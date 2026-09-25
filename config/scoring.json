@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "disease": "Ulcerative colitis",
+  "combination_size": 2,
+  "top_n": 10,
+  "weights": {
+    "target_complementarity": 0.40,
+    "pathway_synergy": 0.30,
+    "safety": 0.15,
+    "pair_evidence": 0.15
+  },
+  "active_ingredient_filter": {
+    "minimum_oral_bioavailability": 30.0,
+    "minimum_drug_likeness": 0.18,
+    "note": "第一版沿用TCMSP常用阈值；局部肠道作用成分可能因此漏筛，后续需做敏感性分析。"
+  },
+  "barrier_pathway_keywords": [
+    "tight junction",
+    "intestinal epithelial",
+    "epithelial structure maintenance",
+    "epithelial barrier",
+    "mucus",
+    "mucin",
+    "wound healing"
+  ],
+  "dimension_formulas": {
+    "target_complementarity": "60%为药对UC靶点并集相对覆盖度，40%为两味药靶点非重叠比例。",
+    "pathway_synergy": "60%为肠黏膜相关UC靶点相对覆盖度，20%为相关通路相对覆盖度，20%为相关通路非重叠比例。该项仅表示通路层面的协同潜力，不代表已证实协同。",
+    "safety": "国家药食同源白名单仅提供60分基础分；有可靠风险记录后再扣分，缺少完整毒理数据不按满分处理。",
+    "pair_evidence": "仅使用pair_evidence表内已核验的两药合用证据；无记录记0分。"
+  },
+  "pair_evidence_rubric": {
+    "direct_human_comparative_study": 100,
+    "direct_uc_animal_whole_herb_with_single_and_combination_groups": 80,
+    "direct_uc_animal_extract_or_fraction_with_single_and_combination_groups": 70,
+    "direct_uc_in_vitro_combination_study": 50,
+    "multi_herb_formula_or_non_uc_evidence": 0,
+    "note": "当前为0.1版证据层级，正式研究使用前需由课题组确认。"
+  },
+  "result_label": "协同潜力排名",
+  "disclaimer": "本结果仅用于科研候选筛选，不代表临床处方或已经证实的协同疗效。"
+}
