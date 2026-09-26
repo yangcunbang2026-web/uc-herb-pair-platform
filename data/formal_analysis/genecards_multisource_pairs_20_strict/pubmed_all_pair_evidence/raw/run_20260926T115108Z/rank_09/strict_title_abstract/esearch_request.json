@@ -1,0 +1,14 @@
+{
+  "run_id": "run_20260926T115108Z",
+  "input_rank": 9,
+  "herb_a": "蒲公英",
+  "herb_b": "莲子",
+  "scope": "strict_title_abstract",
+  "query": "(\"Pu Gong Ying\"[Title/Abstract] OR \"Dandelion\"[Title/Abstract] OR \"Herba Taraxaci\"[Title/Abstract] OR \"Taraxaci Herba\"[Title/Abstract] OR \"Taraxacum mongolicum\"[Title/Abstract] OR \"Taraxacum sinicum\"[Title/Abstract]) AND (\"LianZi\"[Title/Abstract] OR \"Nelumbo nucifera Gaertn.\"[Title/Abstract] OR \"Nelumbo nucifera\"[Title/Abstract]) AND (\"Colitis, Ulcerative\"[MeSH Terms] OR \"ulcerative colitis\"[Title/Abstract] OR \"colitis\"[Title/Abstract] OR \"intestinal barrier\"[Title/Abstract] OR \"gut barrier\"[Title/Abstract] OR \"intestinal mucosa\"[Title/Abstract] OR \"intestinal mucosal barrier\"[Title/Abstract] OR \"mucosal barrier\"[Title/Abstract])",
+  "retrieved_at": "2026-09-26T11:51:08.948468+00:00",
+  "method": "GET",
+  "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?tool=uc_herb_pair_research&db=pubmed&term=%28%22Pu+Gong+Ying%22%5BTitle%2FAbstract%5D+OR+%22Dandelion%22%5BTitle%2FAbstract%5D+OR+%22Herba+Taraxaci%22%5BTitle%2FAbstract%5D+OR+%22Taraxaci+Herba%22%5BTitle%2FAbstract%5D+OR+%22Taraxacum+mongolicum%22%5BTitle%2FAbstract%5D+OR+%22Taraxacum+sinicum%22%5BTitle%2FAbstract%5D%29+AND+%28%22LianZi%22%5BTitle%2FAbstract%5D+OR+%22Nelumbo+nucifera+Gaertn.%22%5BTitle%2FAbstract%5D+OR+%22Nelumbo+nucifera%22%5BTitle%2FAbstract%5D%29+AND+%28%22Colitis%2C+Ulcerative%22%5BMeSH+Terms%5D+OR+%22ulcerative+colitis%22%5BTitle%2FAbstract%5D+OR+%22colitis%22%5BTitle%2FAbstract%5D+OR+%22intestinal+barrier%22%5BTitle%2FAbstract%5D+OR+%22gut+barrier%22%5BTitle%2FAbstract%5D+OR+%22intestinal+mucosa%22%5BTitle%2FAbstract%5D+OR+%22intestinal+mucosal+barrier%22%5BTitle%2FAbstract%5D+OR+%22mucosal+barrier%22%5BTitle%2FAbstract%5D%29&retmode=json&retmax=200&sort=relevance",
+  "headers": {
+    "User-Agent": "UC-Herb-Pair-Research/0.1 (academic research prototype)"
+  }
+}

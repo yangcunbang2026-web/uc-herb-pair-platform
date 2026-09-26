@@ -1,0 +1,10 @@
+﻿source,target,combined_score,experimental_score,database_score,textmining_score,drop_reason
+MMP2,COL18A1,0.96,0.503,0.75,0.687,STRING preferred-name endpoint is absent from the submitted Gene Symbol set; excluded to prevent automatic-name-mapping substitution
+CYP27B1,SRC,0.807,0.781,0.0,0.151,STRING preferred-name endpoint is absent from the submitted Gene Symbol set; excluded to prevent automatic-name-mapping substitution
+KDR,COL18A1,0.96,0.292,0.0,0.944,STRING preferred-name endpoint is absent from the submitted Gene Symbol set; excluded to prevent automatic-name-mapping substitution
+TP53,HNRNPU,0.7,0.364,0.0,0.548,STRING preferred-name endpoint is absent from the submitted Gene Symbol set; excluded to prevent automatic-name-mapping substitution
+MMP3,COL18A1,0.767,0.0,0.4,0.624,STRING preferred-name endpoint is absent from the submitted Gene Symbol set; excluded to prevent automatic-name-mapping substitution
+TERT,HNRNPU,0.745,0.0,0.72,0.129,STRING preferred-name endpoint is absent from the submitted Gene Symbol set; excluded to prevent automatic-name-mapping substitution
+LIN28B,MYC,0.741,0.161,0.0,0.697,STRING preferred-name endpoint is absent from the submitted Gene Symbol set; excluded to prevent automatic-name-mapping substitution
+COL18A1,MMP9,0.92,0.238,0.75,0.588,STRING preferred-name endpoint is absent from the submitted Gene Symbol set; excluded to prevent automatic-name-mapping substitution
+IKBKB,HNRNPU,0.74,0.619,0.0,0.329,STRING preferred-name endpoint is absent from the submitted Gene Symbol set; excluded to prevent automatic-name-mapping substitution

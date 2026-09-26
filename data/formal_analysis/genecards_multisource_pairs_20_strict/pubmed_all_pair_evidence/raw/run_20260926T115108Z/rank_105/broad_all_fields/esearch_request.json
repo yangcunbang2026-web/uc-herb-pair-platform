@@ -1,0 +1,14 @@
+{
+  "run_id": "run_20260926T115108Z",
+  "input_rank": 105,
+  "herb_a": "茯苓",
+  "herb_b": "白扁豆",
+  "scope": "broad_all_fields",
+  "query": "(\"Fuling\"[All Fields] OR \"Poria Cocos(Schw.) Wolf.\"[All Fields] OR \"Poria cocos\"[All Fields]) AND (\"Baibiandou\"[All Fields] OR \"Lablab Semen Album\"[All Fields] OR \"Dolichos lablab\"[All Fields]) AND (\"Colitis, Ulcerative\"[MeSH Terms] OR \"ulcerative colitis\"[All Fields] OR \"colitis\"[All Fields] OR \"intestinal barrier\"[All Fields] OR \"gut barrier\"[All Fields] OR \"intestinal mucosa\"[All Fields] OR \"intestinal mucosal barrier\"[All Fields] OR \"mucosal barrier\"[All Fields])",
+  "retrieved_at": "2026-09-26T11:51:08.948468+00:00",
+  "method": "GET",
+  "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?tool=uc_herb_pair_research&db=pubmed&term=%28%22Fuling%22%5BAll+Fields%5D+OR+%22Poria+Cocos%28Schw.%29+Wolf.%22%5BAll+Fields%5D+OR+%22Poria+cocos%22%5BAll+Fields%5D%29+AND+%28%22Baibiandou%22%5BAll+Fields%5D+OR+%22Lablab+Semen+Album%22%5BAll+Fields%5D+OR+%22Dolichos+lablab%22%5BAll+Fields%5D%29+AND+%28%22Colitis%2C+Ulcerative%22%5BMeSH+Terms%5D+OR+%22ulcerative+colitis%22%5BAll+Fields%5D+OR+%22colitis%22%5BAll+Fields%5D+OR+%22intestinal+barrier%22%5BAll+Fields%5D+OR+%22gut+barrier%22%5BAll+Fields%5D+OR+%22intestinal+mucosa%22%5BAll+Fields%5D+OR+%22intestinal+mucosal+barrier%22%5BAll+Fields%5D+OR+%22mucosal+barrier%22%5BAll+Fields%5D%29&retmode=json&retmax=200&sort=relevance",
+  "headers": {
+    "User-Agent": "UC-Herb-Pair-Research/0.1 (academic research prototype)"
+  }
+}

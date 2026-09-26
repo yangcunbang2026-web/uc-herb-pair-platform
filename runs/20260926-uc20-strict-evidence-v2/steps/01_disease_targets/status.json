@@ -1,0 +1,107 @@
+{
+  "id": "01_disease_targets",
+  "name": "疾病靶点授权导出与标准化",
+  "type": "input_gate",
+  "status": "passed",
+  "started_at": "2026-09-26T13:07:18.070877+00:00",
+  "finished_at": "2026-09-26T13:07:18.108710+00:00",
+  "duration_seconds": 0.032,
+  "required": true,
+  "notes": "",
+  "artifacts_before": [
+    {
+      "specification": "data/formal_inputs/genecards_uc/raw_export.csv",
+      "exists": true,
+      "path": "data\\formal_inputs\\genecards_uc\\raw_export.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\genecards_uc\\raw_export.csv",
+      "bytes": 446213,
+      "modified_at": "2026-09-26T09:37:04.386437+00:00",
+      "sha256": "ff7a40c0cd94cb6232f735df071b78e751b2f1888d010e4d067bbf4f0c6b8d37"
+    },
+    {
+      "specification": "data/formal_inputs/genecards_uc/uc_genecards_targets_normalized.csv",
+      "exists": true,
+      "path": "data\\formal_inputs\\genecards_uc\\uc_genecards_targets_normalized.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\genecards_uc\\uc_genecards_targets_normalized.csv",
+      "bytes": 8551,
+      "modified_at": "2026-09-26T09:39:39.227554+00:00",
+      "sha256": "a0916af3c32947bcd8b4ae142e1c4a064dd088abb34889ca7c56c4528c63d671"
+    },
+    {
+      "specification": "data/formal_inputs/genecards_uc/import_report.json",
+      "exists": true,
+      "path": "data\\formal_inputs\\genecards_uc\\import_report.json",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\genecards_uc\\import_report.json",
+      "bytes": 972,
+      "modified_at": "2026-09-26T09:39:39.234912+00:00",
+      "sha256": "9b96df0677f0987e9bff978ac392a1b8b43564d9cd172c2f6cb20ff22bf4d6f7"
+    }
+  ],
+  "artifacts": [
+    {
+      "specification": "data/formal_inputs/genecards_uc/raw_export.csv",
+      "exists": true,
+      "path": "runs\\20260926-uc20-strict-evidence-v2\\artifacts\\01_disease_targets\\data\\formal_inputs\\genecards_uc\\raw_export.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\20260926-uc20-strict-evidence-v2\\artifacts\\01_disease_targets\\data\\formal_inputs\\genecards_uc\\raw_export.csv",
+      "bytes": 446213,
+      "modified_at": "2026-09-26T09:37:04.386437+00:00",
+      "sha256": "ff7a40c0cd94cb6232f735df071b78e751b2f1888d010e4d067bbf4f0c6b8d37",
+      "origin_path": "data\\formal_inputs\\genecards_uc\\raw_export.csv",
+      "origin_absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\genecards_uc\\raw_export.csv",
+      "storage": "run_snapshot"
+    },
+    {
+      "specification": "data/formal_inputs/genecards_uc/uc_genecards_targets_normalized.csv",
+      "exists": true,
+      "path": "runs\\20260926-uc20-strict-evidence-v2\\artifacts\\01_disease_targets\\data\\formal_inputs\\genecards_uc\\uc_genecards_targets_normalized.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\20260926-uc20-strict-evidence-v2\\artifacts\\01_disease_targets\\data\\formal_inputs\\genecards_uc\\uc_genecards_targets_normalized.csv",
+      "bytes": 8551,
+      "modified_at": "2026-09-26T09:39:39.227554+00:00",
+      "sha256": "a0916af3c32947bcd8b4ae142e1c4a064dd088abb34889ca7c56c4528c63d671",
+      "origin_path": "data\\formal_inputs\\genecards_uc\\uc_genecards_targets_normalized.csv",
+      "origin_absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\genecards_uc\\uc_genecards_targets_normalized.csv",
+      "storage": "run_snapshot"
+    },
+    {
+      "specification": "data/formal_inputs/genecards_uc/import_report.json",
+      "exists": true,
+      "path": "runs\\20260926-uc20-strict-evidence-v2\\artifacts\\01_disease_targets\\data\\formal_inputs\\genecards_uc\\import_report.json",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\20260926-uc20-strict-evidence-v2\\artifacts\\01_disease_targets\\data\\formal_inputs\\genecards_uc\\import_report.json",
+      "bytes": 972,
+      "modified_at": "2026-09-26T09:39:39.234912+00:00",
+      "sha256": "9b96df0677f0987e9bff978ac392a1b8b43564d9cd172c2f6cb20ff22bf4d6f7",
+      "origin_path": "data\\formal_inputs\\genecards_uc\\import_report.json",
+      "origin_absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\genecards_uc\\import_report.json",
+      "storage": "run_snapshot"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "specification": "data/formal_inputs/genecards_uc/raw_export.csv",
+      "exists": true,
+      "path": "data\\formal_inputs\\genecards_uc\\raw_export.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\genecards_uc\\raw_export.csv",
+      "bytes": 446213,
+      "modified_at": "2026-09-26T09:37:04.386437+00:00",
+      "sha256": "ff7a40c0cd94cb6232f735df071b78e751b2f1888d010e4d067bbf4f0c6b8d37"
+    },
+    {
+      "specification": "data/formal_inputs/genecards_uc/uc_genecards_targets_normalized.csv",
+      "exists": true,
+      "path": "data\\formal_inputs\\genecards_uc\\uc_genecards_targets_normalized.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\genecards_uc\\uc_genecards_targets_normalized.csv",
+      "bytes": 8551,
+      "modified_at": "2026-09-26T09:39:39.227554+00:00",
+      "sha256": "a0916af3c32947bcd8b4ae142e1c4a064dd088abb34889ca7c56c4528c63d671"
+    },
+    {
+      "specification": "data/formal_inputs/genecards_uc/import_report.json",
+      "exists": true,
+      "path": "data\\formal_inputs\\genecards_uc\\import_report.json",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\genecards_uc\\import_report.json",
+      "bytes": 972,
+      "modified_at": "2026-09-26T09:39:39.234912+00:00",
+      "sha256": "9b96df0677f0987e9bff978ac392a1b8b43564d9cd172c2f6cb20ff22bf4d6f7"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.streamlit/secrets.toml
+exports/
+data/raw/
+data/processed/
+data/docking/
+tools/
+
+# 线上结果页只读取这个精简后的 SQLite 数据库。
+!data/uc_herbs.sqlite

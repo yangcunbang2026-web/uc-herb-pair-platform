@@ -1,102 +1,72 @@
 # UC 药食同源药对筛选平台
 
-面向团队内部科研使用的 UC 药食同源药对协同潜力筛选原型。
+面向科研人员的网络药理学证据看板。系统根据已经封存的数据库证据，对 UC（溃疡性结肠炎）候选药食同源药对进行筛选和阶段性排序，并展示每一步如何得到结果。
 
-## 第一版范围
+公开网页：<https://uc-herb-pair-platform.streamlit.app>
 
-- 疾病范围：仅溃疡性结肠炎（UC）
-- 药材范围：国家正式药食同源目录内药材
-- 组合范围：两味药组合
-- 评分权重：靶点互补度 40%、通路协同度 30%、安全性 15%、配伍依据 15%
-- 输出：协同潜力排名前 10 名及 CSV 下载
-- 边界：结果属于科研预测，不代表临床处方或已经证实的协同疗效
+## 当前公开版本（2026-09-26）
 
-## 项目结构
+- 原始候选：21味；黄芩不在现行食药物质目录，严格分析保留20味。
+- 两味组合：190组。
+- 独立贡献门槛：106组通过，84组停止并记录具体原因。
+- UC交集靶点：128个。
+- STRING：1343条原始边。
+- Cytoscape：1334条保留边，9条错误映射边有剔除记录。
+- DAVID：106组药对和19味单药基线均完成。
+- PubMed：106组、212条检索式；目前没有可自动计分的两味药直接合用证据。
+- 阶段候选：Top10截止分并列，因此展示11组。
+- 安全性和配伍证据仍待人工复核；正式分子对接候选尚未锁定。
+
+当前排名只使用已经完成的靶点互补40分和通路协同30分，属于70分制阶段结果。它只能叫“协同潜力顺序”，不能证明药效，也不能证明实验中的“1+1>2”。
+
+## 网页能查看什么
+
+- `21 → 20味 → 190组 → 106组 → 11组`的真实筛选漏斗。
+- 全部190组药对，不只展示前10名。
+- 每组药对的通过、停止或暂未入围原因。
+- 两味药的共同靶点、各自独有靶点和组合并集。
+- STRING/Cytoscape派生PPI子网和全局核心节点。
+- DAVID药对结果、两个单药基线及组合新增通路。
+- PubMed检索式、候选文献状态和安全人工门禁。
+- 数据库原始响应、参数、报告、CSV、运行清单和SHA-256证明。
+
+## 重要边界
+
+- AI只整理和解释已获取的数据库证据，不允许补写缺失靶点或疗效。
+- 数据库排序只用于决定优先实验顺序，不构成临床处方或用药建议。
+- “1+1>2”必须通过单药A、单药B、联合AB和正式协同模型实验确认。
+- 国家食药物质目录资格不等于任意剂量、部位、加工方式和人群均安全。
+
+## 项目分层
 
 ```text
-app.py                  结果展示网页
-config/scoring.json     已确认的评分权重
-data/raw/               外部数据库原始文件，只追加、不手改
-data/processed/         标准化后的中间数据
-data/uc_herbs.sqlite    本地结构化数据库（运行初始化脚本后生成）
-exports/                排名结果导出目录
-scripts/init_database.py 数据库初始化脚本
-src/database.py         数据库连接和查询
+app.py / src/dashboard_*.py      公开证据看板
+data/formal_inputs/              正式输入与来源记录
+data/formal_analysis/            标准化、交集、PPI、DAVID、PubMed和安全复核结果
+runs/                             冻结配置、步骤状态、日志、报告和校验值
+scripts/                          本地科研流水线及发布脚本
+data/uc_herbs.sqlite              旧版原型，仅作历史对照
 ```
+
+公开GitHub仓库只保存网页运行实际需要的结果和证据。完整本地项目包含数据库同步、Cytoscape、DAVID和分子对接工具，不会整体上传。
 
 ## 本地启动
 
 ```powershell
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe scripts/init_database.py
-.\.venv\Scripts\python.exe -m streamlit run app.py --server.port 8511
+.\.venv\Scripts\python.exe -m streamlit run app.py --server.address 127.0.0.1 --server.port 8513
 ```
 
-打开 <http://localhost:8511>。
+## 更新公开网页
 
-线下重新执行生信、分子对接等研究脚本时，安装完整依赖：
+先在完整科研项目中生成精简发布仓库：
 
 ```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements-research.txt
+.\scripts\build_web_release.ps1
 ```
 
-## 当前真实数据状态（2026-09-25）
+该脚本会保留逐药对DAVID原始响应和详情页所需证据，省略网页不读取、可由逐组结果重建的大型聚合表，并生成`release_manifest.csv`和`release_summary.json`。提交并推送发布仓库后，Streamlit Community Cloud会自动更新同一网址。
 
-- 已接入 NCBI GEO GSE75214：活动期 UC 结肠 74 例、健康结肠 11 例
-- 已完成 19,036 个基因的差异分析
-- 已写入 1,150 个显著差异基因（FDR < 0.05 且 |log2FC| > 1）
-- 当前数据库共有 1,598 个标准靶点，其中 1,539 个映射到已审阅人类 UniProt 蛋白
-- 已写入 7,008 条 GO/Reactome 通路与功能术语及 25,850 条靶点—通路关系
-- 已写入 5,403 个 GO 术语及 19,562 条靶点—GO 关系
-- 已核验13味国家药食同源药材，其中9味可在 TCMSP 准确匹配
-- 已导入947个成分、1,071条药材—成分关系和5,206条TCMSP原始成分—靶点关系
-- 145个活性成分中，84个已通过 PubChem 名称与分子量交叉核对
-- 已用国家卫健委公告中的正式植物学名称扩展 PubMed 检索；6篇候选中人工规则核验纳入1篇直接UC药对动物研究
-- 已生成36个两味组合，并输出最新批次协同潜力前10名
-- 已完成5,000次权重扰动敏感性检查，并在结果页显示前10稳定率和去掉配伍证据后的对照名次
-- 已增加数据覆盖偏差审计，显示靶点标准化和PubChem结构核对的综合完整度，但不参与药效评分
-- 已接入第二个UC患者结肠数据集GSE87466；与GSE75214共有555个同方向差异基因，三种数据集场景第一名一致
-- 已通过官方GraphQL API接入Open Targets的UC—靶点关联；完整原始证据独立存储，在纳入门槛确认前不进入评分
-- 已通过官方REST API接入NHGRI-EBI GWAS Catalog的UC遗传关联；作者报告基因与变异位置映射基因分开存储，暂不进入评分
-- 已通过官方API接入STRING高置信人类蛋白互作，范围限定为两个UC GEO数据集的共识差异基因，暂不进入评分
-- ChEMBL官方API当前返回HTTP 500，按“有问题先不接”原则暂缓，不使用第三方镜像
-- 已完成党参/黄芪核心成分对PLAU的AutoDock Vina对接；1C5X共晶配体ESI回对接RMSD为0.469埃（合格线2.0埃），方法学验证通过，结果仍暂不进入评分
+## 下一阶段
 
-数据库接入进度见：[数据库接入调查](docs/数据库接入调查.md)。
-
-## 数据更新顺序
-
-```powershell
-.\.venv\Scripts\python.exe scripts/init_database.py
-.\.venv\Scripts\python.exe scripts/prepare_geo.py
-.\.venv\Scripts\python.exe scripts/sync_open_sources.py
-.\.venv\Scripts\python.exe scripts/analyze_geo.py
-.\.venv\Scripts\python.exe scripts/import_uniprot_reactome.py
-.\.venv\Scripts\python.exe scripts/import_go_annotations.py
-.\.venv\Scripts\python.exe scripts/import_nhc_botanical_aliases.py
-.\.venv\Scripts\python.exe scripts\sync_tcmsp_catalog.py
-.\.venv\Scripts\python.exe scripts\sync_tcmsp_details.py
-.\.venv\Scripts\python.exe scripts\sync_uniprot_names.py
-.\.venv\Scripts\python.exe scripts\import_tcmsp_details.py
-.\.venv\Scripts\python.exe scripts\import_uniprot_reactome.py
-.\.venv\Scripts\python.exe scripts\sync_pubchem_active.py
-.\.venv\Scripts\python.exe scripts\sync_pubmed_pair_candidates.py
-.\.venv\Scripts\python.exe scripts\review_pubmed_pair_candidates.py
-.\.venv\Scripts\python.exe scripts\score_pairs.py
-.\.venv\Scripts\python.exe scripts\analyze_score_sensitivity.py
-.\.venv\Scripts\python.exe scripts\audit_data_coverage.py
-.\.venv\Scripts\python.exe scripts\sync_open_targets_uc.py
-.\.venv\Scripts\python.exe scripts\sync_gwas_catalog_uc.py
-.\.venv\Scripts\python.exe scripts\sync_string_uc_consensus.py
-.\.venv\Scripts\python.exe scripts\prepare_plau_docking.py
-.\.venv\Scripts\python.exe scripts\run_plau_docking.py
-.\.venv\Scripts\python.exe scripts\validate_plau_redocking.py
-```
-
-日常只重新分析和导出最新结果时，可以直接运行：
-
-```powershell
-.\.venv\Scripts\python.exe scripts\run_analysis.py
-```
-
-该命令会依次生成排名、权重敏感性、数据完整度，并把带批次号的前10名 CSV 和元数据 JSON 保存到 `exports/`。
+当前网页是“UC严格20味已完成结果的公开证据看板”。下一阶段会把离线科研流水线继续参数化，使用户输入疾病和候选药物后可以创建新任务、分步运行并查看证据；GeneCards授权、安全证据签字和最终分子对接对象确认仍保留人工门禁。

@@ -1,0 +1,30 @@
+{
+  "status_code": 200,
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "date": "Sat, 26 Sep 2026 12:01:04 GMT"
+  },
+  "json": {
+    "header": {
+      "type": "esearch",
+      "version": "0.3"
+    },
+    "esearchresult": {
+      "count": "0",
+      "retmax": "0",
+      "retstart": "0",
+      "idlist": [],
+      "translationset": [],
+      "querytranslation": "(\"Sharen\"[Title/Abstract] OR \"Amomum villosum\"[Title/Abstract]) AND (\"HuoXiang\"[Title/Abstract] OR \"pogostemon cablin blanco benth\"[Title/Abstract] OR \"Pogostemon cablin\"[Title/Abstract]) AND (\"colitis, ulcerative\"[MeSH Terms] OR \"ulcerative colitis\"[Title/Abstract] OR \"colitis\"[Title/Abstract] OR \"intestinal barrier\"[Title/Abstract] OR \"gut barrier\"[Title/Abstract] OR \"intestinal mucosa\"[Title/Abstract] OR \"intestinal mucosal barrier\"[Title/Abstract] OR \"mucosal barrier\"[Title/Abstract])",
+      "warninglist": {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [
+          "\"Amomum Aurantiacum H. T. Tsai Et S. W. Zhao\"[Title/Abstract]"
+        ],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    }
+  }
+}

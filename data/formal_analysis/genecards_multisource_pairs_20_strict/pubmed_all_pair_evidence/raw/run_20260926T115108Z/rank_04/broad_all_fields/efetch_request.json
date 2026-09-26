@@ -1,0 +1,14 @@
+{
+  "run_id": "run_20260926T115108Z",
+  "input_rank": 4,
+  "herb_a": "蒲公英",
+  "herb_b": "乌梅",
+  "scope": "broad_all_fields",
+  "query": "(\"Pu Gong Ying\"[All Fields] OR \"Dandelion\"[All Fields] OR \"Herba Taraxaci\"[All Fields] OR \"Taraxaci Herba\"[All Fields] OR \"Taraxacum mongolicum\"[All Fields] OR \"Taraxacum sinicum\"[All Fields]) AND (\"Wumei\"[All Fields] OR \"Mume Fructus\"[All Fields] OR \"Prunus mume\"[All Fields]) AND (\"Colitis, Ulcerative\"[MeSH Terms] OR \"ulcerative colitis\"[All Fields] OR \"colitis\"[All Fields] OR \"intestinal barrier\"[All Fields] OR \"gut barrier\"[All Fields] OR \"intestinal mucosa\"[All Fields] OR \"intestinal mucosal barrier\"[All Fields] OR \"mucosal barrier\"[All Fields])",
+  "retrieved_at": "2026-09-26T11:51:08.948468+00:00",
+  "method": "GET",
+  "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=uc_herb_pair_research&db=pubmed&id=40775561&retmode=xml",
+  "headers": {
+    "User-Agent": "UC-Herb-Pair-Research/0.1 (academic research prototype)"
+  }
+}

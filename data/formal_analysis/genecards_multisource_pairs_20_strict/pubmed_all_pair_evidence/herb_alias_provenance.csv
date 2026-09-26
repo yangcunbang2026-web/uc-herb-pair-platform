@@ -1,0 +1,60 @@
+﻿herb_name,alias,alias_type,source_name,source_path,source_url,source_field,source_value
+马齿苋,Machixian,pinyin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\01_马齿苋.json,,herb_pinyin,Machixian
+马齿苋,Portulacae Herba,medicinal_english_or_latin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\01_马齿苋.json,,herb_en_name,Portulacae Herba
+栀子,Zhizi,pinyin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\03_栀子.json,,herb_pinyin,Zhizi
+栀子,Gardeniae Fructus,medicinal_english_or_latin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\03_栀子.json,,herb_en_name,Gardeniae Fructus
+金银花,Jinyinhua,pinyin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\04_金银花.json,,herb_pinyin,Jinyinhua
+金银花,Lonicerae Japonicae Flos,medicinal_english_or_latin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\04_金银花.json,,herb_en_name,Lonicerae Japonicae Flos
+鱼腥草,Yuxingcao,pinyin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\05_鱼腥草.json,,herb_pinyin,Yuxingcao
+鱼腥草,Houttuyniae Herba,medicinal_english_or_latin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\05_鱼腥草.json,,herb_en_name,Houttuyniae Herba
+茯苓,Fuling,pinyin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\07_茯苓.json,,herb_pinyin,Fuling
+茯苓,Poria Cocos(Schw.) Wolf.,medicinal_english_or_latin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\07_茯苓.json,,herb_en_name,Poria Cocos(Schw.) Wolf.
+薏苡仁,Yiyiren,pinyin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\08_薏苡仁.json,,herb_pinyin,Yiyiren
+薏苡仁,Coicis Semen,medicinal_english_or_latin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\08_薏苡仁.json,,herb_en_name,Coicis Semen
+白扁豆,Baibiandou,pinyin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\09_白扁豆.json,,herb_pinyin,Baibiandou
+白扁豆,Lablab Semen Album,medicinal_english_or_latin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\09_白扁豆.json,,herb_en_name,Lablab Semen Album
+山药,Shanyao,pinyin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\10_山药.json,,herb_pinyin,Shanyao
+山药,Rhizoma Dioscoreae,medicinal_english_or_latin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\10_山药.json,,herb_en_name,Rhizoma Dioscoreae
+芡实,Qianshi,pinyin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\12_芡实.json,,herb_pinyin,Qianshi
+芡实,Euryales Semen,medicinal_english_or_latin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\12_芡实.json,,herb_en_name,Euryales Semen
+陈皮,Chenpi,pinyin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\13_陈皮.json,,herb_pinyin,Chenpi
+陈皮,Citrus Reticulata,medicinal_english_or_latin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\13_陈皮.json,,herb_en_name,Citrus Reticulata
+砂仁,Sharen,pinyin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\14_砂仁.json,,herb_pinyin,Sharen
+砂仁,Amomum Aurantiacum H. T. Tsai Et S. W. Zhao,medicinal_english_or_latin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\14_砂仁.json,,herb_en_name,Amomum Aurantiacum H. T. Tsai Et S. W. Zhao
+乌梅,Wumei,pinyin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\17_乌梅.json,,herb_pinyin,Wumei
+乌梅,Mume Fructus,medicinal_english_or_latin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\17_乌梅.json,,herb_en_name,Mume Fructus
+生姜,Shengjiang,pinyin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\18_生姜.json,,herb_pinyin,Shengjiang
+生姜,Zingiber Officinale Roscoe,medicinal_english_or_latin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\18_生姜.json,,herb_en_name,Zingiber Officinale Roscoe
+大枣,Dazao,pinyin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\19_大枣.json,,herb_pinyin,Dazao
+大枣,Jujubae Fructus,medicinal_english_or_latin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\19_大枣.json,,herb_en_name,Jujubae Fructus
+甘草,Gancao,pinyin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\20_甘草.json,,herb_pinyin,Gancao
+甘草,licorice,medicinal_english_or_latin,TCMSP local exact-match export,data\channel_tests\tcmsp_uc21\20_甘草.json,,herb_en_name,licorice
+蒲公英,Pu Gong Ying,pinyin,HERB 2.0 name-index audit,data\raw\herb2_capture\name_index_audit.json,,pinyin_name,Pu Gong Ying
+蒲公英,Dandelion,common_english,HERB 2.0 name-index audit,data\raw\herb2_capture\name_index_audit.json,,english_name,Dandelion
+蒲公英,Herba Taraxaci,medicinal_latin,HERB 2.0 name-index audit,data\raw\herb2_capture\name_index_audit.json,,latin_name,Herba Taraxaci;Taraxaci Herba
+蒲公英,Taraxaci Herba,medicinal_latin,HERB 2.0 name-index audit,data\raw\herb2_capture\name_index_audit.json,,latin_name,Herba Taraxaci;Taraxaci Herba
+莲子,LianZi,pinyin,ETCM 2.0 exact-match report,data\formal_inputs\etcm2_supplements\莲子\report.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/莲子,etcm_display_name,LianZi
+莲子,Nelumbo nucifera Gaertn.,botanical_name_with_author,ETCM 2.0 exact-match report,data\formal_inputs\etcm2_supplements\莲子\report.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/莲子,latin_name,Nelumbo nucifera Gaertn.
+藿香,HuoXiang,pinyin,ETCM 2.0 exact-match report,data\formal_inputs\etcm2_supplements\藿香\report.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/藿香,etcm_display_name,HuoXiang
+藿香,Pogostemon cablin(Blanco)Benth.,botanical_name_with_author,ETCM 2.0 exact-match report,data\formal_inputs\etcm2_supplements\藿香\report.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/藿香,latin_name,Pogostemon cablin(Blanco)Benth.
+蒲公英,Taraxacum mongolicum,botanical_binomial,ETCM 2.0,config\pubmed_botanical_aliases.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/蒲公英,Herb Name in Latin,Taraxacum mongolicum Hand.-Mazz.; Taraxacum sinicum Kitag.
+蒲公英,Taraxacum sinicum,botanical_binomial,ETCM 2.0,config\pubmed_botanical_aliases.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/蒲公英,Herb Name in Latin,Taraxacum mongolicum Hand.-Mazz.; Taraxacum sinicum Kitag.
+金银花,Lonicera japonica,botanical_binomial,ETCM 2.0,config\pubmed_botanical_aliases.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/金银花,Herb Name in Latin,Lonicera japonica Thunb.
+马齿苋,Portulaca oleracea,botanical_binomial,ETCM 2.0,config\pubmed_botanical_aliases.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/马齿苋,Herb Name in Latin,Portulaca oleracea L.
+鱼腥草,Houttuynia cordata,botanical_binomial,ETCM 2.0,config\pubmed_botanical_aliases.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/鱼腥草,Herb Name in Latin,Houttuynia cordata Thunb.
+栀子,Gardenia jasminoides,botanical_binomial,ETCM 2.0,config\pubmed_botanical_aliases.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/栀子,Herb Name in Latin,Gardenia jasminoides Ellis
+乌梅,Prunus mume,botanical_binomial,ETCM 2.0,config\pubmed_botanical_aliases.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/乌梅,Herb Name in Latin,Prunus mume(Sieb.)Sieb.etZucc.
+甘草,Glycyrrhiza uralensis,botanical_binomial,ETCM 2.0,config\pubmed_botanical_aliases.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/甘草,Herb Name in Latin,Glycyrrhiza uralensis Fisch.; Glycyrrhiza inflata Bat.; Glycyrrhiza glabra L.
+甘草,Glycyrrhiza inflata,botanical_binomial,ETCM 2.0,config\pubmed_botanical_aliases.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/甘草,Herb Name in Latin,Glycyrrhiza uralensis Fisch.; Glycyrrhiza inflata Bat.; Glycyrrhiza glabra L.
+甘草,Glycyrrhiza glabra,botanical_binomial,ETCM 2.0,config\pubmed_botanical_aliases.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/甘草,Herb Name in Latin,Glycyrrhiza uralensis Fisch.; Glycyrrhiza inflata Bat.; Glycyrrhiza glabra L.
+大枣,Ziziphus jujuba,botanical_binomial,ETCM 2.0,config\pubmed_botanical_aliases.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/大枣,Herb Name in Latin,Ziziphus jujuba Mill.
+莲子,Nelumbo nucifera,botanical_binomial,ETCM 2.0,config\pubmed_botanical_aliases.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/莲子,Herb Name in Latin,Nelumbo nucifera Gaertn.
+藿香,Pogostemon cablin,botanical_binomial,ETCM 2.0,config\pubmed_botanical_aliases.json,http://www.tcmip.cn/ETCM2/front/#/Detail/herb/藿香,Herb Name in Latin,Pogostemon cablin(Blanco)Benth.
+槐米,Sophora japonica,botanical_binomial,国家卫健委2014年官方征求意见附件（非生效终版）,config\pubmed_botanical_aliases.json,https://www.nhc.gov.cn/wjw/yjzj/201411/2d5b6eec573e4d51b8d6d1c33a75ff52/files/1732844430549_44330.doc,槐花、槐米—植物名/拉丁学名,槐 Sophora japonica L.；花及花蕾
+茯苓,Poria cocos,botanical_binomial,国家卫健委2014年官方征求意见附件（非生效终版）,config\pubmed_botanical_aliases.json,https://www.nhc.gov.cn/wjw/yjzj/201411/2d5b6eec573e4d51b8d6d1c33a75ff52/files/1732844430549_44330.doc,茯苓—植物名/拉丁学名,茯苓 Poria cocos (Schw.) Wolf；菌核
+薏苡仁,Coix lacryma-jobi,botanical_binomial,国家卫健委2014年官方征求意见附件（非生效终版）,config\pubmed_botanical_aliases.json,https://www.nhc.gov.cn/wjw/yjzj/201411/2d5b6eec573e4d51b8d6d1c33a75ff52/files/1732844430549_44330.doc,薏苡仁—植物名/拉丁学名,薏苡 Coix lacryma-jobi L. var. mayuen；成熟种仁
+白扁豆,Dolichos lablab,botanical_binomial,国家卫健委2014年官方征求意见附件（非生效终版）,config\pubmed_botanical_aliases.json,https://www.nhc.gov.cn/wjw/yjzj/201411/2d5b6eec573e4d51b8d6d1c33a75ff52/files/1732844430549_44330.doc,白扁豆—植物名/拉丁学名,扁豆 Dolichos lablab L.；成熟种子
+山药,Dioscorea opposita,botanical_binomial,国家卫健委2014年官方征求意见附件（非生效终版）,config\pubmed_botanical_aliases.json,https://www.nhc.gov.cn/wjw/yjzj/201411/2d5b6eec573e4d51b8d6d1c33a75ff52/files/1732844430549_44330.doc,山药—植物名/拉丁学名,薯蓣 Dioscorea opposita Thunb.；根茎
+芡实,Euryale ferox,botanical_binomial,国家卫健委2014年官方征求意见附件（非生效终版）,config\pubmed_botanical_aliases.json,https://www.nhc.gov.cn/wjw/yjzj/201411/2d5b6eec573e4d51b8d6d1c33a75ff52/files/1732844430549_44330.doc,芡实—植物名/拉丁学名,芡 Euryale ferox Salisb.；成熟种仁
+砂仁,Amomum villosum,botanical_binomial,国家卫健委2014年官方征求意见附件（非生效终版）,config\pubmed_botanical_aliases.json,https://www.nhc.gov.cn/wjw/yjzj/201411/2d5b6eec573e4d51b8d6d1c33a75ff52/files/1732844430549_44330.doc,砂仁—植物名/拉丁学名,阳春砂 Amomum villosum Lour.；成熟果实；另列绿壳砂和海南砂
+生姜,Zingiber officinale,botanical_binomial,国家卫健委2014年官方征求意见附件（非生效终版）,config\pubmed_botanical_aliases.json,https://www.nhc.gov.cn/wjw/yjzj/201411/2d5b6eec573e4d51b8d6d1c33a75ff52/files/1732844430549_44330.doc,姜（生姜、干姜）—植物名/拉丁学名,姜 Zingiber officinale Rosc.；生姜为新鲜根茎

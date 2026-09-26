@@ -1,0 +1,28 @@
+{
+  "status": "manual_review_required",
+  "generated_at": "2026-09-26T11:56:41.533614+00:00",
+  "pair_count": 106,
+  "herb_count": 19,
+  "catalog_gate_failures": 0,
+  "final_numeric_safety_scores": 0,
+  "reason": "缺少实际材料身份/部位确认、现行药典注意与禁忌、拟用剂量/途径/加工方式及批次质量证据。按规则不得把缺失项自动记0或自动给满分。",
+  "inputs": {
+    "pairs": {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pair_scores_source_bias_adjusted.csv",
+      "sha256": "93c005020bdb958ed912366038e0e35d5bafc7733495c273c780cc235481c12a"
+    },
+    "identity": {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\config\\official_food_medicine_identity_21.csv",
+      "sha256": "503dc6d0f6dd121951a1a58c5113bb386fa3e26e11128e612e0b5eb6a979b519"
+    },
+    "botanical": {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\official_food_medicine_catalog\\botanical_part_mapping_20.csv",
+      "sha256": "ca2e5c88a2b6275a387fec3988f08d671e77f6802625876317315014e1b9eedc"
+    },
+    "rubric": {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\official_food_medicine_catalog\\safety_evidence_rubric_15.json",
+      "sha256": "5b4948a32f5ed177e9f9a84d5e7afa9e5755bfab934ef220be14794cf3690407"
+    }
+  },
+  "important": "该维度衡量官方安全证据完整度，不等同于已证明药对安全。"
+}

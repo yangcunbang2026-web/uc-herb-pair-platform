@@ -1,0 +1,25 @@
+{
+  "status": "complete_candidate_retrieval_manual_review_required",
+  "generated_at": "2026-09-26T12:07:04.021941+00:00",
+  "source_run_id": "run_20260926T115108Z",
+  "source_input_root": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pubmed_all_pair_evidence",
+  "expected_pairs": 106,
+  "covered_pairs": 106,
+  "candidate_records": 2,
+  "pairs_with_candidates": 2,
+  "known_multiherb_formula_exclusions": 2,
+  "automatically_score_eligible_records": 0,
+  "manual_full_text_review_required_before_positive_scoring": true,
+  "policy": "检索命中仅为候选。多味复方不能自动算作两味药直接合用证据；任何正向配伍证据分必须经过人工全文核验，本脚本不授予15分中的任何分值。",
+  "input_sha256": {
+    "report.json": "30653db571c75e5b3736caa119f1ebbef0d7fd920799134cb6860e03528d7211",
+    "pair_retrieval_summary.csv": "af084770464d730261f9715d715dfc0c4421a285da77d7a7f20469619d78d604",
+    "query_manifest.csv": "4ba45c154954fdfc44c988c5eca9ad1111672c1302e9c117ac3b0008353b45f3",
+    "automatic_prescreen.csv": "fd11ed4484338bed22b38711f36d07b8df1bcf64b3ab3a095bee84a7bdc5ad69"
+  },
+  "outputs": {
+    "pair_summary": "pair_pubmed_evidence_summary.csv",
+    "manual_review_queue": "candidate_manual_full_text_review_queue.csv",
+    "readme": "README.md"
+  }
+}

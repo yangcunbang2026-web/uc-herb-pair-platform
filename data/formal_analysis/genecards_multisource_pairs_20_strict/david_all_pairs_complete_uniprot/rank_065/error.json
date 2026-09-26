@@ -1,0 +1,10 @@
+{
+  "analysis_rank": 65,
+  "herb_a": "蒲公英",
+  "herb_b": "槐米",
+  "status": "failed",
+  "error_type": "ChunkedEncodingError",
+  "error": "Response ended prematurely",
+  "failed_at": "2026-09-26T12:10:07.713867+00:00",
+  "input_signature": "26200075f0a6b86a6060a8884b8cc1615531682550bf29838342167a31cf0001"
+}

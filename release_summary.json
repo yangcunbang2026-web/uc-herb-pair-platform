@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-09-26T15:17:32.8349369Z",
+  "source_project": "UC药食同源药对筛选平台（完整本地科研项目未上传）",
+  "release_repository": "yangcunbang2026-web/uc-herb-pair-platform",
+  "payload_file_count": 1317,
+  "payload_total_bytes": 150840671.0,
+  "omitted_large_aggregates": [
+    "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_all_pairs_complete_uniprot\\all_enrichment_rows.csv",
+    "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_all_pairs_complete_uniprot\\all_enrichment_rows.partial.csv",
+    "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_single_herb_baselines_all_complete_uniprot\\all_enrichment_rows.csv",
+    "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_single_herb_baselines_all_complete_uniprot\\all_enrichment_rows.partial.csv"
+  ],
+  "note": "逐药对DAVID原始响应均保留；仅省略网页不读取、可由逐组结果重建的大型聚合表。"
+}

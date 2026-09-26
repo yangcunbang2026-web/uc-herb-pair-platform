@@ -1,0 +1,673 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-26T13:07:21.306108+00:00",
+  "config_path": "runs\\20260926-uc20-strict-evidence-v2\\job_config_resolved.json",
+  "config_sha256": "7d07590dcb36ba66aed8c990e5c3308795e5594c62a5a66704240eafea5c1855",
+  "qc_code_sha256": "c04f4bda8a8632f11f89390b0b73d7112d84be2ee7420ea2e724221de1161b26",
+  "code_files": [
+    {
+      "path": "scripts\\build_source_bias_adjusted_ranking.py",
+      "sha256": "a14cb0c5e5bff43d3b23aafc20d47b922e0517c0bc976f7367a434a981448d79"
+    },
+    {
+      "path": "scripts\\collect_pubmed_evidence_for_ranked_pairs.py",
+      "sha256": "ea5c821b7183dbbc48bce8f45df3740b6a013d012fb2001e9e158dba8a9d3931"
+    },
+    {
+      "path": "scripts\\finalize_pubmed_pair_evidence.py",
+      "sha256": "19e386e885c689a5c9832f5fecaf5be4bc01facba83c88b3222faba7654e4b54"
+    },
+    {
+      "path": "scripts\\prepare_david_single_herb_baselines.py",
+      "sha256": "4fee3d6310414e807bb4ab30c605eef3f201389eb23c574d334f9cee0901e25a"
+    },
+    {
+      "path": "scripts\\prepare_safety_evidence_review.py",
+      "sha256": "51cffb662ba516c6d782e63f267d224858449e7b55deea130de65870a1ce10fb"
+    },
+    {
+      "path": "scripts\\recalculate_david_pathway_scores.py",
+      "sha256": "73b11b65ea987532a298fa5e07c884fa89d6315ea27ea6bb98a500611d21aef4"
+    },
+    {
+      "path": "scripts\\run_cytoscape_formal_network.py",
+      "sha256": "2ec4e79bb027c4aadbd8c4500d52a2c054dbe44b39c222b09655509e648af118"
+    },
+    {
+      "path": "scripts\\run_david_enrichment_batch.py",
+      "sha256": "aba4fcf63f3aac2de8bba2ee83ee45db5f404a933b9a356eb189c37b6fe2c91b"
+    },
+    {
+      "path": "scripts\\run_formal_genecards_pair_pipeline.py",
+      "sha256": "0c7da625ee386db709d9bfeaa9c66f0920e801c4ac0a84d7c32525fb6f1ac22c"
+    },
+    {
+      "path": "scripts\\run_machine_qc.py",
+      "sha256": "c04f4bda8a8632f11f89390b0b73d7112d84be2ee7420ea2e724221de1161b26"
+    }
+  ],
+  "analysis_root": "data\\formal_analysis\\genecards_multisource_pairs_20_strict",
+  "core_pipeline_status": "pending",
+  "final_result_status": "incomplete",
+  "status_counts": {
+    "failed": 0,
+    "passed": 26,
+    "pending": 1,
+    "warning": 2
+  },
+  "checks": [
+    {
+      "id": "candidate_count_and_uniqueness",
+      "status": "passed",
+      "observed": {
+        "count": 20,
+        "unique": 20
+      },
+      "expected": {
+        "count": 20,
+        "unique": 20
+      },
+      "evidence_paths": [
+        "runs\\20260926-uc20-strict-evidence-v2\\job_config_resolved.json"
+      ],
+      "message": "任务配置中的候选药材数量和唯一性正确。"
+    },
+    {
+      "id": "excluded_herbs_absent",
+      "status": "passed",
+      "observed": [],
+      "expected": [],
+      "evidence_paths": [
+        "runs\\20260926-uc20-strict-evidence-v2\\job_config_resolved.json"
+      ],
+      "message": "明确排除的药材未进入正式候选池。"
+    },
+    {
+      "id": "candidate_csv_matches_config",
+      "status": "passed",
+      "observed": [
+        "马齿苋",
+        "蒲公英",
+        "栀子",
+        "金银花",
+        "鱼腥草",
+        "槐米",
+        "茯苓",
+        "薏苡仁",
+        "白扁豆",
+        "山药",
+        "莲子",
+        "芡实",
+        "陈皮",
+        "砂仁",
+        "藿香",
+        "莱菔子",
+        "乌梅",
+        "生姜",
+        "大枣",
+        "甘草"
+      ],
+      "expected": [
+        "马齿苋",
+        "蒲公英",
+        "栀子",
+        "金银花",
+        "鱼腥草",
+        "槐米",
+        "茯苓",
+        "薏苡仁",
+        "白扁豆",
+        "山药",
+        "莲子",
+        "芡实",
+        "陈皮",
+        "砂仁",
+        "藿香",
+        "莱菔子",
+        "乌梅",
+        "生姜",
+        "大枣",
+        "甘草"
+      ],
+      "evidence_paths": [
+        "config\\uc_candidate_herbs_20_strict.csv",
+        "runs\\20260926-uc20-strict-evidence-v2\\job_config_resolved.json"
+      ],
+      "message": "候选药材CSV与任务配置逐项一致。"
+    },
+    {
+      "id": "analysis_report_candidate_and_pair_counts",
+      "status": "passed",
+      "observed": {
+        "candidate_herbs": 20,
+        "processed_pairs": 190,
+        "expected_pairs": 190,
+        "missing": []
+      },
+      "expected": {
+        "candidate_herbs": 20,
+        "processed_pairs": 190,
+        "expected_pairs": 190,
+        "missing": []
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\report.json"
+      ],
+      "message": "正式组合分析覆盖全部候选药材和理论组合。"
+    },
+    {
+      "id": "herb_source_audit_complete",
+      "status": "passed",
+      "observed": [
+        "乌梅",
+        "大枣",
+        "山药",
+        "栀子",
+        "槐米",
+        "甘草",
+        "生姜",
+        "白扁豆",
+        "砂仁",
+        "芡实",
+        "茯苓",
+        "莱菔子",
+        "莲子",
+        "蒲公英",
+        "薏苡仁",
+        "藿香",
+        "金银花",
+        "陈皮",
+        "马齿苋",
+        "鱼腥草"
+      ],
+      "expected": [
+        "乌梅",
+        "大枣",
+        "山药",
+        "栀子",
+        "槐米",
+        "甘草",
+        "生姜",
+        "白扁豆",
+        "砂仁",
+        "芡实",
+        "茯苓",
+        "莱菔子",
+        "莲子",
+        "蒲公英",
+        "薏苡仁",
+        "藿香",
+        "金银花",
+        "陈皮",
+        "马齿苋",
+        "鱼腥草"
+      ],
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\herb_target_audit.csv"
+      ],
+      "message": "每味候选药材均保留了来源和靶点审计记录。"
+    },
+    {
+      "id": "all_pair_enumeration",
+      "status": "passed",
+      "observed": {
+        "rows": 190,
+        "unique_pairs": 190,
+        "missing_pairs": [],
+        "extra_pairs": [],
+        "outside": [],
+        "self_pairs": 0
+      },
+      "expected": {
+        "rows": 190,
+        "unique_pairs": 190,
+        "missing_pairs": [],
+        "extra_pairs": [],
+        "outside": [],
+        "self_pairs": 0
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pair_scores_raw_formula_audit.csv"
+      ],
+      "message": "两味组合枚举数量、唯一性和候选范围均正确。"
+    },
+    {
+      "id": "eligible_pair_count",
+      "status": "passed",
+      "observed": {
+        "rows": 106,
+        "unique_pairs": 106,
+        "all_pairs_exist_in_raw": true,
+        "both_herbs_contribute_gate": true
+      },
+      "expected": {
+        "rows": 106,
+        "unique_pairs": 106,
+        "all_pairs_exist_in_raw": true,
+        "both_herbs_contribute_gate": true
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pair_scores_provisional.csv",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\report.json"
+      ],
+      "message": "通过双药均有独立贡献门槛的药对数量符合预期。"
+    },
+    {
+      "id": "adjusted_ranking_complete",
+      "status": "passed",
+      "observed": {
+        "rows": 106,
+        "unique_pairs": 106,
+        "same_pair_set_as_eligible": true,
+        "unique_ranks": 106
+      },
+      "expected": {
+        "rows": 106,
+        "unique_pairs": 106,
+        "same_pair_set_as_eligible": true,
+        "unique_ranks": 106
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pair_scores_source_bias_adjusted.csv"
+      ],
+      "message": "来源偏差校正后的阶段性排名连续且无漏项。"
+    },
+    {
+      "id": "disease_targets_checksum",
+      "status": "passed",
+      "observed": "a0916af3c32947bcd8b4ae142e1c4a064dd088abb34889ca7c56c4528c63d671",
+      "expected": "a0916af3c32947bcd8b4ae142e1c4a064dd088abb34889ca7c56c4528c63d671",
+      "evidence_paths": [
+        "data\\formal_inputs\\genecards_uc\\uc_genecards_targets_normalized.csv",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\report.json"
+      ],
+      "message": "输入文件哈希与分析报告一致。"
+    },
+    {
+      "id": "disease_import_report_checksum",
+      "status": "passed",
+      "observed": "9b96df0677f0987e9bff978ac392a1b8b43564d9cd172c2f6cb20ff22bf4d6f7",
+      "expected": "9b96df0677f0987e9bff978ac392a1b8b43564d9cd172c2f6cb20ff22bf4d6f7",
+      "evidence_paths": [
+        "data\\formal_inputs\\genecards_uc\\import_report.json",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\report.json"
+      ],
+      "message": "输入文件哈希与分析报告一致。"
+    },
+    {
+      "id": "string_raw_checksum",
+      "status": "passed",
+      "observed": "5a2f5b897bdeefe31d261619d7915f272b7d0ca741d03b05997c770fdc86d86a",
+      "expected": "5a2f5b897bdeefe31d261619d7915f272b7d0ca741d03b05997c770fdc86d86a",
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\string_network_raw.json",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\report.json"
+      ],
+      "message": "输入文件哈希与分析报告一致。"
+    },
+    {
+      "id": "scoring_config_checksum",
+      "status": "passed",
+      "observed": "2f31e394d69d0d2a8e0bcfd875671f0bece5d7c86700128b1022c0f70052ea8c",
+      "expected": "2f31e394d69d0d2a8e0bcfd875671f0bece5d7c86700128b1022c0f70052ea8c",
+      "evidence_paths": [
+        "config\\scoring.json",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\report.json"
+      ],
+      "message": "输入文件哈希与分析报告一致。"
+    },
+    {
+      "id": "string_cytoscape_closed_loop",
+      "status": "passed",
+      "observed": {
+        "nodes": 128,
+        "kept_edges": 1334,
+        "dropped_edges": 9,
+        "raw_edges": 1343,
+        "bad_endpoints": 0,
+        "metadata_matches_job": true
+      },
+      "expected": {
+        "nodes": 128,
+        "kept_plus_dropped": 1343,
+        "bad_endpoints": 0,
+        "metadata_matches_job": true
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\cytoscape_nodes.csv",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\cytoscape_edges.csv",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\cytoscape_dropped_edges.csv",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\cytoscape_report.json"
+      ],
+      "message": "STRING原始边、Cytoscape保留边、剔除边和节点形成闭环。"
+    },
+    {
+      "id": "string_edges_exactly_partitioned",
+      "status": "passed",
+      "observed": {
+        "missing_raw_edges": 0,
+        "extra_exported_edges": 0
+      },
+      "expected": {
+        "missing_raw_edges": 0,
+        "extra_exported_edges": 0
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\string_network_raw.json",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\cytoscape_edges.csv",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\cytoscape_dropped_edges.csv"
+      ],
+      "message": "每条STRING原始边都且只进入保留边或有理由的剔除边。"
+    },
+    {
+      "id": "string_mapping_exclusions_disclosed",
+      "status": "passed",
+      "observed": {
+        "count": 9,
+        "all_have_reason": true
+      },
+      "expected": {
+        "count": 9,
+        "all_have_reason": true
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\cytoscape_dropped_edges.csv"
+      ],
+      "message": "STRING名称映射剔除项数量正确且逐条说明原因。"
+    },
+    {
+      "id": "david_all_pairs_coverage",
+      "status": "passed",
+      "observed": {
+        "analysis_status": "completed",
+        "requested": 106,
+        "completed": 106,
+        "failed": 0
+      },
+      "expected": {
+        "requested": 106,
+        "completed": 106,
+        "failed": 0
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_all_pairs_complete_uniprot\\report.json"
+      ],
+      "message": "批处理已完整覆盖预期对象。"
+    },
+    {
+      "id": "david_single_baseline_coverage",
+      "status": "passed",
+      "observed": {
+        "analysis_status": "completed",
+        "requested": 19,
+        "completed": 19,
+        "failed": 0
+      },
+      "expected": {
+        "requested": 19,
+        "completed": 19,
+        "failed": 0
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_single_herb_baselines_all_complete_uniprot\\report.json"
+      ],
+      "message": "批处理已完整覆盖预期对象。"
+    },
+    {
+      "id": "david_pair_rank_provenance",
+      "status": "passed",
+      "observed": {
+        "rank_directories": 106,
+        "succeeded_reports": 106,
+        "direct_api_results": 75,
+        "identical_submission_reuses": 31,
+        "retry_history_count": 1,
+        "unresolved_error_count": 0,
+        "unresolved_error_ranks": [],
+        "missing_report_ranks": [],
+        "missing_numeric_ranks": [],
+        "extra_numeric_ranks": [],
+        "provenance_errors": [],
+        "expected_count": 106
+      },
+      "expected": {
+        "rank_directories": 106,
+        "succeeded_reports": 106,
+        "unresolved_error_count": 0,
+        "missing_report_ranks": [],
+        "missing_numeric_ranks": [],
+        "extra_numeric_ranks": [],
+        "provenance_errors": []
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_all_pairs_complete_uniprot"
+      ],
+      "message": "每个DAVID对象都有成功报告；直接请求、相同提交复用和历史重试均可追溯。"
+    },
+    {
+      "id": "david_single_rank_provenance",
+      "status": "passed",
+      "observed": {
+        "rank_directories": 19,
+        "succeeded_reports": 19,
+        "direct_api_results": 16,
+        "identical_submission_reuses": 3,
+        "retry_history_count": 0,
+        "unresolved_error_count": 0,
+        "unresolved_error_ranks": [],
+        "missing_report_ranks": [],
+        "missing_numeric_ranks": [],
+        "extra_numeric_ranks": [],
+        "provenance_errors": [],
+        "expected_count": 19
+      },
+      "expected": {
+        "rank_directories": 19,
+        "succeeded_reports": 19,
+        "unresolved_error_count": 0,
+        "missing_report_ranks": [],
+        "missing_numeric_ranks": [],
+        "extra_numeric_ranks": [],
+        "provenance_errors": []
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_single_herb_baselines_all_complete_uniprot"
+      ],
+      "message": "每个DAVID对象都有成功报告；直接请求、相同提交复用和历史重试均可追溯。"
+    },
+    {
+      "id": "david_refined_ranking",
+      "status": "passed",
+      "observed": {
+        "report_pairs": 106,
+        "report_baselines": 19,
+        "all_rows": 106,
+        "top_rows": 10,
+        "same_pair_set_as_adjusted": true,
+        "continuous_ranks": 106,
+        "top10_matches_all_pairs_prefix": true
+      },
+      "expected": {
+        "report_pairs": 106,
+        "report_baselines": 19,
+        "all_rows": 106,
+        "top_rows": 10,
+        "same_pair_set_as_adjusted": true,
+        "continuous_ranks": 106,
+        "top10_matches_all_pairs_prefix": true
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_all_pairs_complete_uniprot\\david_pathway_scoring_report.json",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_all_pairs_complete_uniprot\\all_pairs_david_refined_ranking.csv",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_all_pairs_complete_uniprot\\top10_david_refined.csv"
+      ],
+      "message": "DAVID二次评分覆盖全部合格药对和全部单药基线，并输出Top10。"
+    },
+    {
+      "id": "safety_evidence_coverage",
+      "status": "passed",
+      "observed": {
+        "report_pairs": 106,
+        "table_rows": 106
+      },
+      "expected": {
+        "report_pairs": 106,
+        "table_rows": 106
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\safety_evidence_review\\report.json",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\safety_evidence_review\\pair_safety_review_template.csv"
+      ],
+      "message": "全部合格药对均已有安全证据复核位置。"
+    },
+    {
+      "id": "unreviewed_safety_is_not_scored",
+      "status": "passed",
+      "observed": {
+        "numeric_scores": 0,
+        "unauthorized_scores": 0,
+        "state": "manual_review_required"
+      },
+      "expected": "no numeric safety score without explicit final review",
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\safety_evidence_review\\report.json",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\safety_evidence_review\\pair_safety_review_template.csv"
+      ],
+      "message": "未完成人工复核的安全证据没有被擅自打分。"
+    },
+    {
+      "id": "safety_manual_review_finality",
+      "status": "warning",
+      "observed": {
+        "status": "manual_review_required",
+        "reported_final_scores": 0,
+        "fully_reviewed_rows": 0
+      },
+      "expected": {
+        "fully_reviewed_rows": 106
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\safety_evidence_review\\report.json",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\safety_evidence_review\\pair_safety_review_template.csv"
+      ],
+      "message": "安全证据覆盖已建好，但仍需科研人员逐对核验，当前不能生成最终四维总分。"
+    },
+    {
+      "id": "pubmed_all_pairs_coverage",
+      "status": "passed",
+      "observed": {
+        "expected": 106,
+        "covered": 106,
+        "rows": 106
+      },
+      "expected": {
+        "expected": 106,
+        "covered": 106,
+        "rows": 106
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pubmed_all_pair_evidence_finalized\\finalization_report.json",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pubmed_all_pair_evidence_finalized\\pair_pubmed_evidence_summary.csv"
+      ],
+      "message": "PubMed候选证据检索覆盖全部合格药对。"
+    },
+    {
+      "id": "pubmed_candidates_not_auto_scored",
+      "status": "passed",
+      "observed": {
+        "positive_auto_score_rows": 0,
+        "eligible_records": 0
+      },
+      "expected": {
+        "positive_auto_score_rows": 0,
+        "eligible_records": 0
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pubmed_all_pair_evidence_finalized\\finalization_report.json",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pubmed_all_pair_evidence_finalized\\pair_pubmed_evidence_summary.csv"
+      ],
+      "message": "检索命中只作为候选，未被AI自动当作两味药协同证据。"
+    },
+    {
+      "id": "pubmed_manual_review_finality",
+      "status": "warning",
+      "observed": {
+        "review_file": "missing_or_incomplete",
+        "retrieval_requires_review": true
+      },
+      "expected": [
+        "evidence_file_paths",
+        "evidence_sha256",
+        "pair_evidence_score",
+        "pair_evidence_score_final",
+        "pair_key",
+        "reviewed_at",
+        "reviewer"
+      ],
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pubmed_all_pair_evidence_finalized\\finalization_report.json",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pubmed_all_pair_evidence_finalized\\pair_pubmed_evidence_summary.csv",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pubmed_all_pair_evidence_finalized\\pair_evidence_human_reviewed.csv"
+      ],
+      "message": "检索已完成，但缺少逐药对签字复核表；当前配伍证据维度不能称最终完成。"
+    },
+    {
+      "id": "legacy_safety_placeholder_quarantined",
+      "status": "passed",
+      "observed": {
+        "used_numeric_rows": 0,
+        "statuses": [
+          "placeholder_60_rejected"
+        ]
+      },
+      "expected": {
+        "used_numeric_rows": 0,
+        "legacy_placeholder": "rejected"
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_all_pairs_complete_uniprot\\all_pairs_david_refined_ranking.csv",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_all_pairs_complete_uniprot\\david_pathway_scoring_report.json"
+      ],
+      "message": "旧版统一60分已被隔离，没有进入阶段性或最终总分。"
+    },
+    {
+      "id": "official_food_medicine_evidence",
+      "status": "passed",
+      "observed": {
+        "identity_candidate_matches": 20,
+        "botanical_candidate_matches": 20,
+        "eligible_candidate_matches": 20,
+        "source_manifest_rows": 8,
+        "source_hash_mismatches": []
+      },
+      "expected": {
+        "candidate_identity_botanical_eligible": 20,
+        "source_hash_mismatches": []
+      },
+      "evidence_paths": [
+        "config\\official_food_medicine_identity_21.csv",
+        "data\\formal_inputs\\official_food_medicine_catalog\\botanical_part_mapping_20.csv",
+        "data\\formal_inputs\\official_food_medicine_catalog\\source_manifest.csv"
+      ],
+      "message": "正式候选药材均有官方目录身份记录，官方来源快照哈希可核验。"
+    },
+    {
+      "id": "docking_linked_to_current_candidates",
+      "status": "pending",
+      "observed": "no current final-candidate docking report",
+      "expected": "docking report linked to a current reviewed finalist pair",
+      "evidence_paths": [
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\final_candidate_lock.json",
+        "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\docking_final_candidates\\report.json"
+      ],
+      "message": "现有对接仅能作为方法测试；安全和文献复核锁定候选后，才能做正式候选对接。"
+    }
+  ],
+  "interpretation": {
+    "passed": "证据文件存在且结构、数量或哈希符合预期。",
+    "pending": "步骤尚未完成或仍在运行，不能误报失败。",
+    "warning": "流程已覆盖，但需要人工科研判断后才能进入最终评分。",
+    "failed": "出现数据矛盾、数量不闭合、越界或证据完整性错误。"
+  },
+  "important": "网络药理学、PPI、富集分析和分子对接只能形成可审计的协同潜力排名，不能独立证明药对具有1+1>2的真实药效。"
+}

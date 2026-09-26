@@ -1,0 +1,28 @@
+{
+  "status_code": 200,
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "date": "Sat, 26 Sep 2026 11:53:14 GMT"
+  },
+  "json": {
+    "header": {
+      "type": "esearch",
+      "version": "0.3"
+    },
+    "esearchresult": {
+      "count": "0",
+      "retmax": "0",
+      "retstart": "0",
+      "idlist": [],
+      "translationset": [],
+      "querytranslation": "(\"LianZi\"[All Fields] OR \"nelumbo nucifera gaertn\"[All Fields] OR \"Nelumbo nucifera\"[All Fields]) AND (\"Gancao\"[All Fields] OR \"licorice\"[All Fields] OR \"Glycyrrhiza uralensis\"[All Fields] OR \"Glycyrrhiza inflata\"[All Fields] OR \"Glycyrrhiza glabra\"[All Fields]) AND (\"colitis, ulcerative\"[MeSH Terms] OR \"ulcerative colitis\"[All Fields] OR \"colitis\"[All Fields] OR \"intestinal barrier\"[All Fields] OR \"gut barrier\"[All Fields] OR \"intestinal mucosa\"[All Fields] OR \"intestinal mucosal barrier\"[All Fields] OR \"mucosal barrier\"[All Fields])",
+      "warninglist": {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    }
+  }
+}

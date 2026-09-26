@@ -1,0 +1,10 @@
+{
+  "run_id": "20260926-uc20-strict-evidence-v2",
+  "sealed_at": "2026-09-26T13:07:21.738388+00:00",
+  "run_status": "needs_input",
+  "results_finality": "interim",
+  "manifest_sha256": "cffcd9e4353f1a1cda8ef643c67683a5d73329cf7a4e106945ee2f669d2d78d2",
+  "report_sha256": "03f2124a58339f47c2b7c7c339f7a4986b842f133afc3b672d53bcc1405280b4",
+  "checksums_file_sha256": "39420be02a3ab7ffa7f33af92201202bec164511601d583702f23898d2f7f1ac",
+  "credentials_stored": false
+}

@@ -1,0 +1,220 @@
+{
+  "schema_version": "1.0",
+  "rubric_id": "official_safety_evidence_15_v1",
+  "rubric_name": "官方安全证据分",
+  "maximum_score": 15,
+  "unit_of_assessment": "药对",
+  "purpose": "衡量两味候选药材的官方安全证据完整度和可审计性，不表示已经证明药对安全。",
+  "scope": {
+    "combination_size": 2,
+    "route": "口服",
+    "candidate_scope": "国家现行食药物质目录内药材",
+    "research_use_only": true
+  },
+  "hard_gates": [
+    {
+      "id": "official_catalog_eligibility",
+      "name": "现行食药物质目录资格",
+      "pass_condition": "两味药均有可追溯的现行国家食药物质目录身份记录。",
+      "on_fail": "exclude",
+      "score_contribution": 0,
+      "note": "目录资格是入围门槛，不作为可被其他维度补偿的加分项。"
+    },
+    {
+      "id": "botanical_identity_and_part_match",
+      "name": "植物基源与使用部位一致",
+      "pass_condition": "实际材料、成分靶点数据和官方/药典基源及使用部位一致；别名、多基源和加工状态均已记录。",
+      "on_fail": "manual_review_or_exclude",
+      "score_contribution": 0
+    },
+    {
+      "id": "explicit_pair_incompatibility",
+      "name": "明确配伍禁忌",
+      "pass_condition": "经当前有效药典、官方标准或课题组确认的权威禁忌来源核验，未命中明确禁止的药对。",
+      "on_fail": "exclude",
+      "score_contribution": 0
+    },
+    {
+      "id": "dose_limit_compliance",
+      "name": "正式剂量限制合规",
+      "pass_condition": "任务提供了两味药的剂量、给药途径和加工方式，且未超出适用的正式限制。",
+      "on_fail": "manual_review_or_exclude",
+      "score_contribution": 0
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "identity_part_evidence",
+      "name": "身份与部位证据",
+      "max_points": 4,
+      "pair_aggregation": "weakest_link",
+      "levels": [
+        {
+          "points": 4,
+          "criteria": "两味药的目录身份、现行药典植物基源、使用部位、加工状态均已逐项匹配，并有来源、版本和人工复核记录。"
+        },
+        {
+          "points": 3,
+          "criteria": "两味药目录身份已确认；基源和部位有官方辅助材料支持，但至少一项仍依赖非生效征求意见稿或非当前版标准，且风险已明确标注。"
+        },
+        {
+          "points": 2,
+          "criteria": "目录身份已确认，但存在多基源、别名、使用部位或加工状态的部分未闭环问题，尚未发现明确冲突。"
+        },
+        {
+          "points": 1,
+          "criteria": "仅确认目录名称，无法充分对应到本次数据库材料的确切植物基源和部位；必须人工复核。"
+        },
+        {
+          "points": 0,
+          "criteria": "存在可追溯的身份或部位冲突；同时触发硬门槛，结果不得进入正式排名。"
+        }
+      ]
+    },
+    {
+      "id": "official_restrictions_special_populations",
+      "name": "官方使用限制与特殊人群",
+      "max_points": 3,
+      "pair_aggregation": "both_herbs_complete",
+      "levels": [
+        {
+          "points": 3,
+          "criteria": "已检查并保存两味药适用的国家公告、正式标准中的用量、用途和特殊人群限制；本任务参数均符合，且有人工复核。"
+        },
+        {
+          "points": 2,
+          "criteria": "两味药均完成官方来源检索，但至少一项限制的适用性、版本或任务参数仍需人工确认。"
+        },
+        {
+          "points": 1,
+          "criteria": "仅一味药完成完整限制核验，或两味药只完成部分官方来源核验。"
+        },
+        {
+          "points": 0,
+          "criteria": "存在明确不符合的官方限制；同时触发硬门槛，或强制人工复核。"
+        }
+      ]
+    },
+    {
+      "id": "pharmacopoeia_cautions_pair_conflicts",
+      "name": "药典注意、禁忌和药对冲突",
+      "max_points": 4,
+      "pair_aggregation": "pair_specific",
+      "levels": [
+        {
+          "points": 4,
+          "criteria": "两味药的现行药典注意/禁忌/不良反应已结构化；药对禁忌已用权威来源核验，未命中明确冲突，并由研究人员复核。"
+        },
+        {
+          "points": 3,
+          "criteria": "两味药的药典注意事项已提取，药对冲突完成初筛；至少一项仍需专家确认，但没有发现明确禁忌。"
+        },
+        {
+          "points": 2,
+          "criteria": "单味药注意事项信息基本齐全，但药对层面的冲突核验不完整。"
+        },
+        {
+          "points": 1,
+          "criteria": "仅有零散注意事项或二手线索，尚未完成现行药典与权威禁忌来源核验。"
+        },
+        {
+          "points": 0,
+          "criteria": "命中明确配伍禁忌或存在无法排除的重大冲突；同时触发硬门槛。"
+        }
+      ]
+    },
+    {
+      "id": "dose_route_processing",
+      "name": "剂量、途径与加工方式",
+      "max_points": 2,
+      "pair_aggregation": "both_herbs_complete",
+      "levels": [
+        {
+          "points": 2,
+          "criteria": "两味药均提供可追溯剂量、口服途径和加工/炮制状态，并完成正式限制比对。"
+        },
+        {
+          "points": 1,
+          "criteria": "参数已提供但至少一味药的剂量依据、加工状态或限制比对仍需复核。"
+        },
+        {
+          "points": 0,
+          "criteria": "已确认剂量、途径或加工方式不合规；触发硬门槛。"
+        }
+      ],
+      "mandatory_for_final_score": true,
+      "missing_input_result": null
+    },
+    {
+      "id": "official_quality_risk_evidence",
+      "name": "官方质量与风险证据",
+      "max_points": 2,
+      "pair_aggregation": "both_herbs_complete",
+      "levels": [
+        {
+          "points": 2,
+          "criteria": "两味药适用的官方质量标准、污染物/残留/加工风险和必要限值均已记录，并能关联到实际原料或研究批次。"
+        },
+        {
+          "points": 1,
+          "criteria": "已记录通用或部分官方质量风险证据，但至少一味药缺少完整限值、批次或适用性信息。"
+        },
+        {
+          "points": 0,
+          "criteria": "发现明确不合格风险证据，或现有证据表明无法满足适用质量要求。"
+        }
+      ]
+    }
+  ],
+  "missing_data_policy": {
+    "automatic_full_score_for_missing": false,
+    "missing_dimension_score": null,
+    "machine_status": "manual_review_required",
+    "final_score_allowed": false,
+    "rule": "缺失证据不得按0分伪装成已评价，也不得自动给满分；字段保留null/NA并进入人工复核队列。"
+  },
+  "finalization_rules": {
+    "all_hard_gates_must_pass": true,
+    "all_dimension_scores_must_be_numeric": true,
+    "dose_route_processing_required": true,
+    "human_reviewer_required": true,
+    "score_formula": "sum(identity_part_evidence, official_restrictions_special_populations, pharmacopoeia_cautions_pair_conflicts, dose_route_processing, official_quality_risk_evidence)",
+    "maximum_score_check": 15,
+    "when_incomplete": "仅输出官方安全证据分待复核，不得生成正式安全总分。"
+  },
+  "prohibited_inferences": [
+    {
+      "item": "OB与DL",
+      "rule": "OB和DL用于成分筛选，不是安全指标，不得计入官方安全证据分。"
+    },
+    {
+      "item": "毒性靶点预测",
+      "rule": "预测结果只能作为探索性风险线索，不得冒充官方毒理或安全证据。"
+    },
+    {
+      "item": "食药物质目录资格",
+      "rule": "目录资格只表示在规定范围内具有食品与中药材身份，不等于任意剂量、长期使用、特殊人群或任意药对均安全。"
+    },
+    {
+      "item": "未检出风险",
+      "rule": "本次未检出不等于不存在风险；必须保存检索范围、来源版本和日期。"
+    }
+  ],
+  "required_output_fields": [
+    "pair_key",
+    "hard_gate_status",
+    "hard_gate_reasons",
+    "identity_part_evidence",
+    "official_restrictions_special_populations",
+    "pharmacopoeia_cautions_pair_conflicts",
+    "dose_route_processing",
+    "official_quality_risk_evidence",
+    "official_safety_evidence_score",
+    "score_finality",
+    "reviewer",
+    "reviewed_at",
+    "evidence_file_paths",
+    "evidence_sha256"
+  ],
+  "interpretation_limit": "该15分衡量官方安全证据的完整度与一致性，不能替代毒理实验、临床安全评价或处方决策。"
+}

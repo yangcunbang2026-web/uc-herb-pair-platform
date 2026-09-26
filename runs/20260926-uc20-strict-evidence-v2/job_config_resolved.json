@@ -1,0 +1,514 @@
+{
+  "schema_version": "1.1",
+  "pipeline_profile": "UC_food_medicine_two_herb_strict_v1",
+  "supported_combination_sizes": [
+    2
+  ],
+  "artifact_policy": {
+    "mode": "copy",
+    "root": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\20260926-uc20-strict-evidence-v2\\artifacts",
+    "preserve_project_relative_paths": true,
+    "note": "每次运行将配置、日志、原始证据、中间表、图、报告和SHA-256封存到独立run目录。"
+  },
+  "paths": {
+    "database": "data/uc_herbs.sqlite",
+    "candidate_herbs_csv": "config/uc_candidate_herbs_20_strict.csv",
+    "scoring_config": "config/scoring.json",
+    "disease_targets_root": "data/formal_inputs/genecards_uc",
+    "disease_targets_file": "data/formal_inputs/genecards_uc/uc_genecards_targets_normalized.csv",
+    "disease_import_report": "data/formal_inputs/genecards_uc/import_report.json",
+    "tcmsp_evidence_root": "data/channel_tests/tcmsp_uc21",
+    "herb2_supplement_root": "data/formal_inputs/herb2_supplements",
+    "etcm2_supplement_root": "data/formal_inputs/etcm2_supplements",
+    "analysis_root": "data/formal_analysis/genecards_multisource_pairs_20_strict",
+    "david_pairs_root": "data/formal_analysis/genecards_multisource_pairs_20_strict/david_all_pairs_complete_uniprot",
+    "david_single_baselines_root": "data/formal_analysis/genecards_multisource_pairs_20_strict/david_single_herb_baselines_all_complete_uniprot",
+    "safety_review_root": "data/formal_analysis/genecards_multisource_pairs_20_strict/safety_evidence_review",
+    "pubmed_retrieval_root": "data/formal_analysis/genecards_multisource_pairs_20_strict/pubmed_all_pair_evidence",
+    "pubmed_finalized_root": "data/formal_analysis/genecards_multisource_pairs_20_strict/pubmed_all_pair_evidence_finalized",
+    "pubmed_reviewed_scores": "data/formal_analysis/genecards_multisource_pairs_20_strict/pubmed_all_pair_evidence_finalized/pair_evidence_human_reviewed.csv",
+    "official_identity_csv": "config/official_food_medicine_identity_21.csv",
+    "official_botanical_mapping_csv": "data/formal_inputs/official_food_medicine_catalog/botanical_part_mapping_20.csv",
+    "official_source_manifest_csv": "data/formal_inputs/official_food_medicine_catalog/source_manifest.csv",
+    "safety_rubric": "data/formal_inputs/official_food_medicine_catalog/safety_evidence_rubric_15.json",
+    "pubmed_alias_config": "config/pubmed_botanical_aliases.json",
+    "final_candidate_lock": "data/formal_analysis/genecards_multisource_pairs_20_strict/final_candidate_lock.json",
+    "final_docking_report": "data/formal_analysis/genecards_multisource_pairs_20_strict/docking_final_candidates/report.json",
+    "pipeline_config": "config/pipeline_uc_20_strict.json"
+  },
+  "job": {
+    "name": "UC_20味国家药食同源候选_严格两味筛选",
+    "disease": {
+      "name_cn": "溃疡性结肠炎",
+      "name_en": "Ulcerative Colitis",
+      "search_terms": [
+        "Ulcerative Colitis",
+        "UC",
+        "溃疡性结肠炎"
+      ],
+      "species": "Homo sapiens",
+      "taxon_id": 9606
+    },
+    "herbs": [
+      "马齿苋",
+      "蒲公英",
+      "栀子",
+      "金银花",
+      "鱼腥草",
+      "槐米",
+      "茯苓",
+      "薏苡仁",
+      "白扁豆",
+      "山药",
+      "莲子",
+      "芡实",
+      "陈皮",
+      "砂仁",
+      "藿香",
+      "莱菔子",
+      "乌梅",
+      "生姜",
+      "大枣",
+      "甘草"
+    ],
+    "combination_size": 2,
+    "top_n": 10,
+    "endpoint": "UC肠黏膜保护与功能互补协同潜力",
+    "result_label_until_all_reviewed": "阶段性协同潜力排名"
+  },
+  "scoring": {
+    "version": "all_pairs_david_review_gated_v1",
+    "strict_evidence_mode": true,
+    "weights": {
+      "target_complementarity": 0.4,
+      "pathway_synergy": 0.3,
+      "safety": 0.15,
+      "pair_evidence": 0.15
+    },
+    "tcmsp_active_filter": "OB >= 30% and DL >= 0.18",
+    "etcm_active_filter": "Standards = Yes",
+    "genecards_filter": "Relevance Score >= 5",
+    "string_required_score": 700,
+    "david_significance": "PValue < 0.01 and Benjamini < 0.05",
+    "unreviewed_score_policy": "安全性和配伍证据未人工复核时保持空值，不允许旧版统一60分或检索命中自动入分。"
+  },
+  "quality_control": {
+    "expected_candidate_count": 20,
+    "expected_eligible_pair_count": 106,
+    "expected_single_baseline_count": 19,
+    "expected_dropped_string_edges": 9,
+    "excluded_herbs": [
+      "黄芩"
+    ],
+    "note": "这些精确数量只用于本次UC严格20味验证集；换疾病或候选池时必须由新一轮结果重新锁定，不能照搬。"
+  },
+  "data_sources": [
+    {
+      "name": "国家卫健委/国家食品安全风险评估中心食药物质目录",
+      "purpose": "限定候选药材范围并保留正式目录证据",
+      "access_mode": "official_documents_with_local_snapshot_and_sha256"
+    },
+    {
+      "name": "GeneCards",
+      "purpose": "UC疾病靶点和相关性分数",
+      "access_mode": "manual_authenticated_export",
+      "note": "唯一必须由真人登录导出的输入；系统不保存密码、Cookie或验证码。"
+    },
+    {
+      "name": "TCMSP / HERB 2.0 / ETCM 2.0",
+      "purpose": "候选药材成分—靶点证据及缺失补充",
+      "access_mode": "website_or_api_with_raw_snapshots"
+    },
+    {
+      "name": "UniProt",
+      "purpose": "统一人类reviewed蛋白和基因标识",
+      "access_mode": "official_rest_api"
+    },
+    {
+      "name": "STRING 12.0",
+      "purpose": "高置信PPI及药间跨靶点互作",
+      "access_mode": "official_api"
+    },
+    {
+      "name": "Cytoscape 3.10.4",
+      "purpose": "网络图、节点/边表及拓扑指标",
+      "access_mode": "local_automation"
+    },
+    {
+      "name": "DAVID",
+      "purpose": "全部合格药对及其单味基线的GO/KEGG富集",
+      "access_mode": "official_api_rate_limited_resumable"
+    },
+    {
+      "name": "NCBI PubMed",
+      "purpose": "全部合格药对的直接合用文献候选检索",
+      "access_mode": "official_eutilities_api_human_review_gated"
+    },
+    {
+      "name": "RCSB PDB / PubChem / AutoDock Vina",
+      "purpose": "最终少量候选的结构获取、回对接质控和正式分子对接",
+      "access_mode": "official_structure_sources_and_local_docking"
+    }
+  ],
+  "steps": [
+    {
+      "id": "01_disease_targets",
+      "name": "疾病靶点授权导出与标准化",
+      "type": "input_gate",
+      "required": true,
+      "artifacts": [
+        "data/formal_inputs/genecards_uc/raw_export.csv",
+        "data/formal_inputs/genecards_uc/uc_genecards_targets_normalized.csv",
+        "data/formal_inputs/genecards_uc/import_report.json"
+      ],
+      "action_required": "科研人员在GeneCards登录后按标准疾病名导出；系统随后标准化并保留原始表、阈值、报告和哈希。"
+    },
+    {
+      "id": "02_herb_component_targets",
+      "name": "20味药材成分—靶点原始证据",
+      "type": "verify_artifacts",
+      "required": true,
+      "artifacts": [
+        "data/channel_tests/tcmsp_uc21/*.json",
+        "data/formal_inputs/herb2_supplements/HERB002472/report.json",
+        "data/formal_inputs/herb2_supplements/HERB004401/report.json",
+        "data/formal_inputs/etcm2_supplements/莲子/report.json",
+        "data/formal_inputs/etcm2_supplements/藿香/report.json",
+        "data/formal_inputs/official_food_medicine_catalog/source_manifest.csv",
+        "data/formal_inputs/official_food_medicine_catalog/botanical_part_mapping_20.csv"
+      ]
+    },
+    {
+      "id": "03_pair_enumeration_string",
+      "name": "疾病交集、190组枚举及STRING网络",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\.venv\\Scripts\\python.exe",
+        "scripts/run_formal_genecards_pair_pipeline.py",
+        "--job-config",
+        "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\20260926-uc20-strict-evidence-v2\\job_config_resolved.json",
+        "--candidate-herbs-csv",
+        "config/uc_candidate_herbs_20_strict.csv",
+        "--database-path",
+        "data/uc_herbs.sqlite",
+        "--disease-targets-path",
+        "data/formal_inputs/genecards_uc/uc_genecards_targets_normalized.csv",
+        "--disease-report-path",
+        "data/formal_inputs/genecards_uc/import_report.json",
+        "--tcmsp-root",
+        "data/channel_tests/tcmsp_uc21",
+        "--herb2-root",
+        "data/formal_inputs/herb2_supplements",
+        "--etcm2-root",
+        "data/formal_inputs/etcm2_supplements",
+        "--scoring-config",
+        "config/scoring.json",
+        "--output-root",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict",
+        "--combination-size",
+        "2",
+        "--top-n",
+        "10",
+        "--species",
+        "9606",
+        "--string-required-score",
+        "700",
+        "--include-herb2-exact-supplements",
+        "--include-etcm2-exact-supplements"
+      ],
+      "artifacts": [
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/herb_target_audit.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pair_scores_raw_formula_audit.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pair_scores_provisional.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/string_network_raw.json",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/report.json"
+      ]
+    },
+    {
+      "id": "04_cytoscape",
+      "name": "Cytoscape网络图与拓扑分析",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\.venv\\Scripts\\python.exe",
+        "scripts/run_cytoscape_formal_network.py",
+        "--analysis-dir",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict",
+        "--title",
+        "FORMAL_UC_20味国家药食同源候选_严格两味筛选_STRING"
+      ],
+      "artifacts": [
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/cytoscape_nodes.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/cytoscape_edges.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/cytoscape_dropped_edges.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/cytoscape_topology_metrics.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/formal_ppi_network.png",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/formal_ppi_session.cys",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/cytoscape_report.json"
+      ]
+    },
+    {
+      "id": "05_source_bias_adjustment",
+      "name": "跨数据库来源偏差校正",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\.venv\\Scripts\\python.exe",
+        "scripts/build_source_bias_adjusted_ranking.py",
+        "--input-root",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict",
+        "--output-root",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict",
+        "--job-config",
+        "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\20260926-uc20-strict-evidence-v2\\job_config_resolved.json",
+        "--candidate-herbs-csv",
+        "config/uc_candidate_herbs_20_strict.csv",
+        "--top-n",
+        "10"
+      ],
+      "artifacts": [
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pair_scores_source_bias_adjusted.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/top10_source_bias_adjusted_interim.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/ranking_stage_sensitivity.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/source_bias_adjustment_report.json"
+      ]
+    },
+    {
+      "id": "06_prepare_single_baselines",
+      "name": "生成全部参与药材的DAVID单味基线输入",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\.venv\\Scripts\\python.exe",
+        "scripts/prepare_david_single_herb_baselines.py",
+        "--input-root",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict",
+        "--pair-path",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pair_scores_source_bias_adjusted.csv",
+        "--audit-path",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/herb_target_audit.csv",
+        "--output-path",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_single_herb_baselines_all_input.csv",
+        "--job-config",
+        "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\20260926-uc20-strict-evidence-v2\\job_config_resolved.json",
+        "--candidate-herbs-csv",
+        "config/uc_candidate_herbs_20_strict.csv"
+      ],
+      "artifacts": [
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_single_herb_baselines_all_input.csv"
+      ]
+    },
+    {
+      "id": "07_david_all_pairs",
+      "name": "DAVID全部106组药对富集",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\.venv\\Scripts\\python.exe",
+        "scripts/run_david_enrichment_batch.py",
+        "--pair-path",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pair_scores_source_bias_adjusted.csv",
+        "--output-root",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_all_pairs_complete_uniprot",
+        "--rank-column",
+        "adjusted_interim_rank",
+        "--id-type",
+        "UNIPROT_ACCESSION",
+        "--resume",
+        "--continue-on-error"
+      ],
+      "artifacts": [
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_all_pairs_complete_uniprot/all_enrichment_rows.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_all_pairs_complete_uniprot/uniprot_mapping_audit.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_all_pairs_complete_uniprot/report.json"
+      ]
+    },
+    {
+      "id": "08_david_all_single_baselines",
+      "name": "DAVID全部19味单药对照基线",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\.venv\\Scripts\\python.exe",
+        "scripts/run_david_enrichment_batch.py",
+        "--pair-path",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_single_herb_baselines_all_input.csv",
+        "--output-root",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_single_herb_baselines_all_complete_uniprot",
+        "--rank-column",
+        "analysis_rank",
+        "--id-type",
+        "UNIPROT_ACCESSION",
+        "--resume",
+        "--continue-on-error"
+      ],
+      "artifacts": [
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_single_herb_baselines_all_complete_uniprot/all_enrichment_rows.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_single_herb_baselines_all_complete_uniprot/uniprot_mapping_audit.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_single_herb_baselines_all_complete_uniprot/report.json"
+      ]
+    },
+    {
+      "id": "09_david_pathway_refinement",
+      "name": "全部药对相对单药的通路增益评分",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\.venv\\Scripts\\python.exe",
+        "scripts/recalculate_david_pathway_scores.py",
+        "--input-root",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict",
+        "--pair-input",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_all_pairs_complete_uniprot/all_enrichment_rows.csv",
+        "--single-input",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_single_herb_baselines_all_complete_uniprot/all_enrichment_rows.csv",
+        "--ranking-input",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pair_scores_source_bias_adjusted.csv",
+        "--output-root",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_all_pairs_complete_uniprot",
+        "--job-config",
+        "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\20260926-uc20-strict-evidence-v2\\job_config_resolved.json",
+        "--candidate-herbs-csv",
+        "config/uc_candidate_herbs_20_strict.csv",
+        "--scoring-config",
+        "config/scoring.json",
+        "--top-n",
+        "10",
+        "--expected-pair-count",
+        "106",
+        "--expected-baseline-count",
+        "19"
+      ],
+      "artifacts": [
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_all_pairs_complete_uniprot/pair_vs_single_pathway_metrics.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_all_pairs_complete_uniprot/all_pairs_david_refined_ranking.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_all_pairs_complete_uniprot/top10_david_refined.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/david_all_pairs_complete_uniprot/david_pathway_scoring_report.json"
+      ]
+    },
+    {
+      "id": "10_safety_review_evidence",
+      "name": "安全性官方证据覆盖与人工复核模板",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\.venv\\Scripts\\python.exe",
+        "scripts/prepare_safety_evidence_review.py",
+        "--pairs",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pair_scores_source_bias_adjusted.csv",
+        "--output-root",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/safety_evidence_review",
+        "--identity",
+        "config/official_food_medicine_identity_21.csv",
+        "--botanical",
+        "data/formal_inputs/official_food_medicine_catalog/botanical_part_mapping_20.csv",
+        "--rubric",
+        "data/formal_inputs/official_food_medicine_catalog/safety_evidence_rubric_15.json"
+      ],
+      "artifacts": [
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/safety_evidence_review/herb_identity_review.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/safety_evidence_review/pair_safety_review_template.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/safety_evidence_review/report.json"
+      ]
+    },
+    {
+      "id": "11_pubmed_all_pairs",
+      "name": "PubMed全部106组药对证据候选检索",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\.venv\\Scripts\\python.exe",
+        "scripts/collect_pubmed_evidence_for_ranked_pairs.py",
+        "--pairs",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pair_scores_source_bias_adjusted.csv",
+        "--output-root",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pubmed_all_pair_evidence"
+      ],
+      "artifacts": [
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pubmed_all_pair_evidence/query_manifest.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pubmed_all_pair_evidence/pair_retrieval_summary.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pubmed_all_pair_evidence/automatic_prescreen.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pubmed_all_pair_evidence/report.json"
+      ]
+    },
+    {
+      "id": "12_pubmed_review_gate",
+      "name": "PubMed候选证据收尾与禁止自动入分",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\.venv\\Scripts\\python.exe",
+        "scripts/finalize_pubmed_pair_evidence.py",
+        "--input-root",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pubmed_all_pair_evidence",
+        "--output-root",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pubmed_all_pair_evidence_finalized",
+        "--expected-pairs",
+        "106"
+      ],
+      "artifacts": [
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pubmed_all_pair_evidence_finalized/pair_pubmed_evidence_summary.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pubmed_all_pair_evidence_finalized/candidate_manual_full_text_review_queue.csv",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pubmed_all_pair_evidence_finalized/finalization_report.json",
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pubmed_all_pair_evidence_finalized/checksums.sha256"
+      ]
+    },
+    {
+      "id": "13_final_docking",
+      "name": "最终候选分子对接及回对接质控",
+      "type": "checkpoint",
+      "required": true,
+      "satisfied": false,
+      "action_required": "完成安全和文献人工复核并锁定最终少量药对后，选择核心成分和蛋白；先完成共晶配体回对接RMSD不大于2埃，再运行正式对接，并在报告中写明pair_key。"
+    },
+    {
+      "id": "14_machine_qc",
+      "name": "全流程机器质控与证据闭环",
+      "type": "command",
+      "required": true,
+      "command": [
+        "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\.venv\\Scripts\\python.exe",
+        "scripts/run_machine_qc.py",
+        "--config",
+        "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\20260926-uc20-strict-evidence-v2\\job_config_resolved.json",
+        "--fail-on-pending"
+      ],
+      "needs_input_exit_codes": [
+        2
+      ],
+      "action_required": "根据pipeline_qc_report.json完成所有pending和warning项；不得手工把未完成步骤改成通过。",
+      "artifacts": [
+        "data/formal_analysis/genecards_multisource_pairs_20_strict/pipeline_qc_report.json"
+      ]
+    }
+  ],
+  "limitations": [
+    "这套系统输出的是协同潜力排名，不是临床处方，也不能单靠计算证明1+1大于2。",
+    "GeneCards授权导出、文献全文判断、安全性/禁忌/剂量核验仍需要科研人员确认。",
+    "TCMSP、HERB 2.0和ETCM 2.0的收录密度和活性筛选口径不同，来源偏差必须保留并披露。",
+    "DAVID按官方访问限制限速运行，必须支持断点续跑，不能为了快绕过限速。",
+    "安全性或配伍证据未正式复核时只输出阶段性协同潜力Top10，不生成伪最终总分。",
+    "分子对接只对最终少量候选执行，并要求回对接验证；对接分数不是药效证明。"
+  ]
+}

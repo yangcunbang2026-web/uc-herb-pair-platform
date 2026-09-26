@@ -1,0 +1,45 @@
+﻿material_name,ingredient_name,molecular_formula,molecular_weight,qed,fdamdd,etcm_standards_yes
+莲子,(-)-1(R)-N-methylcoclaurine,C18H21NO3,299.150,0.915,0.948,True
+莲子,(-)-1(S)-norcoclaurine,C16H17NO3,271.120,0.632,0.977,False
+莲子,(+)-1(R)-Coclaurine,C17H19NO3,285.140,0.811,0.965,True
+莲子,11-methoxyluteolin,C16H12O7,316.060,0.535,0.501,True
+莲子,calcium,H2Ca,41.980,0.000,0.000,True
+莲子,catechin gallate,C12H14O3,206.090,0.688,0.073,False
+莲子,cobalt,Co,58.930,0.000,0.000,False
+莲子,copper,Cu,62.930,0.000,0.000,True
+莲子,"d,l-armepavine",C19H23NO3,313.170,0.941,0.944,True
+莲子,Dehydronuciferine,C19H19NO2,293.140,0.667,0.737,True
+莲子,delphinidin chloride,C15H11ClO7,338.020,0.301,0.859,True
+莲子,fatty acids,C15H29KO2,280.180,0.460,0.017,False
+莲子,gallocatechin,C15H14O7,306.070,0.437,0.288,True
+莲子,hydroxycinnamic acid,C9H8O3,164.050,0.675,0.003,False
+莲子,iron,Fe,55.930,0.000,0.000,False
+莲子,Isoliensinine,C37H42N2O6,610.300,0.224,0.990,True
+莲子,isorhamnetin 3-O-alpha-D-lyxopyranosyl-(1-2)-beta-D-glucopyranoside,C27H30O16,610.150,0.143,0.003,False
+莲子,isorhamnetin 3-O-alpha-L-rhamnopyranosyl-(1-6)-beta-D-glucopyranoside,C28H32O16,624.170,0.147,0.011,True
+莲子,isorhamnetin 3-O-alpha-L-rhamnopyranosyl-(l-6)-[alpha-D-lyxopyranosyl-(1-2)-beta-D-glucopyranoside],C33H40O20,756.210,0.104,0.004,False
+莲子,kaempferol 3-O-alpha-L-rhamnopyranosyl-(I-6)-beta-D-glucopyranoside,C27H30O15,594.160,0.159,0.007,True
+莲子,Lensinine,C37H42N2O6,610.300,0.224,0.988,True
+莲子,Liensinine,C39H45NO6,623.320,0.197,0.979,False
+莲子,lignin,C15H24O3S,284.140,0.743,0.260,False
+莲子,L-proline-(4-3H(N)),C5H9NO2,115.060,0.498,0.029,True
+莲子,magnesium,H2Mg,26.000,0.000,0.000,False
+莲子,malvidin chloride,C17H15ClO7,366.050,0.545,0.913,True
+莲子,manganese,Mn,54.940,0.000,0.000,False
+莲子,"myricetin 3',5'-dimethylether 3-O-beta-D-glucopyranoside",C22H20O14-2,508.090,0.174,0.070,False
+莲子,Neferine,C38H44N2O6,624.320,0.208,0.938,True
+莲子,nelumboroside A,C28H32O15,608.170,0.157,0.010,False
+莲子,nickel,Ni,57.940,0.000,0.000,False
+莲子,orthoacetic acid,C2H6O3,78.030,0.313,0.034,False
+莲子,paclitaxel,C47H51NO14,853.330,0.168,0.140,True
+莲子,pelargonidin chloride,C15H11ClO5,306.030,0.510,0.719,True
+莲子,peony,C20H13N2NaO4S,400.050,0.400,0.661,True
+莲子,petunia glucoside,C11H17NO3,211.120,0.713,0.092,True
+莲子,phosphorus,H3P,34.000,0.000,0.000,False
+莲子,potassium,HK,39.970,0.000,0.000,False
+莲子,quercetin 3-O-alpha-arabinopyranosyl-(1-2)-beta-galactopyranoside,C26H28O16,596.140,0.137,0.004,False
+莲子,quercetin-3-o-galactopyranoside,C21H22O12,466.110,0.256,0.004,False
+莲子,quercetin-3-O-glucopyranoside,C21H22O12,466.110,0.256,0.003,False
+莲子,Roemerine,C18H17NO2,279.130,0.739,0.958,True
+莲子,tetrahydroxyl diphenylethylene-2-o-glucoside,C20H22O9,406.130,0.343,0.016,True
+莲子,zinc,Zn,63.930,0.000,0.000,False

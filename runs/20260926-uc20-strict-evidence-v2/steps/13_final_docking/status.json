@@ -1,0 +1,15 @@
+{
+  "id": "13_final_docking",
+  "name": "最终候选分子对接及回对接质控",
+  "type": "checkpoint",
+  "status": "needs_input",
+  "started_at": "2026-09-26T13:07:18.930955+00:00",
+  "finished_at": "2026-09-26T13:07:18.940585+00:00",
+  "duration_seconds": 0.0,
+  "required": true,
+  "notes": "",
+  "artifacts_before": [],
+  "action_required": "完成安全和文献人工复核并锁定最终少量药对后，选择核心成分和蛋白；先完成共晶配体回对接RMSD不大于2埃，再运行正式对接，并在报告中写明pair_key。",
+  "artifacts": [],
+  "source_artifacts": []
+}

@@ -1,0 +1,22 @@
+candidate_order,input_name,official_catalog_name,current_catalog_eligible,research_role,catalog_match_type,catalog_identity_confidence,botanical_part_reconciliation,database_mapping_warning,official_source,official_url,evidence_note
+1,马齿苋,马齿苋,true,正式候选,精确同名,高,待逐味核对药典物种与部位,,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,现行目录构成经CFSA 2024-08-15问答确认
+2,蒲公英,蒲公英,true,正式候选,精确同名,高,待逐味核对药典物种与部位,,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,现行目录构成经CFSA 2024-08-15问答确认
+3,栀子,栀子,true,正式候选,精确同名,高,待逐味核对药典物种与部位,,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,现行目录构成经CFSA 2024-08-15问答确认
+4,金银花,金银花,true,正式候选,精确同名,高,待逐味核对药典物种与部位,不得混入山银花,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,现行目录构成经CFSA 2024-08-15问答确认
+5,鱼腥草,鱼腥草,true,正式候选,精确同名,高,待逐味核对药典物种与部位,,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,现行目录构成经CFSA 2024-08-15问答确认
+6,槐米,槐米,true,正式候选,精确同名,高,花蕾；仍需药典复核,HERB条目合并花及花蕾，需保留来源偏差警告,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,2014官方征求意见附件可辅助物种与部位映射但不是生效终版
+7,茯苓,茯苓,true,正式候选,精确同名,高,待逐味核对药典物种与部位,,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,现行目录构成经CFSA 2024-08-15问答确认
+8,薏苡仁,薏苡仁,true,正式候选,精确同名,高,待逐味核对药典物种与部位,,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,现行目录构成经CFSA 2024-08-15问答确认
+9,白扁豆,白扁豆,true,正式候选,精确同名,高,待逐味核对药典物种与部位,,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,现行目录构成经CFSA 2024-08-15问答确认
+10,山药,山药,true,正式候选,精确同名,高,待逐味核对药典物种与部位,,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,现行目录构成经CFSA 2024-08-15问答确认
+11,莲子,莲子,true,正式候选,精确同名,高,待逐味核对药典物种与部位,,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,现行目录构成经CFSA 2024-08-15问答确认
+12,芡实,芡实,true,正式候选,精确同名,高,待逐味核对药典物种与部位,,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,现行目录构成经CFSA 2024-08-15问答确认
+13,陈皮,橘皮,true,正式候选,官方确认别名,高,成熟果皮；仍需药典复核,,卫法监发〔2002〕51号附件1及CFSA陈皮问答,https://www.cfsa.net.cn/spaqbz/sptjj/sxsppzqkhz/_sxsp_ysywzcjwtjx/sywz/sywz/2024/14034.shtml,CFSA明确药典陈皮与目录橘皮为一致物质
+14,砂仁,砂仁,true,正式候选,精确同名,高,具体植物种与药用部位待复核,数据库条目可能涵盖不同砂仁来源，正式使用前必须核对,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,仅目录身份已确认
+15,藿香,藿香,true,正式候选,精确同名,中,地上部分；终版目录未给拉丁种,Pogostemon cablin映射有2014官方征求意见附件支持但该附件不是生效终版,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,身份通过但物种与部位映射置信度中等
+16,莱菔子,莱菔子,true,正式候选,精确同名,高,待逐味核对药典物种与部位,,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,现行目录构成经CFSA 2024-08-15问答确认
+17,乌梅,乌梅,true,正式候选,精确同名,高,待逐味核对药典物种与部位,,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,PubMed别名应包含Prunus mume并保留来源
+18,生姜,姜（生姜、干姜）,true,正式候选,目录括号内明确列出,高,生姜部分待药典复核,不得将生姜和干姜作为同一材料混算,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,目录原文明确列出生姜
+19,大枣,枣（大枣、酸枣、黑枣）,true,正式候选,目录括号内明确列出,高,大枣部分待药典复核,不得混入酸枣仁或其他枣种,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,目录原文明确列出大枣
+20,甘草,甘草,true,正式候选,精确同名,高,待逐味核对药典物种与部位,需另核对用量与长期使用风险,卫法监发〔2002〕51号附件1,https://www.nhc.gov.cn/sps/c100088/200203/33c67ea059284ceea9e45ce61271cd12.shtml,目录身份不等于任意剂量安全
+21,黄芩,,false,非食药物质标杆对照,未命中现行四部分目录,高,不适用,不得误认成2023年新增的黄芪,CFSA现行目录构成问答,https://www.cfsa.net.cn/spaqbz/sptjj/sxsppzqkhz/_sxsp_ysywzcjwtjx/sywz/sywz/2024/14039.shtml,严格药食同源分析必须排除；可单列为阳性或方法学标杆

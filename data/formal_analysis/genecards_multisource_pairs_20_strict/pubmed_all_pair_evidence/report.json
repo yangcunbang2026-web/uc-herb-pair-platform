@@ -1,0 +1,27 @@
+{
+  "analysis_status": "candidate_retrieval_only_human_review_required",
+  "source": "NCBI PubMed E-utilities official API",
+  "run_id": "run_20260926T115108Z",
+  "retrieved_at": "2026-09-26T11:51:08.948468+00:00",
+  "pair_input_path": "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pair_scores_source_bias_adjusted.csv",
+  "pair_input_sha256": "93c005020bdb958ed912366038e0e35d5bafc7733495c273c780cc235481c12a",
+  "botanical_alias_config_path": "config\\pubmed_botanical_aliases.json",
+  "botanical_alias_config_sha256": "9380e6a5a550fd280a6945074cd0c29768c6f7d658212140f0abd732719feaee",
+  "pair_count": 106,
+  "query_count": 212,
+  "candidate_articles": 2,
+  "reviewed_multiherb_formula_exclusions": 2,
+  "accepted_evidence_articles": 0,
+  "pairs_not_retrieved_wording": "本次检索未检出",
+  "raw_run_root": "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pubmed_all_pair_evidence\\raw\\run_20260926T115108Z",
+  "outputs": {
+    "alias_provenance": "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pubmed_all_pair_evidence\\herb_alias_provenance.csv",
+    "query_manifest": "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pubmed_all_pair_evidence\\query_manifest.csv",
+    "pair_retrieval_summary": "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pubmed_all_pair_evidence\\pair_retrieval_summary.csv",
+    "automatic_prescreen": "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pubmed_all_pair_evidence\\automatic_prescreen.csv",
+    "legacy_candidate_compatibility_copy": "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pubmed_all_pair_evidence\\literature_candidates_for_human_review.csv",
+    "manual_review_template": "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pubmed_all_pair_evidence\\manual_review_template.csv",
+    "summary_markdown": "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\pubmed_all_pair_evidence\\summary_report.md"
+  },
+  "important": "Search hits are candidates, not accepted pair evidence. PMID 40775561 and 41693711 are multiherb_formula records and are not score-eligible. Zero hits must be reported only as: 本次检索未检出."
+}
