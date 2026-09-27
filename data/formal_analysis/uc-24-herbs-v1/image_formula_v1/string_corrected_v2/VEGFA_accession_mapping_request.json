@@ -1,0 +1,10 @@
+{
+  "method": "POST",
+  "url": "https://version-12-0.string-db.org/api/json/get_string_ids",
+  "parameters": {
+    "identifiers": "P15692",
+    "species": 9606,
+    "echo_query": 1,
+    "caller_identity": "UC-Herb-Pair-Research"
+  }
+}

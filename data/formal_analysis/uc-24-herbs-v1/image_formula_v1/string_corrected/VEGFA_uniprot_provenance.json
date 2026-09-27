@@ -1,0 +1,8 @@
+{
+  "gene_symbol": "VEGFA",
+  "uniprot_accession": "P15692",
+  "mapping_source": "UniProt_REST_human_reviewed_exact_gene",
+  "request_url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AVEGFA+AND+organism_id%3A9606+AND+reviewed%3Atrue&fields=accession%2Cgene_primary%2Corganism_id%2Creviewed&format=tsv&size=1",
+  "raw_response_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\david_all_pairs_complete_uniprot\\uniprot_raw\\VEGFA.tsv",
+  "raw_response_sha256": "c22c0cb792d88bfc60d4997c07bdac20bab3442c0024caef8e095a54e07caa51"
+}

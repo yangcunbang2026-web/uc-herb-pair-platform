@@ -1,0 +1,45 @@
+[
+  {
+    "ingredient_name": "quercetin",
+    "pubchem_cid": "5280343",
+    "target_gene": "PTGS2",
+    "pdb_id": "5IKR",
+    "best_affinity_kcal_mol": -7.912,
+    "pose_count": 9,
+    "chemical_task_key": "PTGS2:5IKR:PubChem:5280343",
+    "execution_mode": "reused_identical_chemical_task_not_new_pair_experiment",
+    "reuse_reason": "Same receptor/grid bytes, ligand identity, seed/exhaustiveness/num_modes and Vina result evidence",
+    "sources": [
+      {
+        "path": "data\\formal_analysis\\uc-24-herbs-v1\\docking_top3\\target_PTGS2_5IKR\\quercetin_5280343_3d.sdf",
+        "sha256": "91ea8d6f9c5986247a1f0b514ebf7332df895b3e7d302c0ac8e640de25d097c4",
+        "bytes": 6127,
+        "role": "reused historical chemical docking evidence"
+      },
+      {
+        "path": "data\\formal_analysis\\uc-24-herbs-v1\\docking_top3\\target_PTGS2_5IKR\\quercetin_5280343.pdbqt",
+        "sha256": "dd6354162af90fc90f038505b60488c4eef0482a762f33d5dab495612faefd4d",
+        "bytes": 2679,
+        "role": "reused historical chemical docking evidence"
+      },
+      {
+        "path": "data\\formal_analysis\\uc-24-herbs-v1\\docking_top3\\target_PTGS2_5IKR\\quercetin_5280343_out.pdbqt",
+        "sha256": "4206f00f119950b59cbe8fbb92a7f8b2cc4f5d633cf030bbc991876b9c8a065f",
+        "bytes": 26577,
+        "role": "reused historical chemical docking evidence"
+      },
+      {
+        "path": "data\\formal_analysis\\uc-24-herbs-v1\\docking_top3\\target_PTGS2_5IKR\\quercetin_5280343.log",
+        "sha256": "cc31716f01580278d5ac7139ac3e59da41eb624036eeb4eed79e36ff36683ec6",
+        "bytes": 2128,
+        "role": "reused historical chemical docking evidence"
+      }
+    ],
+    "pose_file": "target_PTGS2_5IKR/quercetin_5280343_out.pdbqt",
+    "vina_log": "target_PTGS2_5IKR/quercetin_5280343.log",
+    "sdf_file": "target_PTGS2_5IKR/quercetin_5280343_3d.sdf",
+    "ligand_sha256": "dd6354162af90fc90f038505b60488c4eef0482a762f33d5dab495612faefd4d",
+    "receptor_sha256": "bbabf2dda556e8763d6354654b4a30a5e64170553be1981ba7792fa53dd6f64e",
+    "grid_sha256": "df24f29fa0dc91617a625855195734d882d7d3438301f0c85a18c11a651e40fa"
+  }
+]

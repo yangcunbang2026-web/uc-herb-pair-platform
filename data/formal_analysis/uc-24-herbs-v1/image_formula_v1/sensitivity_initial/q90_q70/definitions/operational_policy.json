@@ -1,0 +1,119 @@
+{
+  "policy_id": "uc_operational_genecards_quantile_kegg_scope_v1",
+  "created_at_utc": "2026-09-27T08:15:33.679389+00:00",
+  "research_only": true,
+  "proof_of_clinical_synergy": false,
+  "gene_grades": {
+    "type": "project_operational_policy_not_official_gene_classification",
+    "method": "linear sample quantile, index=(n-1)*q, interpolate floor/ceil neighbours",
+    "universe_size": 511,
+    "exported_intersection_size": 93,
+    "core_quantile": 0.9,
+    "important_quantile": 0.7,
+    "core_threshold_inclusive": 14.665485,
+    "important_threshold_inclusive": 9.439174,
+    "rules": "score >= core_threshold: core/5; otherwise >= important_threshold: important/2; otherwise normal/1",
+    "tie_policy": "Identical relevance scores always receive identical tiers; no rank-based tie split",
+    "counts": {
+      "core": 20,
+      "important": 20,
+      "normal": 53
+    }
+  },
+  "disease_source": {
+    "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\diseases\\uc-24-herbs-v1\\uc_genecards_targets_normalized.csv",
+    "sha256": "a0916af3c32947bcd8b4ae142e1c4a064dd088abb34889ca7c56c4528c63d671",
+    "selected_disease_universe_size": 511,
+    "source_url": "https://www.genecards.org/Search/Keyword?queryString=Ulcerative%20Colitis",
+    "import_report_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\diseases\\uc-24-herbs-v1\\import_report.json",
+    "import_report_sha256": "9b96df0677f0987e9bff978ac392a1b8b43564d9cd172c2f6cb20ff22bf4d6f7",
+    "raw_source_sha256": "ff7a40c0cd94cb6232f735df071b78e751b2f1888d010e4d067bbf4f0c6b8d37",
+    "disease_query": "Ulcerative Colitis",
+    "source_minimum_relevance_score": 5.0,
+    "raw_unique_gene_symbols": 7136,
+    "universe_definition": "Entire previously selected GeneCards disease pool, before any herb intersection"
+  },
+  "intersection_source": {
+    "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\herb_target_audit.csv",
+    "sha256": "062b14477dfe342b563a5ac58ceaadd8bf5f816d360125c06626f034c1b1f9e2",
+    "herb_count": 24,
+    "intersection_gene_count": 93
+  },
+  "pathway_scope": {
+    "policy_id": "uc_operational_genecards_quantile_kegg_scope_v1",
+    "selection_policy": "Fixed project scope: intestinal barrier, mucosal inflammation and epithelial repair; independent of pair ranking",
+    "official_uc_core_claim": false,
+    "pathways": [
+      {
+        "term_id": "hsa05321",
+        "project_scope_reason": "IBD disease-context scope"
+      },
+      {
+        "term_id": "hsa04530",
+        "project_scope_reason": "intestinal barrier: tight junction"
+      },
+      {
+        "term_id": "hsa04520",
+        "project_scope_reason": "intestinal barrier: adherens junction"
+      },
+      {
+        "term_id": "hsa00512",
+        "project_scope_reason": "mucus barrier: mucin-type O-glycan biosynthesis"
+      },
+      {
+        "term_id": "hsa04672",
+        "project_scope_reason": "mucosal immune function: IgA network"
+      },
+      {
+        "term_id": "hsa04668",
+        "project_scope_reason": "inflammatory signaling: TNF"
+      },
+      {
+        "term_id": "hsa04064",
+        "project_scope_reason": "inflammatory signaling: NF-kappa B"
+      },
+      {
+        "term_id": "hsa04657",
+        "project_scope_reason": "inflammatory signaling: IL-17"
+      },
+      {
+        "term_id": "hsa04630",
+        "project_scope_reason": "immune signaling and epithelial repair: JAK-STAT"
+      },
+      {
+        "term_id": "hsa04310",
+        "project_scope_reason": "epithelial regeneration: Wnt"
+      }
+    ],
+    "go_policy": "GO evidence remains available for display but is not counted in this score, avoiding overlapping GO/KEGG counts",
+    "clinical_synergy_claim": false
+  },
+  "pathway_scope_sha256": "5974de0751586f241cff2e484889f79de0b44710e800d2cd6d73181e5dfcd27f",
+  "kegg_evidence": {
+    "source_url": "https://rest.kegg.jp/get/hsa05321+hsa04530+hsa04520+hsa00512+hsa04672+hsa04668+hsa04064+hsa04657+hsa04630+hsa04310",
+    "api_manual": "https://www.kegg.jp/kegg/rest/keggapi.html",
+    "raw_file": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q90_q70\\definitions\\kegg_fixed_pathways.raw.txt",
+    "sha256": "8543c85fff7dfb252c52499ce62f9ebe0da99b047e462a8224b95c9119108829",
+    "acquisition_mode": "provided_raw",
+    "official_names": {
+      "hsa05321": "Inflammatory bowel disease - Homo sapiens (human)",
+      "hsa04530": "Tight junction - Homo sapiens (human)",
+      "hsa04520": "Adherens junction - Homo sapiens (human)",
+      "hsa00512": "Mucin type O-glycan biosynthesis - Homo sapiens (human)",
+      "hsa04672": "Intestinal immune network for IgA production - Homo sapiens (human)",
+      "hsa04668": "TNF signaling pathway - Homo sapiens (human)",
+      "hsa04064": "NF-kappa B signaling pathway - Homo sapiens (human)",
+      "hsa04657": "IL-17 signaling pathway - Homo sapiens (human)",
+      "hsa04630": "JAK-STAT signaling pathway - Homo sapiens (human)",
+      "hsa04310": "Wnt signaling pathway - Homo sapiens (human)"
+    },
+    "claim_limit": "Official source confirms pathway identity/name, not the project's UC-core hypothesis"
+  },
+  "outputs": {
+    "target_grades_csv": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q90_q70\\staged_target_grades.csv",
+    "target_grades_sha256": "5ddeb7fd03b3b4818ed427d48e0824d8c02705081985b1bc65c5a7c13028f081",
+    "core_pathways_csv": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q90_q70\\staged_core_pathways.csv",
+    "core_pathways_sha256": "d8381f30a3bc3ec75af81157ccbe14c862bd4fd3d4dea730ff481c1326a2f045"
+  },
+  "interpretation": "Heuristic candidate prioritization for this project, not clinically established target importance or 1+1>2 efficacy"
+}

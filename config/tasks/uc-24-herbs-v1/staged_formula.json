@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "method_id": "image_formula_v1",
+  "project_root": "../../..",
+  "input_scope": "沿用既有OB/DL和疾病快照，本轮仅换截图评分和STRING400",
+  "target_grades_csv": "config/tasks/uc-24-herbs-v1/staged_target_grades.csv",
+  "core_pathways_csv": "config/tasks/uc-24-herbs-v1/staged_core_pathways.csv",
+  "disease_reference_csv": "data/formal_inputs/diseases/uc-24-herbs-v1/uc_genecards_targets_normalized.csv",
+  "definition_manifest_json": "data/formal_analysis/uc-24-herbs-v1/image_formula_v1/definitions/operational_policy.json",
+  "ppi_edges_csv": "data/formal_analysis/uc-24-herbs-v1/image_formula_v1/string_validated91/edges.csv",
+  "ppi_metadata_json": "data/formal_analysis/uc-24-herbs-v1/image_formula_v1/string_validated91/metadata.json",
+  "species": 9606,
+  "string_required_score": 400,
+  "stage_limits": [30, 15, 10, 3],
+  "enrichment": {
+    "snapshot_directories": [
+      "data/formal_analysis/uc-24-herbs-v1/david_all_pairs_complete_uniprot",
+      "data/formal_analysis/uc-24-herbs-v1/david_single_herb_baselines_all_complete_uniprot"
+    ],
+    "categories": "GOTERM_BP_FAT,GOTERM_CC_FAT,GOTERM_MF_FAT,KEGG_PATHWAY",
+    "submitted_id_type": "UNIPROT_ACCESSION",
+    "species": 9606,
+    "background": "DAVID_DEFAULT",
+    "background_note": "沿用历史人类UniProt输入的DAVID默认背景；原API请求未设置自定义背景，实际背景由原始富集表的Pop Total等字段留证。",
+    "p_value_cutoff": 0.01
+  },
+  "interpretation": "仅用于研究候选药对的协同潜力排序，不构成实际协同疗效证明。"
+}

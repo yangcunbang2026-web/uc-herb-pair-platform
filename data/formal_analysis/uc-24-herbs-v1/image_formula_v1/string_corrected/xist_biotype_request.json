@@ -1,0 +1,7 @@
+{
+  "method": "GET",
+  "url": "https://rest.ensembl.org/lookup/symbol/homo_sapiens/XIST",
+  "headers": {
+    "Accept": "application/json"
+  }
+}

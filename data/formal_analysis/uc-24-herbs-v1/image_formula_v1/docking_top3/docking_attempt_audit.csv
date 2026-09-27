@@ -1,0 +1,7 @@
+﻿pair_rank,pair_key,herb_name,ingredient_name,status,mode
+1,甘草__马齿苋,甘草,quercetin,completed,reused_identical_chemical_task_not_new_pair_experiment
+1,甘草__马齿苋,马齿苋,quercetin,completed,reused_identical_chemical_task_not_new_pair_experiment
+2,甘草__黄芪,甘草,quercetin,completed,reused_identical_chemical_task_not_new_pair_experiment
+2,甘草__黄芪,黄芪,quercetin,completed,reused_identical_chemical_task_not_new_pair_experiment
+3,甘草__石榴皮,甘草,quercetin,completed,reused_identical_chemical_task_not_new_pair_experiment
+3,甘草__石榴皮,石榴皮,quercetin,completed,reused_identical_chemical_task_not_new_pair_experiment

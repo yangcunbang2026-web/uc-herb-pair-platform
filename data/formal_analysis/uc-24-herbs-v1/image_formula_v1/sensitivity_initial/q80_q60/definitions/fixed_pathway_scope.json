@@ -1,0 +1,49 @@
+{
+  "policy_id": "uc_operational_genecards_quantile_kegg_scope_v1",
+  "selection_policy": "Fixed project scope: intestinal barrier, mucosal inflammation and epithelial repair; independent of pair ranking",
+  "official_uc_core_claim": false,
+  "pathways": [
+    {
+      "term_id": "hsa05321",
+      "project_scope_reason": "IBD disease-context scope"
+    },
+    {
+      "term_id": "hsa04530",
+      "project_scope_reason": "intestinal barrier: tight junction"
+    },
+    {
+      "term_id": "hsa04520",
+      "project_scope_reason": "intestinal barrier: adherens junction"
+    },
+    {
+      "term_id": "hsa00512",
+      "project_scope_reason": "mucus barrier: mucin-type O-glycan biosynthesis"
+    },
+    {
+      "term_id": "hsa04672",
+      "project_scope_reason": "mucosal immune function: IgA network"
+    },
+    {
+      "term_id": "hsa04668",
+      "project_scope_reason": "inflammatory signaling: TNF"
+    },
+    {
+      "term_id": "hsa04064",
+      "project_scope_reason": "inflammatory signaling: NF-kappa B"
+    },
+    {
+      "term_id": "hsa04657",
+      "project_scope_reason": "inflammatory signaling: IL-17"
+    },
+    {
+      "term_id": "hsa04630",
+      "project_scope_reason": "immune signaling and epithelial repair: JAK-STAT"
+    },
+    {
+      "term_id": "hsa04310",
+      "project_scope_reason": "epithelial regeneration: Wnt"
+    }
+  ],
+  "go_policy": "GO evidence remains available for display but is not counted in this score, avoiding overlapping GO/KEGG counts",
+  "clinical_synergy_claim": false
+}

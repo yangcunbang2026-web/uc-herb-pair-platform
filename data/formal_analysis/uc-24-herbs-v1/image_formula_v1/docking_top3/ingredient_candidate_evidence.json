@@ -1,0 +1,600 @@
+[
+  {
+    "pair_rank": 1,
+    "pair_key": "甘草__马齿苋",
+    "herb_name": "甘草",
+    "ingredient_id": "MOL000098",
+    "ingredient_name": "quercetin",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "CXCL10",
+      "CXCL8",
+      "IFNG",
+      "IL10",
+      "IL1B",
+      "IL2",
+      "IL6",
+      "NFE2L2",
+      "PPARG",
+      "PTGS2",
+      "TNF",
+      "TP53"
+    ],
+    "core_hit_count": 12,
+    "ob": 46.4333481195,
+    "dl": 0.27525,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\02_甘草.json",
+        "sha256": "327a7f0fc28b26e50aa9940bcb52d7a947e0560be3764060d2ee543e74bb784f",
+        "bytes": 872958,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 1
+  },
+  {
+    "pair_rank": 1,
+    "pair_key": "甘草__马齿苋",
+    "herb_name": "甘草",
+    "ingredient_id": "MOL000392",
+    "ingredient_name": "formononetin",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "IL4",
+      "NOS2",
+      "PPARG",
+      "PTGS2"
+    ],
+    "core_hit_count": 4,
+    "ob": 69.6738806088,
+    "dl": 0.21202,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\02_甘草.json",
+        "sha256": "327a7f0fc28b26e50aa9940bcb52d7a947e0560be3764060d2ee543e74bb784f",
+        "bytes": 872958,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 2
+  },
+  {
+    "pair_rank": 1,
+    "pair_key": "甘草__马齿苋",
+    "herb_name": "甘草",
+    "ingredient_id": "MOL000422",
+    "ingredient_name": "kaempferol",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "NOS2",
+      "PPARG",
+      "PTGS2",
+      "TNF"
+    ],
+    "core_hit_count": 4,
+    "ob": 41.8822495352,
+    "dl": 0.24066,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\02_甘草.json",
+        "sha256": "327a7f0fc28b26e50aa9940bcb52d7a947e0560be3764060d2ee543e74bb784f",
+        "bytes": 872958,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 3
+  },
+  {
+    "pair_rank": 1,
+    "pair_key": "甘草__马齿苋",
+    "herb_name": "马齿苋",
+    "ingredient_id": "MOL000098",
+    "ingredient_name": "quercetin",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "CXCL10",
+      "CXCL8",
+      "IFNG",
+      "IL10",
+      "IL1B",
+      "IL2",
+      "IL6",
+      "NFE2L2",
+      "PPARG",
+      "PTGS2",
+      "TNF",
+      "TP53"
+    ],
+    "core_hit_count": 12,
+    "ob": 46.4333481195,
+    "dl": 0.27525,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\06_马齿苋.json",
+        "sha256": "2567dee00149e47a6c8e5ab36728a9154d581b362b4ba9e83bfb67b08241e5c4",
+        "bytes": 500564,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 1
+  },
+  {
+    "pair_rank": 1,
+    "pair_key": "甘草__马齿苋",
+    "herb_name": "马齿苋",
+    "ingredient_id": "MOL000006",
+    "ingredient_name": "luteolin",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "IFNG",
+      "IL10",
+      "IL2",
+      "IL4",
+      "IL6",
+      "PPARG",
+      "PTGS2",
+      "TNF",
+      "TP53"
+    ],
+    "core_hit_count": 9,
+    "ob": 36.1626293429,
+    "dl": 0.24552,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\06_马齿苋.json",
+        "sha256": "2567dee00149e47a6c8e5ab36728a9154d581b362b4ba9e83bfb67b08241e5c4",
+        "bytes": 500564,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 2
+  },
+  {
+    "pair_rank": 1,
+    "pair_key": "甘草__马齿苋",
+    "herb_name": "马齿苋",
+    "ingredient_id": "MOL000422",
+    "ingredient_name": "kaempferol",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "NOS2",
+      "PPARG",
+      "PTGS2",
+      "TNF"
+    ],
+    "core_hit_count": 4,
+    "ob": 41.8822495352,
+    "dl": 0.24066,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\06_马齿苋.json",
+        "sha256": "2567dee00149e47a6c8e5ab36728a9154d581b362b4ba9e83bfb67b08241e5c4",
+        "bytes": 500564,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 3
+  },
+  {
+    "pair_rank": 2,
+    "pair_key": "甘草__黄芪",
+    "herb_name": "甘草",
+    "ingredient_id": "MOL000098",
+    "ingredient_name": "quercetin",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "CXCL10",
+      "CXCL8",
+      "IFNG",
+      "IL10",
+      "IL1B",
+      "IL2",
+      "IL6",
+      "NFE2L2",
+      "PPARG",
+      "PTGS2",
+      "TNF",
+      "TP53"
+    ],
+    "core_hit_count": 12,
+    "ob": 46.4333481195,
+    "dl": 0.27525,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\02_甘草.json",
+        "sha256": "327a7f0fc28b26e50aa9940bcb52d7a947e0560be3764060d2ee543e74bb784f",
+        "bytes": 872958,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 1
+  },
+  {
+    "pair_rank": 2,
+    "pair_key": "甘草__黄芪",
+    "herb_name": "甘草",
+    "ingredient_id": "MOL000392",
+    "ingredient_name": "formononetin",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "IL4",
+      "NOS2",
+      "PPARG",
+      "PTGS2"
+    ],
+    "core_hit_count": 4,
+    "ob": 69.6738806088,
+    "dl": 0.21202,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\02_甘草.json",
+        "sha256": "327a7f0fc28b26e50aa9940bcb52d7a947e0560be3764060d2ee543e74bb784f",
+        "bytes": 872958,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 2
+  },
+  {
+    "pair_rank": 2,
+    "pair_key": "甘草__黄芪",
+    "herb_name": "甘草",
+    "ingredient_id": "MOL000422",
+    "ingredient_name": "kaempferol",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "NOS2",
+      "PPARG",
+      "PTGS2",
+      "TNF"
+    ],
+    "core_hit_count": 4,
+    "ob": 41.8822495352,
+    "dl": 0.24066,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\02_甘草.json",
+        "sha256": "327a7f0fc28b26e50aa9940bcb52d7a947e0560be3764060d2ee543e74bb784f",
+        "bytes": 872958,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 3
+  },
+  {
+    "pair_rank": 2,
+    "pair_key": "甘草__黄芪",
+    "herb_name": "黄芪",
+    "ingredient_id": "MOL000098",
+    "ingredient_name": "quercetin",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "CXCL10",
+      "CXCL8",
+      "IFNG",
+      "IL10",
+      "IL1B",
+      "IL2",
+      "IL6",
+      "NFE2L2",
+      "PPARG",
+      "PTGS2",
+      "TNF",
+      "TP53"
+    ],
+    "core_hit_count": 12,
+    "ob": 46.4333481195,
+    "dl": 0.27525,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\18_黄芪.json",
+        "sha256": "ec531c2801ff20162f784086d644e12a93549ccf29c48e850ff1616c68283d41",
+        "bytes": 321834,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 1
+  },
+  {
+    "pair_rank": 2,
+    "pair_key": "甘草__黄芪",
+    "herb_name": "黄芪",
+    "ingredient_id": "MOL000392",
+    "ingredient_name": "formononetin",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "IL4",
+      "NOS2",
+      "PPARG",
+      "PTGS2"
+    ],
+    "core_hit_count": 4,
+    "ob": 69.6738806088,
+    "dl": 0.21202,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\18_黄芪.json",
+        "sha256": "ec531c2801ff20162f784086d644e12a93549ccf29c48e850ff1616c68283d41",
+        "bytes": 321834,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 2
+  },
+  {
+    "pair_rank": 2,
+    "pair_key": "甘草__黄芪",
+    "herb_name": "黄芪",
+    "ingredient_id": "MOL000422",
+    "ingredient_name": "kaempferol",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "NOS2",
+      "PPARG",
+      "PTGS2",
+      "TNF"
+    ],
+    "core_hit_count": 4,
+    "ob": 41.8822495352,
+    "dl": 0.24066,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\18_黄芪.json",
+        "sha256": "ec531c2801ff20162f784086d644e12a93549ccf29c48e850ff1616c68283d41",
+        "bytes": 321834,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 3
+  },
+  {
+    "pair_rank": 3,
+    "pair_key": "甘草__石榴皮",
+    "herb_name": "甘草",
+    "ingredient_id": "MOL000098",
+    "ingredient_name": "quercetin",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "CXCL10",
+      "CXCL8",
+      "IFNG",
+      "IL10",
+      "IL1B",
+      "IL2",
+      "IL6",
+      "NFE2L2",
+      "PPARG",
+      "PTGS2",
+      "TNF",
+      "TP53"
+    ],
+    "core_hit_count": 12,
+    "ob": 46.4333481195,
+    "dl": 0.27525,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\02_甘草.json",
+        "sha256": "327a7f0fc28b26e50aa9940bcb52d7a947e0560be3764060d2ee543e74bb784f",
+        "bytes": 872958,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 1
+  },
+  {
+    "pair_rank": 3,
+    "pair_key": "甘草__石榴皮",
+    "herb_name": "甘草",
+    "ingredient_id": "MOL000392",
+    "ingredient_name": "formononetin",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "IL4",
+      "NOS2",
+      "PPARG",
+      "PTGS2"
+    ],
+    "core_hit_count": 4,
+    "ob": 69.6738806088,
+    "dl": 0.21202,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\02_甘草.json",
+        "sha256": "327a7f0fc28b26e50aa9940bcb52d7a947e0560be3764060d2ee543e74bb784f",
+        "bytes": 872958,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 2
+  },
+  {
+    "pair_rank": 3,
+    "pair_key": "甘草__石榴皮",
+    "herb_name": "甘草",
+    "ingredient_id": "MOL000422",
+    "ingredient_name": "kaempferol",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "NOS2",
+      "PPARG",
+      "PTGS2",
+      "TNF"
+    ],
+    "core_hit_count": 4,
+    "ob": 41.8822495352,
+    "dl": 0.24066,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\02_甘草.json",
+        "sha256": "327a7f0fc28b26e50aa9940bcb52d7a947e0560be3764060d2ee543e74bb784f",
+        "bytes": 872958,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 3
+  },
+  {
+    "pair_rank": 3,
+    "pair_key": "甘草__石榴皮",
+    "herb_name": "石榴皮",
+    "ingredient_id": "MOL000098",
+    "ingredient_name": "quercetin",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "CXCL10",
+      "CXCL8",
+      "IFNG",
+      "IL10",
+      "IL1B",
+      "IL2",
+      "IL6",
+      "NFE2L2",
+      "PPARG",
+      "PTGS2",
+      "TNF",
+      "TP53"
+    ],
+    "core_hit_count": 12,
+    "ob": 46.4333481195,
+    "dl": 0.27525,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\20_石榴皮.json",
+        "sha256": "2d904db5f6031b1353de2792d0d6ba07d3ea4ac6851edae4edfc18aa0ad9ef3b",
+        "bytes": 153409,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 1
+  },
+  {
+    "pair_rank": 3,
+    "pair_key": "甘草__石榴皮",
+    "herb_name": "石榴皮",
+    "ingredient_id": "MOL000006",
+    "ingredient_name": "luteolin",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "IFNG",
+      "IL10",
+      "IL2",
+      "IL4",
+      "IL6",
+      "PPARG",
+      "PTGS2",
+      "TNF",
+      "TP53"
+    ],
+    "core_hit_count": 9,
+    "ob": 36.1626293429,
+    "dl": 0.24552,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\20_石榴皮.json",
+        "sha256": "2d904db5f6031b1353de2792d0d6ba07d3ea4ac6851edae4edfc18aa0ad9ef3b",
+        "bytes": 153409,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 2
+  },
+  {
+    "pair_rank": 3,
+    "pair_key": "甘草__石榴皮",
+    "herb_name": "石榴皮",
+    "ingredient_id": "MOL000422",
+    "ingredient_name": "kaempferol",
+    "target_gene": "PTGS2",
+    "target_is_pair_common_core": true,
+    "common_core_target_hits": [
+      "NOS2",
+      "PPARG",
+      "PTGS2",
+      "TNF"
+    ],
+    "core_hit_count": 4,
+    "ob": 41.8822495352,
+    "dl": 0.24066,
+    "sources": [
+      {
+        "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\20_石榴皮.json",
+        "sha256": "2d904db5f6031b1353de2792d0d6ba07d3ea4ac6851edae4edfc18aa0ad9ef3b",
+        "bytes": 153409,
+        "role": "herb-compound-target source"
+      }
+    ],
+    "database_sources": [
+      "TCMSP exact material"
+    ],
+    "ingredient_priority": 3
+  }
+]

@@ -1,0 +1,690 @@
+{
+  "scope": "complete_for_initial_stage_only",
+  "status": "complete_for_initial_stage_only",
+  "formula_version": "image-staged-v1",
+  "created_at_utc": "2026-09-27T08:15:33.895803+00:00",
+  "baseline": "q90_q70",
+  "herb_count": 24,
+  "enumerated_pair_count": 276,
+  "sources": [
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\diseases\\uc-24-herbs-v1\\uc_genecards_targets_normalized.csv",
+      "sha256": "a0916af3c32947bcd8b4ae142e1c4a064dd088abb34889ca7c56c4528c63d671",
+      "bytes": 8551
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\herb_target_audit.csv",
+      "sha256": "062b14477dfe342b563a5ac58ceaadd8bf5f816d360125c06626f034c1b1f9e2",
+      "bytes": 10012
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\definitions\\kegg_fixed_pathways.raw.txt",
+      "sha256": "8543c85fff7dfb252c52499ce62f9ebe0da99b047e462a8224b95c9119108829",
+      "bytes": 173627
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\diseases\\uc-24-herbs-v1\\import_report.json",
+      "sha256": "9b96df0677f0987e9bff978ac392a1b8b43564d9cd172c2f6cb20ff22bf4d6f7",
+      "bytes": 972
+    }
+  ],
+  "outputs": [
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q90_q70\\staged_target_grades.csv",
+      "sha256": "5ddeb7fd03b3b4818ed427d48e0824d8c02705081985b1bc65c5a7c13028f081",
+      "bytes": 44165
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q90_q70\\staged_core_pathways.csv",
+      "sha256": "d8381f30a3bc3ec75af81157ccbe14c862bd4fd3d4dea730ff481c1326a2f045",
+      "bytes": 5959
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q90_q70\\definitions\\operational_policy.json",
+      "sha256": "3f0a3a634219d0f9fb443d49775ccb938a1a09b6fa95463a55bcea0489c9d5a9",
+      "bytes": 6326
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q90_q70\\initial_ranking.json",
+      "sha256": "b90df9d9a646e58699a7720ec81911a4e9e5219f62d611f7dd1f4b4aa06f76f7",
+      "bytes": 1414799
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q90_q70\\initial_scores.csv",
+      "sha256": "5b4403afabc16468d4e8bc27ba502ec955c56c69c445db50fa26afc85d8e7eb1",
+      "bytes": 284338
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q85_q65\\staged_target_grades.csv",
+      "sha256": "485a9e9c826034c30f0890fbf16e6182353c7f54beed26fbaa837aca38609469",
+      "bytes": 44352
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q85_q65\\staged_core_pathways.csv",
+      "sha256": "9e9983810a1ef9646eb0e3c9448b071d8a324b7aada8ea230cbe73ca0470ffac",
+      "bytes": 5959
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q85_q65\\definitions\\operational_policy.json",
+      "sha256": "815c524572efa1f537fd6b09379f310c4bc1d038115849466a8ef1dded91912d",
+      "bytes": 6330
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q85_q65\\initial_ranking.json",
+      "sha256": "050629823babce107ebc1f30adc1763952ef982fdfd280f2b4b4ecc8c5ea6b6b",
+      "bytes": 1418177
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q85_q65\\initial_scores.csv",
+      "sha256": "1c8e897cfa890cbe16f55a1bb19c3be917741c395c664047916b5ed2eb4a39fd",
+      "bytes": 284581
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q80_q60\\staged_target_grades.csv",
+      "sha256": "614d87ae3abc4130c409048ca645e4cad6653611c7c7a58dec02900523eedfa6",
+      "bytes": 44163
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q80_q60\\staged_core_pathways.csv",
+      "sha256": "8fc99b3c9e2ff94bfa090a333e6d903fed3493ed7ee9e1584e5b28ad3fbe9279",
+      "bytes": 5959
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q80_q60\\definitions\\operational_policy.json",
+      "sha256": "522e3283dec5083de8e7e29bd6f9d706aab8b5afa17f97cab035bfa26bc1dd70",
+      "bytes": 6327
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q80_q60\\initial_ranking.json",
+      "sha256": "da87a29fa099015f1d39fdb720285613640b4ec29b38b64fc0990393e6683c96",
+      "bytes": 1420811
+    },
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q80_q60\\initial_scores.csv",
+      "sha256": "c856883ce4e568ef589eb2b513006e854d5d7e2187efea6392d30ce34cf63bb9",
+      "bytes": 284397
+    }
+  ],
+  "variants": [
+    {
+      "label": "q90_q70",
+      "core_quantile": 0.9,
+      "important_quantile": 0.7,
+      "gene_grades": {
+        "type": "project_operational_policy_not_official_gene_classification",
+        "method": "linear sample quantile, index=(n-1)*q, interpolate floor/ceil neighbours",
+        "universe_size": 511,
+        "exported_intersection_size": 93,
+        "core_quantile": 0.9,
+        "important_quantile": 0.7,
+        "core_threshold_inclusive": 14.665485,
+        "important_threshold_inclusive": 9.439174,
+        "rules": "score >= core_threshold: core/5; otherwise >= important_threshold: important/2; otherwise normal/1",
+        "tie_policy": "Identical relevance scores always receive identical tiers; no rank-based tie split",
+        "counts": {
+          "core": 20,
+          "important": 20,
+          "normal": 53
+        }
+      },
+      "selected_count": 30,
+      "scored_pair_count": 276,
+      "cutoff_tie": false,
+      "top30": [
+        "甘草__马齿苋",
+        "甘草__黄芪",
+        "甘草__石榴皮",
+        "石榴皮__黄芪",
+        "乌梅__甘草",
+        "马齿苋__黄芪",
+        "石榴皮__马齿苋",
+        "甘草__鱼腥草",
+        "栀子__甘草",
+        "槐花__甘草",
+        "大枣__甘草",
+        "乌梅__石榴皮",
+        "大枣__石榴皮",
+        "大枣__马齿苋",
+        "石榴皮__鱼腥草",
+        "栀子__石榴皮",
+        "槐花__石榴皮",
+        "乌梅__马齿苋",
+        "乌梅__黄芪",
+        "大枣__黄芪",
+        "马齿苋__鱼腥草",
+        "鱼腥草__黄芪",
+        "栀子__马齿苋",
+        "栀子__黄芪",
+        "槐花__马齿苋",
+        "槐花__黄芪",
+        "乌梅__大枣",
+        "大枣__鱼腥草",
+        "大枣__栀子",
+        "大枣__槐花"
+      ],
+      "definition_file": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q90_q70\\definitions\\operational_policy.json",
+      "initial_ranking_file": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q90_q70\\initial_ranking.json"
+    },
+    {
+      "label": "q85_q65",
+      "core_quantile": 0.85,
+      "important_quantile": 0.65,
+      "gene_grades": {
+        "type": "project_operational_policy_not_official_gene_classification",
+        "method": "linear sample quantile, index=(n-1)*q, interpolate floor/ceil neighbours",
+        "universe_size": 511,
+        "exported_intersection_size": 93,
+        "core_quantile": 0.85,
+        "important_quantile": 0.65,
+        "core_threshold_inclusive": 12.8477335,
+        "important_threshold_inclusive": 8.4260895,
+        "rules": "score >= core_threshold: core/5; otherwise >= important_threshold: important/2; otherwise normal/1",
+        "tie_policy": "Identical relevance scores always receive identical tiers; no rank-based tie split",
+        "counts": {
+          "core": 24,
+          "important": 23,
+          "normal": 46
+        }
+      },
+      "selected_count": 30,
+      "scored_pair_count": 276,
+      "cutoff_tie": false,
+      "top30": [
+        "甘草__马齿苋",
+        "甘草__黄芪",
+        "甘草__石榴皮",
+        "石榴皮__黄芪",
+        "乌梅__甘草",
+        "甘草__鱼腥草",
+        "马齿苋__黄芪",
+        "栀子__甘草",
+        "槐花__甘草",
+        "石榴皮__马齿苋",
+        "大枣__甘草",
+        "乌梅__石榴皮",
+        "石榴皮__鱼腥草",
+        "大枣__马齿苋",
+        "大枣__石榴皮",
+        "栀子__石榴皮",
+        "槐花__石榴皮",
+        "乌梅__马齿苋",
+        "乌梅__黄芪",
+        "马齿苋__鱼腥草",
+        "鱼腥草__黄芪",
+        "大枣__黄芪",
+        "栀子__马齿苋",
+        "栀子__黄芪",
+        "槐花__马齿苋",
+        "槐花__黄芪",
+        "乌梅__大枣",
+        "大枣__鱼腥草",
+        "大枣__栀子",
+        "大枣__槐花"
+      ],
+      "definition_file": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q85_q65\\definitions\\operational_policy.json",
+      "initial_ranking_file": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q85_q65\\initial_ranking.json"
+    },
+    {
+      "label": "q80_q60",
+      "core_quantile": 0.8,
+      "important_quantile": 0.6,
+      "gene_grades": {
+        "type": "project_operational_policy_not_official_gene_classification",
+        "method": "linear sample quantile, index=(n-1)*q, interpolate floor/ceil neighbours",
+        "universe_size": 511,
+        "exported_intersection_size": 93,
+        "core_quantile": 0.8,
+        "important_quantile": 0.6,
+        "core_threshold_inclusive": 11.856749,
+        "important_threshold_inclusive": 7.8020153,
+        "rules": "score >= core_threshold: core/5; otherwise >= important_threshold: important/2; otherwise normal/1",
+        "tie_policy": "Identical relevance scores always receive identical tiers; no rank-based tie split",
+        "counts": {
+          "core": 27,
+          "important": 24,
+          "normal": 42
+        }
+      },
+      "selected_count": 30,
+      "scored_pair_count": 276,
+      "cutoff_tie": false,
+      "top30": [
+        "甘草__马齿苋",
+        "甘草__黄芪",
+        "甘草__石榴皮",
+        "乌梅__甘草",
+        "石榴皮__黄芪",
+        "甘草__鱼腥草",
+        "栀子__甘草",
+        "槐花__甘草",
+        "马齿苋__黄芪",
+        "石榴皮__马齿苋",
+        "大枣__甘草",
+        "乌梅__石榴皮",
+        "石榴皮__鱼腥草",
+        "大枣__马齿苋",
+        "大枣__石榴皮",
+        "栀子__石榴皮",
+        "槐花__石榴皮",
+        "乌梅__马齿苋",
+        "乌梅__黄芪",
+        "马齿苋__鱼腥草",
+        "鱼腥草__黄芪",
+        "大枣__黄芪",
+        "栀子__马齿苋",
+        "栀子__黄芪",
+        "槐花__马齿苋",
+        "槐花__黄芪",
+        "乌梅__大枣",
+        "大枣__鱼腥草",
+        "大枣__栀子",
+        "大枣__槐花"
+      ],
+      "definition_file": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q80_q60\\definitions\\operational_policy.json",
+      "initial_ranking_file": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\sensitivity_initial\\q80_q60\\initial_ranking.json"
+    }
+  ],
+  "comparisons_to_baseline": {
+    "q85_q65": {
+      "scope": "complete_for_initial_stage_only",
+      "baseline_top_count": 30,
+      "variant_top_count": 30,
+      "common_top_count": 30,
+      "union_top_count": 30,
+      "jaccard_top_set": 1.0,
+      "added_to_top": [],
+      "removed_from_top": [],
+      "common_top_rank_changes": [
+        {
+          "pair_key": "乌梅__大枣",
+          "baseline_rank": 27,
+          "variant_rank": 27,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "乌梅__甘草",
+          "baseline_rank": 5,
+          "variant_rank": 5,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "乌梅__石榴皮",
+          "baseline_rank": 12,
+          "variant_rank": 12,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "乌梅__马齿苋",
+          "baseline_rank": 18,
+          "variant_rank": 18,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "乌梅__黄芪",
+          "baseline_rank": 19,
+          "variant_rank": 19,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "大枣__栀子",
+          "baseline_rank": 29,
+          "variant_rank": 29,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "大枣__槐花",
+          "baseline_rank": 30,
+          "variant_rank": 30,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "大枣__甘草",
+          "baseline_rank": 11,
+          "variant_rank": 11,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "大枣__石榴皮",
+          "baseline_rank": 13,
+          "variant_rank": 15,
+          "rank_change": 2
+        },
+        {
+          "pair_key": "大枣__马齿苋",
+          "baseline_rank": 14,
+          "variant_rank": 14,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "大枣__鱼腥草",
+          "baseline_rank": 28,
+          "variant_rank": 28,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "大枣__黄芪",
+          "baseline_rank": 20,
+          "variant_rank": 22,
+          "rank_change": 2
+        },
+        {
+          "pair_key": "栀子__甘草",
+          "baseline_rank": 9,
+          "variant_rank": 8,
+          "rank_change": -1
+        },
+        {
+          "pair_key": "栀子__石榴皮",
+          "baseline_rank": 16,
+          "variant_rank": 16,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "栀子__马齿苋",
+          "baseline_rank": 23,
+          "variant_rank": 23,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "栀子__黄芪",
+          "baseline_rank": 24,
+          "variant_rank": 24,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "槐花__甘草",
+          "baseline_rank": 10,
+          "variant_rank": 9,
+          "rank_change": -1
+        },
+        {
+          "pair_key": "槐花__石榴皮",
+          "baseline_rank": 17,
+          "variant_rank": 17,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "槐花__马齿苋",
+          "baseline_rank": 25,
+          "variant_rank": 25,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "槐花__黄芪",
+          "baseline_rank": 26,
+          "variant_rank": 26,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "甘草__石榴皮",
+          "baseline_rank": 3,
+          "variant_rank": 3,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "甘草__马齿苋",
+          "baseline_rank": 1,
+          "variant_rank": 1,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "甘草__鱼腥草",
+          "baseline_rank": 8,
+          "variant_rank": 6,
+          "rank_change": -2
+        },
+        {
+          "pair_key": "甘草__黄芪",
+          "baseline_rank": 2,
+          "variant_rank": 2,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "石榴皮__马齿苋",
+          "baseline_rank": 7,
+          "variant_rank": 10,
+          "rank_change": 3
+        },
+        {
+          "pair_key": "石榴皮__鱼腥草",
+          "baseline_rank": 15,
+          "variant_rank": 13,
+          "rank_change": -2
+        },
+        {
+          "pair_key": "石榴皮__黄芪",
+          "baseline_rank": 4,
+          "variant_rank": 4,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "马齿苋__鱼腥草",
+          "baseline_rank": 21,
+          "variant_rank": 20,
+          "rank_change": -1
+        },
+        {
+          "pair_key": "马齿苋__黄芪",
+          "baseline_rank": 6,
+          "variant_rank": 7,
+          "rank_change": 1
+        },
+        {
+          "pair_key": "鱼腥草__黄芪",
+          "baseline_rank": 22,
+          "variant_rank": 21,
+          "rank_change": -1
+        }
+      ],
+      "baseline_cutoff_tie": false,
+      "variant_cutoff_tie": false,
+      "final_ranking_stability_assessed": false
+    },
+    "q80_q60": {
+      "scope": "complete_for_initial_stage_only",
+      "baseline_top_count": 30,
+      "variant_top_count": 30,
+      "common_top_count": 30,
+      "union_top_count": 30,
+      "jaccard_top_set": 1.0,
+      "added_to_top": [],
+      "removed_from_top": [],
+      "common_top_rank_changes": [
+        {
+          "pair_key": "乌梅__大枣",
+          "baseline_rank": 27,
+          "variant_rank": 27,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "乌梅__甘草",
+          "baseline_rank": 5,
+          "variant_rank": 4,
+          "rank_change": -1
+        },
+        {
+          "pair_key": "乌梅__石榴皮",
+          "baseline_rank": 12,
+          "variant_rank": 12,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "乌梅__马齿苋",
+          "baseline_rank": 18,
+          "variant_rank": 18,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "乌梅__黄芪",
+          "baseline_rank": 19,
+          "variant_rank": 19,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "大枣__栀子",
+          "baseline_rank": 29,
+          "variant_rank": 29,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "大枣__槐花",
+          "baseline_rank": 30,
+          "variant_rank": 30,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "大枣__甘草",
+          "baseline_rank": 11,
+          "variant_rank": 11,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "大枣__石榴皮",
+          "baseline_rank": 13,
+          "variant_rank": 15,
+          "rank_change": 2
+        },
+        {
+          "pair_key": "大枣__马齿苋",
+          "baseline_rank": 14,
+          "variant_rank": 14,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "大枣__鱼腥草",
+          "baseline_rank": 28,
+          "variant_rank": 28,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "大枣__黄芪",
+          "baseline_rank": 20,
+          "variant_rank": 22,
+          "rank_change": 2
+        },
+        {
+          "pair_key": "栀子__甘草",
+          "baseline_rank": 9,
+          "variant_rank": 7,
+          "rank_change": -2
+        },
+        {
+          "pair_key": "栀子__石榴皮",
+          "baseline_rank": 16,
+          "variant_rank": 16,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "栀子__马齿苋",
+          "baseline_rank": 23,
+          "variant_rank": 23,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "栀子__黄芪",
+          "baseline_rank": 24,
+          "variant_rank": 24,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "槐花__甘草",
+          "baseline_rank": 10,
+          "variant_rank": 8,
+          "rank_change": -2
+        },
+        {
+          "pair_key": "槐花__石榴皮",
+          "baseline_rank": 17,
+          "variant_rank": 17,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "槐花__马齿苋",
+          "baseline_rank": 25,
+          "variant_rank": 25,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "槐花__黄芪",
+          "baseline_rank": 26,
+          "variant_rank": 26,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "甘草__石榴皮",
+          "baseline_rank": 3,
+          "variant_rank": 3,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "甘草__马齿苋",
+          "baseline_rank": 1,
+          "variant_rank": 1,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "甘草__鱼腥草",
+          "baseline_rank": 8,
+          "variant_rank": 6,
+          "rank_change": -2
+        },
+        {
+          "pair_key": "甘草__黄芪",
+          "baseline_rank": 2,
+          "variant_rank": 2,
+          "rank_change": 0
+        },
+        {
+          "pair_key": "石榴皮__马齿苋",
+          "baseline_rank": 7,
+          "variant_rank": 10,
+          "rank_change": 3
+        },
+        {
+          "pair_key": "石榴皮__鱼腥草",
+          "baseline_rank": 15,
+          "variant_rank": 13,
+          "rank_change": -2
+        },
+        {
+          "pair_key": "石榴皮__黄芪",
+          "baseline_rank": 4,
+          "variant_rank": 5,
+          "rank_change": 1
+        },
+        {
+          "pair_key": "马齿苋__鱼腥草",
+          "baseline_rank": 21,
+          "variant_rank": 20,
+          "rank_change": -1
+        },
+        {
+          "pair_key": "马齿苋__黄芪",
+          "baseline_rank": 6,
+          "variant_rank": 9,
+          "rank_change": 3
+        },
+        {
+          "pair_key": "鱼腥草__黄芪",
+          "baseline_rank": 22,
+          "variant_rank": 21,
+          "rank_change": -1
+        }
+      ],
+      "baseline_cutoff_tie": false,
+      "variant_cutoff_tie": false,
+      "final_ranking_stability_assessed": false
+    }
+  },
+  "main_rules_changed": false,
+  "main_ranking_changed": false,
+  "network_requests": 0,
+  "final_ranking_stability_assessed": false,
+  "unassessed_stages": [
+    "PPI Top15",
+    "enrichment Top10",
+    "docking Top3",
+    "experimental synergy"
+  ],
+  "interpretation": "Changes in initial Top30 under operational tier thresholds only. Do not infer final-rank or efficacy robustness."
+}

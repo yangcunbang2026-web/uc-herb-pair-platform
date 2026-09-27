@@ -1,0 +1,10 @@
+{
+  "vina_version": "1.2.7",
+  "exhaustiveness": 16,
+  "seed": 20260927,
+  "num_modes": 9,
+  "strong_binding_threshold_kcal_mol": -7.0,
+  "pair_fallback": false,
+  "reference_rmsd_gate": "fixed_receptor_coordinate_frame_no_ligand_alignment",
+  "compound_selection": "highest common-core-target coverage, then OB descending, then name; no outcome-driven fallback"
+}

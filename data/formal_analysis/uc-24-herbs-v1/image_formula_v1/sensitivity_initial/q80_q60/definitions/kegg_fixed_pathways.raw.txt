@@ -1,0 +1,2574 @@
+ENTRY       hsa05321                    Pathway
+NAME        Inflammatory bowel disease - Homo sapiens (human)
+DESCRIPTION Inflammatory bowel disease (IBD), which includes Crohn disease (CD) and ulcerative colitis (UC), is characterized by chronic inflammation of the gastrointestinal tract due to environmental and genetic factors, infectious microbes, and the dysregulated immune system. Although many environmental factors (for example, geographic locations, smoking, etc.) affect the development of IBD, the most crucial might be the luminal (external) environment of the epithelial cells. There are pathogens that are found in increasing frequency in IBD. The microbial components such as flagellin, peptidoglycan, and lipopolysaccharide are recognized by receptors such as toll-like receptors (TLRs) and nucleotide-binding oligomerization domain (NOD) proteins, and also by antigen-presenting cells (APCs) in genetically susceptible host. The TLR recognition triggers the activation of NF-kappaB, leading to an inflammatory response. APC-expressed gene NOD2 has been associated with Crohn disease. In case of mutations of NOD2, negative regulation of IL-12 production is reduced with the stimulation of muramyl dipeptide (MDP), leading to CD. In addition, the APC mediates the differentiation of naive T cells into effector T cells (Th1, Th17, Th2) and natural killer T (NKT) cells. Th1 and Th17 cells produce high levels of IFN-gamma and IL-17, -22, respectively, both of which promote CD. In contrast, Th2 cells produce IL-4, -5, -10, which together with IL-13 from NKT induce UC.
+CLASS       Human Diseases; Immune disease
+PATHWAY_MAP hsa05321  Inflammatory bowel disease
+DISEASE     H01227  Inflammatory bowel disease (IBD)
+DRUG        D02597  Adalimumab (USAN/INN)
+            D02598  Infliximab (USAN/INN)
+            D04358  Golimumab (USAN/INN)
+ORGANISM    Homo sapiens (human) [GN:hsa]
+GENE        112744  IL17F; interleukin-17F precursor [KO:K05494]
+            149233  IL23R; interleukin-23 receptor precursor [KO:K05065]
+            2625  GATA3; trans-acting T-cell-specific transcription factor GATA-3 isoform 2 [KO:K17895]
+            30009  TBX21; T-box transcription factor TBX21 [KO:K10166]
+            3108  HLA-DMA; HLA class II histocompatibility antigen, DM alpha chain precursor [KO:K06752]
+            3109  HLA-DMB; HLA class II histocompatibility antigen, DM beta chain precursor [KO:K06752]
+            3111  HLA-DOA; HLA class II histocompatibility antigen, DO alpha chain precursor [KO:K06752]
+            3112  HLA-DOB; HLA class II histocompatibility antigen, DO beta chain precursor [KO:K06752]
+            3113  HLA-DPA1; HLA class II histocompatibility antigen, DP alpha 1 chain precursor [KO:K06752]
+            3115  HLA-DPB1; HLA class II histocompatibility antigen, DP beta 1 chain precursor [KO:K06752]
+            3117  HLA-DQA1; HLA class II histocompatibility antigen, DQ alpha 1 chain precursor [KO:K06752]
+            3118  HLA-DQA2; HLA class II histocompatibility antigen, DQ alpha 2 chain precursor [KO:K06752]
+            3119  HLA-DQB1; HLA class II histocompatibility antigen, DQ beta 1 chain isoform 2 precursor [KO:K06752]
+            3120  HLA-DQB2; HLA class II histocompatibility antigen, DQ beta 2 chain isoform 2 precursor [KO:K06752]
+            3122  HLA-DRA; HLA class II histocompatibility antigen, DR alpha chain precursor [KO:K06752]
+            3123  HLA-DRB1; major histocompatibility complex, class II, DR beta 1 precursor [KO:K06752]
+            3125  HLA-DRB3; major histocompatibility complex, class II, DR beta 3 precursor [KO:K06752]
+            3126  HLA-DRB4; major histocompatibility complex, class II, DR beta 4 precursor [KO:K06752]
+            3127  HLA-DRB5; major histocompatibility complex, class II, DR beta 5 precursor [KO:K06752]
+            3458  IFNG; interferon gamma precursor [KO:K04687]
+            3459  IFNGR1; interferon gamma receptor 1 isoform 1 precursor [KO:K05132]
+            3460  IFNGR2; interferon gamma receptor 2 isoform 2 precursor [KO:K05133]
+            3552  IL1A; interleukin-1 alpha precursor [KO:K04383]
+            3553  IL1B; interleukin-1 beta proprotein [KO:K04519]
+            3558  IL2; interleukin-2 precursor [KO:K05429]
+            3561  IL2RG; cytokine receptor common subunit gamma isoform 1 precursor [KO:K05070]
+            3565  IL4; interleukin-4 isoform 1 precursor [KO:K05430]
+            3566  IL4R; interleukin-4 receptor subunit alpha isoform a precursor [KO:K05071]
+            3567  IL5; interleukin-5 precursor [KO:K05428]
+            3569  IL6; interleukin-6 isoform 1 precursor [KO:K05405]
+            3586  IL10; interleukin-10 isoform 1 precursor [KO:K05443]
+            3592  IL12A; interleukin-12 subunit alpha isoform 4 precursor [KO:K05406]
+            3593  IL12B; interleukin-12 subunit beta precursor [KO:K05425]
+            3594  IL12RB1; interleukin-12 receptor subunit beta-1 isoform 1 precursor [KO:K05063]
+            3595  IL12RB2; interleukin-12 receptor subunit beta-2 isoform a precursor [KO:K05064]
+            3596  IL13; interleukin-13 isoform 1 precursor [KO:K05435]
+            3605  IL17A; interleukin-17A precursor [KO:K05489]
+            3606  IL18; interleukin-18 isoform 1 precursor [KO:K05482]
+            3725  JUN; transcription factor Jun [KO:K04448]
+            4087  SMAD2; mothers against decapentaplegic homolog 2 isoform 1 [KO:K04500]
+            4088  SMAD3; mothers against decapentaplegic homolog 3 isoform 1 [KO:K23605]
+            4094  MAF; transcription factor Maf isoform b [KO:K09035]
+            4772  NFATC1; nuclear factor of activated T-cells, cytoplasmic 1 isoform F [KO:K04446]
+            4790  NFKB1; nuclear factor NF-kappa-B p105 subunit isoform 2 proprotein [KO:K02580]
+            50615  IL21R; interleukin-21 receptor isoform 1 precursor [KO:K05075]
+            50616  IL22; interleukin-22 precursor [KO:K05445]
+            50943  FOXP3; forkhead box protein P3 isoform a [KO:K10163]
+            51561  IL23A; interleukin-23 subunit alpha precursor [KO:K05426]
+            59067  IL21; interleukin-21 isoform 1 precursor [KO:K05434]
+            5970  RELA; transcription factor p65 isoform 1 [KO:K04735]
+            6095  RORA; nuclear receptor ROR-alpha isoform a [KO:K08532]
+            6097  RORC; nuclear receptor ROR-gamma isoform a [KO:K08534]
+            64127  NOD2; nucleotide-binding oligomerization domain-containing protein 2 isoform 1 [KO:K10165]
+            6772  STAT1; signal transducer and activator of transcription 1-alpha/beta isoform alpha [KO:K11220]
+            6774  STAT3; signal transducer and activator of transcription 3 isoform 1 [KO:K04692]
+            6775  STAT4; signal transducer and activator of transcription 4 [KO:K11222]
+            6778  STAT6; signal transducer and activator of transcription 6 isoform 1 [KO:K11225]
+            7040  TGFB1; transforming growth factor beta-1 proprotein preproprotein [KO:K13375]
+            7042  TGFB2; transforming growth factor beta-2 proprotein isoform 2 preproprotein [KO:K13376]
+            7043  TGFB3; transforming growth factor beta-3 proprotein isoform 1 preproprotein [KO:K13377]
+            7097  TLR2; toll-like receptor 2 precursor [KO:K10159]
+            7099  TLR4; toll-like receptor 4 isoform A precursor [KO:K10160]
+            7100  TLR5; toll-like receptor 5 precursor [KO:K10168]
+            7124  TNF; tumor necrosis factor [KO:K03156]
+            8807  IL18RAP; interleukin-18 receptor accessory protein isoform 1 precursor [KO:K05174]
+            8809  IL18R1; interleukin-18 receptor 1 isoform 1 precursor [KO:K05173]
+REFERENCE   PMID:20134493
+  AUTHORS   Melmed GY, Targan SR
+  TITLE     Future biologic targets for IBD: potentials and pitfalls.
+  JOURNAL   Nat Rev Gastroenterol Hepatol 7:110-7 (2010)
+            DOI:10.1038/nrgastro.2009.218
+REFERENCE   PMID:18200661
+  AUTHORS   Shih DQ, Targan SR
+  TITLE     Immunopathogenesis of inflammatory bowel disease.
+  JOURNAL   World J Gastroenterol 14:390-400 (2008)
+            DOI:10.3748/wjg.14.390
+REFERENCE   PMID:17499605
+  AUTHORS   Baumgart DC, Carding SR
+  TITLE     Inflammatory bowel disease: cause and immunobiology.
+  JOURNAL   Lancet 369:1627-40 (2007)
+            DOI:10.1016/S0140-6736(07)60750-8
+REFERENCE   PMID:16493424
+  AUTHORS   Strober W, Murray PJ, Kitani A, Watanabe T
+  TITLE     Signalling pathways and molecular interactions of NOD1 and NOD2.
+  JOURNAL   Nat Rev Immunol 6:9-20 (2006)
+            DOI:10.1038/nri1747
+REFERENCE   PMID:21487504
+  AUTHORS   Matricon J, Barnich N, Ardid D
+  TITLE     Immunopathogenesis of inflammatory bowel disease.
+  JOURNAL   Self Nonself 1:299-309 (2010)
+            DOI:10.4161/self.1.4.13560
+REFERENCE   PMID:12797537
+  AUTHORS   Agnello D, Lankford CS, Bream J, Morinobu A, Gadina M, O'Shea JJ, Frucht DM
+  TITLE     Cytokines and transcription factors that regulate T helper cell differentiation: new players and new insights.
+  JOURNAL   J Clin Immunol 23:147-61 (2003)
+            DOI:10.1023/A:1023381027062
+REFERENCE   PMID:10898785
+  AUTHORS   Glimcher LH, Murphy KM
+  TITLE     Lineage commitment in the immune system: the T helper lymphocyte grows up.
+  JOURNAL   Genes Dev 14:1693-711 (2000)
+            DOI:10.1101/gad.14.14.1693
+REFERENCE   PMID:12042806
+  AUTHORS   Neurath MF, Finotto S, Glimcher LH
+  TITLE     The role of Th1/Th2 polarization in mucosal immunity.
+  JOURNAL   Nat Med 8:567-73 (2002)
+            DOI:10.1038/nm0602-567
+REFERENCE   PMID:12006974
+  AUTHORS   Afkarian M, Sedy JR, Yang J, Jacobson NG, Cereb N, Yang SY, Murphy TL, Murphy KM
+  TITLE     T-bet is a STAT1-induced regulator of IL-12R expression in naive CD4+ T cells.
+  JOURNAL   Nat Immunol 3:549-57 (2002)
+            DOI:10.1038/ni794
+REFERENCE   PMID:18242222
+  AUTHORS   Sartor RB
+  TITLE     Microbial influences in inflammatory bowel diseases.
+  JOURNAL   Gastroenterology 134:577-94 (2008)
+            DOI:10.1053/j.gastro.2007.11.059
+REFERENCE   PMID:9759857
+  AUTHORS   Yoshimoto T, Takeda K, Tanaka T, Ohkusu K, Kashiwamura S, Okamura H, Akira S, Nakanishi K
+  TITLE     IL-12 up-regulates IL-18 receptor expression on T cells, Th1 cells, and B cells: synergism with IL-18 for IFN-gamma production.
+  JOURNAL   J Immunol 161:3400-7 (1998)
+REFERENCE   PMID:23176791
+  AUTHORS   Hur SJ, Kang SH, Jung HS, Kim SC, Jeon HS, Kim IH, Lee JD
+  TITLE     Review of natural products actions on cytokines in inflammatory bowel disease.
+  JOURNAL   Nutr Res 32:801-16 (2012)
+            DOI:10.1016/j.nutres.2012.09.013
+REFERENCE   PMID:18563156
+  AUTHORS   Bettelli E, Korn T, Oukka M, Kuchroo VK
+  TITLE     Induction and effector functions of T(H)17 cells.
+  JOURNAL   Nature 453:1051-7 (2008)
+            DOI:10.1038/nature07036
+REFERENCE   PMID:18053739
+  AUTHORS   Ivanov II, Zhou L, Littman DR
+  TITLE     Transcriptional regulation of Th17 cell differentiation.
+  JOURNAL   Semin Immunol 19:409-17 (2007)
+            DOI:10.1016/j.smim.2007.10.011
+REFERENCE   PMID:19322214
+  AUTHORS   Di Cesare A, Di Meglio P, Nestle FO
+  TITLE     The IL-23/Th17 axis in the immunopathogenesis of psoriasis.
+  JOURNAL   J Invest Dermatol 129:1339-50 (2009)
+            DOI:10.1038/jid.2009.59
+REFERENCE   PMID:19381306
+  AUTHORS   Jetten AM
+  TITLE     Retinoid-related orphan receptors (RORs): critical roles in development, immunity, circadian rhythm, and cellular metabolism.
+  JOURNAL   Nucl Recept Signal 7:e003 (2009)
+            DOI:10.1621/nrs.07003
+REFERENCE   PMID:21681604
+  AUTHORS   Bene L, Falus A, Baffy N, Fulop AK
+  TITLE     Cellular and molecular mechanisms in the two major forms of inflammatory bowel disease.
+  JOURNAL   Pathol Oncol Res 17:463-72 (2011)
+            DOI:10.1007/s12253-011-9397-4
+REL_PATHWAY hsa04060  Cytokine-cytokine receptor interaction
+            hsa04612  Antigen processing and presentation
+            hsa04620  Toll-like receptor signaling pathway
+            hsa04621  NOD-like receptor signaling pathway
+            hsa04630  JAK-STAT signaling pathway
+            hsa04659  Th17 cell differentiation
+            hsa04660  T cell receptor signaling pathway
+KO_PATHWAY  ko05321
+///
+
+ENTRY       hsa04530                    Pathway
+NAME        Tight junction - Homo sapiens (human)
+DESCRIPTION Tight junctions (TJs) are essential for establishing a selectively permeable barrier to diffusion through the paracellular space between neighboring cells. TJs are composed of at least three types of transmembrane protein -occludin, claudin and junctional adhesion molecules (JAMs)- and a cytoplasmic 'plaque' consisting of many different proteins that form large complexes. These are proposed to be involved in junction assembly, barrier regulation, cell polarity, gene transcription, and other pathways.
+CLASS       Cellular Processes; Cellular community - eukaryotes
+PATHWAY_MAP hsa04530  Tight junction
+NETWORK     nt06166  Human papillomavirus (HPV)
+            nt06180  Pathogenic Escherichia coli
+  ELEMENT   N00340  The Scribble/Dlg/Lgl polarity module
+            N00344  CRB3-Pals1-PATJ complex
+            N01287  Tight junction-Actin signaling pathway
+DRUG        D09916  Ivacaftor (USAN/INN)
+            D10685  Lumacaftor and ivacaftor
+            D11042  Tezacaftor and ivacaftor
+            D11527  Zolbetuximab (USAN/INN)
+            D11700  Elexacaftor, ivacaftor and tezacaftor
+            D12722  Bexotegrast (USAN/INN)
+            D12781  Osemitamab (USAN/INN)
+            D12997  Lixudebart (USAN/INN)
+            D13024  Vanzacaftor, tezacaftor and deutivacaftor
+            D13158  Spevatamig (USAN/INN)
+            D13163  Sonesitatug (USAN/INN)
+            D13164  Sonesitatug vedotin (USAN/INN)
+            D13271  Ixotatug (USAN/INN)
+            D13340  Ixotatug vedotin (USAN/INN)
+DBLINKS     GO: 0005923
+ORGANISM    Homo sapiens (human) [GN:hsa]
+GENE        100132463  CLDN24; claudin-24 [KO:K06087]
+            100288814  CLDN34; claudin-34 [KO:K06087]
+            100506658  OCLN; occludin isoform a [KO:K06088]
+            10092  ARPC5; actin-related protein 2/3 complex subunit 5 isoform 1 [KO:K05754]
+            10093  ARPC4; actin-related protein 2/3 complex subunit 4 isoform a [KO:K05755]
+            10094  ARPC3; actin-related protein 2/3 complex subunit 3 isoform 1 [KO:K05756]
+            10095  ARPC1B; actin-related protein 2/3 complex subunit 1B [KO:K05757]
+            10096  ACTR3; actin-related protein 3 isoform 1 [KO:K18584]
+            10097  ACTR2; actin-related protein 2 isoform b [KO:K17260]
+            10109  ARPC2; actin-related protein 2/3 complex subunit 2 [KO:K05758]
+            1019  CDK4; cyclin-dependent kinase 4 [KO:K02089] [EC:2.7.11.22]
+            10207  PATJ; inaD-like protein isoform 1 [KO:K06092]
+            10376  TUBA1B; tubulin alpha-1B chain [KO:K07374]
+            103910  MYL12B; myosin regulatory light chain 12B [KO:K12757]
+            10398  MYL9; myosin regulatory light polypeptide 9 isoform a [KO:K12755]
+            10552  ARPC1A; actin-related protein 2/3 complex subunit 1A isoform 1 [KO:K05757]
+            10627  MYL12A; myosin regulatory light chain 12A isoform 1 [KO:K12757]
+            10686  CLDN16; claudin-16 [KO:K06087]
+            1080  CFTR; cystic fibrosis transmembrane conductance regulator [KO:K05031] [EC:5.6.1.6]
+            11149  POPDC1; popeye domain-containing protein 1 [KO:K21108]
+            112714  TUBA3E; tubulin alpha-3E chain [KO:K07374]
+            113457  TUBA3D; tubulin alpha-3D chain [KO:K07374]
+            11346  SYNPO; synaptopodin isoform C [KO:K21112]
+            123720  WHAMM; WASP homolog-associated protein with actin, membranes and microtubules [KO:K20479]
+            1364  CLDN4; claudin-4 [KO:K06087]
+            1365  CLDN3; claudin-3 [KO:K06087]
+            1366  CLDN7; claudin-7 isoform 1 [KO:K06087]
+            137075  CLDN23; claudin-23 [KO:K06087]
+            140465  MYL6B; myosin light chain 6B [KO:K12751]
+            149461  CLDN19; claudin-19 isoform a [KO:K06087]
+            150084  IGSF5; immunoglobulin superfamily member 5 [KO:K06786]
+            153562  MARVELD2; MARVEL domain-containing protein 2 isoform 1 [KO:K17291]
+            154796  AMOT; angiomotin isoform 1 [KO:K16819]
+            154810  AMOTL1; angiomotin-like protein 1 isoform 1 [KO:K06104]
+            1739  DLG1; disks large homolog 1 isoform 1 [KO:K12076]
+            1740  DLG2; disks large homolog 2 isoform 2 [KO:K12075]
+            1741  DLG3; disks large homolog 3 isoform a [KO:K21098]
+            2017  CTTN; src substrate cortactin isoform a [KO:K06106]
+            2064  ERBB2; receptor tyrosine-protein kinase erbB-2 isoform a precursor [KO:K05083] [EC:2.7.10.1]
+            23327  NEDD4L; E3 ubiquitin-protein ligase NEDD4-like isoform 1 [KO:K13305] [EC:2.3.2.26]
+            23370  ARHGEF18; rho guanine nucleotide exchange factor 18 isoform c [KO:K21066]
+            23513  SCRIB; protein scribble homolog isoform a [KO:K16175]
+            23562  CLDN14; claudin-14 [KO:K06087]
+            24146  CLDN15; claudin-15 [KO:K06087]
+            2626  GATA4; transcription factor GATA-4 isoform 2 [KO:K09183]
+            26285  CLDN17; claudin-17 [KO:K06087]
+            27134  TJP3; tight junction protein ZO-3 isoform 1 [KO:K06097]
+            3059  HCLS1; hematopoietic lineage cell-specific protein isoform 1 [KO:K06106]
+            3308  HSPA4; heat shock 70 kDa protein 4 [KO:K09489]
+            3688  ITGB1; integrin beta-1 isoform 1A precursor [KO:K05719]
+            3725  JUN; transcription factor Jun [KO:K04448]
+            387  RHOA; transforming protein RhoA isoform 1 precursor [KO:K04513]
+            3993  LLGL2; LLGL scribble cell polarity complex component 2 isoform c [KO:K06094]
+            3996  LLGL1; lethal(2) giant larvae protein homolog 1 [KO:K06094]
+            4214  MAP3K1; mitogen-activated protein kinase kinase kinase 1 [KO:K04416] [EC:2.7.11.25]
+            4217  MAP3K5; mitogen-activated protein kinase kinase kinase 5 isoform 2 [KO:K04426] [EC:2.7.11.25]
+            4218  RAB8A; ras-related protein Rab-8A [KO:K07901]
+            4301  AFDN; afadin isoform 6 [KO:K05702]
+            4478  MSN; moesin isoform 1 [KO:K05763]
+            4627  MYH9; myosin-9 [KO:K10352]
+            4628  MYH10; myosin-10 isoform 2 [KO:K10352]
+            4629  MYH11; myosin-11 isoform SM1A [KO:K10352]
+            4633  MYL2; myosin regulatory light chain 2, ventricular/cardiac muscle isoform isoform 1 [KO:K10351]
+            4637  MYL6; myosin light polypeptide 6 isoform 1 [KO:K12751]
+            4734  NEDD4; E3 ubiquitin-protein ligase NEDD4 isoform 3 [KO:K10591] [EC:2.3.2.26]
+            4771  NF2; merlin isoform 1 [KO:K16684]
+            49861  CLDN20; claudin-20 precursor [KO:K06087]
+            5010  CLDN11; claudin-11 isoform 1 [KO:K06087]
+            50848  F11R; junctional adhesion molecule A isoform 1 precursor [KO:K06089]
+            50855  PARD6A; partitioning defective 6 homolog alpha isoform 1 [KO:K06093]
+            5111  PCNA; proliferating cell nuclear antigen [KO:K04802]
+            51208  CLDN18; claudin-18 isoform 1 [KO:K06087]
+            51421  AMOTL2; angiomotin-like protein 2 isoform 4 [KO:K06104]
+            51422  PRKAG2; 5'-AMP-activated protein kinase subunit gamma-2 isoform a [KO:K07200]
+            51735  RAPGEF6; rap guanine nucleotide exchange factor 6 isoform 2 [KO:K08020]
+            51762  RAB8B; ras-related protein Rab-8B [KO:K07902]
+            51807  TUBA8; tubulin alpha-8 chain isoform 1 [KO:K07374]
+            53632  PRKAG3; 5'-AMP-activated protein kinase subunit gamma-3 [KO:K07200]
+            53842  CLDN22; claudin-22 [KO:K06087]
+            54566  EPB41L4B; band 4.1-like protein 4B isoform 2 [KO:K21111]
+            55114  ARHGAP17; rho GTPase-activating protein 17 isoform 1 [KO:K20638]
+            5515  PPP2CA; serine/threonine-protein phosphatase 2A catalytic subunit alpha isoform isoform 1 [KO:K04382] [EC:3.1.3.16]
+            5516  PPP2CB; serine/threonine-protein phosphatase 2A catalytic subunit beta isoform [KO:K04382] [EC:3.1.3.16]
+            5518  PPP2R1A; serine/threonine-protein phosphatase 2A 65 kDa regulatory subunit A alpha isoform isoform 1 [KO:K03456]
+            5519  PPP2R1B; serine/threonine-protein phosphatase 2A 65 kDa regulatory subunit A beta isoform isoform a [KO:K03456]
+            5520  PPP2R2A; serine/threonine-protein phosphatase 2A 55 kDa regulatory subunit B alpha isoform isoform 1 [KO:K04354]
+            5521  PPP2R2B; serine/threonine-protein phosphatase 2A 55 kDa regulatory subunit B beta isoform isoform e [KO:K04354]
+            5522  PPP2R2C; protein phosphatase 2, regulatory subunit B, gamma isoform a [KO:K04354]
+            5562  PRKAA1; 5'-AMP-activated protein kinase catalytic subunit alpha-1 isoform 1 [KO:K07198] [EC:2.7.11.31]
+            5563  PRKAA2; 5'-AMP-activated protein kinase catalytic subunit alpha-2 [KO:K07198] [EC:2.7.11.31]
+            5564  PRKAB1; 5'-AMP-activated protein kinase subunit beta-1 [KO:K07199]
+            5565  PRKAB2; 5'-AMP-activated protein kinase subunit beta-2 [KO:K07199]
+            5566  PRKACA; cAMP-dependent protein kinase catalytic subunit alpha isoform Calpha1 [KO:K04345] [EC:2.7.11.11]
+            5567  PRKACB; cAMP-dependent protein kinase catalytic subunit beta isoform 2 [KO:K04345] [EC:2.7.11.11]
+            5568  PRKACG; cAMP-dependent protein kinase catalytic subunit gamma [KO:K04345] [EC:2.7.11.11]
+            5571  PRKAG1; 5'-AMP-activated protein kinase subunit gamma-1 isoform 1 [KO:K07200]
+            5581  PRKCE; protein kinase C epsilon type [KO:K18050] [EC:2.7.11.13]
+            5584  PRKCI; protein kinase C iota type [KO:K06069] [EC:2.7.11.13]
+            55844  PPP2R2D; serine/threonine-protein phosphatase 2A 55 kDa regulatory subunit B delta isoform isoform a [KO:K04354]
+            5590  PRKCZ; protein kinase C zeta type isoform 1 [KO:K18952] [EC:2.7.11.13]
+            5599  MAPK8; mitogen-activated protein kinase 8 isoform alpha2 [KO:K04440] [EC:2.7.11.24]
+            5601  MAPK9; mitogen-activated protein kinase 9 isoform alpha2 [KO:K04440] [EC:2.7.11.24]
+            5602  MAPK10; mitogen-activated protein kinase 10 isoform 1 [KO:K04440] [EC:2.7.11.24]
+            5609  MAP2K7; dual specificity mitogen-activated protein kinase kinase 7 isoform 3 [KO:K04431] [EC:2.7.12.2]
+            56288  PARD3; partitioning defective 3 homolog isoform 1 [KO:K04237]
+            57180  ACTR3B; actin-related protein 3B isoform 1 [KO:K18584]
+            57530  CGN; cingulin [KO:K06102]
+            57826  RAP2C; ras-related protein Rap-2c isoform 1 precursor [KO:K07839]
+            58494  JAM2; junctional adhesion molecule B isoform 1 precursor [KO:K06735]
+            58538  MPP4; MAGUK p55 subfamily member 4 isoform 1 [KO:K21109]
+            5872  RAB13; ras-related protein Rab-13 isoform 1 [KO:K06109]
+            5879  RAC1; ras-related C3 botulinum toxin substrate 1 isoform Rac1 [KO:K04392]
+            5906  RAP1A; ras-related protein Rap-1A precursor [KO:K04353]
+            595  CCND1; G1/S-specific cyclin-D1 [KO:K04503]
+            5962  RDX; radixin isoform 2 [KO:K05762]
+            60  ACTB; actin, cytoplasmic 1 [KO:K05692]
+            6093  ROCK1; rho-associated protein kinase 1 [KO:K04514] [EC:2.7.11.39]
+            64398  PALS1; protein PALS1 isoform 1 [KO:K06091]
+            644672  CLDN25; claudin-25 [KO:K06087]
+            653857  ACTR3C; actin-related protein 3C isoform a precursor [KO:K18584]
+            6714  SRC; proto-oncogene tyrosine-protein kinase Src [KO:K05704] [EC:2.7.10.2]
+            6794  STK11; serine/threonine-protein kinase STK11 isoform 1 [KO:K07298] [EC:2.7.11.1]
+            7074  TIAM1; rho guanine nucleotide exchange factor TIAM1 isoform 1 [KO:K05731]
+            7082  TJP1; tight junction protein 1 isoform a [KO:K05701]
+            71  ACTG1; actin, cytoplasmic 2 [KO:K05692]
+            7122  CLDN5; claudin-5 isoform 2 [KO:K06087]
+            7277  TUBA4A; tubulin alpha-4A chain isoform 1 [KO:K07374]
+            7278  TUBA3C; tubulin alpha-3C chain [KO:K07374]
+            7408  VASP; vasodilator-stimulated phosphoprotein [KO:K06274]
+            7430  EZR; ezrin [KO:K08007]
+            7454  WAS; actin nucleation-promoting factor WAS isoform 1 [KO:K05747]
+            776  CACNA1D; voltage-dependent L-type calcium channel subunit alpha-1D isoform b [KO:K04851]
+            7846  TUBA1A; tubulin alpha-1A chain isoform 1 [KO:K07374]
+            79778  MICALL2; MICAL-like protein 2 [KO:K21068]
+            79784  MYH14; myosin-14 isoform 2 [KO:K10352]
+            79861  TUBAL3; tubulin alpha chain-like 3 isoform 1 [KO:K07374]
+            80086  TUBA4B; tubulin-like protein alpha-4B [KO:K07374]
+            81  ACTN4; alpha-actinin-4 isoform 1 [KO:K05699]
+            81873  ARPC5L; actin-related protein 2/3 complex subunit 5-like protein [KO:K05754]
+            8189  SYMPK; symplekin [KO:K06100]
+            83700  JAM3; junctional adhesion molecule C isoform 1 precursor [KO:K06785]
+            84552  PARD6G; partitioning defective 6 homolog gamma [KO:K06093]
+            84612  PARD6B; partitioning defective 6 homolog beta [KO:K06093]
+            84790  TUBA1C; tubulin alpha-1C chain isoform c [KO:K07374]
+            84952  CGNL1; cingulin-like protein 1 [KO:K21110]
+            8531  YBX3; Y-box-binding protein 3 isoform a [KO:K06099]
+            861  RUNX1; runt-related transcription factor 1 isoform AML1b [KO:K08367]
+            87  ACTN1; alpha-actinin-1 isoform b [KO:K05699]
+            8777  MPDZ; multiple PDZ domain protein isoform 4 [KO:K06095]
+            9069  CLDN12; claudin-12 [KO:K06087]
+            9071  CLDN10; claudin-10 isoform b [KO:K06087]
+            9073  CLDN8; claudin-8 [KO:K06087]
+            9074  CLDN6; claudin-6 [KO:K06087]
+            9075  CLDN2; claudin-2 [KO:K06087]
+            9076  CLDN1; claudin-1 [KO:K06087]
+            9080  CLDN9; claudin-9 [KO:K06087]
+            909  CD1A; T-cell surface glycoprotein CD1a isoform 1 precursor [KO:K06448]
+            910  CD1B; T-cell surface glycoprotein CD1b precursor [KO:K06448]
+            911  CD1C; T-cell surface glycoprotein CD1c precursor [KO:K06448]
+            912  CD1D; antigen-presenting glycoprotein CD1d isoform 1 precursor [KO:K06448]
+            913  CD1E; T-cell surface glycoprotein CD1e, membrane-associated isoform a precursor [KO:K06448]
+            9181  ARHGEF2; rho guanine nucleotide exchange factor 2 isoform 1 [KO:K12791]
+            91862  MARVELD3; MARVEL domain-containing protein 3 isoform 2 [KO:K21099]
+            9223  MAGI1; membrane-associated guanylate kinase, WW and PDZ domain-containing protein 1 isoform c [KO:K05631]
+            92359  CRB3; protein crumbs homolog 3 isoform a precursor [KO:K06090]
+            93643  TJAP1; tight junction-associated protein 1 isoform a [KO:K06105]
+            9368  NHERF1; Na(+)/H(+) exchange regulatory cofactor NHE-RF1 [KO:K13365]
+            9414  TJP2; tight junction protein 2 isoform 1 [KO:K06098]
+            9475  ROCK2; rho-associated protein kinase 2 isoform 1 [KO:K17388] [EC:2.7.11.39]
+            9693  RAPGEF2; rap guanine nucleotide exchange factor 2 isoform 5 [KO:K08018]
+            998  CDC42; cell division control protein 42 homolog isoform 1 precursor [KO:K04393]
+COMPOUND    C00076  Calcium cation
+REFERENCE   PMID:27353478
+  AUTHORS   Zihni C, Mills C, Matter K, Balda MS
+  TITLE     Tight junctions: from simple barriers to multifunctional molecular gates.
+  JOURNAL   Nat Rev Mol Cell Biol 17:564-80 (2016)
+            DOI:10.1038/nrm.2016.80
+REFERENCE   PMID:22169974
+  AUTHORS   Martin-Belmonte F, Perez-Moreno M
+  TITLE     Epithelial cell polarity, stem cells and cancer.
+  JOURNAL   Nat Rev Cancer 12:23-38 (2011)
+            DOI:10.1038/nrc3169
+REFERENCE   PMID:17525755
+  AUTHORS   Weber C, Fraemohs L, Dejana E
+  TITLE     The role of junctional adhesion molecules in vascular inflammation.
+  JOURNAL   Nat Rev Immunol 7:467-77 (2007)
+            DOI:10.1038/nri2096
+REFERENCE   PMID:15820555
+  AUTHORS   Miyoshi J, Takai Y
+  TITLE     Molecular perspective on tight-junction assembly and epithelial polarity.
+  JOURNAL   Adv Drug Deliv Rev 57:815-55 (2005)
+            DOI:10.1016/j.addr.2005.01.008
+REFERENCE   PMID:16650994
+  AUTHORS   Mertens AE, Pegtel DM, Collard JG
+  TITLE     Tiam1 takes PARt in cell polarity.
+  JOURNAL   Trends Cell Biol 16:308-16 (2006)
+            DOI:10.1016/j.tcb.2006.04.001
+REFERENCE   PMID:16771626
+  AUTHORS   Shin K, Fogg VC, Margolis B
+  TITLE     Tight junctions and cell polarity.
+  JOURNAL   Annu Rev Cell Dev Biol 22:207-35 (2006)
+            DOI:10.1146/annurev.cellbio.22.010305.104219
+REFERENCE   PMID:17182900
+  AUTHORS   Kooistra MR, Dube N, Bos JL
+  TITLE     Rap1: a key regulator in cell-cell junction formation.
+  JOURNAL   J Cell Sci 120:17-22 (2007)
+            DOI:10.1242/jcs.03306
+REFERENCE   PMID:17950242
+  AUTHORS   Gonzalez-Mariscal L, Tapia R, Chamorro D
+  TITLE     Crosstalk of tight junction components with signaling pathways.
+  JOURNAL   Biochim Biophys Acta 1778:729-56 (2008)
+            DOI:10.1016/j.bbamem.2007.08.018
+REFERENCE   PMID:18005931
+  AUTHORS   Assemat E, Bazellieres E, Pallesi-Pocachard E, Le Bivic A, Massey-Harroche D
+  TITLE     Polarity complex proteins.
+  JOURNAL   Biochim Biophys Acta 1778:614-30 (2008)
+            DOI:10.1016/j.bbamem.2007.08.029
+REFERENCE   PMID:18946474
+  AUTHORS   Iden S, Collard JG
+  TITLE     Crosstalk between small GTPases and polarity proteins in cell polarization.
+  JOURNAL   Nat Rev Mol Cell Biol 9:846-59 (2008)
+            DOI:10.1038/nrm2521
+REFERENCE   PMID:20094051
+  AUTHORS   Rosse C, Linch M, Kermorgant S, Cameron AJ, Boeckeler K, Parker PJ
+  TITLE     PKC and the control of localized signal dynamics.
+  JOURNAL   Nat Rev Mol Cell Biol 11:103-12 (2010)
+            DOI:10.1038/nrm2847
+REFERENCE   PMID:20134025
+  AUTHORS   Terry S, Nie M, Matter K, Balda MS
+  TITLE     Rho signaling and tight junction functions.
+  JOURNAL   Physiology (Bethesda) 25:16-26 (2010)
+            DOI:10.1152/physiol.00034.2009
+REFERENCE   PMID:21283798
+  AUTHORS   Russ PK, Pino CJ, Williams CS, Bader DM, Haselton FR, Chang MS
+  TITLE     Bves modulates tight junction associated signaling.
+  JOURNAL   PLoS One 6:e14563 (2011)
+            DOI:10.1371/journal.pone.0014563
+REFERENCE   PMID:21781017
+  AUTHORS   Citi S, Spadaro D, Schneider Y, Stutz J, Pulimeno P
+  TITLE     Regulation of small GTPases at epithelial cell-cell junctions.
+  JOURNAL   Mol Membr Biol 28:427-44 (2011)
+            DOI:10.3109/09687688.2011.603101
+REFERENCE   PMID:22896795
+  AUTHORS   Lickert H, Van Campenhout CA
+  TITLE     Evolution of the Discs large gene family provides new insights into the establishment of apical epithelial polarity and the etiology of mental retardation.
+  JOURNAL   Commun Integr Biol 5:287-90 (2012)
+            DOI:10.4161/cib.19792
+REFERENCE   PMID:22928510
+  AUTHORS   Spadaro D, Tapia R, Pulimeno P, Citi S
+  TITLE     The control of gene expression and cell proliferation by the epithelial apical junctional complex.
+  JOURNAL   Essays Biochem 53:83-93 (2012)
+            DOI:10.1042/bse0530083
+REFERENCE   PMID:24548561
+  AUTHORS   Moleirinho S, Guerrant W, Kissil JL
+  TITLE     The Angiomotins--from discovery to function.
+  JOURNAL   FEBS Lett 588:2693-703 (2014)
+            DOI:10.1016/j.febslet.2014.02.006
+REFERENCE   PMID:24651541
+  AUTHORS   Rodriguez-Boulan E, Macara IG
+  TITLE     Organization and execution of the epithelial polarity programme.
+  JOURNAL   Nat Rev Mol Cell Biol 15:225-42 (2014)
+            DOI:10.1038/nrm3775
+REFERENCE   PMID:25152334
+  AUTHORS   Gonzalez-Mariscal L, Dominguez-Calderon A, Raya-Sandino A, Ortega-Olvera JM, Vargas-Sierra O, Martinez-Revollar G
+  TITLE     Tight junctions and the regulation of gene expression.
+  JOURNAL   Semin Cell Dev Biol 36:213-23 (2014)
+            DOI:10.1016/j.semcdb.2014.08.009
+REFERENCE   PMID:25469537
+  AUTHORS   Mack NA, Georgiou M
+  TITLE     The interdependence of the Rho GTPases and apicobasal cell polarity.
+  JOURNAL   Small GTPases 5:10 (2014)
+            DOI:10.4161/21541248.2014.973768
+REFERENCE   PMID:25483301
+  AUTHORS   Citi S, Guerrera D, Spadaro D, Shah J
+  TITLE     Epithelial junctions and Rho family GTPases: the zonular signalosome.
+  JOURNAL   Small GTPases 5:1-15 (2014)
+            DOI:10.4161/21541248.2014.973760
+REFERENCE   PMID:25757376
+  AUTHORS   Zihni C, Terry SJ
+  TITLE     RhoGTPase signalling at epithelial tight junctions: Bridging the GAP between polarity and cancer.
+  JOURNAL   Int J Biochem Cell Biol 64:120-5 (2015)
+            DOI:10.1016/j.biocel.2015.02.020
+REFERENCE   PMID:22892070
+  AUTHORS   Nakano A, Takashima S
+  TITLE     LKB1 and AMP-activated protein kinase: regulators of cell polarity.
+  JOURNAL   Genes Cells 17:737-47 (2012)
+            DOI:10.1111/j.1365-2443.2012.01629.x
+REFERENCE   PMID:12042308
+  AUTHORS   Patrie KM, Drescher AJ, Welihinda A, Mundel P, Margolis B
+  TITLE     Interaction of two actin-binding proteins, synaptopodin and alpha-actinin-4, with the tight junction protein MAGI-1.
+  JOURNAL   J Biol Chem 277:30183-90 (2002)
+            DOI:10.1074/jbc.M203072200
+REFERENCE   PMID:18094055
+  AUTHORS   Yamamura R, Nishimura N, Nakatsuji H, Arase S, Sasaki T
+  TITLE     The interaction of JRAB/MICAL-L2 with Rab8 and Rab13 coordinates the assembly of tight junctions and adherens junctions.
+  JOURNAL   Mol Biol Cell 19:971-83 (2008)
+            DOI:10.1091/mbc.E07-06-0551
+REFERENCE   PMID:23885123
+  AUTHORS   Monteiro AC, Sumagin R, Rankin CR, Leoni G, Mina MJ, Reiter DM, Stehle T, Dermody TS, Schaefer SA, Hall RA, Nusrat A, Parkos CA
+  TITLE     JAM-A associates with ZO-2, afadin, and PDZ-GEF1 to activate Rap2c and regulate epithelial barrier function.
+  JOURNAL   Mol Biol Cell 24:2849-60 (2013)
+            DOI:10.1091/mbc.E13-06-0298
+REL_PATHWAY hsa04520  Adherens junction
+            hsa04810  Regulation of actin cytoskeleton
+KO_PATHWAY  ko04530
+///
+
+ENTRY       hsa04520                    Pathway
+NAME        Adherens junction - Homo sapiens (human)
+DESCRIPTION Cell-cell adherens junctions (AJs), the most common type of intercellular adhesions, are important for maintaining tissue architecture and cell polarity and can limit cell movement and proliferation. At AJs, E-cadherin serves as an essential cell adhesion molecules (CAMs). The cytoplasmic tail binds beta-catenin, which in turn binds alpha-catenin. Alpha-catenin is associated with F-actin bundles directly and indirectly. The integrity of the cadherin-catenin complex is negatively regulated by phosphorylation of beta-catenin by receptor tyrosine kinases (RTKs) and cytoplasmic tyrosine kinases (Fer, Fyn, Yes, and Src), which leads to dissociation of the cadherin-catenin complex. Integrity of this complex is positively regulated by beta -catenin phosphorylation by casein kinase II, and dephosphorylation by protein tyrosine phosphatases. Changes in the phosphorylation state of beta-catenin affect cell-cell adhesion, cell migration and the level of signaling beta-catenin. Wnt signaling acts as a positive regulator of beta-catenin by inhibiting beta-catenin degradation, which stabilizes beta-catenin, and causes its accumulation. Cadherin may acts as a negative regulator of signaling beta-catenin as it binds beta-catenin at the cell surface and thereby sequesters it from the nucleus. Nectins also function as CAMs at AJs, but are more highly concentrated at AJs than E-cadherin. Nectins transduce signals through Cdc42 and Rac, which reorganize the actin cytoskeleton, regulate the formation of AJs, and strengthen cell-cell adhesion.
+CLASS       Cellular Processes; Cellular community - eukaryotes
+PATHWAY_MAP hsa04520  Adherens junction
+DRUG        D05716  Repifermin (USAN/INN)
+            D09328  Cixutumumab (USAN)
+            D09746  Dalotuzumab (USAN)
+            D09908  Ganitumab (USAN/INN)
+            D09925  Linsitinib (USAN/INN)
+            D09941  Onartuzumab (USAN/INN)
+            D10056  Robatumumab (USAN/INN)
+            D10173  Tivantinib (JAN/USAN/INN)
+            D11307  Telisotuzumab (USAN)
+            D11344  Telisotuzumab vedotin (USAN)
+            D11524  Enfortumab (USAN)
+            D11525  Enfortumab vedotin (USAN)
+            D11894  Amivantamab (USAN/INN)
+            D12287  Terevalefim (USAN/INN)
+            D12768  Ficerafusp alfa (USAN)
+            D13229  Amivantamab (genetical recombination) and vorhyaluronidase alfa (genetical recombination)
+            D13314  Olaviztabart (USAN)
+DBLINKS     GO: 0005912
+ORGANISM    Homo sapiens (human) [GN:hsa]
+GENE        1003  CDH5; cadherin-5 preproprotein [KO:K06533]
+            10163  WASF2; actin-binding protein WASF2 isoform 1 [KO:K05748]
+            103910  MYL12B; myosin regulatory light chain 12B [KO:K12757]
+            10398  MYL9; myosin regulatory light polypeptide 9 isoform a [KO:K12755]
+            10458  BAIAP2; BAR/IMD domain-containing adapter protein 2 isoform 2 [KO:K05627]
+            10580  SORBS1; sorbin and SH3 domain-containing protein 1 isoform 3 [KO:K06086]
+            10627  MYL12A; myosin regulatory light chain 12A isoform 1 [KO:K12757]
+            10810  WASF3; actin-binding protein WASF3 isoform 1 [KO:K06083]
+            11235  PDCD10; programmed cell death protein 10 [KO:K18269]
+            117178  SSX2IP; afadin- and alpha-actinin-binding protein isoform 1 [KO:K06085]
+            1387  CREBBP; CREB-binding protein isoform a [KO:K04498] [EC:2.3.1.48]
+            1457  CSNK2A1; casein kinase II subunit alpha isoform a [KO:K03097] [EC:2.7.11.1]
+            1459  CSNK2A2; casein kinase II subunit alpha' [KO:K03097] [EC:2.7.11.1]
+            1460  CSNK2B; casein kinase II subunit beta isoform 1 [KO:K03115]
+            1495  CTNNA1; catenin alpha-1 isoform 1 [KO:K05691]
+            1496  CTNNA2; catenin alpha-2 isoform 3 [KO:K05691]
+            1499  CTNNB1; catenin beta-1 isoform 1 [KO:K02105]
+            1500  CTNND1; catenin delta-1 isoform 1ABC [KO:K05690]
+            1956  EGFR; epidermal growth factor receptor isoform a precursor [KO:K04361] [EC:2.7.10.1]
+            2033  EP300; histone acetyltransferase p300 isoform 1 [KO:K04498] [EC:2.3.1.48]
+            2064  ERBB2; receptor tyrosine-protein kinase erbB-2 isoform a precursor [KO:K05083] [EC:2.7.10.1]
+            2241  FER; tyrosine-protein kinase Fer isoform a [KO:K08889] [EC:2.7.10.2]
+            2260  FGFR1; fibroblast growth factor receptor 1 isoform 1 precursor [KO:K04362] [EC:2.7.10.1]
+            2534  FYN; tyrosine-protein kinase Fyn isoform a [KO:K05703] [EC:2.7.10.2]
+            25945  NECTIN3; nectin-3 isoform 1 precursor [KO:K06592]
+            283106  CSNK2A3; casein kinase II subunit alpha 3 [KO:K03097] [EC:2.7.11.1]
+            29119  CTNNA3; catenin alpha-3 isoform a [KO:K05691]
+            29895  MYL11; myosin regulatory light chain 11 [KO:K12758]
+            3480  IGF1R; insulin-like growth factor 1 receptor isoform 1 precursor [KO:K05087] [EC:2.7.10.1]
+            3643  INSR; insulin receptor isoform Long preproprotein [KO:K04527] [EC:2.7.10.1]
+            387  RHOA; transforming protein RhoA isoform 1 precursor [KO:K04513]
+            4008  LMO7; LIM domain only protein 7 isoform 3 [KO:K06084]
+            4088  SMAD3; mothers against decapentaplegic homolog 3 isoform 1 [KO:K23605]
+            4089  SMAD4; mothers against decapentaplegic homolog 4 isoform a [KO:K04501]
+            4233  MET; hepatocyte growth factor receptor isoform b preproprotein [KO:K05099] [EC:2.7.10.1]
+            4301  AFDN; afadin isoform 6 [KO:K05702]
+            4633  MYL2; myosin regulatory light chain 2, ventricular/cardiac muscle isoform isoform 1 [KO:K10351]
+            4636  MYL5; myosin light chain 5 isoform 1 [KO:K12753]
+            51176  LEF1; lymphoid enhancer-binding factor 1 isoform 1 [KO:K04492]
+            51701  NLK; serine/threonine-protein kinase NLK [KO:K04468] [EC:2.7.11.24]
+            52  ACP1; low molecular weight phosphotyrosine protein phosphatase isoform c [KO:K14394] [EC:3.1.3.2 3.1.3.48]
+            54922  RASIP1; ras-interacting protein 1 [KO:K26417]
+            55698  RADIL; ras-associating and dilute domain-containing protein [KO:K26418]
+            5594  MAPK1; mitogen-activated protein kinase 1 [KO:K04371] [EC:2.7.11.24]
+            5595  MAPK3; mitogen-activated protein kinase 3 isoform 1 [KO:K04371] [EC:2.7.11.24]
+            56288  PARD3; partitioning defective 3 homolog isoform 1 [KO:K04237]
+            57154  SMURF1; E3 ubiquitin-protein ligase SMURF1 isoform 1 [KO:K04678] [EC:2.3.2.26]
+            57493  HEG1; protein HEG homolog 1 precursor [KO:K24472]
+            5770  PTPN1; tyrosine-protein phosphatase non-receptor type 1 isoform 1 [KO:K05696] [EC:3.1.3.48]
+            5777  PTPN6; tyrosine-protein phosphatase non-receptor type 6 isoform 1 [KO:K05697] [EC:3.1.3.48]
+            5787  PTPRB; receptor-type tyrosine-protein phosphatase beta isoform b precursor [KO:K05694] [EC:3.1.3.48]
+            5792  PTPRF; receptor-type tyrosine-protein phosphatase F isoform 1 precursor [KO:K05695] [EC:3.1.3.48]
+            5795  PTPRJ; receptor-type tyrosine-protein phosphatase eta isoform 1 precursor [KO:K05698] [EC:3.1.3.48]
+            5797  PTPRM; receptor-type tyrosine-protein phosphatase mu isoform 2 precursor [KO:K05693] [EC:3.1.3.48]
+            5818  NECTIN1; nectin-1 isoform 1 precursor [KO:K06081]
+            5819  NECTIN2; nectin-2 isoform delta precursor [KO:K06531]
+            58498  MYL7; myosin regulatory light chain 2, atrial isoform [KO:K12754]
+            5879  RAC1; ras-related C3 botulinum toxin substrate 1 isoform Rac1 [KO:K04392]
+            5880  RAC2; ras-related C3 botulinum toxin substrate 2 [KO:K07860]
+            5881  RAC3; ras-related C3 botulinum toxin substrate 3 isoform 1 [KO:K07861]
+            5906  RAP1A; ras-related protein Rap-1A precursor [KO:K04353]
+            5908  RAP1B; ras-related protein Rap-1b isoform 1 precursor [KO:K07836]
+            60  ACTB; actin, cytoplasmic 1 [KO:K05692]
+            6093  ROCK1; rho-associated protein kinase 1 [KO:K04514] [EC:2.7.11.39]
+            64750  SMURF2; E3 ubiquitin-protein ligase SMURF2 [KO:K04678] [EC:2.3.2.26]
+            6591  SNAI2; zinc finger protein SNAI2 [KO:K05706]
+            6615  SNAI1; zinc finger protein SNAI1 [KO:K05707]
+            6714  SRC; proto-oncogene tyrosine-protein kinase Src [KO:K05704] [EC:2.7.10.2]
+            6885  MAP3K7; mitogen-activated protein kinase kinase kinase 7 isoform B [KO:K04427] [EC:2.7.11.25]
+            6932  TCF7; transcription factor 7 isoform 1 [KO:K02620]
+            6934  TCF7L2; transcription factor 7-like 2 isoform 17 [KO:K04491]
+            7046  TGFBR1; TGF-beta receptor type-1 isoform 1 precursor [KO:K04674] [EC:2.7.11.30]
+            7048  TGFBR2; TGF-beta receptor type-2 isoform B precursor [KO:K04388] [EC:2.7.11.30]
+            7082  TJP1; tight junction protein 1 isoform a [KO:K05701]
+            71  ACTG1; actin, cytoplasmic 2 [KO:K05692]
+            7414  VCL; vinculin isoform meta-VCL [KO:K05700]
+            7454  WAS; actin nucleation-promoting factor WAS isoform 1 [KO:K05747]
+            7525  YES1; tyrosine-protein kinase Yes [KO:K05705] [EC:2.7.10.2]
+            81  ACTN4; alpha-actinin-4 isoform 1 [KO:K05699]
+            81607  NECTIN4; nectin-4 precursor [KO:K06593]
+            83439  TCF7L1; transcription factor 7-like 1 [KO:K04490]
+            83605  CCM2; cerebral cavernous malformations 2 protein isoform 2 [KO:K26416]
+            87  ACTN1; alpha-actinin-1 isoform b [KO:K05699]
+            8826  IQGAP1; ras GTPase-activating-like protein IQGAP1 [KO:K16848]
+            889  KRIT1; krev interaction trapped protein 1 isoform 1 [KO:K17705]
+            8936  WASF1; actin-binding protein WASF1 [KO:K05753]
+            8976  WASL; actin nucleation-promoting factor WASL [KO:K23612]
+            93408  MYL10; myosin regulatory light chain 10 [KO:K12756]
+            9411  ARHGAP29; rho GTPase-activating protein 29 isoform a [KO:K20644]
+            9475  ROCK2; rho-associated protein kinase 2 isoform 1 [KO:K17388] [EC:2.7.11.39]
+            9855  FARP2; FERM, ARHGEF and pleckstrin domain-containing protein 2 isoform a [KO:K06082]
+            998  CDC42; cell division control protein 42 homolog isoform 1 precursor [KO:K04393]
+            999  CDH1; cadherin-1 isoform 1 preproprotein [KO:K05689]
+REFERENCE   PMID:15001769
+  AUTHORS   Nelson WJ, Nusse R.
+  TITLE     Convergence of Wnt, beta-catenin, and cadherin pathways.
+  JOURNAL   Science 303:1483-7 (2004)
+            DOI:10.1126/science.1094291
+REFERENCE   PMID:10204118
+  AUTHORS   Potter E, Bergwitz C, Brabant G.
+  TITLE     The cadherin-catenin system: implications for growth and differentiation of endocrine tissues.
+  JOURNAL   Endocr Rev 20:207-39 (1999)
+            DOI:10.1210/edrv.20.2.0362
+REFERENCE   PMID:10959047
+  AUTHORS   Beavon IR.
+  TITLE     The E-cadherin-catenin complex in tumour metastasis: structure, function and regulation.
+  JOURNAL   Eur J Cancer 36:1607-20 (2000)
+            DOI:10.1016/S0959-8049(00)00158-1
+REFERENCE   PMID:15489912
+  AUTHORS   Reynolds AB, Roczniak-Ferguson A.
+  TITLE     Emerging roles for p120-catenin in cell adhesion and cancer.
+  JOURNAL   Oncogene 23:7947-56 (2004)
+            DOI:10.1038/sj.onc.1208161
+REFERENCE   PMID:11171368
+  AUTHORS   Angst BD, Marcozzi C, Magee AI.
+  TITLE     The cadherin superfamily: diversity in form and function.
+  JOURNAL   J Cell Sci 114:629-41 (2001)
+REFERENCE   PMID:11984870
+  AUTHORS   Lilien J, Balsamo J, Arregui C, Xu G.
+  TITLE     Turn-off, drop-out: functional state switching of cadherins.
+  JOURNAL   Dev Dyn 224:18-29 (2002)
+            DOI:10.1002/dvdy.10087
+REFERENCE   PMID:12640114
+  AUTHORS   Piedra J, Miravet S, Castano J, Palmer HG, Heisterkamp N, Garcia de Herreros A, Dunach M.
+  TITLE     p120 Catenin-associated Fer and Fyn tyrosine kinases regulate beta-catenin Tyr-142 phosphorylation and beta-catenin-alpha-catenin Interaction.
+  JOURNAL   Mol Cell Biol 23:2287-97 (2003)
+            DOI:10.1128/MCB.23.7.2287-2297.2003
+REFERENCE   PMID:14623871
+  AUTHORS   Conacci-Sorrell M, Simcha I, Ben-Yedidia T, Blechman J, Savagner P, Ben-Ze'ev A.
+  TITLE     Autoregulation of E-cadherin expression by cadherin-cadherin interactions: the roles of beta-catenin signaling, Slug, and MAPK.
+  JOURNAL   J Cell Biol 163:847-57 (2003)
+            DOI:10.1083/jcb.200308162
+REFERENCE   PMID:11703922
+  AUTHORS   Ciruna B, Rossant J.
+  TITLE     FGF signaling regulates mesoderm cell fate specification and morphogenetic movement at the primitive streak.
+  JOURNAL   Dev Cell 1:37-49 (2001)
+            DOI:10.1016/S1534-5807(01)00017-X
+REFERENCE   PMID:12665527
+  AUTHORS   Peinado H, Quintanilla M, Cano A.
+  TITLE     Transforming growth factor beta-1 induces snail transcription factor in epithelial cell lines: mechanisms for epithelial mesenchymal transitions.
+  JOURNAL   J Biol Chem 278:21113-23 (2003)
+            DOI:10.1074/jbc.M211304200
+REFERENCE   PMID:10890911
+  AUTHORS   Labbe E, Letamendia A, Attisano L.
+  TITLE     Association of Smads with lymphoid enhancer binding factor 1/T cell-specific factor mediates cooperative signaling by the transforming growth factor-beta and wnt pathways.
+  JOURNAL   Proc Natl Acad Sci U S A 97:8358-63 (2000)
+            DOI:10.1073/pnas.150152697
+REFERENCE   PMID:15551862
+  AUTHORS   Nakanishi H, Takai Y.
+  TITLE     Roles of nectins in cell adhesion, migration and polarization.
+  JOURNAL   Biol Chem 385:885-92 (2004)
+            DOI:10.1515/BC.2004.116
+REFERENCE   PMID:15561584
+  AUTHORS   Irie K, Shimizu K, Sakisaka T, Ikeda W, Takai Y.
+  TITLE     Roles and modes of action of nectins in cell-cell adhesion.
+  JOURNAL   Semin Cell Dev Biol 15:643-56 (2004)
+            DOI:10.1016/j.semcdb.2004.09.002
+REL_PATHWAY hsa04010  MAPK signaling pathway
+            hsa04060  Cytokine-cytokine receptor interaction
+            hsa04310  Wnt signaling pathway
+            hsa04350  TGF-beta signaling pathway
+            hsa04530  Tight junction
+            hsa04810  Regulation of actin cytoskeleton
+KO_PATHWAY  ko04520
+///
+
+ENTRY       hsa00512                    Pathway
+NAME        Mucin type O-glycan biosynthesis - Homo sapiens (human)
+DESCRIPTION O-glycans are a class of glycans that modify serine or threonine residues of proteins. Biosynthesis of O-glycans starts from the transfer of N-acetylgalactosamine (GalNAc) to serine or threonine. The first GalNAc may be extended with sugars including galactose, N-acetylglucosamine, fucose, or sialic acid, but not mannose, glucose, or xylose. Depending on the sugars added, there are four common O-glycan core structures, cores 1 through 4, and an additional four, cores 5 though 8. Mucins are highly O-glycosylated glycoproteins ubiquitous in mucous secretions on cell surfaces and in body fluids. Mucin O-glycans can be branched, and many sugars or groups of sugars are antigenic. Important modifications of mucin O-glycans include O-acetylation of sialic acid and O-sulfation of galactose and N-acetylglucosamine.
+CLASS       Metabolism; Glycan biosynthesis and metabolism
+PATHWAY_MAP hsa00512  Mucin type O-glycan biosynthesis
+MODULE      hsa_M00056  O-glycan biosynthesis, mucin type core [PATH:hsa00512]
+DBLINKS     GO: 0006493
+ORGANISM    Homo sapiens (human) [GN:hsa]
+GENE        100528030  POC1B-GALNT4; POC1B-GALNT4 protein isoform 2 [KO:K00710] [EC:2.4.1.41]
+            10331  B3GNT3; N-acetyllactosaminide beta-1,3-N-acetylglucosaminyltransferase 3 [KO:K07970] [EC:2.4.1.146 2.4.1.149]
+            10610  ST6GALNAC2; alpha-N-acetylgalactosaminide alpha-2,6-sialyltransferase 2 [KO:K06616] [EC:2.4.3.3]
+            11226  GALNT6; polypeptide N-acetylgalactosaminyltransferase 6 [KO:K00710] [EC:2.4.1.41]
+            11227  GALNT5; polypeptide N-acetylgalactosaminyltransferase 5 isoform 1 [KO:K00710] [EC:2.4.1.41]
+            114805  GALNT13; polypeptide N-acetylgalactosaminyltransferase 13 isoform 1 [KO:K00710] [EC:2.4.1.41]
+            117248  GALNT15; polypeptide N-acetylgalactosaminyltransferase 15 isoform 1 [KO:K00710] [EC:2.4.1.41]
+            168391  GALNTL5; inactive polypeptide N-acetylgalactosaminyltransferase-like protein 5 [KO:K00710] [EC:2.4.1.41]
+            192134  B3GNT6; acetylgalactosaminyl-O-glycosyl-glycoprotein beta-1,3-N-acetylglucosaminyltransferase [KO:K00739] [EC:2.4.1.147]
+            256435  ST6GALNAC3; alpha-N-acetylgalactosaminide alpha-2,6-sialyltransferase 3 isoform 1 [KO:K03373] [EC:2.4.3.7]
+            2589  GALNT1; polypeptide N-acetylgalactosaminyltransferase 1 [KO:K00710] [EC:2.4.1.41]
+            2590  GALNT2; polypeptide N-acetylgalactosaminyltransferase 2 precursor [KO:K00710] [EC:2.4.1.41]
+            2591  GALNT3; polypeptide N-acetylgalactosaminyltransferase 3 [KO:K00710] [EC:2.4.1.41]
+            26290  GALNT8; probable polypeptide N-acetylgalactosaminyltransferase 8 [KO:K00710] [EC:2.4.1.41]
+            2650  GCNT1; beta-1,3-galactosyl-O-glycosyl-glycoprotein beta-1,6-N-acetylglucosaminyltransferase [KO:K00727] [EC:2.4.1.102]
+            27090  ST6GALNAC4; alpha-N-acetyl-neuraminyl-2,3-beta-galactosyl-1,3-N-acetyl-galactosaminide alpha-2,6-sialyltransferase isoform a [KO:K03374] [EC:2.4.3.7]
+            29071  C1GALT1C1; C1GALT1-specific chaperone 1 [KO:K09653]
+            374378  GALNT18; polypeptide N-acetylgalactosaminyltransferase 18 isoform 1 [KO:K00710] [EC:2.4.1.41]
+            442117  GALNTL6; polypeptide N-acetylgalactosaminyltransferase-like 6 [KO:K00710] [EC:2.4.1.41]
+            50614  GALNT9; polypeptide N-acetylgalactosaminyltransferase 9 isoform B [KO:K00710] [EC:2.4.1.41]
+            51301  GCNT4; beta-1,3-galactosyl-O-glycosyl-glycoprotein beta-1,6-N-acetylglucosaminyltransferase 4 [KO:K09663] [EC:2.4.1.-]
+            51809  GALNT7; N-acetylgalactosaminyltransferase 7 isoform 1 [KO:K00710] [EC:2.4.1.41]
+            55568  GALNT10; polypeptide N-acetylgalactosaminyltransferase 10 [KO:K00710] [EC:2.4.1.41]
+            55808  ST6GALNAC1; alpha-N-acetylgalactosaminide alpha-2,6-sialyltransferase 1 isoform 1 [KO:K03479] [EC:2.4.3.3]
+            56913  C1GALT1; glycoprotein-N-acetylgalactosamine 3-beta-galactosyltransferase 1 [KO:K00731] [EC:2.4.1.122]
+            57452  GALNT16; polypeptide N-acetylgalactosaminyltransferase 16 [KO:K00710] [EC:2.4.1.41]
+            63917  GALNT11; polypeptide N-acetylgalactosaminyltransferase 11 isoform 1 [KO:K00710] [EC:2.4.1.41]
+            64409  GALNT17; polypeptide N-acetylgalactosaminyltransferase 17 precursor [KO:K00710] [EC:2.4.1.41]
+            6482  ST3GAL1; CMP-N-acetylneuraminate-beta-galactosamide-alpha-2,3-sialyltransferase 1 [KO:K00780] [EC:2.4.3.2 2.4.3.4]
+            6483  ST3GAL2; CMP-N-acetylneuraminate-beta-galactosamide-alpha-2,3-sialyltransferase 2 [KO:K03368] [EC:2.4.3.2 2.4.3.4]
+            728819  C1GALT1C1L; C1GALT1-specific chaperone 1-like protein [KO:K09653]
+            79623  GALNT14; polypeptide N-acetylgalactosaminyltransferase 14 isoform 1 [KO:K00710] [EC:2.4.1.41]
+            79695  GALNT12; polypeptide N-acetylgalactosaminyltransferase 12 [KO:K00710] [EC:2.4.1.41]
+            8693  GALNT4; polypeptide N-acetylgalactosaminyltransferase 4 [KO:K00710] [EC:2.4.1.41]
+            9245  GCNT3; beta-1,3-galactosyl-O-glycosyl-glycoprotein beta-1,6-N-acetylglucosaminyltransferase 3 isoform 1 [KO:K09662] [EC:2.4.1.-]
+            9334  B4GALT5; beta-1,4-galactosyltransferase 5 [KO:K09905] [EC:2.4.1.274 2.4.1.-]
+COMPOUND    C02189  [Protein]-L-serine
+            G00023  Tn antigen
+            G00024  Thomsen-Friedenreich antigen
+            G00025  
+            G00026  Sialyl T antigen
+            G00027  
+            G00028  
+            G00029  
+            G00030  
+            G00031  
+            G00032  
+            G00033  
+            G00034  
+            G00035  Sialyl-Tn antigen
+            G10611  UDP-N-acetyl-D-galactosamine
+            G10794  
+            G13153  
+REFERENCE   PMID:10580130
+  AUTHORS   Brockhausen I.
+  TITLE     Pathways of O-glycan biosynthesis in cancer cells.
+  JOURNAL   Biochim Biophys Acta 1473:67-95 (1999)
+            DOI:10.1016/S0304-4165(99)00170-1
+REFERENCE   PMID:11821425
+  AUTHORS   Iwai T, Inaba N, Naundorf A, Zhang Y, Gotoh M, Iwasaki H, Kudo T, Togayachi A, Ishizuka Y, Nakanishi H, Narimatsu H.
+  TITLE     Molecular cloning and characterization of a novel UDP-GlcNAc:GalNAc-peptide beta1,3-N-acetylglucosaminyltransferase (beta 3Gn-T6), an enzyme synthesizing the core 3 structure of O-glycans.
+  JOURNAL   J Biol Chem 277:12802-9 (2002)
+            DOI:10.1074/jbc.M112457200
+REFERENCE   PMID:12626393
+  AUTHORS   Korekane H, Taguchi T, Sakamoto Y, Honke K, Dohmae N, Salminen H, Toivonen S, Helin J, Takio K, Renkonen O, Taniguchi N.
+  TITLE     Purification and cDNA cloning of UDP-GlcNAc:GlcNAcbeta1-3Galbeta1-4Glc(NAc)-R [GlcNAc to Gal]beta1,6N-acetylglucosaminyltransferase from rat small intestine: a major carrier of dIGnT activity in rat small intestine.
+  JOURNAL   Glycobiology 13:387-400 (2003)
+            DOI:10.1093/glycob/cwg044
+REFERENCE   PMID:10350056
+  AUTHORS   van Die I, van Tetering A, Schiphorst WE, Sato T, Furukawa K, van den Eijnden DH.
+  TITLE     The acceptor substrate specificity of human beta4-galactosyltransferase V indicates its potential function in O-glycosylation.
+  JOURNAL   FEBS Lett 450:52-6 (1999)
+            DOI:10.1016/S0014-5793(99)00462-7
+REFERENCE   PMID:15466199
+  AUTHORS   Marcos NT, Pinho S, Grandela C, Cruz A, Samyn-Petit B, Harduin-Lepers A, Almeida R, Silva F, Morais V, Costa J, Kihlberg J, Clausen H, Reis CA
+  TITLE     Role of the human ST6GalNAc-I and ST6GalNAc-II in the synthesis of the cancer-associated sialyl-Tn antigen.
+  JOURNAL   Cancer Res 64:7050-7 (2004)
+            DOI:10.1158/0008-5472.CAN-04-1921
+REFERENCE   PMID:10207017
+  AUTHORS   Lee YC, Kaufmann M, Kitazume-Kawaguchi S, Kono M, Takashima S, Kurosawa N, Liu H, Pircher H, Tsuji S
+  TITLE     Molecular cloning and functional expression of two members of mouse NeuAcalpha2,3Galbeta1,3GalNAc GalNAcalpha2,6-sialyltransferase family, ST6GalNAc  III and IV.
+  JOURNAL   J Biol Chem 274:11958-67 (1999)
+            DOI:10.1074/jbc.274.17.11958
+REFERENCE   PMID:25727146
+  AUTHORS   Kudelka MR, Ju T, Heimburg-Molinaro J, Cummings RD
+  TITLE     Simple sugars to complex disease--mucin-type O-glycans in cancer.
+  JOURNAL   Adv Cancer Res 126:53-135 (2015)
+            DOI:10.1016/bs.acr.2014.11.002
+REFERENCE   PMID:11439191
+  AUTHORS   Yeh JC, Hiraoka N, Petryniak B, Nakayama J, Ellies LG, Rabuka D, Hindsgaul O, Marth JD, Lowe JB, Fukuda M
+  TITLE     Novel sulfated lymphocyte homing receptors and their control by a Core1 extension beta 1,3-N-acetylglucosaminyltransferase.
+  JOURNAL   Cell 105:957-69 (2001)
+            DOI:10.1016/S0092-8674(01)00394-4
+REL_PATHWAY hsa00533  Glycosaminoglycan biosynthesis - keratan sulfate
+KO_PATHWAY  ko00512
+///
+
+ENTRY       hsa04672                    Pathway
+NAME        Intestinal immune network for IgA production - Homo sapiens (human)
+DESCRIPTION The intestine is the largest lymphoid tissue in the body. One striking feature of intestinal immunity is its ability to generate great amounts of noninflammatory immunoglobulin A (IgA) antibodies that serve as the first line of defense against microorganisms. The basic map of IgA production includes induction of mucosal B cells in the Peyer's patches, circulation through the bloodstream and homing to intestinal mucosa of IgA-commited plasma cells, and local antibody production for export across the intestinal membranes. Multiple cytokines, including TGF-{beta}, IL-10, IL-4, IL-5, and IL-6, are required to promote IgA class switching and terminal differentiation process of the B cells. Secreted IgA promotes immune exclusion by entrapping dietary antigens and microorganisms in the mucus and functions for neutralization of toxins and pathogenic microbes.
+CLASS       Organismal Systems; Immune system
+PATHWAY_MAP hsa04672  Intestinal immune network for IgA production
+DRUG        D03203  Abatacept (USAN/INN)
+            D03222  Belatacept (USAN/INN)
+            D09799  Carotegrast methyl (JAN)
+            D09901  Etrolizumab (USAN/INN)
+            D10028  Valategrast hydrochloride (USAN)
+            D10378  Vercirnon (USAN/INN)
+            D10379  Vercirnon sodium (USAN)
+            D11281  Reltecimod (USAN/INN)
+            D11348  Reltecimod sodium (USAN)
+            D11556  Idecabtagene vicleucel (USAN)
+            D11594  Belantamab (USAN/INN)
+            D11595  Belantamab mafodotin (USAN)
+            D11821  Nogapendekin alfa (USAN/INN)
+            D11907  Rozibafusp alfa (USAN/INN)
+            D11992  Pavurutamab (USAN)
+            D11996  Feladilimab (USAN/INN)
+            D12010  Pacanalotamab (USAN)
+            D12151  Ianalumab (JAN/USAN/INN)
+            D12195  Izuralimab (USAN)
+            D12222  Linvoseltamab (USAN)
+            D12300  Acazicolcept (USAN/INN)
+            D12306  Ordesekimab (USAN)
+            D12315  Ciltacabtagene autoleucel (USAN/INN)
+            D12374  Sibeprenlimab (USAN/INN)
+            D12566  Nezastomig (USAN)
+            D12620  Frexalimab (USAN/INN)
+            D12623  Nanrilkefusp alfa (USAN/INN)
+            D12800  Zigakibart (USAN/INN)
+            D12803  Povetacicept (USAN/INN)
+            D12888  Nogapendekin alfa inbakicept
+            D12913  Ingitamig (USAN)
+            D12990  Etentamig (USAN/INN)
+            D13033  Abiprubart (USAN/INN)
+            D13214  Cizutamig (USAN/INN)
+            D13259  Ciltistotug (USAN/INN)
+            D13320  Ramantamig (USAN/INN)
+            D13359  Velaprumig (USAN/INN)
+DBLINKS     GO: 0002387
+ORGANISM    Homo sapiens (human) [GN:hsa]
+GENE        102723407  [KO:K06856]
+            102723996  [KO:K06710]
+            10673  TNFSF13B; tumor necrosis factor ligand superfamily member 13B isoform 1 [KO:K05476]
+            10803  CCR9; C-C chemokine receptor type 9 isoform A [KO:K04184]
+            115650  TNFRSF13C; tumor necrosis factor receptor superfamily member 13C [KO:K05151]
+            23308  ICOSLG; ICOS ligand isoform a precursor [KO:K06710]
+            23495  TNFRSF13B; tumor necrosis factor receptor superfamily member 13B [KO:K05150]
+            2826  CCR10; C-C chemokine receptor type 10 [KO:K04185]
+            29851  ICOS; inducible T-cell costimulator precursor [KO:K06713]
+            3108  HLA-DMA; HLA class II histocompatibility antigen, DM alpha chain precursor [KO:K06752]
+            3109  HLA-DMB; HLA class II histocompatibility antigen, DM beta chain precursor [KO:K06752]
+            3111  HLA-DOA; HLA class II histocompatibility antigen, DO alpha chain precursor [KO:K06752]
+            3112  HLA-DOB; HLA class II histocompatibility antigen, DO beta chain precursor [KO:K06752]
+            3113  HLA-DPA1; HLA class II histocompatibility antigen, DP alpha 1 chain precursor [KO:K06752]
+            3115  HLA-DPB1; HLA class II histocompatibility antigen, DP beta 1 chain precursor [KO:K06752]
+            3117  HLA-DQA1; HLA class II histocompatibility antigen, DQ alpha 1 chain precursor [KO:K06752]
+            3118  HLA-DQA2; HLA class II histocompatibility antigen, DQ alpha 2 chain precursor [KO:K06752]
+            3119  HLA-DQB1; HLA class II histocompatibility antigen, DQ beta 1 chain isoform 2 precursor [KO:K06752]
+            3120  HLA-DQB2; HLA class II histocompatibility antigen, DQ beta 2 chain isoform 2 precursor [KO:K06752]
+            3122  HLA-DRA; HLA class II histocompatibility antigen, DR alpha chain precursor [KO:K06752]
+            3123  HLA-DRB1; major histocompatibility complex, class II, DR beta 1 precursor [KO:K06752]
+            3125  HLA-DRB3; major histocompatibility complex, class II, DR beta 3 precursor [KO:K06752]
+            3126  HLA-DRB4; major histocompatibility complex, class II, DR beta 4 precursor [KO:K06752]
+            3127  HLA-DRB5; major histocompatibility complex, class II, DR beta 5 precursor [KO:K06752]
+            3558  IL2; interleukin-2 precursor [KO:K05429]
+            3565  IL4; interleukin-4 isoform 1 precursor [KO:K05430]
+            3567  IL5; interleukin-5 precursor [KO:K05428]
+            3569  IL6; interleukin-6 isoform 1 precursor [KO:K05405]
+            3586  IL10; interleukin-10 isoform 1 precursor [KO:K05443]
+            3600  IL15; interleukin-15 isoform 1 preproprotein [KO:K05433]
+            3601  IL15RA; interleukin-15 receptor subunit alpha isoform 1 precursor [KO:K05074]
+            3676  ITGA4; integrin alpha-4 isoform 1 preproprotein [KO:K06483]
+            3695  ITGB7; integrin beta-7 isoform a precursor [KO:K06590]
+            4055  LTBR; tumor necrosis factor receptor superfamily member 3 isoform 1 precursor [KO:K03159]
+            5284  PIGR; polymeric immunoglobulin receptor precursor [KO:K13073]
+            56477  CCL28; C-C motif chemokine 28 isoform a precursor [KO:K05513]
+            57379  AICDA; single-stranded DNA cytosine deaminase isoform 1 [KO:K10989] [EC:3.5.4.38]
+            608  TNFRSF17; tumor necrosis factor receptor superfamily member 17 [KO:K05153]
+            6370  CCL25; C-C motif chemokine 25 isoform 1 precursor [KO:K13072]
+            6387  CXCL12; stromal cell-derived factor 1 isoform beta precursor [KO:K10031]
+            7040  TGFB1; transforming growth factor beta-1 proprotein preproprotein [KO:K13375]
+            7852  CXCR4; C-X-C chemokine receptor type 4 isoform b [KO:K04189]
+            8174  MADCAM1; mucosal addressin cell adhesion molecule 1 isoform a precursor [KO:K06779]
+            8741  TNFSF13; tumor necrosis factor ligand superfamily member 13 isoform alpha precursor [KO:K05475]
+            9020  MAP3K14; mitogen-activated protein kinase kinase kinase 14 [KO:K04466] [EC:2.7.11.25]
+            940  CD28; T-cell-specific surface glycoprotein CD28 isoform 1 precursor [KO:K06470]
+            941  CD80; T-lymphocyte activation antigen CD80 precursor [KO:K05412]
+            942  CD86; T-lymphocyte activation antigen CD86 isoform 1 precursor [KO:K05413]
+            958  CD40; tumor necrosis factor receptor superfamily member 5 isoform 1 precursor [KO:K03160]
+            959  CD40LG; CD40 ligand [KO:K03161]
+COMPOUND    C00777  Retinoate
+            C15493  9-cis-Retinoic acid
+REFERENCE   PMID:12511876
+  AUTHORS   Fagarasan S, Honjo T
+  TITLE     Intestinal IgA synthesis: regulation of front-line body defences.
+  JOURNAL   Nat Rev Immunol 3:63-72 (2003)
+            DOI:10.1038/nri982
+REFERENCE   PMID:19079156
+  AUTHORS   Macpherson AJ, McCoy KD, Johansen FE, Brandtzaeg P
+  TITLE     The immune geography of IgA induction and function.
+  JOURNAL   Mucosal Immunol 1:11-22 (2008)
+            DOI:10.1038/mi.2007.6
+REFERENCE   PMID:15971106
+  AUTHORS   Kunisawa J, Kiyono H
+  TITLE     A marvel of mucosal T cells and secretory antibodies for the creation of first lines of defense.
+  JOURNAL   Cell Mol Life Sci 62:1308-21 (2005)
+            DOI:10.1007/s00018-005-5035-1
+REFERENCE   PMID:18549797
+  AUTHORS   Cerutti A, Rescigno M
+  TITLE     The biology of intestinal immunoglobulin A responses.
+  JOURNAL   Immunity 28:740-50 (2008)
+            DOI:10.1016/j.immuni.2008.05.001
+REFERENCE   PMID:18243016
+  AUTHORS   Tsuji M, Suzuki K, Kinoshita K, Fagarasan S
+  TITLE     Dynamic interactions between bacteria and immune cells leading to intestinal IgA synthesis.
+  JOURNAL   Semin Immunol 20:59-66 (2008)
+            DOI:10.1016/j.smim.2007.12.003
+REFERENCE   PMID:17182536
+  AUTHORS   Corthesy B
+  TITLE     Roundtrip ticket for secretory IgA: role in mucosal homeostasis?
+  JOURNAL   J Immunol 178:27-32 (2007)
+            DOI:10.4049/jimmunol.178.1.27
+REFERENCE   PMID:18838301
+  AUTHORS   Suzuki K, Fagarasan S
+  TITLE     How host-bacterial interactions lead to IgA synthesis in the gut.
+  JOURNAL   Trends Immunol 29:523-31 (2008)
+            DOI:10.1016/j.it.2008.08.001
+REFERENCE   PMID:19079167
+  AUTHORS   Mora JR, von Andrian UH
+  TITLE     Differentiation and homing of IgA-secreting cells.
+  JOURNAL   Mucosal Immunol 1:96-109 (2008)
+            DOI:10.1038/mi.2007.14
+REFERENCE   PMID:17161619
+  AUTHORS   Suzuki K, Ha SA, Tsuji M, Fagarasan S
+  TITLE     Intestinal IgA synthesis: a primitive form of adaptive immunity that regulates microbial communities in the gut.
+  JOURNAL   Semin Immunol 19:127-35 (2007)
+            DOI:10.1016/j.smim.2006.10.001
+REFERENCE   PMID:18483500
+  AUTHORS   Cerutti A
+  TITLE     The regulation of IgA class switching.
+  JOURNAL   Nat Rev Immunol 8:421-34 (2008)
+            DOI:10.1038/nri2322
+REL_PATHWAY hsa04612  Antigen processing and presentation
+            hsa04660  T cell receptor signaling pathway
+            hsa04662  B cell receptor signaling pathway
+            hsa04670  Leukocyte transendothelial migration
+KO_PATHWAY  ko04672
+///
+
+ENTRY       hsa04668                    Pathway
+NAME        TNF signaling pathway - Homo sapiens (human)
+DESCRIPTION Tumor necrosis factor (TNF), as a critical cytokine, can induce a wide range of intracellular signal pathways including apoptosis and cell survival as well as inflammation and immunity. Activated TNF is assembled to a homotrimer and binds to its receptors (TNFR1, TNFR2) resulting in the trimerization of TNFR1 or TNFR2. TNFR1 is expressed by nearly all cells and is the major receptor for TNF (also called TNF-alpha). In contrast, TNFR2 is expressed in limited cells such as CD4 and CD8 T lymphocytes, endothelial cells, microglia, oligodendrocytes, neuron subtypes, cardiac myocytes, thymocytes and human mesenchymal stem cells. It is the receptor for both TNF and LTA (also called TNF-beta). Upon binding of the ligand, TNFR mediates the association of some adaptor proteins such as TRADD or TRAF2, which in turn initiate recruitment of signal transducers. TNFR1 signaling induces activation of many genes, primarily controlled by two distinct pathways, NF-kappa B pathway and the MAPK cascade, or apoptosis and necroptosis. TNFR2 signaling activates NF-kappa B pathway including PI3K-dependent NF-kappa B pathway and JNK pathway leading to survival.
+CLASS       Environmental Information Processing; Signal transduction
+PATHWAY_MAP hsa04668  TNF signaling pathway
+NETWORK     nt06160  Human T-cell leukemia virus 1 (HTLV-1)
+            nt06161  Human immunodeficiency virus 1 (HIV-1)
+            nt06163  Hepatitis C virus (HCV)
+            nt06164  Kaposi sarcoma-associated herpesvirus (KSHV)
+            nt06165  Epstein-Barr virus (EBV)
+            nt06166  Human papillomavirus (HPV)
+            nt06167  Human cytomegalovirus (HCMV)
+            nt06168  Herpes simplex virus 1 (HSV-1)
+            nt06180  Pathogenic Escherichia coli
+            nt06181  Salmonella
+            nt06182  Shigella
+            nt06223  TNF signaling (cancer)
+            nt06231  Apoptosis (cancer)
+            nt06263  Hepatocellular carcinoma
+            nt06461  Huntington disease
+            nt06516  TNF signaling
+            nt06524  Apoptosis
+            nt06527  Necroptosis
+  ELEMENT   N00145  Extrinsic apoptotic pathway
+            N00151  TNF-NFKB signaling pathway
+            N00374  TNF-IRF1 signaling pathway
+            N00444  TNF-p38 signaling pathway
+            N00446  TNF-JNK signaling pathway
+            N01583  Regulation of extrinsic apoptotic pathway, XIAP
+DRUG        D00754  Thalidomide (JAN/USP/INN)
+            D01583  Pirfenidone (JAN/USAN/INN)
+            D03793  Ilomastat (USAN/INN)
+            D03795  Marimastat (USAN/INN)
+            D03797  Prinomastat (USAN/INN)
+            D03800  Rebimastat (USAN/INN)
+            D04687  Lenalidomide (JAN/USAN/INN)
+            D04690  Lenercept (USAN/INN)
+            D06017  Tebufelone (USAN/INN)
+            D06570  Camobucol (USAN/INN)
+            D06582  Elsibucol (USAN/INN)
+            D06619  Mifamurtide (USAN)
+            D06648  Succinobucol (USAN)
+            D08562  Tasonermin (INN)
+            D08976  Pomalidomide (JAN/USAN/INN)
+            D09813  Lenalidomide hydrate (JAN)
+            D11121  Gimsilumab (USAN/INN)
+            D11385  Inarigivir soproxil (USAN)
+            D11498  Quetmolimab (USAN)
+            D11703  Opinercept (INN)
+            D12306  Ordesekimab (USAN)
+            D12352  Eclitasertib (USAN/INN)
+            D12464  Dazukibart (USAN)
+            D12790  Adalimumab fosimdesonide (USAN/INN)
+            D12810  Falbikitug (USAN/INN)
+            D12821  Flizasertib (USAN/INN)
+            D12846  Ocadusertib (USAN)
+            D13325  Xelafaslatide (USAN/INN)
+            D13339  Balinatunfib (USAN/INN)
+DBLINKS     GO: 0033209
+ORGANISM    Homo sapiens (human) [GN:hsa]
+GENE        10000  AKT3; RAC-gamma serine/threonine-protein kinase isoform 1 [KO:K04456] [EC:2.7.11.1]
+            10059  DNM1L; dynamin-1-like protein isoform 1 [KO:K17065] [EC:3.6.5.5]
+            10454  TAB1; TGF-beta-activated kinase 1 and MAP3K7-binding protein 1 isoform alpha [KO:K04403]
+            10488  CREB3; cyclic AMP-responsive element-binding protein 3 [KO:K09048]
+            1051  CEBPB; CCAAT/enhancer-binding protein beta isoform a [KO:K10048]
+            110117499  P3R3URF-PIK3R3; LOC110117498-PIK3R3 readthrough [KO:K02649]
+            11035  RIPK3; receptor-interacting serine/threonine-protein kinase 3 [KO:K08847] [EC:2.7.11.1]
+            1147  CHUK; inhibitor of nuclear factor kappa-B kinase subunit alpha isoform 1 [KO:K04467] [EC:2.7.11.10]
+            1326  MAP3K8; mitogen-activated protein kinase kinase kinase 8 [KO:K04415] [EC:2.7.11.25]
+            1385  CREB1; cyclic AMP-responsive element-binding protein 1 isoform A [KO:K05870]
+            1386  ATF2; cyclic AMP-dependent transcription factor ATF-2 isoform 1 [KO:K04450]
+            1388  ATF6B; cyclic AMP-dependent transcription factor ATF-6 beta isoform a [KO:K09049]
+            1432  MAPK14; mitogen-activated protein kinase 14 isoform 2 [KO:K04441] [EC:2.7.11.24]
+            1435  CSF1; macrophage colony-stimulating factor 1 isoform a precursor [KO:K05453]
+            1437  CSF2; granulocyte-macrophage colony-stimulating factor precursor [KO:K05427]
+            148327  CREB3L4; cyclic AMP-responsive element-binding protein 3-like protein 4 isoform 1 [KO:K09048]
+            153090  DAB2IP; disabled homolog 2-interacting protein isoform 3 [KO:K19901]
+            1540  CYLD; ubiquitin carboxyl-terminal hydrolase CYLD isoform 1 [KO:K08601] [EC:3.4.19.12]
+            182  JAG1; protein jagged-1 precursor [KO:K06052]
+            1906  EDN1; endothelin-1 isoform 1 preproprotein [KO:K16366]
+            192111  PGAM5; serine/threonine-protein phosphatase PGAM5, mitochondrial isoform 1 [KO:K15637] [EC:3.1.3.16]
+            197259  MLKL; mixed lineage kinase domain-like protein isoform 1 [KO:K08849] [EC:2.7.11.1]
+            207  AKT1; RAC-alpha serine/threonine-protein kinase [KO:K04456] [EC:2.7.11.1]
+            208  AKT2; RAC-beta serine/threonine-protein kinase isoform 1 [KO:K04456] [EC:2.7.11.1]
+            2277  VEGFD; vascular endothelial growth factor D preproprotein [KO:K05449]
+            23118  TAB2; TGF-beta-activated kinase 1 and MAP3K7-binding protein 2 isoform a [KO:K04404]
+            2353  FOS; protein c-Fos [KO:K04379]
+            257397  TAB3; TGF-beta-activated kinase 1 and MAP3K7-binding protein 3 isoform 1 [KO:K12793]
+            2919  CXCL1; growth-regulated alpha protein precursor [KO:K05505]
+            2920  CXCL2; C-X-C motif chemokine 2 precursor [KO:K05505]
+            2921  CXCL3; C-X-C motif chemokine 3 precursor [KO:K05505]
+            329  BIRC2; baculoviral IAP repeat-containing protein 2 isoform 1 [KO:K16060]
+            330  BIRC3; baculoviral IAP repeat-containing protein 3 [KO:K16060]
+            331  XIAP; E3 ubiquitin-protein ligase XIAP [KO:K04725] [EC:2.3.2.27]
+            3383  ICAM1; intercellular adhesion molecule 1 precursor [KO:K06490]
+            3456  IFNB1; interferon beta precursor [KO:K05415]
+            355  FAS; tumor necrosis factor receptor superfamily member 6 isoform 1 precursor [KO:K04390]
+            3551  IKBKB; inhibitor of nuclear factor kappa-B kinase subunit beta isoform 1 [KO:K07209] [EC:2.7.11.10]
+            3553  IL1B; interleukin-1 beta proprotein [KO:K04519]
+            3569  IL6; interleukin-6 isoform 1 precursor [KO:K05405]
+            3600  IL15; interleukin-15 isoform 1 preproprotein [KO:K05433]
+            3627  CXCL10; C-X-C motif chemokine 10 precursor [KO:K12671]
+            3659  IRF1; interferon regulatory factor 1 isoform 1 [KO:K09444]
+            3725  JUN; transcription factor Jun [KO:K04448]
+            3726  JUNB; transcription factor JunB [KO:K09028]
+            3976  LIF; leukemia inhibitory factor isoform 1 precursor [KO:K05419]
+            4049  LTA; lymphotoxin-alpha precursor [KO:K05468]
+            4217  MAP3K5; mitogen-activated protein kinase kinase kinase 5 isoform 2 [KO:K04426] [EC:2.7.11.25]
+            4314  MMP3; stromelysin-1 preproprotein [KO:K01394] [EC:3.4.24.17]
+            4318  MMP9; matrix metalloproteinase-9 preproprotein [KO:K01403] [EC:3.4.24.35]
+            4323  MMP14; matrix metalloproteinase-14 preproprotein [KO:K07763] [EC:3.4.24.80]
+            468  ATF4; cyclic AMP-dependent transcription factor ATF-4 [KO:K04374]
+            4790  NFKB1; nuclear factor NF-kappa-B p105 subunit isoform 2 proprotein [KO:K02580]
+            4792  NFKBIA; NF-kappa-B inhibitor alpha [KO:K04734]
+            5290  PIK3CA; phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform [KO:K00922] [EC:2.7.1.153]
+            5291  PIK3CB; phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit beta isoform isoform 1 [KO:K00922] [EC:2.7.1.153]
+            5293  PIK3CD; phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform isoform 1 [KO:K00922] [EC:2.7.1.153]
+            5295  PIK3R1; phosphatidylinositol 3-kinase regulatory subunit alpha isoform 1 [KO:K02649]
+            5296  PIK3R2; phosphatidylinositol 3-kinase regulatory subunit beta [KO:K02649]
+            5594  MAPK1; mitogen-activated protein kinase 1 [KO:K04371] [EC:2.7.11.24]
+            5595  MAPK3; mitogen-activated protein kinase 3 isoform 1 [KO:K04371] [EC:2.7.11.24]
+            5599  MAPK8; mitogen-activated protein kinase 8 isoform alpha2 [KO:K04440] [EC:2.7.11.24]
+            5600  MAPK11; mitogen-activated protein kinase 11 [KO:K04441] [EC:2.7.11.24]
+            5601  MAPK9; mitogen-activated protein kinase 9 isoform alpha2 [KO:K04440] [EC:2.7.11.24]
+            5602  MAPK10; mitogen-activated protein kinase 10 isoform 1 [KO:K04440] [EC:2.7.11.24]
+            5603  MAPK13; mitogen-activated protein kinase 13 [KO:K04441] [EC:2.7.11.24]
+            5604  MAP2K1; dual specificity mitogen-activated protein kinase kinase 1 isoform 1 [KO:K04368] [EC:2.7.12.2]
+            5606  MAP2K3; dual specificity mitogen-activated protein kinase kinase 3 isoform B [KO:K04432] [EC:2.7.12.2]
+            5608  MAP2K6; dual specificity mitogen-activated protein kinase kinase 6 isoform 1 [KO:K04433] [EC:2.7.12.2]
+            5609  MAP2K7; dual specificity mitogen-activated protein kinase kinase 7 isoform 3 [KO:K04431] [EC:2.7.12.2]
+            5743  PTGS2; prostaglandin G/H synthase 2 precursor [KO:K11987] [EC:1.14.99.1]
+            5970  RELA; transcription factor p65 isoform 1 [KO:K04735]
+            602  BCL3; B-cell lymphoma 3 protein [KO:K09258]
+            6300  MAPK12; mitogen-activated protein kinase 12 isoform 1 [KO:K04441] [EC:2.7.11.24]
+            6347  CCL2; C-C motif chemokine 2 precursor [KO:K14624]
+            6352  CCL5; C-C motif chemokine 5 isoform 1 precursor [KO:K12499]
+            6364  CCL20; C-C motif chemokine 20 isoform 1 precursor [KO:K14625]
+            6372  CXCL6; C-X-C motif chemokine 6 precursor [KO:K05506]
+            6374  CXCL5; C-X-C motif chemokine 5 precursor [KO:K05506]
+            6376  CX3CL1; fractalkine isoform 1 precursor [KO:K05508]
+            6401  SELE; E-selectin precursor [KO:K06494]
+            64127  NOD2; nucleotide-binding oligomerization domain-containing protein 2 isoform 1 [KO:K10165]
+            6416  MAP2K4; dual specificity mitogen-activated protein kinase kinase 4 isoform 1 [KO:K04430] [EC:2.7.12.2]
+            64285  RHBDF1; inactive rhomboid protein 1 [KO:K27588]
+            64764  CREB3L2; cyclic AMP-responsive element-binding protein 3-like protein 2 isoform 1 [KO:K09048]
+            6868  ADAM17; disintegrin and metalloproteinase domain-containing protein 17 isoform 1 preproprotein [KO:K06059] [EC:3.4.24.86]
+            6885  MAP3K7; mitogen-activated protein kinase kinase kinase 7 isoform B [KO:K04427] [EC:2.7.11.25]
+            7124  TNF; tumor necrosis factor [KO:K03156]
+            7128  TNFAIP3; tumor necrosis factor alpha-induced protein 3 [KO:K11859] [EC:3.4.19.12]
+            7132  TNFRSF1A; tumor necrosis factor receptor superfamily member 1A isoform 1 precursor [KO:K03158]
+            7133  TNFRSF1B; tumor necrosis factor receptor superfamily member 1B precursor [KO:K05141]
+            7185  TRAF1; TNF receptor-associated factor 1 isoform a [KO:K03172]
+            7186  TRAF2; TNF receptor-associated factor 2 [KO:K03173] [EC:2.3.2.27]
+            7187  TRAF3; TNF receptor-associated factor 3 isoform 1 [KO:K03174]
+            7188  TRAF5; TNF receptor-associated factor 5 isoform b [KO:K09849]
+            7412  VCAM1; vascular cell adhesion protein 1 isoform a precursor [KO:K06527]
+            7424  VEGFC; vascular endothelial growth factor C preproprotein [KO:K05449]
+            79651  RHBDF2; inactive rhomboid protein 2 isoform 1 [KO:K27588]
+            836  CASP3; caspase-3 isoform a preproprotein [KO:K02187] [EC:3.4.22.56]
+            83737  ITCH; E3 ubiquitin-protein ligase Itchy homolog isoform 1 [KO:K05632] [EC:2.3.2.26]
+            83786  FRMD8; FERM domain-containing protein 8 isoform 1 [KO:K23972]
+            840  CASP7; caspase-7 isoform alpha precursor [KO:K04397] [EC:3.4.22.60]
+            841  CASP8; caspase-8 isoform 2 precursor [KO:K04398] [EC:3.4.22.61]
+            843  CASP10; caspase-10 isoform 2 preproprotein [KO:K04400] [EC:3.4.22.63]
+            84699  CREB3L3; cyclic AMP-responsive element-binding protein 3-like protein 3 isoform a [KO:K09048]
+            8503  PIK3R3; phosphatidylinositol 3-kinase regulatory subunit gamma isoform 1 [KO:K02649]
+            8517  IKBKG; NF-kappa-B essential modulator isoform a [KO:K07210]
+            8717  TRADD; tumor necrosis factor receptor type 1-associated DEATH domain protein [KO:K03171]
+            8737  RIPK1; receptor-interacting serine/threonine-protein kinase 1 isoform 1 [KO:K02861] [EC:2.7.11.1]
+            8772  FADD; FAS-associated death domain protein [KO:K02373]
+            8809  IL18R1; interleukin-18 receptor 1 isoform 1 precursor [KO:K05173]
+            8837  CFLAR; CASP8 and FADD-like apoptosis regulator isoform 1 [KO:K04724]
+            8986  RPS6KA4; ribosomal protein S6 kinase alpha-4 isoform a [KO:K16510] [EC:2.7.11.1]
+            9020  MAP3K14; mitogen-activated protein kinase kinase kinase 14 [KO:K04466] [EC:2.7.11.25]
+            9021  SOCS3; suppressor of cytokine signaling 3 [KO:K04696]
+            90993  CREB3L1; cyclic AMP-responsive element-binding protein 3-like protein 1 isoform 1 [KO:K09048]
+            9252  RPS6KA5; ribosomal protein S6 kinase alpha-5 isoform a [KO:K04445] [EC:2.7.11.1]
+            9530  BAG4; BAG family molecular chaperone regulator 4 isoform 1 [KO:K09558]
+            9586  CREB5; cyclic AMP-responsive element-binding protein 5 isoform alpha [KO:K09047]
+REFERENCE   PMID:23085193
+  AUTHORS   Chu WM
+  TITLE     Tumor necrosis factor.
+  JOURNAL   Cancer Lett 328:222-5 (2013)
+            DOI:10.1016/j.canlet.2012.10.014
+REFERENCE   PMID:23531747
+  AUTHORS   Shuh M, Bohorquez H, Loss GE Jr, Cohen AJ
+  TITLE     Tumor Necrosis Factor-alpha: Life and Death of Hepatocytes During Liver Ischemia/Reperfusion Injury.
+  JOURNAL   Ochsner J 13:119-30 (2013)
+REFERENCE   PMID:11897488
+  AUTHORS   MacEwan DJ
+  TITLE     TNF receptor subtype signalling: differences and cellular consequences.
+  JOURNAL   Cell Signal 14:477-92 (2002)
+            DOI:10.1016/S0898-6568(01)00262-5
+REFERENCE   PMID:22296764
+  AUTHORS   Newton K, Dixit VM
+  TITLE     Signaling in innate immunity and inflammation.
+  JOURNAL   Cold Spring Harb Perspect Biol 4:a006049 (2012)
+            DOI:10.1101/cshperspect.a006049
+REFERENCE   PMID:10581243
+  AUTHORS   Pomerantz JL, Baltimore D
+  TITLE     NF-kappaB activation by a signaling complex containing TRAF2, TANK and TBK1, a novel IKK-related kinase.
+  JOURNAL   EMBO J 18:6694-704 (1999)
+            DOI:10.1093/emboj/18.23.6694
+REFERENCE   PMID:21232019
+  AUTHORS   Naude PJ, den Boer JA, Luiten PG, Eisel UL
+  TITLE     Tumor necrosis factor receptor cross-talk.
+  JOURNAL   FEBS J 278:888-98 (2011)
+            DOI:10.1111/j.1742-4658.2011.08017.x
+REFERENCE   PMID:20489699
+  AUTHORS   Faustman D, Davis M
+  TITLE     TNF receptor 2 pathway: drug target for autoimmune diseases.
+  JOURNAL   Nat Rev Drug Discov 9:482-93 (2010)
+            DOI:10.1038/nrd3030
+REFERENCE   PMID:14532286
+  AUTHORS   Chan FK, Shisler J, Bixby JG, Felices M, Zheng L, Appel M, Orenstein J, Moss B, Lenardo MJ
+  TITLE     A role for tumor necrosis factor receptor-2 and receptor-interacting protein in programmed necrosis and antiviral responses.
+  JOURNAL   J Biol Chem 278:51613-21 (2003)
+            DOI:10.1074/jbc.M305633200
+REFERENCE   PMID:26869525
+  AUTHORS   Lee MY, Nam KH, Choi KC
+  TITLE     iRhoms; Its Functions and Essential Roles.
+  JOURNAL   Biomol Ther (Seoul) 24:109-14 (2016)
+            DOI:10.4062/biomolther.2015.149
+REL_PATHWAY hsa04010  MAPK signaling pathway
+            hsa04064  NF-kappa B signaling pathway
+            hsa04120  Ubiquitin mediated proteolysis
+            hsa04151  PI3K-Akt signaling pathway
+            hsa04210  Apoptosis
+KO_PATHWAY  ko04668
+///
+
+ENTRY       hsa04064                    Pathway
+NAME        NF-kappa B signaling pathway - Homo sapiens (human)
+DESCRIPTION Nuclear factor-kappa B (NF-kappa B) is the generic name of a family of transcription factors that function as dimers and regulate genes involved in immunity, inflammation and cell survival. There are several pathways leading to NF-kappa B-activation. The canonical pathway is induced by tumour necrosis factor-alpha (TNF-alpha), interleukin-1 (IL-1) or byproducts of bacterial and viral infections. This pathway relies on IKK- mediated IkappaB-alpha phosphorylation on Ser32 and 36, leading to its degradation, which allows the p50/p65 NF-kappa B dimer to enter the nucleus and activate gene transcription. Atypical pathways are IKK-independent and rely on phosphorylation of IkappaB-alpha on Tyr42 or on Ser residues in IkappaB-alpha PEST domain. The non-canonical pathway is triggered by particular members of the TNFR superfamily, such as lymphotoxin-beta (LT-beta) or BAFF. It involves NIK and IKK-alpha-mediated p100 phosphorylation and processing to p52, resulting in nuclear translocation of p52/RelB heterodimers.
+CLASS       Environmental Information Processing; Signal transduction
+PATHWAY_MAP hsa04064  NF-kappa B signaling pathway
+NETWORK     nt06160  Human T-cell leukemia virus 1 (HTLV-1)
+            nt06161  Human immunodeficiency virus 1 (HIV-1)
+            nt06163  Hepatitis C virus (HCV)
+            nt06164  Kaposi sarcoma-associated herpesvirus (KSHV)
+            nt06165  Epstein-Barr virus (EBV)
+            nt06167  Human cytomegalovirus (HCMV)
+            nt06168  Herpes simplex virus 1 (HSV-1)
+            nt06180  Pathogenic Escherichia coli
+            nt06181  Salmonella
+            nt06182  Shigella
+            nt06223  TNF signaling (cancer)
+            nt06263  Hepatocellular carcinoma
+            nt06516  TNF signaling
+  ELEMENT   N00151  TNF-NFKB signaling pathway
+            N00505  CD40-NFKB signaling pathway
+            N00559  LIGHT-HVEM-NFKB signaling pathway
+            N01797  EDA-EDAR signaling pathway
+            N01798  TNFSF11-TNFRSF11A signaling pathway
+DRUG        D00742  Etanercept (USAN/INN)
+            D00754  Thalidomide (JAN/USP/INN)
+            D01146  Iguratimod (JAN/INN)
+            D02979  Ardenermin (USAN)
+            D03068  Belimumab (USAN)
+            D04687  Lenalidomide (JAN/USAN/INN)
+            D04690  Lenercept (USAN/INN)
+            D05263  Onercept (USAN/INN)
+            D05393  Pegsunercept (USAN)
+            D06193  Toralizumab (USAN/INN)
+            D06619  Mifamurtide (USAN)
+            D06635  Rilonacept (USAN/INN)
+            D08562  Tasonermin (INN)
+            D08866  Baminercept (USAN/INN)
+            D08877  Briobacept (USAN)
+            D09347  Fostamatinib (USAN)
+            D09348  Fostamatinib disodium (USAN)
+            D09730  Olaparib (JAN/USAN/INN)
+            D09813  Lenalidomide hydrate (JAN)
+            D10733  Talazoparib tosylate (USAN)
+            D11122  Letolizumab (USAN/INN)
+            D11127  Tibulizumab (USAN/INN)
+            D11209  Entospletinib (USAN/INN)
+            D11457  Fenebrutinib (USAN/INN)
+            D11478  Branebrutinib (USAN)
+            D11703  Opinercept (INN)
+            D11789  Mivavotinib (USAN/INN)
+            D11790  Mivavotinib citrate (USAN)
+            D11873  Rilzabrutinib (JAN/USAN/INN)
+            D11907  Rozibafusp alfa (USAN/INN)
+            D12151  Ianalumab (JAN/USAN/INN)
+            D12158  Elsubrutinib (USAN/INN)
+            D12160  Orelabrutinib (USAN/INN)
+            D12167  Zimlovisertib (USAN)
+            D12181  Edasalonexent (USAN/INN)
+            D12213  Tolebrutinib (JAN/USAN/INN)
+            D12285  Remibrutinib (JAN/USAN/INN)
+            D12352  Eclitasertib (USAN/INN)
+            D12383  Edralbrutinib (USAN/INN)
+            D12411  Emavusertib (USAN/INN)
+            D12412  Emavusertib hydrochloride (USAN)
+            D12467  Evobrutinib (USAN/INN)
+            D12504  Nemtabrutinib (USAN/INN)
+            D12532  Emavusertib mesylate (USAN)
+            D12533  Emavusertib maleate (USAN)
+            D12538  Emavusertib phosphate (USAN)
+            D12539  emavusertib tosylate (USAN)
+            D12648  Quisovalimab (USAN/INN)
+            D12656  Adakitug (USAN)
+            D12821  Flizasertib (USAN/INN)
+            D12846  Ocadusertib (USAN)
+            D12940  Oditrasertib (USAN/INN)
+            D12953  Sovleplenib (USAN/INN)
+            D12981  Saruparib (USAN/INN)
+            D13010  Lartesertib (USAN/INN)
+            D13033  Abiprubart (USAN/INN)
+            D13232  Senaparib (INN)
+            D13253  Birelentinib (USAN/INN)
+            D13259  Ciltistotug (USAN/INN)
+            D13261  Corubrutinib (USAN)
+            D13277  Flixebrutinib (USAN)
+            D13285  Itareparib (USAN/INN)
+            D13366  Palacaparib (USAN/INN)
+ORGANISM    Homo sapiens (human) [GN:hsa]
+GENE        102723407  [KO:K06856]
+            10454  TAB1; TGF-beta-activated kinase 1 and MAP3K7-binding protein 1 isoform alpha [KO:K04403]
+            10673  TNFSF13B; tumor necrosis factor ligand superfamily member 13B isoform 1 [KO:K05476]
+            10848  PPP1R13L; relA-associated inhibitor [KO:K27356]
+            10892  MALT1; mucosa-associated lymphoid tissue lymphoma translocation protein 1 isoform a [KO:K07369] [EC:3.4.22.-]
+            10912  GADD45G; growth arrest and DNA damage-inducible protein GADD45 gamma [KO:K04402]
+            10913  EDAR; tumor necrosis factor receptor superfamily member EDAR precursor [KO:K05162]
+            114609  TIRAP; toll/interleukin-1 receptor domain-containing adapter protein isoform a [KO:K05403]
+            1147  CHUK; inhibitor of nuclear factor kappa-B kinase subunit alpha isoform 1 [KO:K04467] [EC:2.7.11.10]
+            115650  TNFRSF13C; tumor necrosis factor receptor superfamily member 13C [KO:K05151]
+            128178  EDARADD; ectodysplasin-A receptor-associated adapter protein isoform A [KO:K23324]
+            142  PARP1; poly [ADP-ribose] polymerase 1 [KO:K24070]
+            1457  CSNK2A1; casein kinase II subunit alpha isoform a [KO:K03097] [EC:2.7.11.1]
+            1459  CSNK2A2; casein kinase II subunit alpha' [KO:K03097] [EC:2.7.11.1]
+            1460  CSNK2B; casein kinase II subunit beta isoform 1 [KO:K03115]
+            148022  TICAM1; TIR domain-containing adapter molecule 1 isoform 1 [KO:K05842]
+            1540  CYLD; ubiquitin carboxyl-terminal hydrolase CYLD isoform 1 [KO:K08601] [EC:3.4.19.12]
+            1647  GADD45A; growth arrest and DNA damage-inducible protein GADD45 alpha isoform 1 [KO:K04402]
+            1896  EDA; ectodysplasin-A isoform 1 [KO:K05480]
+            23085  ERC1; ELKS/Rab6-interacting/CAST family member 1 isoform epsilon [KO:K16072]
+            23118  TAB2; TGF-beta-activated kinase 1 and MAP3K7-binding protein 2 isoform a [KO:K04404]
+            23586  RIGI; antiviral innate immune response receptor RIG-I isoform 1 [KO:K12646] [EC:5.6.2.6]
+            23643  LY96; lymphocyte antigen 96 isoform 1 precursor [KO:K05400]
+            257397  TAB3; TGF-beta-activated kinase 1 and MAP3K7-binding protein 3 isoform 1 [KO:K12793]
+            27040  LAT; linker for activation of T-cells family member 1 isoform a [KO:K07362]
+            283106  CSNK2A3; casein kinase II subunit alpha 3 [KO:K03097] [EC:2.7.11.1]
+            2919  CXCL1; growth-regulated alpha protein precursor [KO:K05505]
+            2920  CXCL2; C-X-C motif chemokine 2 precursor [KO:K05505]
+            2921  CXCL3; C-X-C motif chemokine 3 precursor [KO:K05505]
+            29760  BLNK; B-cell linker protein isoform 1 [KO:K07371]
+            29775  CARD10; caspase recruitment domain-containing protein 10 [KO:K20912]
+            329  BIRC2; baculoviral IAP repeat-containing protein 2 isoform 1 [KO:K16060]
+            330  BIRC3; baculoviral IAP repeat-containing protein 3 [KO:K16060]
+            331  XIAP; E3 ubiquitin-protein ligase XIAP [KO:K04725] [EC:2.3.2.27]
+            3383  ICAM1; intercellular adhesion molecule 1 precursor [KO:K06490]
+            353376  TICAM2; TIR domain-containing adapter molecule 2 [KO:K05409]
+            3551  IKBKB; inhibitor of nuclear factor kappa-B kinase subunit beta isoform 1 [KO:K07209] [EC:2.7.11.10]
+            3553  IL1B; interleukin-1 beta proprotein [KO:K04519]
+            3554  IL1R1; interleukin-1 receptor type 1 isoform 1 precursor [KO:K04386]
+            3576  CXCL8; interleukin-8 isoform 1 precursor [KO:K10030]
+            3654  IRAK1; interleukin-1 receptor-associated kinase 1 isoform 1 [KO:K04730] [EC:2.7.11.1]
+            388372  CCL4L1; C-C motif chemokine 4-like precursor [KO:K12964]
+            3929  LBP; lipopolysaccharide-binding protein precursor [KO:K05399]
+            3932  LCK; tyrosine-protein kinase Lck isoform a [KO:K05856] [EC:2.7.10.2]
+            4049  LTA; lymphotoxin-alpha precursor [KO:K05468]
+            4050  LTB; lymphotoxin-beta isoform a [KO:K03157]
+            4055  LTBR; tumor necrosis factor receptor superfamily member 3 isoform 1 precursor [KO:K03159]
+            4067  LYN; tyrosine-protein kinase Lyn isoform A [KO:K05854] [EC:2.7.10.2]
+            4615  MYD88; myeloid differentiation primary response protein MyD88 isoform 2 [KO:K04729]
+            4616  GADD45B; growth arrest and DNA damage-inducible protein GADD45 beta [KO:K04402]
+            472  ATM; serine-protein kinase ATM isoform a [KO:K04728] [EC:2.7.11.1]
+            4790  NFKB1; nuclear factor NF-kappa-B p105 subunit isoform 2 proprotein [KO:K02580]
+            4791  NFKB2; nuclear factor NF-kappa-B p100 subunit isoform a [KO:K04469]
+            4792  NFKBIA; NF-kappa-B inhibitor alpha [KO:K04734]
+            51135  IRAK4; interleukin-1 receptor-associated kinase 4 isoform a [KO:K04733] [EC:2.7.11.1]
+            51588  PIAS4; E3 SUMO-protein ligase PIAS4 [KO:K16065] [EC:2.3.2.27]
+            5328  PLAU; urokinase-type plasminogen activator isoform 1 preproprotein [KO:K01348] [EC:3.4.21.73]
+            5335  PLCG1; 1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase gamma-1 isoform b [KO:K01116] [EC:3.1.4.11]
+            5336  PLCG2; 1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase gamma-2 [KO:K05859] [EC:3.1.4.11]
+            55367  PIDD1; p53-induced death domain-containing protein 1 isoform 1 [KO:K10130]
+            5579  PRKCB; protein kinase C beta type isoform 1 [KO:K19662] [EC:2.7.11.13]
+            5588  PRKCQ; protein kinase C theta type isoform 1 [KO:K18052] [EC:2.7.11.13]
+            5743  PTGS2; prostaglandin G/H synthase 2 precursor [KO:K11987] [EC:1.14.99.1]
+            596  BCL2; apoptosis regulator Bcl-2 isoform alpha [KO:K02161]
+            597  BCL2A1; bcl-2-related protein A1 isoform 1 [KO:K02162]
+            5970  RELA; transcription factor p65 isoform 1 [KO:K04735]
+            5971  RELB; transcription factor RelB isoform 1 [KO:K09253]
+            598  BCL2L1; bcl-2-like protein 1 isoform Bcl-X(L) [KO:K04570]
+            60401  EDA2R; tumor necrosis factor receptor superfamily member 27 isoform 1 [KO:K05163]
+            6351  CCL4; C-C motif chemokine 4 precursor [KO:K12964]
+            6357  CCL13; C-C motif chemokine 13 precursor [KO:K16595]
+            6363  CCL19; C-C motif chemokine 19 precursor [KO:K05512]
+            6366  CCL21; C-C motif chemokine 21 precursor [KO:K16062]
+            6387  CXCL12; stromal cell-derived factor 1 isoform beta precursor [KO:K10031]
+            6850  SYK; tyrosine-protein kinase SYK isoform Syk(L) [KO:K05855] [EC:2.7.10.2]
+            6885  MAP3K7; mitogen-activated protein kinase kinase kinase 7 isoform B [KO:K04427] [EC:2.7.11.25]
+            695  BTK; tyrosine-protein kinase BTK isoform 1 [KO:K07370] [EC:2.7.10.2]
+            7099  TLR4; toll-like receptor 4 isoform A precursor [KO:K10160]
+            7124  TNF; tumor necrosis factor [KO:K03156]
+            7128  TNFAIP3; tumor necrosis factor alpha-induced protein 3 [KO:K11859] [EC:3.4.19.12]
+            7132  TNFRSF1A; tumor necrosis factor receptor superfamily member 1A isoform 1 precursor [KO:K03158]
+            7185  TRAF1; TNF receptor-associated factor 1 isoform a [KO:K03172]
+            7186  TRAF2; TNF receptor-associated factor 2 [KO:K03173] [EC:2.3.2.27]
+            7187  TRAF3; TNF receptor-associated factor 3 isoform 1 [KO:K03174]
+            7188  TRAF5; TNF receptor-associated factor 5 isoform b [KO:K09849]
+            7189  TRAF6; TNF receptor-associated factor 6 [KO:K03175] [EC:2.3.2.27]
+            7329  UBE2I; SUMO-conjugating enzyme UBC9 [KO:K10577]
+            7412  VCAM1; vascular cell adhesion protein 1 isoform a precursor [KO:K06527]
+            7535  ZAP70; tyrosine-protein kinase ZAP-70 isoform 1 [KO:K07360] [EC:2.7.10.2]
+            7706  TRIM25; E3 ubiquitin/ISG15 ligase TRIM25 [KO:K10652] [EC:2.3.2.27]
+            79092  CARD14; caspase recruitment domain-containing protein 14 isoform 1 [KO:K20913]
+            84433  CARD11; caspase recruitment domain-containing protein 11 [KO:K07367]
+            8517  IKBKG; NF-kappa-B essential modulator isoform a [KO:K07210]
+            8600  TNFSF11; tumor necrosis factor ligand superfamily member 11 isoform 1 [KO:K05473]
+            8717  TRADD; tumor necrosis factor receptor type 1-associated DEATH domain protein [KO:K03171]
+            8737  RIPK1; receptor-interacting serine/threonine-protein kinase 1 isoform 1 [KO:K02861] [EC:2.7.11.1]
+            8740  TNFSF14; tumor necrosis factor ligand superfamily member 14 isoform 1 [KO:K05477]
+            8792  TNFRSF11A; tumor necrosis factor receptor superfamily member 11A isoform 1 precursor [KO:K05147]
+            8837  CFLAR; CASP8 and FADD-like apoptosis regulator isoform 1 [KO:K04724]
+            8915  BCL10; B-cell lymphoma/leukemia 10 isoform 1 [KO:K07368]
+            9020  MAP3K14; mitogen-activated protein kinase kinase kinase 14 [KO:K04466] [EC:2.7.11.25]
+            929  CD14; monocyte differentiation antigen CD14 precursor [KO:K04391]
+            9560  CCL4L2; C-C motif chemokine 4-like isoform 2 precursor [KO:K12964]
+            958  CD40; tumor necrosis factor receptor superfamily member 5 isoform 1 precursor [KO:K03160]
+            959  CD40LG; CD40 ligand [KO:K03161]
+COMPOUND    C00076  Calcium cation
+            C00165  Diacylglycerol
+            C01245  D-myo-Inositol 1,4,5-trisphosphate
+REFERENCE   PMID:21772278
+  AUTHORS   Oeckinghaus A, Hayden MS, Ghosh S
+  TITLE     Crosstalk in NF-kappaB signaling pathways.
+  JOURNAL   Nat Immunol 12:695-708 (2011)
+            DOI:10.1038/ni.2065
+REFERENCE   PMID:19203223
+  AUTHORS   Gloire G, Piette J
+  TITLE     Redox regulation of nuclear post-translational modifications during NF-kappaB activation.
+  JOURNAL   Antioxid Redox Signal 11:2209-22 (2009)
+            DOI:10.1089/ARS.2009.2463
+REFERENCE   PMID:17183360
+  AUTHORS   Perkins ND
+  TITLE     Integrating cell-signalling pathways with NF-kappaB and IKK function.
+  JOURNAL   Nat Rev Mol Cell Biol 8:49-62 (2007)
+            DOI:10.1038/nrm2083
+REFERENCE   PMID:16264088
+  AUTHORS   Lindstrom TM, Bennett PR
+  TITLE     The role of nuclear factor kappa B in human labour.
+  JOURNAL   Reproduction 130:569-81 (2005)
+            DOI:10.1530/rep.1.00197
+REFERENCE   PMID:22017430
+  AUTHORS   Razani B, Reichardt AD, Cheng G
+  TITLE     Non-canonical NF-kappaB signaling activation and regulation: principles and perspectives.
+  JOURNAL   Immunol Rev 244:44-54 (2011)
+            DOI:10.1111/j.1600-065X.2011.01059.x
+REFERENCE   PMID:21173796
+  AUTHORS   Sun SC
+  TITLE     Non-canonical NF-kappaB signaling pathway.
+  JOURNAL   Cell Res 21:71-85 (2011)
+            DOI:10.1038/cr.2010.177
+REFERENCE   PMID:17431096
+  AUTHORS   Neumann M, Naumann M
+  TITLE     Beyond IkappaBs: alternative regulation of NF-kappaB activity.
+  JOURNAL   FASEB J 21:2642-54 (2007)
+            DOI:10.1096/fj.06-7615rev
+REFERENCE   PMID:22119011
+  AUTHORS   Verhelst K, Carpentier I, Beyaert R
+  TITLE     Regulation of TNF-induced NF-kappaB activation by different cytoplasmic ubiquitination events.
+  JOURNAL   Cytokine Growth Factor Rev 22:277-86 (2011)
+            DOI:10.1016/j.cytogfr.2011.11.002
+REFERENCE   PMID:22017435
+  AUTHORS   Rickert RC, Jellusova J, Miletic AV
+  TITLE     Signaling by the tumor necrosis factor receptor superfamily in B-cell biology and disease.
+  JOURNAL   Immunol Rev 244:115-33 (2011)
+            DOI:10.1111/j.1600-065X.2011.01067.x
+REFERENCE   PMID:21232019
+  AUTHORS   Naude PJ, den Boer JA, Luiten PG, Eisel UL
+  TITLE     Tumor necrosis factor receptor cross-talk.
+  JOURNAL   FEBS J 278:888-98 (2011)
+            DOI:10.1111/j.1742-4658.2011.08017.x
+REFERENCE   PMID:16984817
+  AUTHORS   Grivennikov SI, Kuprash DV, Liu ZG, Nedospasov SA
+  TITLE     Intracellular signals and events activated by cytokines of the tumor necrosis factor superfamily: From simple paradigms to complex mechanisms.
+  JOURNAL   Int Rev Cytol 252:129-61 (2006)
+            DOI:10.1016/S0074-7696(06)52002-9
+REFERENCE   PMID:16356770
+  AUTHORS   Wada T, Nakashima T, Hiroshi N, Penninger JM
+  TITLE     RANKL-RANK signaling in osteoclastogenesis and bone disease.
+  JOURNAL   Trends Mol Med 12:17-25 (2006)
+            DOI:10.1016/j.molmed.2005.11.007
+REFERENCE   PMID:17098202
+  AUTHORS   Schulze-Luehrmann J, Ghosh S
+  TITLE     Antigen-receptor signaling to nuclear factor kappa B.
+  JOURNAL   Immunity 25:701-15 (2006)
+            DOI:10.1016/j.immuni.2006.10.010
+REFERENCE   PMID:15134788
+  AUTHORS   Weil R, Israel A
+  TITLE     T-cell-receptor- and B-cell-receptor-mediated activation of NF-kappaB in lymphocytes.
+  JOURNAL   Curr Opin Immunol 16:374-81 (2004)
+            DOI:10.1016/j.coi.2004.03.003
+REFERENCE   PMID:15905862
+  AUTHORS   Siebenlist U, Brown K, Claudio E
+  TITLE     Control of lymphocyte development by nuclear factor-kappaB.
+  JOURNAL   Nat Rev Immunol 5:435-45 (2005)
+            DOI:10.1038/nri1629
+REFERENCE   PMID:14657271
+  AUTHORS   Lucas PC, McAllister-Lucas LM, Nunez G
+  TITLE     NF-kappaB signaling in lymphocytes: a new cast of characters.
+  JOURNAL   J Cell Sci 117:31-9 (2004)
+            DOI:10.1242/jcs.00904
+REFERENCE   PMID:19726767
+  AUTHORS   Khan WN
+  TITLE     B cell receptor and BAFF receptor signaling regulation of B cell homeostasis.
+  JOURNAL   J Immunol 183:3561-7 (2009)
+            DOI:10.4049/jimmunol.0800933
+REFERENCE   PMID:19302050
+  AUTHORS   Vallabhapurapu S, Karin M
+  TITLE     Regulation and function of NF-kappaB transcription factors in the immune system.
+  JOURNAL   Annu Rev Immunol 27:693-733 (2009)
+            DOI:10.1146/annurev.immunol.021908.132641
+REFERENCE   PMID:17047224
+  AUTHORS   Hacker H, Karin M
+  TITLE     Regulation and function of IKK and IKK-related kinases.
+  JOURNAL   Sci STKE 2006:re13 (2006)
+            DOI:10.1126/stke.3572006re13
+REFERENCE   PMID:21872579
+  AUTHORS   Sabatel H, Pirlot C, Piette J, Habraken Y
+  TITLE     Importance of PIKKs in NF-kappaB activation by genotoxic stress.
+  JOURNAL   Biochem Pharmacol 82:1371-83 (2011)
+            DOI:10.1016/j.bcp.2011.07.105
+REFERENCE   PMID:21187855
+  AUTHORS   Miyamoto S
+  TITLE     Nuclear initiated NF-kappaB signaling: NEMO and ATM take center stage.
+  JOURNAL   Cell Res 21:116-30 (2011)
+            DOI:10.1038/cr.2010.179
+REFERENCE   PMID:18832076
+  AUTHORS   Brzoska K, Szumiel I
+  TITLE     Signalling loops and linear pathways: NF-kappaB activation in response to genotoxic stress.
+  JOURNAL   Mutagenesis 24:1-8 (2009)
+            DOI:10.1093/mutage/gen056
+REFERENCE   PMID:17607554
+  AUTHORS   Wu ZH, Miyamoto S
+  TITLE     Many faces of NF-kappaB signaling induced by genotoxic stress.
+  JOURNAL   J Mol Med (Berl) 85:1187-202 (2007)
+            DOI:10.1007/s00109-007-0227-9
+REFERENCE   PMID:22390971
+  AUTHORS   Maelfait J, Beyaert R
+  TITLE     Emerging role of ubiquitination in antiviral RIG-I signaling.
+  JOURNAL   Microbiol Mol Biol Rev 76:33-45 (2012)
+            DOI:10.1128/MMBR.05012-11
+REFERENCE   PMID:18613837
+  AUTHORS   Ware CF
+  TITLE     Targeting lymphocyte activation through the lymphotoxin and LIGHT pathways.
+  JOURNAL   Immunol Rev 223:186-201 (2008)
+            DOI:10.1111/j.1600-065X.2008.00629.x
+REFERENCE   PMID:15546385
+  AUTHORS   Schneider K, Potter KG, Ware CF
+  TITLE     Lymphotoxin and LIGHT signaling pathways and target genes.
+  JOURNAL   Immunol Rev 202:49-66 (2004)
+            DOI:10.1111/j.0105-2896.2004.00206.x
+REFERENCE   PMID:22152226
+  AUTHORS   Remouchamps C, Boutaffala L, Ganeff C, Dejardin E
+  TITLE     Biology and signal transduction pathways of the Lymphotoxin-alphabeta/LTbetaR system.
+  JOURNAL   Cytokine Growth Factor Rev 22:301-10 (2011)
+            DOI:10.1016/j.cytogfr.2011.11.007
+REFERENCE   PMID:21135871
+  AUTHORS   Liu S, Chen ZJ
+  TITLE     Expanding role of ubiquitination in NF-kappaB signaling.
+  JOURNAL   Cell Res 21:6-21 (2011)
+            DOI:10.1038/cr.2010.170
+REFERENCE   PMID:19489733
+  AUTHORS   Skaug B, Jiang X, Chen ZJ
+  TITLE     The role of ubiquitin in NF-kappaB regulatory pathways.
+  JOURNAL   Annu Rev Biochem 78:769-96 (2009)
+            DOI:10.1146/annurev.biochem.78.070907.102750
+REFERENCE   PMID:20300215
+  AUTHORS   Wertz IE, Dixit VM
+  TITLE     Signaling to NF-kappaB: regulation by ubiquitination.
+  JOURNAL   Cold Spring Harb Perspect Biol 2:a003350 (2010)
+            DOI:10.1101/cshperspect.a003350
+REFERENCE   PMID:11875461
+  AUTHORS   Karin M, Lin A
+  TITLE     NF-kappaB at the crossroads of life and death.
+  JOURNAL   Nat Immunol 3:221-7 (2002)
+            DOI:10.1038/ni0302-221
+REFERENCE   PMID:12654254
+  AUTHORS   Lin A, Karin M
+  TITLE     NF-kappaB in cancer: a marked target.
+  JOURNAL   Semin Cancer Biol 13:107-14 (2003)
+            DOI:10.1016/S1044-579X(02)00128-1
+REFERENCE   PMID:16251197
+  AUTHORS   Morlon A, Munnich A, Smahi A
+  TITLE     TAB2, TRAF6 and TAK1 are involved in NF-kappaB activation induced by the TNF-receptor, Edar and its adaptator Edaradd.
+  JOURNAL   Hum Mol Genet 14:3751-7 (2005)
+            DOI:10.1093/hmg/ddi405
+REFERENCE   PMID:24070496
+  AUTHORS   Sadier A, Viriot L, Pantalacci S, Laudet V
+  TITLE     The ectodysplasin pathway: from diseases to adaptations.
+  JOURNAL   Trends Genet 30:24-31 (2014)
+            DOI:10.1016/j.tig.2013.08.006
+REFERENCE   PMID:26260321
+  AUTHORS   Verhelst K, Gardam S, Borghi A, Kreike M, Carpentier I, Beyaert R
+  TITLE     XEDAR activates the non-canonical NF-kappaB pathway.
+  JOURNAL   Biochem Biophys Res Commun 465:275-80 (2015)
+            DOI:10.1016/j.bbrc.2015.08.019
+REFERENCE   PMID:27508514
+  AUTHORS   McDaniel DK, Eden K, Ringel VM, Allen IC
+  TITLE     Emerging Roles for Noncanonical NF-kappaB Signaling in the Modulation of Inflammatory Bowel Disease Pathobiology.
+  JOURNAL   Inflamm Bowel Dis 22:2265-79 (2016)
+            DOI:10.1097/MIB.0000000000000858
+REFERENCE   PMID:12787560
+  AUTHORS   Mikkola ML, Thesleff I
+  TITLE     Ectodysplasin signaling in development.
+  JOURNAL   Cytokine Growth Factor Rev 14:211-24 (2003)
+            DOI:10.1016/S1359-6101(03)00020-0
+REFERENCE   PMID:26646590
+  AUTHORS   Hu Y, Ge W, Wang X, Sutendra G, Zhao K, Dedeic Z, Slee EA, Baer C, Lu X
+  TITLE     Caspase cleavage of iASPP potentiates its ability to inhibit p53 and NF-kappaB.
+  JOURNAL   Oncotarget 6:42478-90 (2015)
+            DOI:10.18632/oncotarget.6478
+REL_PATHWAY hsa03050  Proteasome
+            hsa04020  Calcium signaling pathway
+            hsa04060  Cytokine-cytokine receptor interaction
+            hsa04120  Ubiquitin mediated proteolysis
+            hsa04210  Apoptosis
+            hsa04380  Osteoclast differentiation
+            hsa04620  Toll-like receptor signaling pathway
+            hsa04622  RIG-I-like receptor signaling pathway
+            hsa04660  T cell receptor signaling pathway
+            hsa04662  B cell receptor signaling pathway
+KO_PATHWAY  ko04064
+///
+
+ENTRY       hsa04657                    Pathway
+NAME        IL-17 signaling pathway - Homo sapiens (human)
+DESCRIPTION The interleukin 17 (IL-17) family, a subset of cytokines consisting of IL-17A-F, plays crucial roles in both acute and chronic inflammatory responses. IL-17A, the hallmark cytokine of the newly defined T helper 17 (TH17) cell subset, has important roles in protecting the host against extracellular pathogens, but also promotes inflammatory pathology in autoimmune disease, whereas IL-17F is mainly involved in mucosal host defense mechanisms. IL-17E (IL-25) is an amplifier of Th2 immune responses. IL-17C has biological functions similar to those of IL-17A. The functions of IL-17B and IL-17D remain largely elusive. The IL-17 family signals via their correspondent receptors and activates downstream pathways that include NF-kappaB, MAPKs and C/EBPs to induce the expression of antimicrobial peptides, cytokines and chemokines. The receptor proximal adaptor Act1 (an NF-kappaB activator 1) is considered as the master mediator in IL-17A signaling. It is likely that Act1 is a common signal adaptor also shared by other members mediated signalings in this family.
+CLASS       Organismal Systems; Immune system
+PATHWAY_MAP hsa04657  IL-17 signaling pathway
+DRUG        D03116  Bindarit (USAN/INN)
+            D03517  Cipemastat (USAN/INN)
+            D03800  Rebimastat (USAN/INN)
+            D04923  Mepolizumab (USAN/INN)
+            D10061  Brodalumab (USAN)
+            D10071  Ixekizumab (USAN)
+            D10902  Afasevikumab (USAN/INN)
+            D11127  Tibulizumab (USAN/INN)
+            D11343  Otilimab (USAN)
+            D11550  Bimekizumab (USAN/INN)
+            D12278  Izokibep (USAN/INN)
+            D12985  Ompekimig (USAN)
+            D13089  Simepdekinra (USAN)
+            D13155  Donzakimig (USAN/INN)
+            D13160  Galvokimig (USAN/INN)
+            D13227  Sonelokimab (USAN/INN)
+DBLINKS     GO: 0097400
+ORGANISM    Homo sapiens (human) [GN:hsa]
+GENE        100289462  DEFB4B; beta-defensin 4B precursor [KO:K21100]
+            1051  CEBPB; CCAAT/enhancer-binding protein beta isoform a [KO:K10048]
+            10758  TRAF3IP2; E3 ubiquitin ligase TRAF3IP2 isoform 1 [KO:K21124]
+            112744  IL17F; interleukin-17F precursor [KO:K05494]
+            1147  CHUK; inhibitor of nuclear factor kappa-B kinase subunit alpha isoform 1 [KO:K04467] [EC:2.7.11.10]
+            132014  IL17RE; interleukin-17 receptor E isoform 1 precursor [KO:K05168]
+            1432  MAPK14; mitogen-activated protein kinase 14 isoform 2 [KO:K04441] [EC:2.7.11.24]
+            1437  CSF2; granulocyte-macrophage colony-stimulating factor precursor [KO:K05427]
+            1440  CSF3; granulocyte colony-stimulating factor isoform a precursor [KO:K05423]
+            1673  DEFB4A; defensin beta 4A precursor [KO:K21100]
+            1994  ELAVL1; ELAV-like protein 1 [KO:K13088]
+            225689  MAPK15; mitogen-activated protein kinase 15 [KO:K19603] [EC:2.7.11.24]
+            23118  TAB2; TGF-beta-activated kinase 1 and MAP3K7-binding protein 2 isoform a [KO:K04404]
+            2353  FOS; protein c-Fos [KO:K04379]
+            2354  FOSB; protein FosB isoform 1 [KO:K09029]
+            23765  IL17RA; interleukin-17 receptor A isoform 1 precursor [KO:K05164]
+            257397  TAB3; TGF-beta-activated kinase 1 and MAP3K7-binding protein 3 isoform 1 [KO:K12793]
+            27189  IL17C; interleukin-17C precursor [KO:K05491]
+            27190  IL17B; interleukin-17B isoform 1 precursor [KO:K05490]
+            29110  TBK1; serine/threonine-protein kinase TBK1 [KO:K05410] [EC:2.7.11.10]
+            2919  CXCL1; growth-regulated alpha protein precursor [KO:K05505]
+            2920  CXCL2; C-X-C motif chemokine 2 precursor [KO:K05505]
+            2921  CXCL3; C-X-C motif chemokine 3 precursor [KO:K05505]
+            2932  GSK3B; glycogen synthase kinase-3 beta isoform 2 [KO:K03083] [EC:2.7.11.26]
+            29761  USP25; ubiquitin carboxyl-terminal hydrolase 25 isoform USP25a [KO:K11849] [EC:3.4.19.12]
+            3320  HSP90AA1; heat shock protein HSP 90-alpha isoform 2 [KO:K04079]
+            3326  HSP90AB1; heat shock protein HSP 90-beta isoform a [KO:K04079]
+            338324  S100A7A; protein S100-A7A [KO:K21126]
+            3458  IFNG; interferon gamma precursor [KO:K04687]
+            3551  IKBKB; inhibitor of nuclear factor kappa-B kinase subunit beta isoform 1 [KO:K07209] [EC:2.7.11.10]
+            3553  IL1B; interleukin-1 beta proprotein [KO:K04519]
+            3565  IL4; interleukin-4 isoform 1 precursor [KO:K05430]
+            3567  IL5; interleukin-5 precursor [KO:K05428]
+            3569  IL6; interleukin-6 isoform 1 precursor [KO:K05405]
+            3576  CXCL8; interleukin-8 isoform 1 precursor [KO:K10030]
+            3596  IL13; interleukin-13 isoform 1 precursor [KO:K05435]
+            3605  IL17A; interleukin-17A precursor [KO:K05489]
+            3627  CXCL10; C-X-C motif chemokine 10 precursor [KO:K12671]
+            3725  JUN; transcription factor Jun [KO:K04448]
+            3727  JUND; transcription factor JunD isoform JunD-FL [KO:K04449]
+            3934  LCN2; neutrophil gelatinase-associated lipocalin precursor [KO:K21129]
+            4312  MMP1; interstitial collagenase isoform 1 preproprotein [KO:K01388] [EC:3.4.24.7]
+            4314  MMP3; stromelysin-1 preproprotein [KO:K01394] [EC:3.4.24.17]
+            4318  MMP9; matrix metalloproteinase-9 preproprotein [KO:K01403] [EC:3.4.24.35]
+            4322  MMP13; collagenase 3 preproprotein [KO:K07994] [EC:3.4.24.-]
+            4586  MUC5AC; mucin-5AC precursor [KO:K13908]
+            4790  NFKB1; nuclear factor NF-kappa-B p105 subunit isoform 2 proprotein [KO:K02580]
+            4792  NFKBIA; NF-kappa-B inhibitor alpha [KO:K04734]
+            51433  ANAPC5; anaphase-promoting complex subunit 5 isoform a [KO:K03352]
+            53342  IL17D; interleukin-17D isoform c precursor [KO:K05492]
+            55540  IL17RB; interleukin-17 receptor B precursor [KO:K05165]
+            5594  MAPK1; mitogen-activated protein kinase 1 [KO:K04371] [EC:2.7.11.24]
+            5595  MAPK3; mitogen-activated protein kinase 3 isoform 1 [KO:K04371] [EC:2.7.11.24]
+            5596  MAPK4; mitogen-activated protein kinase 4 isoform 1 [KO:K06855] [EC:2.7.11.24]
+            5597  MAPK6; mitogen-activated protein kinase 6 [KO:K06855] [EC:2.7.11.24]
+            5598  MAPK7; mitogen-activated protein kinase 7 isoform 1 [KO:K04464] [EC:2.7.11.24]
+            5599  MAPK8; mitogen-activated protein kinase 8 isoform alpha2 [KO:K04440] [EC:2.7.11.24]
+            5600  MAPK11; mitogen-activated protein kinase 11 [KO:K04441] [EC:2.7.11.24]
+            5601  MAPK9; mitogen-activated protein kinase 9 isoform alpha2 [KO:K04440] [EC:2.7.11.24]
+            5602  MAPK10; mitogen-activated protein kinase 10 isoform 1 [KO:K04440] [EC:2.7.11.24]
+            5603  MAPK13; mitogen-activated protein kinase 13 [KO:K04441] [EC:2.7.11.24]
+            5743  PTGS2; prostaglandin G/H synthase 2 precursor [KO:K11987] [EC:1.14.99.1]
+            5970  RELA; transcription factor p65 isoform 1 [KO:K04735]
+            6278  S100A7; protein S100-A7 [KO:K21126]
+            6279  S100A8; protein S100-A8 isoform d [KO:K21127]
+            6280  S100A9; protein S100-A9 [KO:K21128]
+            6300  MAPK12; mitogen-activated protein kinase 12 isoform 1 [KO:K04441] [EC:2.7.11.24]
+            6347  CCL2; C-C motif chemokine 2 precursor [KO:K14624]
+            6354  CCL7; C-C motif chemokine 7 precursor [KO:K05509]
+            6356  CCL11; eotaxin precursor [KO:K16597]
+            6361  CCL17; C-C motif chemokine 17 precursor [KO:K21083]
+            6364  CCL20; C-C motif chemokine 20 isoform 1 precursor [KO:K14625]
+            6372  CXCL6; C-X-C motif chemokine 6 precursor [KO:K05506]
+            6374  CXCL5; C-X-C motif chemokine 5 precursor [KO:K05506]
+            6426  SRSF1; serine/arginine-rich splicing factor 1 isoform 1 [KO:K12890]
+            64806  IL25; interleukin-25 isoform 1 precursor [KO:K05493]
+            6885  MAP3K7; mitogen-activated protein kinase kinase kinase 7 isoform B [KO:K04427] [EC:2.7.11.25]
+            7124  TNF; tumor necrosis factor [KO:K03156]
+            7128  TNFAIP3; tumor necrosis factor alpha-induced protein 3 [KO:K11859] [EC:3.4.19.12]
+            7184  HSP90B1; endoplasmin precursor [KO:K09487]
+            7186  TRAF2; TNF receptor-associated factor 2 [KO:K03173] [EC:2.3.2.27]
+            7187  TRAF3; TNF receptor-associated factor 3 isoform 1 [KO:K03174]
+            7188  TRAF5; TNF receptor-associated factor 5 isoform b [KO:K09849]
+            7189  TRAF6; TNF receptor-associated factor 6 [KO:K03175] [EC:2.3.2.27]
+            727897  MUC5B; mucin-5B precursor [KO:K13908]
+            8061  FOSL1; fos-related antigen 1 isoform 1 [KO:K04502]
+            836  CASP3; caspase-3 isoform a preproprotein [KO:K02187] [EC:3.4.22.56]
+            841  CASP8; caspase-8 isoform 2 precursor [KO:K04398] [EC:3.4.22.61]
+            84818  IL17RC; interleukin-17 receptor C isoform 2 precursor [KO:K05166]
+            8517  IKBKG; NF-kappa-B essential modulator isoform a [KO:K07210]
+            8717  TRADD; tumor necrosis factor receptor type 1-associated DEATH domain protein [KO:K03171]
+            8772  FADD; FAS-associated death domain protein [KO:K02373]
+            9618  TRAF4; TNF receptor-associated factor 4 [KO:K09848]
+            9641  IKBKE; inhibitor of nuclear factor kappa-B kinase subunit epsilon isoform 1 [KO:K07211] [EC:2.7.11.10]
+REFERENCE   PMID:23917206
+  AUTHORS   Song X, Qian Y
+  TITLE     IL-17 family cytokines mediated signaling in the pathogenesis of inflammatory diseases.
+  JOURNAL   Cell Signal 25:2335-47 (2013)
+            DOI:10.1016/j.cellsig.2013.07.021
+REFERENCE   PMID:23557798
+  AUTHORS   Song X, Qian Y
+  TITLE     The activation and regulation of IL-17 receptor mediated signaling.
+  JOURNAL   Cytokine 62:175-82 (2013)
+            DOI:10.1016/j.cyto.2013.03.014
+REFERENCE   PMID:24011563
+  AUTHORS   Gu C, Wu L, Li X
+  TITLE     IL-17 family: cytokines, receptors and signaling.
+  JOURNAL   Cytokine 64:477-85 (2013)
+            DOI:10.1016/j.cyto.2013.07.022
+REFERENCE   PMID:25145755
+  AUTHORS   Gaffen SL, Jain R, Garg AV, Cua DJ
+  TITLE     The IL-23-IL-17 immune axis: from mechanisms to therapeutic testing.
+  JOURNAL   Nat Rev Immunol 14:585-600 (2014)
+            DOI:10.1038/nri3707
+REFERENCE   PMID:21349428
+  AUTHORS   Iwakura Y, Ishigame H, Saijo S, Nakae S
+  TITLE     Functional specialization of interleukin-17 family members.
+  JOURNAL   Immunity 34:149-62 (2011)
+            DOI:10.1016/j.immuni.2011.02.012
+REFERENCE   PMID:20514051
+  AUTHORS   Qian Y, Kang Z, Liu C, Li X
+  TITLE     IL-17 signaling in host defense and inflammatory diseases.
+  JOURNAL   Cell Mol Immunol 7:328-33 (2010)
+            DOI:10.1038/cmi.2010.27
+REFERENCE   PMID:22324470
+  AUTHORS   Zhu S, Qian Y
+  TITLE     IL-17/IL-17 receptor system in autoimmune disease: mechanisms and therapeutic potential.
+  JOURNAL   Clin Sci (Lond) 122:487-511 (2012)
+            DOI:10.1042/CS20110496
+REFERENCE   PMID:26252407
+  AUTHORS   Zenobia C, Hajishengallis G
+  TITLE     Basic biology and role of interleukin-17 in immunity and inflammation.
+  JOURNAL   Periodontol 2000 69:142-59 (2015)
+            DOI:10.1111/prd.12083
+REFERENCE   PMID:21074482
+  AUTHORS   Reynolds JM, Angkasekwinai P, Dong C
+  TITLE     IL-17 family member cytokines: regulation and function in innate immunity.
+  JOURNAL   Cytokine Growth Factor Rev 21:413-23 (2010)
+            DOI:10.1016/j.cytogfr.2010.10.002
+REFERENCE   PMID:21852080
+  AUTHORS   Gaffen SL
+  TITLE     Recent advances in the IL-17 cytokine family.
+  JOURNAL   Curr Opin Immunol 23:613-9 (2011)
+            DOI:10.1016/j.coi.2011.07.006
+REFERENCE   PMID:18701318
+  AUTHORS   Gaffen SL
+  TITLE     An overview of IL-17 function and signaling.
+  JOURNAL   Cytokine 43:402-7 (2008)
+            DOI:10.1016/j.cyto.2008.07.017
+REFERENCE   PMID:21155836
+  AUTHORS   Hu Y, Shen F, Crellin NK, Ouyang W
+  TITLE     The IL-17 pathway as a major therapeutic target in autoimmune diseases.
+  JOURNAL   Ann N Y Acad Sci 1217:60-76 (2011)
+            DOI:10.1111/j.1749-6632.2010.05825.x
+REFERENCE   PMID:20383173
+  AUTHORS   Xu S, Cao X
+  TITLE     Interleukin-17 and its expanding biological functions.
+  JOURNAL   Cell Mol Immunol 7:164-74 (2010)
+            DOI:10.1038/cmi.2010.21
+REFERENCE   PMID:20177959
+  AUTHORS   Pappu R, Ramirez-Carrozzi V, Ota N, Ouyang W, Hu Y
+  TITLE     The IL-17 family cytokines in immunity and disease.
+  JOURNAL   J Clin Immunol 30:185-95 (2010)
+            DOI:10.1007/s10875-010-9369-6
+REFERENCE   PMID:19575028
+  AUTHORS   Gaffen SL
+  TITLE     Structure and signalling in the IL-17 receptor family.
+  JOURNAL   Nat Rev Immunol 9:556-67 (2009)
+            DOI:10.1038/nri2586
+REFERENCE   PMID:18178098
+  AUTHORS   Shen F, Gaffen SL
+  TITLE     Structure-function relationships in the IL-17 receptor: implications for signal transduction and therapy.
+  JOURNAL   Cytokine 41:92-104 (2008)
+            DOI:10.1016/j.cyto.2007.11.013
+REFERENCE   PMID:23116200
+  AUTHORS   Doyle MS, Collins ES, FitzGerald OM, Pennington SR
+  TITLE     New insight into the functions of the interleukin-17 receptor adaptor protein Act1 in psoriatic arthritis.
+  JOURNAL   Arthritis Res Ther 14:226 (2012)
+            DOI:10.1186/ar4071
+REFERENCE   PMID:17027518
+  AUTHORS   Gaffen SL, Kramer JM, Yu JJ, Shen F
+  TITLE     The IL-17 cytokine family.
+  JOURNAL   Vitam Horm 74:255-82 (2006)
+            DOI:10.1016/S0083-6729(06)74010-9
+REFERENCE   PMID:21130872
+  AUTHORS   Chang SH, Dong C
+  TITLE     Signaling of interleukin-17 family cytokines in immunity and inflammation.
+  JOURNAL   Cell Signal 23:1069-75 (2011)
+            DOI:10.1016/j.cellsig.2010.11.022
+REFERENCE   PMID:17921324
+  AUTHORS   Cortez DM, Feldman MD, Mummidi S, Valente AJ, Steffensen B, Vincenti M, Barnes JL, Chandrasekar B
+  TITLE     IL-17 stimulates MMP-1 expression in primary human cardiac fibroblasts via p38 MAPK- and ERK1/2-dependent C/EBP-beta , NF-kappaB, and AP-1 activation.
+  JOURNAL   Am J Physiol Heart Circ Physiol 293:H3356-65 (2007)
+            DOI:10.1152/ajpheart.00928.2007
+REFERENCE   PMID:22851696
+  AUTHORS   Qu F, Gao H, Zhu S, Shi P, Zhang Y, Liu Y, Jallal B, Yao Y, Shi Y, Qian Y
+  TITLE     TRAF6-dependent Act1 phosphorylation by the IkappaB kinase-related kinases suppresses interleukin-17-induced NF-kappaB activation.
+  JOURNAL   Mol Cell Biol 32:3925-37 (2012)
+            DOI:10.1128/MCB.00268-12
+REFERENCE   PMID:17177681
+  AUTHORS   Sharkhuu T, Matthaei KI, Forbes E, Mahalingam S, Hogan SP, Hansbro PM, Foster PS
+  TITLE     Mechanism of interleukin-25 (IL-17E)-induced pulmonary inflammation and airways hyper-reactivity.
+  JOURNAL   Clin Exp Allergy 36:1575-83 (2006)
+            DOI:10.1111/j.1365-2222.2006.02595.x
+REL_PATHWAY hsa04010  MAPK signaling pathway
+            hsa04060  Cytokine-cytokine receptor interaction
+            hsa04064  NF-kappa B signaling pathway
+            hsa04210  Apoptosis
+            hsa04659  Th17 cell differentiation
+KO_PATHWAY  ko04657
+///
+
+ENTRY       hsa04630                    Pathway
+NAME        JAK-STAT signaling pathway - Homo sapiens (human)
+DESCRIPTION The Janus kinase/signal transducers and activators of transcription (JAK/STAT) pathway is one of a handful of pleiotropic cascades used to transduce a multitude of signals for development and homeostasis in animals, from humans to flies. In mammals, the JAK/STAT pathway is the principal signaling mechanism for a wide array of cytokines and growth factors. Following the binding of cytokines to their cognate receptor, STATs are activated by members of the JAK family of tyrosine kinases. Once activated, they dimerize and translocate to the nucleus and modulate the expression of target genes. In addition to the activation of STATs, JAKs mediate the recruitment of other molecules such as the MAP kinases, PI3 kinase etc. These molecules process downstream signals via the Ras-Raf-MAP kinase and PI3 kinase pathways which results in the activation of additional transcription factors.
+CLASS       Environmental Information Processing; Signal transduction
+PATHWAY_MAP hsa04630  JAK-STAT signaling pathway
+NETWORK     nt06167  Human cytomegalovirus (HCMV)
+            nt06219  JAK-STAT signaling (cancer)
+            nt06262  Pancreatic cancer
+            nt06518  JAK-STAT signaling
+  ELEMENT   N00094  EGF-Jak-STAT signaling pathway
+            N00415  IL10 family to Jak-STAT signaling pathway
+            N01554  IL2 family to Jak-STAT signaling pathway
+            N01555  Hormone-like-cytokine to Jak-STAT signaling pathway
+            N01556  IL6 family to Jak-STAT signaling pathway
+            N01557  IL12/23 to Jak-STAT signaling pathway
+            N01558  Type I interferon to Jak-STAT signaling pathway
+            N01559  Type II interferon to Jak-STAT signaling pathway
+            N01804  IL3 family to Jak-STAT signaling pathway
+DRUG        D00745  Interferon alfa-2a (USAN/INN)
+            D00746  Interferon beta-1b (USAN/INN)
+            D00747  Interferon gamma-1b (USAN/INN)
+            D00748  Aldesleukin (USAN/INN)
+            D02596  Tocilizumab (USAN/INN)
+            D02743  Celmoleukin (genetical recombination) (JP19)
+            D02744  Interferon alfacon-1 (USAN/INN)
+            D02745  Interferon alfa-2b (USAN)
+            D02747  Peginterferon alfa-2a (USAN/INN)
+            D02748  Peginterferon alfa-2b (USAN/INN)
+            D02749  Teceleukin (USAN)
+            D03058  Basiliximab (USAN/INN)
+            D03117  Binetrakin (USAN/INN)
+            D03231  Epoetin alfa (USAN/INN)
+            D03232  Epoetin beta (USAN/INN)
+            D03235  Filgrastim (USP/INN)
+            D03245  Nartograstim (genetical recombination) (JAN)
+            D03247  Lenograstim (USAN/INN)
+            D03304  Interferon beta (JAN)
+            D03305  Interferon alfa (NAMALWA) (JP19)
+            D03357  Interferon gamma-1a (genetical recombination) (JAN)
+            D03639  Daclizumab (USAN/INN)
+            D03645  Daniplestim (USAN/INN)
+            D03647  Dapiclermin (USAN/INN)
+            D03651  Darbepoetin alfa (USAN/INN)
+            D03682  Denileukin diftitox (USAN/INN)
+            D03978  Eltrombopag olamine (JAN/USAN)
+            D04032  Epoetin delta (USAN)
+            D04552  Interferon alfa-n1 (USAN)
+            D04553  Interferon alfa-n3 (USAN)
+            D04554  Interferon beta-1a (USAN)
+            D04695  Leridistim (USAN/INN)
+            D04923  Mepolizumab (USAN/INN)
+            D05036  Milodistim (USAN/INN)
+            D05066  Molgramostim (USAN/INN)
+            D05090  Muplestim (USAN/INN)
+            D05266  Oprelvekin (USAN/INN)
+            D05377  Pascolizumab (USAN/INN)
+            D05389  Pegnartograstim (USAN/INN)
+            D05803  Sargramostim (USP/INN)
+            D06556  Apilimod mesylate (USAN)
+            D06889  Pegfilgrastim (USAN/INN)
+            D08805  Interferon gamma-n1 (JAN)
+            D08844  Albinterferon alfa-2b (USAN)
+            D08985  Reslizumab (USAN)
+            D08990  Romiplostim (USAN/INN)
+            D09024  Totrombopag choline (USAN)
+            D09214  Ustekinumab (USAN/INN)
+            D09332  Denenicokin (USAN/INN)
+            D09588  Briakinumab (USAN/INN)
+            D09633  Lebrikizumab (USAN/INN)
+            D09669  Siltuximab (USAN/INN)
+            D09783  Tofacitinib citrate (JAN/USAN)
+            D09897  Enokizumab (USAN/INN)
+            D09930  Mavrilimumab (USAN/INN)
+            D09946  Peginesatide (USAN/INN)
+            D09947  Peginesatide acetate (JAN/USAN)
+            D09959  Ruxolitinib (USAN/INN)
+            D09960  Ruxolitinib phosphate (JAN/USAN)
+            D09970  Tofacitinib (USAN)
+            D09979  Tralokinumab (USAN/INN)
+            D09998  Epoetin beta pegol (genetical recombination) (JAN)
+            D10000  Epoetin epsilon (INN)
+            D10015  Litgenprostucel-L (USAN)
+            D10078  Peginterferon lambda-1a (USAN)
+            D10080  Sirukumab (USAN)
+            D10161  Sarilumab (USAN)
+            D10242  Lipegfilgrastim (USAN)
+            D10306  Avatrombopag (USAN/INN)
+            D10307  Avatrombopag maleate (JAN/USAN)
+            D10308  Baricitinib (JAN/USAN/INN)
+            D10310  Balugrastim (USAN/INN)
+            D10354  Dupilumab (USAN/INN)
+            D10365  Gandotinib (USAN/INN)
+            D10438  Guselkumab (USAN/INN)
+            D10476  Lusutrombopag (JAN/USAN/INN)
+            D10483  Peginterferon beta-1a (USAN/INN)
+            D10630  Fedratinib (USAN/INN)
+            D10717  Napabucasin (JAN/USAN/INN)
+            D10846  Epoetin theta (INN)
+            D10847  Epoetin zeta (INN)
+            D10871  Filgotinib (USAN/INN)
+            D10872  Filgotinib hydrochloride (USAN)
+            D10889  Momelotinib hydrochloride hydrate (JAN)
+            D10944  Itacitinib (USAN/INN)
+            D10945  Itacitinib adipate (JAN/USAN)
+            D10994  Upadacitinib (USAN/INN)
+            D10995  Upadacitinib tartrate (USAN)
+            D11026  Pegteograstim (INN)
+            D11027  Ropeginterferon alfa-2b (INN)
+            D11046  Delgocitinib (JAN/USAN/INN)
+            D11048  Upadacitinib hydrate (JAN)
+            D11052  Risankizumab (USAN/INN)
+            D11079  Satralizumab (USAN/INN)
+            D11106  Filgotinib maleate (JAN/USAN)
+            D11123  Mirikizumab (USAN/INN)
+            D11188  Eflapegrastim (USAN/INN)
+            D11193  Somavaratan (USAN/INN)
+            D11200  Pegilodecakin (USAN/INN)
+            D11296  Fedratinib hydrochloride (USAN)
+            D11400  Abrocitinib (JAN/USAN)
+            D11537  Brepocitinib (USAN)
+            D11538  Brepocitinib tosylate (USAN)
+            D11598  Romilkimab (USAN/INN)
+            D11676  Gusacitinib (USAN/INN)
+            D11677  Gusacitinib hydrochloride (USAN)
+            D11747  Inbakicept (USAN/INN)
+            D11756  Fletikumab (USAN/INN)
+            D11771  Tezepelumab (USAN/INN)
+            D11800  Vixarelimab (USAN)
+            D11817  Deucravacitinib (JAN/USAN)
+            D11821  Nogapendekin alfa (USAN/INN)
+            D11866  Deuruxolitinib (USAN)
+            D11867  Deuruxolitinib phosphate (USAN)
+            D11953  Efmarodocokin alfa (USAN/INN)
+            D11962  Murizatoclax (USAN/INN)
+            D11963  Tapotoclax (USAN/INN)
+            D11970  Ritlecitinib tosylate (USAN)
+            D11986  Efbemalenograstim alfa (USAN/INN)
+            D12056  Ropsacitinib (USAN)
+            D12118  Nezulcitinib (USAN)
+            D12169  Depemokimab (USAN)
+            D12211  Ivarmacitinib (USAN)
+            D12212  Ivarmacitinib sulfate (USAN)
+            D12306  Ordesekimab (USAN)
+            D12307  Pivekimab (USAN)
+            D12308  Pivekimab sunirine (USAN)
+            D12328  Rezpegaldesleukin (USAN)
+            D12371  Nemvaleukin alfa (USAN/INN)
+            D12386  Melredableukin alfa (USAN/INN)
+            D12479  Lusvertikimab (USAN/INN)
+            D12487  Olokizumab (INN)
+            D12502  Golidocitinib (USAN/INN)
+            D12575  Povorcitinib (USAN/INN)
+            D12576  Povorcitinib phosphate (JAN/USAN)
+            D12623  Nanrilkefusp alfa (USAN/INN)
+            D12625  Pegenzileukin (USAN/INN)
+            D12709  Marlotamig (USAN)
+            D12725  Lomedeucitinib (USAN)
+            D12731  Anumigilimab (USAN/INN)
+            D12739  Bempikibart (USAN/INN)
+            D12748  Levilimab (INN)
+            D12784  Casdozokitug (USAN/INN)
+            D12786  Lepzacitinib (USAN)
+            D12807  Ziltivekimab (USAN/INN)
+            D12810  Falbikitug (USAN/INN)
+            D12815  Eltrombopag choline
+            D12824  Temtokibart (USAN/INN)
+            D12850  Imneskibart (USAN)
+            D12888  Nogapendekin alfa inbakicept
+            D12928  Vopikitug (USAN/INN)
+            D12929  Vamikibart (USAN/INN)
+            D12941  Zasocitinib (JAN/USAN/INN)
+            D12962  Tilrekimig (USAN)
+            D12973  Verekitug (USAN/INN)
+            D12985  Ompekimig (USAN)
+            D12993  Frevecitinib (USAN/INN)
+            D13016  Efepoetin alfa (INN)
+            D13040  Londamocitinib (USAN/INN)
+            D13041  Londamocitinib xinafoate (USAN)
+            D13048  Onvapegleukin alfa (USAN/INN)
+            D13049  Pacibekitug (USAN/INN)
+            D13054  Lunsekimig (USAN/INN)
+            D13057  Bexatamig (USAN/INN)
+            D13084  Revakinagene taroretcel (USAN/INN)
+            D13085  Solrikitug (USAN/INN)
+            D13093  Icotrokinra hydrochloride (JAN/USAN)
+            D13094  Efpixileukin alfa (USAN)
+            D13096  Tolododekin alfa (USAN)
+            D13108  Icotrokinra (USAN/INN)
+            D13123  Envudeucitinib (USAN/INN)
+            D13124  Envudeucitinib hydrochloride (USAN)
+            D13131  Zamzetoclax (USAN/INN)
+            D13155  Donzakimig (USAN/INN)
+            D13179  Nuvisertib (USAN/INN)
+            D13180  Nuvisertib hydrochloride (USAN)
+DBLINKS     GO: 0007259
+ORGANISM    Homo sapiens (human) [GN:hsa]
+GENE        10000  AKT3; RAC-gamma serine/threonine-protein kinase isoform 1 [KO:K04456] [EC:2.7.11.1]
+            10254  STAM2; signal transducing adapter molecule 2 [KO:K04705]
+            1026  CDKN1A; cyclin-dependent kinase inhibitor 1 isoform 1 [KO:K06625]
+            10379  IRF9; interferon regulatory factor 9 isoform 2 [KO:K04693]
+            10401  PIAS3; E3 SUMO-protein ligase PIAS3 [KO:K16064] [EC:2.3.2.-]
+            11009  IL24; interleukin-24 isoform 1 precursor [KO:K22668]
+            110117499  P3R3URF-PIK3R3; LOC110117498-PIK3R3 readthrough [KO:K02649]
+            1154  CISH; cytokine-inducible SH2-containing protein isoform 2 [KO:K04701]
+            116379  IL22RA2; interleukin-22 receptor subunit alpha-2 isoform 1 precursor [KO:K05139]
+            122809  SOCS4; suppressor of cytokine signaling 4 [KO:K04697]
+            1270  CNTF; ciliary neurotrophic factor [KO:K05420]
+            1271  CNTFR; ciliary neurotrophic factor receptor subunit alpha preproprotein [KO:K05059]
+            133396  IL31RA; interleukin-31 receptor subunit alpha isoform 2 precursor [KO:K22630]
+            1387  CREBBP; CREB-binding protein isoform a [KO:K04498] [EC:2.3.1.48]
+            1437  CSF2; granulocyte-macrophage colony-stimulating factor precursor [KO:K05427]
+            1438  CSF2RA; granulocyte-macrophage colony-stimulating factor receptor subunit alpha isoform a precursor [KO:K05066]
+            1439  CSF2RB; cytokine receptor common subunit beta isoform 2 precursor [KO:K04738]
+            1440  CSF3; granulocyte colony-stimulating factor isoform a precursor [KO:K05423]
+            1441  CSF3R; granulocyte colony-stimulating factor receptor isoform a precursor [KO:K05061]
+            1442  CSH1; chorionic somatomammotropin hormone 1 precursor [KO:K05438]
+            1443  CSH2; chorionic somatomammotropin hormone 2 isoform 1 precursor [KO:K05438]
+            1444  CSHL1; chorionic somatomammotropin hormone-like 1 isoform 1 precursor [KO:K05438]
+            1489  CTF1; cardiotrophin-1 isoform 1 [KO:K05422]
+            149233  IL23R; interleukin-23 receptor precursor [KO:K05065]
+            163702  IFNLR1; interferon lambda receptor 1 isoform 1 precursor [KO:K05140]
+            1950  EGF; pro-epidermal growth factor isoform 1 preproprotein [KO:K04357]
+            1956  EGFR; epidermal growth factor receptor isoform a precursor [KO:K04361] [EC:2.7.10.1]
+            2033  EP300; histone acetyltransferase p300 isoform 1 [KO:K04498] [EC:2.3.1.48]
+            2056  EPO; erythropoietin precursor [KO:K05437]
+            2057  EPOR; erythropoietin receptor precursor [KO:K05079]
+            207  AKT1; RAC-alpha serine/threonine-protein kinase [KO:K04456] [EC:2.7.11.1]
+            208  AKT2; RAC-beta serine/threonine-protein kinase isoform 1 [KO:K04456] [EC:2.7.11.1]
+            2273  FHL1; four and a half LIM domains protein 1 isoform 1 [KO:K14365]
+            23529  CLCF1; cardiotrophin-like cytokine factor 1 isoform 1 precursor [KO:K05421]
+            246778  IL27; interleukin-27 subunit alpha precursor [KO:K22629]
+            2475  MTOR; serine/threonine-protein kinase mTOR isoform 1 [KO:K07203] [EC:2.7.11.1]
+            2670  GFAP; glial fibrillary acidic protein isoform 1 [KO:K05640]
+            2688  GH1; somatotropin isoform 1 precursor [KO:K05438]
+            2689  GH2; growth hormone variant isoform 1 precursor [KO:K05438]
+            2690  GHR; growth hormone receptor isoform 1 precursor [KO:K05080]
+            282616  IFNL2; interferon lambda-2 precursor [KO:K22669]
+            282617  IFNL3; interferon lambda-3 isoform 2 precursor [KO:K22669]
+            282618  IFNL1; interferon lambda-1 precursor [KO:K05447]
+            2885  GRB2; growth factor receptor-bound protein 2 isoform 1 [KO:K04364]
+            29949  IL19; interleukin-19 precursor [KO:K05444]
+            30837  SOCS7; suppressor of cytokine signaling 7 [KO:K04699]
+            316  AOX1; aldehyde oxidase [KO:K00157] [EC:1.2.3.1]
+            3265  HRAS; GTPase HRas isoform 1 [KO:K02833]
+            338376  IFNE; interferon epsilon precursor [KO:K05442]
+            3439  IFNA1; interferon alpha-1 precursor [KO:K05414]
+            3440  IFNA2; interferon alpha-2 precursor [KO:K05414]
+            3441  IFNA4; interferon alpha-4 precursor [KO:K05414]
+            3442  IFNA5; interferon alpha-5 precursor [KO:K05414]
+            3443  IFNA6; interferon alpha-6 precursor [KO:K05414]
+            3444  IFNA7; interferon alpha-7 precursor [KO:K05414]
+            3445  IFNA8; interferon alpha-8 precursor [KO:K05414]
+            3446  IFNA10; interferon alpha-10 precursor [KO:K05414]
+            3447  IFNA13; interferon alpha-13 precursor [KO:K05414]
+            3448  IFNA14; interferon alpha-14 precursor [KO:K05414]
+            3449  IFNA16; interferon alpha-16 precursor [KO:K05414]
+            3451  IFNA17; interferon alpha-17 precursor [KO:K05414]
+            3452  IFNA21; interferon alpha-21 precursor [KO:K05414]
+            3454  IFNAR1; interferon alpha/beta receptor 1 isoform 2 precursor [KO:K05130]
+            3455  IFNAR2; interferon alpha/beta receptor 2 isoform a precursor [KO:K05131]
+            3456  IFNB1; interferon beta precursor [KO:K05415]
+            3458  IFNG; interferon gamma precursor [KO:K04687]
+            3459  IFNGR1; interferon gamma receptor 1 isoform 1 precursor [KO:K05132]
+            3460  IFNGR2; interferon gamma receptor 2 isoform 2 precursor [KO:K05133]
+            3467  IFNW1; interferon omega-1 precursor [KO:K05440]
+            3558  IL2; interleukin-2 precursor [KO:K05429]
+            3559  IL2RA; interleukin-2 receptor subunit alpha isoform 1 precursor [KO:K05068]
+            3560  IL2RB; interleukin-2 receptor subunit beta precursor [KO:K05069]
+            3561  IL2RG; cytokine receptor common subunit gamma isoform 1 precursor [KO:K05070]
+            3562  IL3; interleukin-3 precursor [KO:K04736]
+            3563  IL3RA; interleukin-3 receptor subunit alpha isoform 1 precursor [KO:K04737]
+            3565  IL4; interleukin-4 isoform 1 precursor [KO:K05430]
+            3566  IL4R; interleukin-4 receptor subunit alpha isoform a precursor [KO:K05071]
+            3567  IL5; interleukin-5 precursor [KO:K05428]
+            3568  IL5RA; interleukin-5 receptor subunit alpha isoform 1 precursor [KO:K05067]
+            3569  IL6; interleukin-6 isoform 1 precursor [KO:K05405]
+            3570  IL6R; interleukin-6 receptor subunit alpha isoform 1 precursor [KO:K05055]
+            3572  IL6ST; interleukin-6 receptor subunit beta isoform 1 precursor [KO:K05060]
+            3574  IL7; interleukin-7 isoform 1 precursor [KO:K05431]
+            3575  IL7R; interleukin-7 receptor subunit alpha isoform 1 precursor [KO:K05072]
+            3578  IL9; interleukin-9 precursor [KO:K05432]
+            3581  IL9R; interleukin-9 receptor isoform 1 precursor [KO:K05073]
+            3586  IL10; interleukin-10 isoform 1 precursor [KO:K05443]
+            3587  IL10RA; interleukin-10 receptor subunit alpha isoform 1 precursor [KO:K05134]
+            3588  IL10RB; interleukin-10 receptor subunit beta isoform 1 precursor [KO:K05135]
+            3589  IL11; interleukin-11 isoform 1 precursor [KO:K05417]
+            3590  IL11RA; interleukin-11 receptor subunit alpha precursor [KO:K05056]
+            3592  IL12A; interleukin-12 subunit alpha isoform 4 precursor [KO:K05406]
+            3593  IL12B; interleukin-12 subunit beta precursor [KO:K05425]
+            3594  IL12RB1; interleukin-12 receptor subunit beta-1 isoform 1 precursor [KO:K05063]
+            3595  IL12RB2; interleukin-12 receptor subunit beta-2 isoform a precursor [KO:K05064]
+            3596  IL13; interleukin-13 isoform 1 precursor [KO:K05435]
+            3597  IL13RA1; interleukin-13 receptor subunit alpha-1 precursor [KO:K05076]
+            3598  IL13RA2; interleukin-13 receptor subunit alpha-2 precursor [KO:K05077]
+            3600  IL15; interleukin-15 isoform 1 preproprotein [KO:K05433]
+            3601  IL15RA; interleukin-15 receptor subunit alpha isoform 1 precursor [KO:K05074]
+            3716  JAK1; tyrosine-protein kinase JAK1 isoform 1 [KO:K11217] [EC:2.7.10.2]
+            3717  JAK2; tyrosine-protein kinase JAK2 isoform a [KO:K04447] [EC:2.7.10.2]
+            3718  JAK3; tyrosine-protein kinase JAK3 [KO:K11218] [EC:2.7.10.2]
+            386653  IL31; interleukin-31 precursor [KO:K22631]
+            3952  LEP; leptin precursor [KO:K05424]
+            3953  LEPR; leptin receptor isoform 1 precursor [KO:K05062]
+            3976  LIF; leukemia inhibitory factor isoform 1 precursor [KO:K05419]
+            3977  LIFR; leukemia inhibitory factor receptor isoform a precursor [KO:K05058]
+            4170  MCL1; induced myeloid leukemia cell differentiation protein Mcl-1 isoform 1 [KO:K02539]
+            4352  MPL; thrombopoietin receptor precursor [KO:K05082]
+            4609  MYC; myc proto-oncogene protein isoform 1 [KO:K04377]
+            5008  OSM; oncostatin-M isoform 1 preproprotein [KO:K05418]
+            50604  IL20; interleukin-20 isoform 1 precursor [KO:K22667]
+            50615  IL21R; interleukin-21 receptor isoform 1 precursor [KO:K05075]
+            50616  IL22; interleukin-22 precursor [KO:K05445]
+            5154  PDGFA; platelet-derived growth factor subunit A isoform 1 preproprotein [KO:K04359]
+            5155  PDGFB; platelet-derived growth factor subunit B isoform 1 preproprotein [KO:K17386]
+            5156  PDGFRA; platelet-derived growth factor receptor alpha isoform 1 precursor [KO:K04363] [EC:2.7.10.1]
+            51561  IL23A; interleukin-23 subunit alpha precursor [KO:K05426]
+            51588  PIAS4; E3 SUMO-protein ligase PIAS4 [KO:K16065] [EC:2.3.2.27]
+            5159  PDGFRB; platelet-derived growth factor receptor beta isoform 1 precursor [KO:K05089] [EC:2.7.10.1]
+            5290  PIK3CA; phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform [KO:K00922] [EC:2.7.1.153]
+            5291  PIK3CB; phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit beta isoform isoform 1 [KO:K00922] [EC:2.7.1.153]
+            5292  PIM1; serine/threonine-protein kinase pim-1 isoform 2 [KO:K04702] [EC:2.7.11.1]
+            5293  PIK3CD; phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform isoform 1 [KO:K00922] [EC:2.7.1.153]
+            5295  PIK3R1; phosphatidylinositol 3-kinase regulatory subunit alpha isoform 1 [KO:K02649]
+            5296  PIK3R2; phosphatidylinositol 3-kinase regulatory subunit beta [KO:K02649]
+            53832  IL20RA; interleukin-20 receptor subunit alpha isoform 1 precursor [KO:K05136]
+            53833  IL20RB; interleukin-20 receptor subunit beta precursor [KO:K05137]
+            55801  IL26; interleukin-26 precursor [KO:K05446]
+            5617  PRL; prolactin precursor [KO:K05439]
+            5618  PRLR; prolactin receptor isoform 1 precursor [KO:K05081]
+            56832  IFNK; interferon kappa precursor [KO:K05441]
+            5771  PTPN2; tyrosine-protein phosphatase non-receptor type 2 isoform 1 [KO:K18026] [EC:3.1.3.48]
+            5777  PTPN6; tyrosine-protein phosphatase non-receptor type 6 isoform 1 [KO:K05697] [EC:3.1.3.48]
+            5781  PTPN11; tyrosine-protein phosphatase non-receptor type 11 isoform 1 [KO:K07293] [EC:3.1.3.48]
+            5894  RAF1; RAF proto-oncogene serine/threonine-protein kinase isoform b [KO:K04366] [EC:2.7.11.1]
+            58985  IL22RA1; interleukin-22 receptor subunit alpha-1 precursor [KO:K05138]
+            59067  IL21; interleukin-21 isoform 1 precursor [KO:K05434]
+            595  CCND1; G1/S-specific cyclin-D1 [KO:K04503]
+            596  BCL2; apoptosis regulator Bcl-2 isoform alpha [KO:K02161]
+            598  BCL2L1; bcl-2-like protein 1 isoform Bcl-X(L) [KO:K04570]
+            64109  CRLF2; cytokine receptor-like factor 2 isoform 1 precursor [KO:K05078]
+            6654  SOS1; son of sevenless homolog 1 isoform 1 [KO:K03099]
+            6655  SOS2; son of sevenless homolog 2 isoform 1 [KO:K03099]
+            6772  STAT1; signal transducer and activator of transcription 1-alpha/beta isoform alpha [KO:K11220]
+            6773  STAT2; signal transducer and activator of transcription 2 isoform 1 [KO:K11221]
+            6774  STAT3; signal transducer and activator of transcription 3 isoform 1 [KO:K04692]
+            6775  STAT4; signal transducer and activator of transcription 4 [KO:K11222]
+            6776  STAT5A; signal transducer and activator of transcription 5A isoform 1 [KO:K11223]
+            6777  STAT5B; signal transducer and activator of transcription 5B [KO:K11224]
+            6778  STAT6; signal transducer and activator of transcription 6 isoform 1 [KO:K11225]
+            7066  THPO; thrombopoietin isoform 1 precursor [KO:K06854]
+            7297  TYK2; non-receptor tyrosine-protein kinase TYK2 isoform 2 [KO:K11219] [EC:2.7.10.2]
+            8027  STAM; signal transducing adapter molecule 1 isoform a [KO:K04705]
+            8503  PIK3R3; phosphatidylinositol 3-kinase regulatory subunit gamma isoform 1 [KO:K02649]
+            85480  TSLP; thymic stromal lymphopoietin isoform 1 precursor [KO:K05436]
+            8554  PIAS1; E3 SUMO-protein ligase PIAS1 isoform 2 [KO:K04706] [EC:2.3.2.-]
+            8651  SOCS1; suppressor of cytokine signaling 1 [KO:K04694]
+            8835  SOCS2; suppressor of cytokine signaling 2 [KO:K04695]
+            894  CCND2; G1/S-specific cyclin-D2 [KO:K10151]
+            896  CCND3; G1/S-specific cyclin-D3 isoform 2 [KO:K10152]
+            9021  SOCS3; suppressor of cytokine signaling 3 [KO:K04696]
+            9063  PIAS2; E3 SUMO-protein ligase PIAS2 isoform beta [KO:K16063] [EC:2.3.2.-]
+            9180  OSMR; oncostatin-M-specific receptor subunit beta isoform 1 precursor [KO:K05057]
+            9306  SOCS6; suppressor of cytokine signaling 6 [KO:K04699]
+            9466  IL27RA; interleukin-27 receptor subunit alpha precursor [KO:K19598]
+            9655  SOCS5; suppressor of cytokine signaling 5 [KO:K04698]
+REFERENCE   PMID:22383755
+  AUTHORS   Harrison DA
+  TITLE     The Jak/STAT pathway.
+  JOURNAL   Cold Spring Harb Perspect Biol 4:a011205 (2012)
+            DOI:10.1101/cshperspect.a011205
+REFERENCE   PMID:22339650
+  AUTHORS   Kiu H, Nicholson SE
+  TITLE     Biology and significance of the JAK/STAT signalling pathways.
+  JOURNAL   Growth Factors 30:88-106 (2012)
+            DOI:10.3109/08977194.2012.660936
+REFERENCE   PMID:21372217
+  AUTHORS   Hervas-Stubbs S, Perez-Gracia JL, Rouzaut A, Sanmamed MF, Le Bon A, Melero I
+  TITLE     Direct effects of type I interferons on cells of the immune system.
+  JOURNAL   Clin Cancer Res 17:2619-27 (2011)
+            DOI:10.1158/1078-0432.CCR-10-1114
+REFERENCE   PMID:25217450
+  AUTHORS   Fish EN, Platanias LC
+  TITLE     Interferon receptor signaling in malignancy: a network of cellular pathways defining biological outcomes.
+  JOURNAL   Mol Cancer Res 12:1691-703 (2014)
+            DOI:10.1158/1541-7786.MCR-14-0450
+REFERENCE   PMID:21034406
+  AUTHORS   Ivanenkov YA, Balakin KV, Lavrovsky Y
+  TITLE     Small molecule inhibitors of NF-kB and JAK/STAT signal transduction pathways as promising anti-inflammatory therapeutics.
+  JOURNAL   Mini Rev Med Chem 11:55-78 (2011)
+            DOI:10.2174/138955711793564079
+REFERENCE   PMID:25587654
+  AUTHORS   O'Shea JJ, Schwartz DM, Villarino AV, Gadina M, McInnes IB, Laurence A
+  TITLE     The JAK-STAT pathway: impact on human disease and therapeutic intervention.
+  JOURNAL   Annu Rev Med 66:311-28 (2015)
+            DOI:10.1146/annurev-med-051113-024537
+REFERENCE   PMID:24069565
+  AUTHORS   Zoranovic T, Grmai L, Bach EA
+  TITLE     Regulation of proliferation, cell competition, and cellular growth by the Drosophila JAK-STAT pathway.
+  JOURNAL   JAKSTAT 2:e25408 (2013)
+            DOI:10.4161/jkst.25408
+REFERENCE   PMID:16204702
+  AUTHORS   Ungureanu D, Silvennoinen O
+  TITLE     SLIM trims STATs: ubiquitin E3 ligases provide insights for specificity in the regulation of cytokine signaling.
+  JOURNAL   Sci STKE 2005:pe49 (2005)
+            DOI:10.1126/stke.3042005pe49
+REFERENCE   PMID:23735217
+  AUTHORS   Richard AJ, Stephens JM
+  TITLE     The role of JAK-STAT signaling in adipose tissue function.
+  JOURNAL   Biochim Biophys Acta 1842:431-9 (2014)
+            DOI:10.1016/j.bbadis.2013.05.030
+REFERENCE   PMID:24606160
+  AUTHORS   Sun Y, Lehmbecker A, Kalkuhl A, Deschl U, Sun W, Rohn K, Tzvetanova ID, Nave KA, Baumgartner W, Ulrich R
+  TITLE     STAT3 represents a molecular switch possibly inducing astroglial instead of oligodendroglial differentiation of oligodendroglial progenitor cells in Theiler's murine encephalomyelitis.
+  JOURNAL   Neuropathol Appl Neurobiol 41:347-70 (2015)
+            DOI:10.1111/nan.12133
+REFERENCE   PMID:10851053
+  AUTHORS   Hirano T, Ishihara K, Hibi M
+  TITLE     Roles of STAT3 in mediating the cell growth, differentiation and survival signals relayed through the IL-6 family of cytokine receptors.
+  JOURNAL   Oncogene 19:2548-56 (2000)
+            DOI:10.1038/sj.onc.1203551
+REFERENCE   PMID:11114747
+  AUTHORS   Rane SG, Reddy EP
+  TITLE     Janus kinases: components of multiple signaling pathways.
+  JOURNAL   Oncogene 19:5662-79 (2000)
+            DOI:10.1038/sj.onc.1203925
+REFERENCE   PMID:8682149
+  AUTHORS   Heim MH
+  TITLE     The Jak-STAT pathway: specific signal transduction from the cell membrane to the nucleus.
+  JOURNAL   Eur J Clin Invest 26:1-12 (1996)
+            DOI:10.1046/j.1365-2362.1996.103248.x
+REFERENCE   PMID:30267440
+  AUTHORS   Morris R, Kershaw NJ, Babon JJ
+  TITLE     The molecular details of cytokine signaling via the JAK/STAT pathway.
+  JOURNAL   Protein Sci 27:1984-2009 (2018)
+            DOI:10.1002/pro.3519
+REFERENCE   PMID:34492272
+  AUTHORS   Tzeng HT, Chyuan IT, Lai JH
+  TITLE     Targeting the JAK-STAT pathway in autoimmune diseases and cancers: A focus on molecular mechanisms and therapeutic potential.
+  JOURNAL   Biochem Pharmacol 193:114760 (2021)
+            DOI:10.1016/j.bcp.2021.114760
+REFERENCE   PMID:32203403
+  AUTHORS   Salas A, Hernandez-Rocha C, Duijvestein M, Faubion W, McGovern D, Vermeire S, Vetrano S, Vande Casteele N
+  TITLE     JAK-STAT pathway targeting for the treatment of inflammatory bowel disease.
+  JOURNAL   Nat Rev Gastroenterol Hepatol 17:323-337 (2020)
+            DOI:10.1038/s41575-020-0273-0
+REL_PATHWAY hsa04010  MAPK signaling pathway
+            hsa04060  Cytokine-cytokine receptor interaction
+            hsa04110  Cell cycle
+            hsa04120  Ubiquitin mediated proteolysis
+            hsa04151  PI3K-Akt signaling pathway
+            hsa04210  Apoptosis
+KO_PATHWAY  ko04630
+///
+
+ENTRY       hsa04310                    Pathway
+NAME        Wnt signaling pathway - Homo sapiens (human)
+DESCRIPTION Wnt proteins are secreted morphogens that are required for basic developmental processes, such as cell-fate specification, progenitor-cell proliferation and the control of asymmetric cell division, in many different species and organs. There are at least three different Wnt pathways: the canonical pathway, the planar cell polarity (PCP) pathway and the Wnt/Ca2+ pathway. In the canonical Wnt pathway, the major effect of Wnt ligand binding to its receptor is the stabilization of cytoplasmic beta-catenin through inhibition of the bea-catenin degradation complex. Beta-catenin is then free to enter the nucleus and activate Wnt-regulated genes through its interaction with TCF (T-cell factor) family transcription factors and concomitant recruitment of coactivators. Planar cell polarity (PCP) signaling leads to the activation of the small GTPases RHOA (RAS homologue gene-family member A) and RAC1, which activate the stress kinase JNK (Jun N-terminal kinase) and ROCK (RHO-associated coiled-coil-containing protein kinase 1) and leads to remodelling of the cytoskeleton and changes in cell adhesion and motility. WNT-Ca2+ signalling is mediated through G proteins and phospholipases and leads to transient increases in cytoplasmic free calcium that subsequently activate the kinase PKC (protein kinase C) and CAMKII (calcium calmodulin mediated kinase II) and the phosphatase calcineurin.
+CLASS       Environmental Information Processing; Signal transduction
+PATHWAY_MAP hsa04310  Wnt signaling pathway
+NETWORK     nt06164  Kaposi sarcoma-associated herpesvirus (KSHV)
+            nt06181  Salmonella
+            nt06215  WNT signaling (cancer)
+            nt06260  Colorectal cancer
+            nt06261  Gastric cancer
+            nt06263  Hepatocellular carcinoma
+            nt06270  Breast cancer
+            nt06271  Endometrial cancer
+            nt06274  Thyroid cancer
+            nt06505  WNT signaling
+            nt06549  Cadherin signaling
+  ELEMENT   N00056  Wnt signaling pathway, Canonical pathway
+            N01427  WNT5A-ROR signaling pathway
+            N01440  Wnt signaling modulation, LGR/RSPO
+            N01441  Wnt signaling modulation, SOST/LRP4
+            N01442  Wnt signaling modulation, Wnt inhibitor
+            N01443  Wnt signaling modulation, Wnt acylation
+            N02010  Wnt signaling pathway, PCP pathway
+DRUG        D10094  Blosozumab (USAN)
+            D10156  Romosozumab (USAN)
+            D10410  Vantictumab (USAN/INN)
+            D11322  Umbralisib (USAN/INN)
+            D11323  Umbralisib tosylate (USAN)
+            D11369  Rosmantuzumab (USAN)
+            D11453  Nirogacestat hydrobromide (USAN)
+            D11758  Ipafricept (USAN/INN)
+            D12209  Ozuriftamab (USAN)
+            D12210  Ozuriftmab vedotin (USAN)
+            D12235  Osugacestat (USAN/INN)
+            D12416  Petosemtamab (USAN/INN)
+            D12445  Foscenvivint (JAN/INN)
+            D13031  Varegacestat (USAN/INN)
+            D13105  Setrusumab (USAN/INN)
+            D13162  Remigromig (USAN)
+            D13274  Relzasertideg (USAN)
+DBLINKS     GO: 0016055
+ORGANISM    Homo sapiens (human) [GN:hsa]
+GENE        10023  FRAT1; proto-oncogene FRAT1 [KO:K03069]
+            102723796  TLE7; transducin-like enhancer protein 7 [KO:K04497]
+            102800317  TPTEP2-CSNK1E; casein kinase I isoform epsilon [KO:K08960] [EC:2.7.11.1]
+            10297  APC2; adenomatous polyposis coli protein 2 isoform 1 [KO:K02085]
+            11197  WIF1; wnt inhibitory factor 1 precursor [KO:K01691]
+            11211  FZD10; frizzled-10 precursor [KO:K02842]
+            122011  CSNK1A1L; casein kinase I isoform alpha-like [KO:K08957] [EC:2.7.11.1]
+            1387  CREBBP; CREB-binding protein isoform a [KO:K04498] [EC:2.3.1.48]
+            144165  PRICKLE1; prickle-like protein 1 [KO:K04511]
+            1452  CSNK1A1; casein kinase I isoform alpha isoform 2 [KO:K08957] [EC:2.7.11.1]
+            1454  CSNK1E; casein kinase I isoform epsilon [KO:K08960] [EC:2.7.11.1]
+            1457  CSNK2A1; casein kinase II subunit alpha isoform a [KO:K03097] [EC:2.7.11.1]
+            1459  CSNK2A2; casein kinase II subunit alpha' [KO:K03097] [EC:2.7.11.1]
+            1460  CSNK2B; casein kinase II subunit beta isoform 1 [KO:K03115]
+            147111  NOTUM; palmitoleoyl-protein carboxylesterase NOTUM precursor [KO:K19882] [EC:3.1.1.98]
+            147495  APCDD1; protein APCDD1 precursor [KO:K25812]
+            1487  CTBP1; C-terminal-binding protein 1 isoform 1 [KO:K04496] [EC:1.1.1.428]
+            1488  CTBP2; C-terminal-binding protein 2 isoform 1 [KO:K04496] [EC:1.1.1.428]
+            1499  CTNNB1; catenin beta-1 isoform 1 [KO:K02105]
+            1501  CTNND2; catenin delta-2 isoform 1 [KO:K23491]
+            164284  APCDD1L; protein APCDD1-like isoform 1 precursor [KO:K25812]
+            166336  PRICKLE2; prickle-like protein 2 [KO:K04511]
+            1855  DVL1; segment polarity protein dishevelled homolog DVL-1 isoform 1 [KO:K02353]
+            1856  DVL2; segment polarity protein dishevelled homolog DVL-2 [KO:K02353]
+            1857  DVL3; segment polarity protein dishevelled homolog DVL-3 [KO:K02353]
+            1951  CELSR3; cadherin EGF LAG seven-pass G-type receptor 3 precursor [KO:K04602]
+            1952  CELSR2; cadherin EGF LAG seven-pass G-type receptor 2 precursor [KO:K04601]
+            2033  EP300; histone acetyltransferase p300 isoform 1 [KO:K04498] [EC:2.3.1.48]
+            2239  GPC4; glypican-4 precursor [KO:K08110]
+            22881  ANKRD6; ankyrin repeat domain-containing protein 6 isoform a [KO:K21435]
+            22943  DKK1; dickkopf-related protein 1 precursor [KO:K02165]
+            23002  DAAM1; disheveled-associated activator of morphogenesis 1 isoform 1 [KO:K04512]
+            23236  PLCB1; 1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-1 isoform a [KO:K05858] [EC:3.1.4.11]
+            23291  FBXW11; F-box/WD repeat-containing protein 11 isoform C [KO:K03362]
+            23401  FRAT2; GSK-3-binding protein FRAT2 [KO:K03096]
+            23411  SIRT1; NAD-dependent protein deacetylase sirtuin-1 isoform a [KO:K11411] [EC:2.3.1.286]
+            23500  DAAM2; disheveled-associated activator of morphogenesis 2 isoform 1 [KO:K04512]
+            2487  FRZB; secreted frizzled-related protein 3 precursor [KO:K25481]
+            2535  FZD2; frizzled-2 precursor [KO:K02235]
+            25776  CBY1; protein chibby homolog 1 [KO:K23402]
+            25805  BAMBI; BMP and activin membrane-bound inhibitor homolog precursor [KO:K10162]
+            27101  CACYBP; calcyclin-binding protein isoform 1 [KO:K04507]
+            27121  DKK4; dickkopf-related protein 4 precursor [KO:K02165]
+            27123  DKK2; dickkopf-related protein 2 precursor [KO:K02165]
+            27130  INVS; inversin isoform a [KO:K19626]
+            283106  CSNK2A3; casein kinase II subunit alpha 3 [KO:K03097] [EC:2.7.11.1]
+            284654  RSPO1; R-spondin-1 isoform 1 precursor [KO:K19471]
+            2932  GSK3B; glycogen synthase kinase-3 beta isoform 2 [KO:K03083] [EC:2.7.11.26]
+            29964  PRICKLE4; prickle-like protein 4 [KO:K04511]
+            324  APC; adenomatous polyposis coli protein isoform b [KO:K02085]
+            340419  RSPO2; R-spondin-2 isoform 1 precursor [KO:K23097]
+            343637  RSPO4; R-spondin-4 isoform 1 precursor [KO:K23099]
+            3725  JUN; transcription factor Jun [KO:K04448]
+            387  RHOA; transforming protein RhoA isoform 1 precursor [KO:K04513]
+            4007  PRICKLE3; prickle planar cell polarity protein 3 isoform 1 [KO:K04511]
+            4040  LRP6; low-density lipoprotein receptor-related protein 6 isoform b precursor [KO:K03068]
+            4041  LRP5; low-density lipoprotein receptor-related protein 5 isoform 1 precursor [KO:K03068]
+            4088  SMAD3; mothers against decapentaplegic homolog 3 isoform 1 [KO:K23605]
+            4089  SMAD4; mothers against decapentaplegic homolog 4 isoform a [KO:K04501]
+            4163  MCC; colorectal mutant cancer protein isoform 2 [KO:K26734]
+            4316  MMP7; matrilysin preproprotein [KO:K01397] [EC:3.4.24.23]
+            440193  CCDC88C; protein Daple [KO:K25811]
+            4609  MYC; myc proto-oncogene protein isoform 1 [KO:K04377]
+            4772  NFATC1; nuclear factor of activated T-cells, cytoplasmic 1 isoform F [KO:K04446]
+            4773  NFATC2; nuclear factor of activated T-cells, cytoplasmic 2 isoform C [KO:K17332]
+            4775  NFATC3; nuclear factor of activated T-cells, cytoplasmic 3 isoform 1 [KO:K17333]
+            4776  NFATC4; nuclear factor of activated T-cells, cytoplasmic 4 isoform 2 [KO:K17334]
+            4919  ROR1; inactive tyrosine-protein kinase transmembrane receptor ROR1 isoform 1 precursor [KO:K05122] [EC:2.7.10.1]
+            4920  ROR2; tyrosine-protein kinase transmembrane receptor ROR2 isoform 1 precursor [KO:K05123] [EC:2.7.10.1]
+            50964  SOST; sclerostin precursor [KO:K16834]
+            51176  LEF1; lymphoid enhancer-binding factor 1 isoform 1 [KO:K04492]
+            51384  WNT16; protein Wnt-16 isoform 1 precursor [KO:K01558]
+            51701  NLK; serine/threonine-protein kinase NLK [KO:K04468] [EC:2.7.11.24]
+            5176  SERPINF1; pigment epithelium-derived factor isoform 1 precursor [KO:K19614]
+            5330  PLCB2; 1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-2 isoform 1 [KO:K05858] [EC:3.1.4.11]
+            5331  PLCB3; 1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-3 isoform 1 [KO:K05858] [EC:3.1.4.11]
+            5332  PLCB4; 1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-4 isoform b [KO:K05858] [EC:3.1.4.11]
+            54361  WNT4; protein Wnt-4 precursor [KO:K00408]
+            5467  PPARD; peroxisome proliferator-activated receptor delta isoform 1 [KO:K04504]
+            54894  RNF43; E3 ubiquitin-protein ligase RNF43 isoform 1 precursor [KO:K15694] [EC:2.3.2.27]
+            5530  PPP3CA; protein phosphatase 3 catalytic subunit alpha isoform 1 [KO:K04348] [EC:3.1.3.16]
+            5532  PPP3CB; serine/threonine-protein phosphatase 2B catalytic subunit beta isoform isoform b [KO:K04348] [EC:3.1.3.16]
+            5533  PPP3CC; serine/threonine-protein phosphatase 2B catalytic subunit gamma isoform isoform 2 [KO:K04348] [EC:3.1.3.16]
+            5534  PPP3R1; calcineurin subunit B type 1 [KO:K06268]
+            5535  PPP3R2; calcineurin subunit B type 2 [KO:K06268]
+            55366  LGR4; leucine-rich repeat-containing G-protein coupled receptor 4 isoform 1 precursor [KO:K04309]
+            5566  PRKACA; cAMP-dependent protein kinase catalytic subunit alpha isoform Calpha1 [KO:K04345] [EC:2.7.11.11]
+            5567  PRKACB; cAMP-dependent protein kinase catalytic subunit beta isoform 2 [KO:K04345] [EC:2.7.11.11]
+            5568  PRKACG; cAMP-dependent protein kinase catalytic subunit gamma [KO:K04345] [EC:2.7.11.11]
+            5578  PRKCA; protein kinase C alpha type [KO:K02677] [EC:2.7.11.13]
+            5579  PRKCB; protein kinase C beta type isoform 1 [KO:K19662] [EC:2.7.11.13]
+            5582  PRKCG; protein kinase C gamma type isoform 2 [KO:K19663] [EC:2.7.11.13]
+            5599  MAPK8; mitogen-activated protein kinase 8 isoform alpha2 [KO:K04440] [EC:2.7.11.24]
+            5601  MAPK9; mitogen-activated protein kinase 9 isoform alpha2 [KO:K04440] [EC:2.7.11.24]
+            5602  MAPK10; mitogen-activated protein kinase 10 isoform 1 [KO:K04440] [EC:2.7.11.24]
+            5663  PSEN1; presenilin-1 isoform I-467 [KO:K04505] [EC:3.4.23.-]
+            56998  CTNNBIP1; beta-catenin-interacting protein 1 [KO:K04493]
+            57216  VANGL2; vang-like protein 2 [KO:K04510]
+            57680  CHD8; chromodomain-helicase-DNA-binding protein 8 isoform 1 [KO:K04494] [EC:5.6.2.-]
+            57805  CCAR2; cell cycle and apoptosis regulator protein 2 isoform 1 [KO:K25816]
+            5879  RAC1; ras-related C3 botulinum toxin substrate 1 isoform Rac1 [KO:K04392]
+            5880  RAC2; ras-related C3 botulinum toxin substrate 2 [KO:K07860]
+            5881  RAC3; ras-related C3 botulinum toxin substrate 3 isoform 1 [KO:K07861]
+            59343  SENP2; sentrin-specific protease 2 [KO:K03345] [EC:3.4.22.68]
+            59352  LGR6; leucine-rich repeat-containing G-protein coupled receptor 6 isoform 1 precursor [KO:K08399]
+            595  CCND1; G1/S-specific cyclin-D1 [KO:K04503]
+            6259  RYK; tyrosine-protein kinase RYK isoform 2 precursor [KO:K05128] [EC:2.7.10.1]
+            6422  SFRP1; secreted frizzled-related protein 1 precursor [KO:K02166]
+            6423  SFRP2; secreted frizzled-related protein 2 precursor [KO:K02176]
+            6424  SFRP4; secreted frizzled-related protein 4 precursor [KO:K02185]
+            6425  SFRP5; secreted frizzled-related protein 5 precursor [KO:K02222]
+            64321  SOX17; transcription factor SOX-17 [KO:K04495]
+            6477  SIAH1; E3 ubiquitin-protein ligase SIAH1 isoform a [KO:K04506] [EC:2.3.2.27]
+            64840  PORCN; protein-serine O-palmitoleoyltransferase porcupine isoform D [KO:K00181] [EC:2.3.1.250]
+            6500  SKP1; S-phase kinase-associated protein 1 isoform b [KO:K03094]
+            6885  MAP3K7; mitogen-activated protein kinase kinase kinase 7 isoform B [KO:K04427] [EC:2.7.11.25]
+            6907  TBL1X; F-box-like/WD repeat-containing protein TBL1X isoform a [KO:K04508]
+            6932  TCF7; transcription factor 7 isoform 1 [KO:K02620]
+            6934  TCF7L2; transcription factor 7-like 2 isoform 17 [KO:K04491]
+            7088  TLE1; transducin-like enhancer protein 1 isoform 2 [KO:K04497]
+            7089  TLE2; transducin-like enhancer protein 2 isoform 1 [KO:K04497]
+            7090  TLE3; transducin-like enhancer protein 3 isoform a [KO:K04497]
+            7091  TLE4; transducin-like enhancer protein 4 isoform 3 [KO:K04497]
+            7157  TP53; cellular tumor antigen p53 isoform a [KO:K04451]
+            7471  WNT1; proto-oncogene Wnt-1 precursor [KO:K03209]
+            7472  WNT2; protein Wnt-2 precursor [KO:K00182]
+            7473  WNT3; proto-oncogene Wnt-3 precursor [KO:K00312]
+            7474  WNT5A; protein Wnt-5a isoform 1 precursor [KO:K00444]
+            7475  WNT6; protein Wnt-6 precursor [KO:K00445]
+            7476  WNT7A; protein Wnt-7a precursor [KO:K00572]
+            7477  WNT7B; protein Wnt-7b isoform 2 precursor [KO:K00572]
+            7478  WNT8A; protein Wnt-8a isoform 3 precursor [KO:K00714]
+            7479  WNT8B; protein Wnt-8b precursor [KO:K00714]
+            7480  WNT10B; protein Wnt-10b precursor [KO:K01357]
+            7481  WNT11; protein Wnt-11 precursor [KO:K01384]
+            7482  WNT2B; protein Wnt-2b isoform WNT-2B2 [KO:K00182]
+            7483  WNT9A; protein Wnt-9a precursor [KO:K01064]
+            7484  WNT9B; protein Wnt-9b isoform 1 precursor [KO:K01064]
+            7855  FZD5; frizzled-5 precursor [KO:K02375]
+            79718  TBL1XR1; F-box-like/WD repeat-containing protein TBL1XR1 isoform 1 [KO:K04508]
+            7976  FZD3; frizzled-3 isoform 1 precursor [KO:K02329]
+            79816  TLE6; transducin-like enhancer protein 6 isoform 1 [KO:K04497]
+            80319  CXXC4; CXXC-type zinc finger protein 4 [KO:K03344]
+            80326  WNT10A; protein Wnt-10a precursor [KO:K01357]
+            8061  FOSL1; fos-related antigen 1 isoform 1 [KO:K04502]
+            81029  WNT5B; protein Wnt-5b precursor [KO:K00444]
+            815  CAMK2A; calcium/calmodulin-dependent protein kinase type II subunit alpha isoform 2 [KO:K04515] [EC:2.7.11.17]
+            816  CAMK2B; calcium/calmodulin-dependent protein kinase type II subunit beta isoform 1 [KO:K04515] [EC:2.7.11.17]
+            817  CAMK2D; calcium/calmodulin-dependent protein kinase type II subunit delta isoform 3 [KO:K04515] [EC:2.7.11.17]
+            818  CAMK2G; calcium/calmodulin-dependent protein kinase type II subunit gamma isoform 7 [KO:K04515] [EC:2.7.11.17]
+            81839  VANGL1; vang-like protein 1 isoform 1 [KO:K04510]
+            8312  AXIN1; axin-1 isoform a [KO:K02157]
+            8313  AXIN2; axin-2 isoform 1 [KO:K04385]
+            8321  FZD1; frizzled-1 [KO:K02432]
+            8322  FZD4; frizzled-4 precursor [KO:K02354]
+            8323  FZD6; frizzled-6 isoform a precursor [KO:K02376]
+            8324  FZD7; frizzled-7 precursor [KO:K02432]
+            8325  FZD8; frizzled-8 precursor [KO:K02375]
+            8326  FZD9; frizzled-9 precursor [KO:K02842]
+            83439  TCF7L1; transcription factor 7-like 1 [KO:K04490]
+            84133  ZNRF3; E3 ubiquitin-protein ligase ZNRF3 isoform 1 precursor [KO:K16273] [EC:2.3.2.27]
+            84445  LZTS2; leucine zipper putative tumor suppressor 2 isoform a [KO:K26471]
+            8454  CUL1; cullin-1 [KO:K03347]
+            84870  RSPO3; R-spondin-3 precursor [KO:K23098]
+            85407  NKD1; protein naked cuticle homolog 1 [KO:K03213]
+            85409  NKD2; protein naked cuticle homolog 2 isoform 1 [KO:K03213]
+            8549  LGR5; leucine-rich repeat-containing G-protein coupled receptor 5 isoform 1 precursor [KO:K04308]
+            8607  RUVBL1; ruvB-like 1 isoform 1 [KO:K04499] [EC:5.6.2.4]
+            8840  CCN4; CCN family member 4 isoform 1 precursor [KO:K22471]
+            894  CCND2; G1/S-specific cyclin-D2 [KO:K10151]
+            8945  BTRC; F-box/WD repeat-containing protein 1A isoform 1 [KO:K03362]
+            896  CCND3; G1/S-specific cyclin-D3 isoform 2 [KO:K10152]
+            89780  WNT3A; protein Wnt-3a precursor [KO:K00312]
+            90665  TBL1Y; F-box-like/WD repeat-containing protein TBL1Y [KO:K04508]
+            9350  CER1; cerberus precursor [KO:K01645]
+            9475  ROCK2; rho-associated protein kinase 2 isoform 1 [KO:K17388] [EC:2.7.11.39]
+            9620  CELSR1; cadherin EGF LAG seven-pass G-type receptor 1 isoform 2 precursor [KO:K04600]
+            9978  RBX1; E3 ubiquitin-protein ligase RBX1 [KO:K03868] [EC:2.3.2.32]
+COMPOUND    C00076  Calcium cation
+REFERENCE   PMID:14635791
+  AUTHORS   Hatsell S, Rowlands T, Hiremath M, Cowin P.
+  TITLE     Beta-catenin and Tcfs in mammary development and cancer.
+  JOURNAL   J Mammary Gland Biol Neoplasia 8:145-58 (2003)
+            DOI:10.1023/A:1025944723047
+REFERENCE   PMID:14745971
+  AUTHORS   Yang Y.
+  TITLE     Wnts and wing: Wnt signaling in vertebrate limb development and musculoskeletal morphogenesis.
+  JOURNAL   Birth Defects Res Part C Embryo Today 69:305-17 (2003)
+            DOI:10.1002/bdrc.10026
+REFERENCE   PMID:12446114
+  AUTHORS   Kalderon D.
+  TITLE     Similarities between the Hedgehog and Wnt signaling pathways.
+  JOURNAL   Trends Cell Biol 12:523-31 (2002)
+            DOI:10.1016/S0962-8924(02)02388-7
+REFERENCE   PMID:14530294
+  AUTHORS   Nusse R.
+  TITLE     Wnts and Hedgehogs: lipid-modified proteins and similarities in signaling mechanisms at the cell surface.
+  JOURNAL   Development 130:5297-305 (2003)
+            DOI:10.1242/dev.00821
+REFERENCE   PMID:15102436
+  AUTHORS   Jope RS, Johnson GV.
+  TITLE     The glamour and gloom of glycogen synthase kinase-3.
+  JOURNAL   Trends Biochem Sci 29:95-102 (2004)
+            DOI:10.1016/j.tibs.2003.12.004
+REFERENCE   PMID:12967557
+  AUTHORS   Veeman MT, Axelrod JD, Moon RT.
+  TITLE     A second canon. Functions and mechanisms of beta-catenin-independent Wnt signaling.
+  JOURNAL   Dev Cell 5:367-77 (2003)
+            DOI:10.1016/S1534-5807(03)00266-1
+REFERENCE   PMID:11433294
+  AUTHORS   Sun TQ, Lu B, Feng JJ, Reinhard C, Jan YN, Fantl WJ, Williams LT.
+  TITLE     PAR-1 is a Dishevelled-associated kinase and a positive regulator of Wnt signalling.
+  JOURNAL   Nat Cell Biol 3:628-36 (2001)
+            DOI:10.1038/35083016
+REFERENCE   PMID:23256519
+  AUTHORS   Saito-Diaz K, Chen TW, Wang X, Thorne CA, Wallace HA, Page-McCaw A, Lee E
+  TITLE     The way Wnt works: Components and mechanism.
+  JOURNAL   Growth Factors 31:1-31 (2013)
+            DOI:10.3109/08977194.2012.752737
+REFERENCE   PMID:19482104
+  AUTHORS   Carethers JM
+  TITLE     Intersection of transforming growth factor-beta and Wnt signaling pathways in colorectal cancer and metastasis.
+  JOURNAL   Gastroenterology 137:33-6 (2009)
+            DOI:10.1053/j.gastro.2009.05.011
+REFERENCE   PMID:18838381
+  AUTHORS   Lin Z, Gao C, Ning Y, He X, Wu W, Chen YG
+  TITLE     The pseudoreceptor BMP and activin membrane-bound inhibitor positively modulates Wnt/beta-catenin signaling.
+  JOURNAL   J Biol Chem 283:33053-8 (2008)
+            DOI:10.1074/jbc.M804039200
+REFERENCE   PMID:23151663
+  AUTHORS   Niehrs C
+  TITLE     The complex world of WNT receptor signalling.
+  JOURNAL   Nat Rev Mol Cell Biol 13:767-79 (2012)
+            DOI:10.1038/nrm3470
+REFERENCE   PMID:28522145
+  AUTHORS   Abou Ziki MD, Mani A
+  TITLE     Wnt signaling, a novel pathway regulating blood pressure? State of the art review.
+  JOURNAL   Atherosclerosis 262:171-178 (2017)
+            DOI:10.1016/j.atherosclerosis.2017.05.001
+REFERENCE   PMID:25808920
+  AUTHORS   He Y, Ki H, Kim H, Kim K
+  TITLE     delta-Catenin interacts with LEF-1 and negatively regulates its transcriptional activity.
+  JOURNAL   Cell Biol Int 39:954-61 (2015)
+            DOI:10.1002/cbin.10465
+REFERENCE   PMID:32888647
+  AUTHORS   Esaki N, Enomoto A, Takagishi M, Mizutani Y, Iida T, Ushida K, Shiraki Y, Mii S, Takahashi M
+  TITLE     The Daple-CK1epsilon complex regulates Dvl2 phosphorylation and canonical Wnt signaling.
+  JOURNAL   Biochem Biophys Res Commun 532:406-413 (2020)
+            DOI:10.1016/j.bbrc.2020.08.066
+REFERENCE   PMID:28242765
+  AUTHORS   Yiew NKH, Chatterjee TK, Tang YL, Pellenberg R, Stansfield BK, Bagi Z, Fulton DJ, Stepp DW, Chen W, Patel V, Kamath VM, Litwin SE, Hui DY, Rudich SM, Kim HW, Weintraub NL
+  TITLE     A novel role for the Wnt inhibitor APCDD1 in adipocyte differentiation: Implications for diet-induced obesity.
+  JOURNAL   J Biol Chem 292:6312-6324 (2017)
+            DOI:10.1074/jbc.M116.758078
+REL_PATHWAY hsa04010  MAPK signaling pathway
+            hsa04110  Cell cycle
+            hsa04115  p53 signaling pathway
+            hsa04120  Ubiquitin mediated proteolysis
+            hsa04350  TGF-beta signaling pathway
+            hsa04510  Focal adhesion
+            hsa04520  Adherens junction
+            hsa05010  Alzheimer disease
+KO_PATHWAY  ko04310
+///

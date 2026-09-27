@@ -1,0 +1,337 @@
+{
+  "status": "verified",
+  "passed": true,
+  "target_gene": "PTGS2",
+  "pdb_id": "5IKR",
+  "reference_ligand": "ID8",
+  "receptor_chain": "A",
+  "fixed_receptor_heavy_atom_rmsd_angstrom": 1.8447597103386895,
+  "threshold_angstrom": 2.0,
+  "alignment_applied": false,
+  "atom_identity_basis": "CCD atom names/elements/bonds and PDBQT REMARK SMILES IDX",
+  "verified_reference_heavy_atoms": 18,
+  "verified_receptor_heavy_atoms": 4470,
+  "atom_mapping": [
+    {
+      "ccd_atom_name": "C1",
+      "element": "C",
+      "smiles_atom_index_1based": 17,
+      "pdbqt_serial": 14,
+      "crystal_xyz": [
+        39.81,
+        1.943,
+        63.116
+      ],
+      "pose_xyz": [
+        39.901,
+        1.338,
+        62.11
+      ]
+    },
+    {
+      "ccd_atom_name": "C10",
+      "element": "C",
+      "smiles_atom_index_1based": 10,
+      "pdbqt_serial": 4,
+      "crystal_xyz": [
+        38.47,
+        3.364,
+        58.016
+      ],
+      "pose_xyz": [
+        38.286,
+        3.401,
+        57.677
+      ]
+    },
+    {
+      "ccd_atom_name": "C11",
+      "element": "C",
+      "smiles_atom_index_1based": 11,
+      "pdbqt_serial": 3,
+      "crystal_xyz": [
+        37.213,
+        3.792,
+        57.767
+      ],
+      "pose_xyz": [
+        37.096,
+        4.03,
+        57.562
+      ]
+    },
+    {
+      "ccd_atom_name": "C12",
+      "element": "C",
+      "smiles_atom_index_1based": 12,
+      "pdbqt_serial": 2,
+      "crystal_xyz": [
+        36.331,
+        3.875,
+        58.784
+      ],
+      "pose_xyz": [
+        36.23,
+        3.997,
+        58.595
+      ]
+    },
+    {
+      "ccd_atom_name": "C13",
+      "element": "C",
+      "smiles_atom_index_1based": 13,
+      "pdbqt_serial": 1,
+      "crystal_xyz": [
+        36.664,
+        3.527,
+        60.062
+      ],
+      "pose_xyz": [
+        36.511,
+        3.333,
+        59.755
+      ]
+    },
+    {
+      "ccd_atom_name": "C14",
+      "element": "C",
+      "smiles_atom_index_1based": 14,
+      "pdbqt_serial": 7,
+      "crystal_xyz": [
+        35.576,
+        3.664,
+        61.088
+      ],
+      "pose_xyz": [
+        35.447,
+        3.376,
+        60.814
+      ]
+    },
+    {
+      "ccd_atom_name": "C17",
+      "element": "C",
+      "smiles_atom_index_1based": 18,
+      "pdbqt_serial": 19,
+      "crystal_xyz": [
+        39.297,
+        2.942,
+        64.068
+      ],
+      "pose_xyz": [
+        40.271,
+        0.33,
+        61.103
+      ]
+    },
+    {
+      "ccd_atom_name": "C18",
+      "element": "C",
+      "smiles_atom_index_1based": 1,
+      "pdbqt_serial": 20,
+      "crystal_xyz": [
+        41.531,
+        1.322,
+        64.792
+      ],
+      "pose_xyz": [
+        41.838,
+        0.599,
+        63.472
+      ]
+    },
+    {
+      "ccd_atom_name": "C2",
+      "element": "C",
+      "smiles_atom_index_1based": 2,
+      "pdbqt_serial": 16,
+      "crystal_xyz": [
+        40.884,
+        1.179,
+        63.471
+      ],
+      "pose_xyz": [
+        40.654,
+        1.452,
+        63.242
+      ]
+    },
+    {
+      "ccd_atom_name": "C3",
+      "element": "C",
+      "smiles_atom_index_1based": 3,
+      "pdbqt_serial": 18,
+      "crystal_xyz": [
+        41.387,
+        0.264,
+        62.618
+      ],
+      "pose_xyz": [
+        40.335,
+        2.356,
+        64.19
+      ]
+    },
+    {
+      "ccd_atom_name": "C4",
+      "element": "C",
+      "smiles_atom_index_1based": 4,
+      "pdbqt_serial": 17,
+      "crystal_xyz": [
+        40.847,
+        0.093,
+        61.393
+      ],
+      "pose_xyz": [
+        39.259,
+        3.158,
+        64.044
+      ]
+    },
+    {
+      "ccd_atom_name": "C5",
+      "element": "C",
+      "smiles_atom_index_1based": 5,
+      "pdbqt_serial": 15,
+      "crystal_xyz": [
+        39.783,
+        0.85,
+        61.026
+      ],
+      "pose_xyz": [
+        38.499,
+        3.051,
+        62.926
+      ]
+    },
+    {
+      "ccd_atom_name": "C6",
+      "element": "C",
+      "smiles_atom_index_1based": 6,
+      "pdbqt_serial": 13,
+      "crystal_xyz": [
+        39.253,
+        1.783,
+        61.876
+      ],
+      "pose_xyz": [
+        38.805,
+        2.143,
+        61.948
+      ]
+    },
+    {
+      "ccd_atom_name": "C8",
+      "element": "C",
+      "smiles_atom_index_1based": 8,
+      "pdbqt_serial": 6,
+      "crystal_xyz": [
+        37.942,
+        3.072,
+        60.297
+      ],
+      "pose_xyz": [
+        37.718,
+        2.678,
+        59.85
+      ]
+    },
+    {
+      "ccd_atom_name": "C9",
+      "element": "C",
+      "smiles_atom_index_1based": 9,
+      "pdbqt_serial": 5,
+      "crystal_xyz": [
+        38.817,
+        3.024,
+        59.271
+      ],
+      "pose_xyz": [
+        38.582,
+        2.748,
+        58.816
+      ]
+    },
+    {
+      "ccd_atom_name": "N7",
+      "element": "N",
+      "smiles_atom_index_1based": 7,
+      "pdbqt_serial": 11,
+      "crystal_xyz": [
+        38.296,
+        2.622,
+        61.494
+      ],
+      "pose_xyz": [
+        38.006,
+        1.931,
+        60.908
+      ]
+    },
+    {
+      "ccd_atom_name": "O15",
+      "element": "O",
+      "smiles_atom_index_1based": 16,
+      "pdbqt_serial": 9,
+      "crystal_xyz": [
+        35.58,
+        3.229,
+        62.21
+      ],
+      "pose_xyz": [
+        35.167,
+        2.504,
+        61.595
+      ]
+    },
+    {
+      "ccd_atom_name": "O16",
+      "element": "O",
+      "smiles_atom_index_1based": 15,
+      "pdbqt_serial": 8,
+      "crystal_xyz": [
+        34.553,
+        4.169,
+        60.792
+      ],
+      "pose_xyz": [
+        34.724,
+        4.305,
+        60.88
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "data\\formal_analysis\\uc-24-herbs-v1\\image_formula_v1\\docking_top3\\reference_qc\\ID8.cif",
+      "sha256": "4752f554dc6dcb1b3a999cc08c1b7b48a4ab83c9f992ac7f27a5a6a6a29473ee",
+      "bytes": 8330,
+      "role": "official CCD ID8 chemistry"
+    },
+    {
+      "path": "data\\formal_analysis\\uc-24-herbs-v1\\docking_top3\\target_PTGS2_5IKR\\5IKR.pdb",
+      "sha256": "a49a2d980020881b734a532b371fd9db83c9a2d011684c0ab95f394deba5dcff",
+      "bytes": 2363337,
+      "role": "original crystal coordinates"
+    },
+    {
+      "path": "data\\formal_analysis\\uc-24-herbs-v1\\docking_top3\\target_PTGS2_5IKR\\ID8_crystal.pdbqt",
+      "sha256": "11513a8d72cf5dd5e97cc581fec3cd7f85f1e64cf36e3ded76d1395e1bc224ab",
+      "bytes": 1985,
+      "role": "prepared reference ligand"
+    },
+    {
+      "path": "data\\formal_analysis\\uc-24-herbs-v1\\docking_top3\\target_PTGS2_5IKR\\ID8_redocked_out.pdbqt",
+      "sha256": "a2b612d2ee1e6eaeb88e25328ba31f46a2020eb6748880e657c97fac5c7c46b8",
+      "bytes": 20232,
+      "role": "existing redocking first pose"
+    },
+    {
+      "path": "data\\formal_analysis\\uc-24-herbs-v1\\docking_top3\\target_PTGS2_5IKR\\5IKR_receptor.pdbqt",
+      "sha256": "bbabf2dda556e8763d6354654b4a30a5e64170553be1981ba7792fa53dd6f64e",
+      "bytes": 439506,
+      "role": "fixed prepared receptor"
+    }
+  ],
+  "interpretation": "Reference-pose technical QC only; not proof of compound binding or herb synergy"
+}

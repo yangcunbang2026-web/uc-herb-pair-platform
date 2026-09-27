@@ -22,6 +22,7 @@ from src.dashboard_ui import (
     render_screening_funnel,
 )
 from src.reference_dashboard import render_reference_dashboard
+from src.staged_formula_dashboard import render_staged_formula_dashboard
 from src.job_builder import (
     load_config,
     normalize_herbs,
@@ -196,6 +197,8 @@ def discover_tasks() -> dict[str, Path]:
     for path in paths:
         if not path.is_file() or path.resolve() in seen:
             continue
+        if not (path.parent / "staged_formula.json").is_file():
+            continue
         seen.add(path.resolve())
         try:
             summary = task_summary(load_config(path))
@@ -213,13 +216,13 @@ default_summary = task_summary(default_task)
 deployment_path = PROJECT_ROOT / "config" / "deployment.json"
 deployment = json.loads(deployment_path.read_text(encoding="utf-8")) if deployment_path.is_file() else {}
 if deployment.get("read_only", False):
-    st.caption("团队预览版 · UC / 24味中药 · 可查看筛选结果、3组候选药对和逐步证据。新任务计算在本地研究端运行。")
+    st.caption("团队预览版 · UC / 24味中药 · 可查看筛选结果、候选药对和逐步证据。此页面仅展示已有结果，不接收新的计算任务。")
 else:
     st.markdown('<div id="new-research-task" class="chapter-anchor"></div>', unsafe_allow_html=True)
     with st.expander("新建分析任务：输入疾病和中药后开始跑", expanded=True):
         st.caption(
-            "系统会自动建任务、获取疾病靶点、抓取TCMSP，再继续运行交集、STRING、"
-            "Cytoscape、DAVID、Top10 和 Top3 分子对接。默认使用Open Targets官方API，不需要登录。"
+            "当前只展示已按新算法重算的UC任务。通用任务启动暂未切换到新评分链路，因此暂停提交，"
+            "不会继续调用旧算法，也不会把UC的核心通路直接套到其他疾病。"
         )
         with st.form("homepage_task_form", clear_on_submit=False):
             disease_columns = st.columns(3)
@@ -245,7 +248,7 @@ else:
             preview_herbs = normalize_herbs(herbs_input)
             preview_pairs = len(preview_herbs) * (len(preview_herbs) - 1) // 2
             st.caption(f"当前识别 {len(preview_herbs)} 味不重复中药，预计生成 {preview_pairs} 个两味组合。")
-            submitted = st.form_submit_button("创建任务并开始分析", type="primary", width="stretch")
+            submitted = st.form_submit_button("创建任务并开始分析", type="primary", width="stretch", disabled=True)
         if submitted:
             try:
                 disease_source = (
@@ -297,8 +300,25 @@ selected_task_path = Path(selected_task_value)
 selected_task = load_config(selected_task_path)
 selected_summary = task_summary(selected_task)
 
+# Only the screenshot method is an active research workflow. Historical data
+# stays on disk for provenance; the old weighted dashboard is not loaded.
+staged_rules_path = selected_task_path.parent / "staged_formula.json"
+if staged_rules_path.is_file():
+    staged_paths = selected_task.get("paths", {})
+    staged_analysis_root = PROJECT_ROOT / (
+        staged_paths.get("analysis_root") or staged_paths.get("legacy_analysis_root") or ""
+    )
+    render_staged_formula_dashboard(PROJECT_ROOT, staged_rules_path, staged_analysis_root)
+else:
+    st.info("本任务尚未配置图片逐级评分规则，不显示旧排名或借用其他任务结果。")
+st.stop()
+
 selected_task_id = str(selected_task.get("job", {}).get("id", ""))
-selected_status = load_task_status(PROJECT_ROOT, selected_task_id) if selected_task_id else {}
+staged_rules_path = selected_task_path.parent / "staged_formula.json"
+selected_status = (
+    load_task_status(PROJECT_ROOT, selected_task_id)
+    if selected_task_id and not staged_rules_path.is_file() else {}
+)
 if selected_status:
     state = str(selected_status.get("status", ""))
     stage = str(selected_status.get("stage", "等待运行"))
@@ -337,13 +357,10 @@ disease_targets_path = disease_root / "uc_genecards_targets_all_normalized.csv"
 if not disease_targets_path.exists():
     disease_targets_path = disease_root / "uc_genecards_targets_normalized.csv"
 
-render_reference_dashboard(
-    project_root=PROJECT_ROOT,
-    selected_task_path=selected_task_path,
-    selected_task=selected_task,
-    selected_summary=selected_summary,
-    dashboard=dashboard,
-)
+if staged_rules_path.is_file():
+    render_staged_formula_dashboard(PROJECT_ROOT, staged_rules_path, strict_root)
+else:
+    st.info("本任务尚未配置图片逐级评分规则。旧算法已停用，不显示旧排名或借用UC结果。")
 st.stop()
 
 st.title("中药组合协同潜力筛选平台")
