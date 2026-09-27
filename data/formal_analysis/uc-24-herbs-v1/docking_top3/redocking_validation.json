@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "validated_target_count": 1,
+  "symmetry_aware_heavy_atom_rmsd_angstrom": 1.7969,
+  "threshold_angstrom": 2.0,
+  "targets": [
+    {
+      "target_gene": "PTGS2",
+      "uniprot_id": "P35354",
+      "pdb_id": "5IKR",
+      "species": "Homo sapiens",
+      "receptor_chain": "A",
+      "resolution_angstrom": 2.342,
+      "reference_ligand": "ID8",
+      "best_affinity_kcal_mol": -8.881,
+      "symmetry_aware_heavy_atom_rmsd_angstrom": 1.7969,
+      "direct_heavy_atom_rmsd_angstrom": 1.8448,
+      "threshold_angstrom": 2.0,
+      "passed": true,
+      "source_pdb_sha256": "a49a2d980020881b734a532b371fd9db83c9a2d011684c0ab95f394deba5dcff",
+      "source_ligand_sha256": "f1efa827635f145ffffc3e1cbbc6e836a7e0252c90b28f121218b18ec847ae49"
+    }
+  ]
+}

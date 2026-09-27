@@ -1,0 +1,608 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-27T05:22:45.579589+00:00",
+  "config_path": "config\\tasks\\uc-24-herbs-v1\\pipeline.json",
+  "config_sha256": "a4091e5236e6d192a7a5e89421b6c2fef46a643e8c7794d0d3f0728058e8fdd8",
+  "qc_code_sha256": "4c65473c032d9748aae4e2d32faa4dfe591f413375408832b79dd2f080d3ab79",
+  "code_files": [
+    {
+      "path": "scripts\\build_source_bias_adjusted_ranking.py",
+      "sha256": "a14cb0c5e5bff43d3b23aafc20d47b922e0517c0bc976f7367a434a981448d79"
+    },
+    {
+      "path": "scripts\\prepare_david_single_herb_baselines.py",
+      "sha256": "4fee3d6310414e807bb4ab30c605eef3f201389eb23c574d334f9cee0901e25a"
+    },
+    {
+      "path": "scripts\\recalculate_david_pathway_scores.py",
+      "sha256": "1de49ad519471b7555cec0abeebdf990fac5d99fcbfaed81dbe9cf3eca24e076"
+    },
+    {
+      "path": "scripts\\run_cytoscape_formal_network.py",
+      "sha256": "8b55a776964933afe3c169ae2fe1970f3a1ed7a5ee17b9689167eefe4121cbdc"
+    },
+    {
+      "path": "scripts\\run_david_enrichment_batch.py",
+      "sha256": "e9e73f298ec79da7971f01b8e6126e3b7aaeac0174ab3b8a518699fbdcbc498d"
+    },
+    {
+      "path": "scripts\\run_formal_genecards_pair_pipeline.py",
+      "sha256": "0c7da625ee386db709d9bfeaa9c66f0920e801c4ac0a84d7c32525fb6f1ac22c"
+    },
+    {
+      "path": "scripts\\run_machine_qc.py",
+      "sha256": "4c65473c032d9748aae4e2d32faa4dfe591f413375408832b79dd2f080d3ab79"
+    },
+    {
+      "path": "scripts\\run_top3_ptgs2_docking.py",
+      "sha256": "a6667b017ae3b112e2dfb0e03d7e5620c243710f252b6060b2b177dd14725f46"
+    },
+    {
+      "path": "scripts\\select_top3_docking_candidates.py",
+      "sha256": "7f96c4620ee227ed4f5318a64deb3e22e05049feefd6b7ea0f0e10f9f3a80b82"
+    }
+  ],
+  "analysis_root": "data\\formal_analysis\\uc-24-herbs-v1",
+  "core_pipeline_status": "passed",
+  "final_result_status": "incomplete",
+  "status_counts": {
+    "failed": 0,
+    "passed": 22,
+    "pending": 3,
+    "warning": 0
+  },
+  "checks": [
+    {
+      "id": "candidate_count_and_uniqueness",
+      "status": "passed",
+      "observed": {
+        "count": 24,
+        "unique": 24
+      },
+      "expected": {
+        "count": 24,
+        "unique": 24
+      },
+      "evidence_paths": [
+        "config\\tasks\\uc-24-herbs-v1\\pipeline.json"
+      ],
+      "message": "任务配置中的候选药材数量和唯一性正确。"
+    },
+    {
+      "id": "excluded_herbs_absent",
+      "status": "passed",
+      "observed": [],
+      "expected": [],
+      "evidence_paths": [
+        "config\\tasks\\uc-24-herbs-v1\\pipeline.json"
+      ],
+      "message": "明确排除的药材未进入正式候选池。"
+    },
+    {
+      "id": "candidate_csv_matches_config",
+      "status": "passed",
+      "observed": [
+        "黄芩",
+        "甘草",
+        "葛根",
+        "茯苓",
+        "姜黄",
+        "马齿苋",
+        "山药",
+        "芡实",
+        "陈皮",
+        "白扁豆",
+        "蒲公英",
+        "鱼腥草",
+        "槐花",
+        "栀子",
+        "薏苡仁",
+        "莲子",
+        "党参",
+        "黄芪",
+        "大枣",
+        "石榴皮",
+        "乌梅",
+        "砂仁",
+        "生姜",
+        "肉豆蔻"
+      ],
+      "expected": [
+        "黄芩",
+        "甘草",
+        "葛根",
+        "茯苓",
+        "姜黄",
+        "马齿苋",
+        "山药",
+        "芡实",
+        "陈皮",
+        "白扁豆",
+        "蒲公英",
+        "鱼腥草",
+        "槐花",
+        "栀子",
+        "薏苡仁",
+        "莲子",
+        "党参",
+        "黄芪",
+        "大枣",
+        "石榴皮",
+        "乌梅",
+        "砂仁",
+        "生姜",
+        "肉豆蔻"
+      ],
+      "evidence_paths": [
+        "config\\tasks\\uc-24-herbs-v1\\candidate_herbs.csv",
+        "config\\tasks\\uc-24-herbs-v1\\pipeline.json"
+      ],
+      "message": "候选药材CSV与任务配置逐项一致。"
+    },
+    {
+      "id": "analysis_report_candidate_and_pair_counts",
+      "status": "passed",
+      "observed": {
+        "candidate_herbs": 24,
+        "processed_pairs": 276,
+        "expected_pairs": 276,
+        "missing": []
+      },
+      "expected": {
+        "candidate_herbs": 24,
+        "processed_pairs": 276,
+        "expected_pairs": 276,
+        "missing": []
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\report.json"
+      ],
+      "message": "正式组合分析覆盖全部候选药材和理论组合。"
+    },
+    {
+      "id": "herb_source_audit_complete",
+      "status": "passed",
+      "observed": [
+        "乌梅",
+        "党参",
+        "大枣",
+        "姜黄",
+        "山药",
+        "栀子",
+        "槐花",
+        "甘草",
+        "生姜",
+        "白扁豆",
+        "石榴皮",
+        "砂仁",
+        "肉豆蔻",
+        "芡实",
+        "茯苓",
+        "莲子",
+        "葛根",
+        "蒲公英",
+        "薏苡仁",
+        "陈皮",
+        "马齿苋",
+        "鱼腥草",
+        "黄芩",
+        "黄芪"
+      ],
+      "expected": [
+        "乌梅",
+        "党参",
+        "大枣",
+        "姜黄",
+        "山药",
+        "栀子",
+        "槐花",
+        "甘草",
+        "生姜",
+        "白扁豆",
+        "石榴皮",
+        "砂仁",
+        "肉豆蔻",
+        "芡实",
+        "茯苓",
+        "莲子",
+        "葛根",
+        "蒲公英",
+        "薏苡仁",
+        "陈皮",
+        "马齿苋",
+        "鱼腥草",
+        "黄芩",
+        "黄芪"
+      ],
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\herb_target_audit.csv"
+      ],
+      "message": "每味候选药材均保留了来源和靶点审计记录。"
+    },
+    {
+      "id": "all_pair_enumeration",
+      "status": "passed",
+      "observed": {
+        "rows": 276,
+        "unique_pairs": 276,
+        "missing_pairs": [],
+        "extra_pairs": [],
+        "outside": [],
+        "self_pairs": 0
+      },
+      "expected": {
+        "rows": 276,
+        "unique_pairs": 276,
+        "missing_pairs": [],
+        "extra_pairs": [],
+        "outside": [],
+        "self_pairs": 0
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\pair_scores_raw_formula_audit.csv"
+      ],
+      "message": "两味组合枚举数量、唯一性和候选范围均正确。"
+    },
+    {
+      "id": "eligible_pair_count",
+      "status": "passed",
+      "observed": {
+        "rows": 153,
+        "unique_pairs": 153,
+        "all_pairs_exist_in_raw": true,
+        "both_herbs_contribute_gate": true
+      },
+      "expected": {
+        "rows": 153,
+        "unique_pairs": 153,
+        "all_pairs_exist_in_raw": true,
+        "both_herbs_contribute_gate": true
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\pair_scores_provisional.csv",
+        "data\\formal_analysis\\uc-24-herbs-v1\\report.json"
+      ],
+      "message": "通过双药均有独立贡献门槛的药对数量符合预期。"
+    },
+    {
+      "id": "adjusted_ranking_complete",
+      "status": "passed",
+      "observed": {
+        "rows": 153,
+        "unique_pairs": 153,
+        "same_pair_set_as_eligible": true,
+        "unique_ranks": 153
+      },
+      "expected": {
+        "rows": 153,
+        "unique_pairs": 153,
+        "same_pair_set_as_eligible": true,
+        "unique_ranks": 153
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\pair_scores_source_bias_adjusted.csv"
+      ],
+      "message": "来源偏差校正后的阶段性排名连续且无漏项。"
+    },
+    {
+      "id": "disease_targets_checksum",
+      "status": "passed",
+      "observed": "a0916af3c32947bcd8b4ae142e1c4a064dd088abb34889ca7c56c4528c63d671",
+      "expected": "a0916af3c32947bcd8b4ae142e1c4a064dd088abb34889ca7c56c4528c63d671",
+      "evidence_paths": [
+        "data\\formal_inputs\\diseases\\uc-24-herbs-v1\\uc_genecards_targets_normalized.csv",
+        "data\\formal_analysis\\uc-24-herbs-v1\\report.json"
+      ],
+      "message": "输入文件哈希与分析报告一致。"
+    },
+    {
+      "id": "disease_import_report_checksum",
+      "status": "passed",
+      "observed": "9b96df0677f0987e9bff978ac392a1b8b43564d9cd172c2f6cb20ff22bf4d6f7",
+      "expected": "9b96df0677f0987e9bff978ac392a1b8b43564d9cd172c2f6cb20ff22bf4d6f7",
+      "evidence_paths": [
+        "data\\formal_inputs\\diseases\\uc-24-herbs-v1\\import_report.json",
+        "data\\formal_analysis\\uc-24-herbs-v1\\report.json"
+      ],
+      "message": "输入文件哈希与分析报告一致。"
+    },
+    {
+      "id": "string_raw_checksum",
+      "status": "passed",
+      "observed": "09e35c059c31424557d30307a8de49265d55e9646cb5385ec976b21e4331e20f",
+      "expected": "09e35c059c31424557d30307a8de49265d55e9646cb5385ec976b21e4331e20f",
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\string_network_raw.json",
+        "data\\formal_analysis\\uc-24-herbs-v1\\report.json"
+      ],
+      "message": "输入文件哈希与分析报告一致。"
+    },
+    {
+      "id": "scoring_config_checksum",
+      "status": "passed",
+      "observed": "2f31e394d69d0d2a8e0bcfd875671f0bece5d7c86700128b1022c0f70052ea8c",
+      "expected": "2f31e394d69d0d2a8e0bcfd875671f0bece5d7c86700128b1022c0f70052ea8c",
+      "evidence_paths": [
+        "config\\scoring.json",
+        "data\\formal_analysis\\uc-24-herbs-v1\\report.json"
+      ],
+      "message": "输入文件哈希与分析报告一致。"
+    },
+    {
+      "id": "string_cytoscape_closed_loop",
+      "status": "passed",
+      "observed": {
+        "nodes": 93,
+        "kept_edges": 894,
+        "dropped_edges": 6,
+        "raw_edges": 900,
+        "bad_endpoints": 0,
+        "metadata_matches_job": true
+      },
+      "expected": {
+        "nodes": 93,
+        "kept_plus_dropped": 900,
+        "bad_endpoints": 0,
+        "metadata_matches_job": true
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\cytoscape_nodes.csv",
+        "data\\formal_analysis\\uc-24-herbs-v1\\cytoscape_edges.csv",
+        "data\\formal_analysis\\uc-24-herbs-v1\\cytoscape_dropped_edges.csv",
+        "data\\formal_analysis\\uc-24-herbs-v1\\cytoscape_report.json"
+      ],
+      "message": "STRING原始边、Cytoscape保留边、剔除边和节点形成闭环。"
+    },
+    {
+      "id": "string_edges_exactly_partitioned",
+      "status": "passed",
+      "observed": {
+        "missing_raw_edges": 0,
+        "extra_exported_edges": 0
+      },
+      "expected": {
+        "missing_raw_edges": 0,
+        "extra_exported_edges": 0
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\string_network_raw.json",
+        "data\\formal_analysis\\uc-24-herbs-v1\\cytoscape_edges.csv",
+        "data\\formal_analysis\\uc-24-herbs-v1\\cytoscape_dropped_edges.csv"
+      ],
+      "message": "每条STRING原始边都且只进入保留边或有理由的剔除边。"
+    },
+    {
+      "id": "david_all_pairs_coverage",
+      "status": "passed",
+      "observed": {
+        "analysis_status": "completed",
+        "requested": 153,
+        "completed": 153,
+        "failed": 0
+      },
+      "expected": {
+        "requested": 153,
+        "completed": 153,
+        "failed": 0
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\david_all_pairs_complete_uniprot\\report.json"
+      ],
+      "message": "批处理已完整覆盖预期对象。"
+    },
+    {
+      "id": "david_single_baseline_coverage",
+      "status": "passed",
+      "observed": {
+        "analysis_status": "completed",
+        "requested": 24,
+        "completed": 24,
+        "failed": 0
+      },
+      "expected": {
+        "requested": 24,
+        "completed": 24,
+        "failed": 0
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\david_single_herb_baselines_all_complete_uniprot\\report.json"
+      ],
+      "message": "批处理已完整覆盖预期对象。"
+    },
+    {
+      "id": "david_pair_rank_provenance",
+      "status": "passed",
+      "observed": {
+        "rank_directories": 153,
+        "succeeded_reports": 153,
+        "direct_api_results": 47,
+        "identical_submission_reuses": 106,
+        "retry_history_count": 0,
+        "unresolved_error_count": 0,
+        "unresolved_error_ranks": [],
+        "missing_report_ranks": [],
+        "missing_numeric_ranks": [],
+        "extra_numeric_ranks": [],
+        "provenance_errors": [],
+        "expected_count": 153
+      },
+      "expected": {
+        "rank_directories": 153,
+        "succeeded_reports": 153,
+        "unresolved_error_count": 0,
+        "missing_report_ranks": [],
+        "missing_numeric_ranks": [],
+        "extra_numeric_ranks": [],
+        "provenance_errors": []
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\david_all_pairs_complete_uniprot"
+      ],
+      "message": "每个DAVID对象都有成功报告；直接请求、相同提交复用和历史重试均可追溯。"
+    },
+    {
+      "id": "david_single_rank_provenance",
+      "status": "passed",
+      "observed": {
+        "rank_directories": 24,
+        "succeeded_reports": 24,
+        "direct_api_results": 20,
+        "identical_submission_reuses": 4,
+        "retry_history_count": 0,
+        "unresolved_error_count": 0,
+        "unresolved_error_ranks": [],
+        "missing_report_ranks": [],
+        "missing_numeric_ranks": [],
+        "extra_numeric_ranks": [],
+        "provenance_errors": [],
+        "expected_count": 24
+      },
+      "expected": {
+        "rank_directories": 24,
+        "succeeded_reports": 24,
+        "unresolved_error_count": 0,
+        "missing_report_ranks": [],
+        "missing_numeric_ranks": [],
+        "extra_numeric_ranks": [],
+        "provenance_errors": []
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\david_single_herb_baselines_all_complete_uniprot"
+      ],
+      "message": "每个DAVID对象都有成功报告；直接请求、相同提交复用和历史重试均可追溯。"
+    },
+    {
+      "id": "david_refined_ranking",
+      "status": "passed",
+      "observed": {
+        "report_pairs": 153,
+        "report_baselines": 24,
+        "all_rows": 153,
+        "top_rows": 10,
+        "same_pair_set_as_adjusted": true,
+        "continuous_ranks": 153,
+        "top10_matches_all_pairs_prefix": true
+      },
+      "expected": {
+        "report_pairs": 153,
+        "report_baselines": 24,
+        "all_rows": 153,
+        "top_rows": 10,
+        "same_pair_set_as_adjusted": true,
+        "continuous_ranks": 153,
+        "top10_matches_all_pairs_prefix": true
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\david_all_pairs_complete_uniprot\\david_pathway_scoring_report.json",
+        "data\\formal_analysis\\uc-24-herbs-v1\\david_all_pairs_complete_uniprot\\all_pairs_david_refined_ranking.csv",
+        "data\\formal_analysis\\uc-24-herbs-v1\\david_all_pairs_complete_uniprot\\top10_david_refined.csv"
+      ],
+      "message": "DAVID二次评分覆盖全部合格药对和全部单药基线，并输出Top10。"
+    },
+    {
+      "id": "safety_evidence_coverage",
+      "status": "pending",
+      "observed": "missing_or_unreadable",
+      "expected": {
+        "pairs": 153,
+        "numeric_scores": 0
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\safety_evidence_review\\report.json",
+        "data\\formal_analysis\\uc-24-herbs-v1\\safety_evidence_review\\pair_safety_review_template.csv"
+      ],
+      "message": "安全证据人工复核模板尚未生成。"
+    },
+    {
+      "id": "pubmed_all_pairs_coverage",
+      "status": "pending",
+      "observed": "missing_or_unreadable",
+      "expected": 153,
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\pubmed_all_pair_evidence_finalized\\finalization_report.json",
+        "data\\formal_analysis\\uc-24-herbs-v1\\pubmed_all_pair_evidence_finalized\\pair_pubmed_evidence_summary.csv"
+      ],
+      "message": "PubMed全药对检索与收尾报告尚未就绪。"
+    },
+    {
+      "id": "legacy_safety_placeholder_quarantined",
+      "status": "passed",
+      "observed": {
+        "used_numeric_rows": 0,
+        "statuses": [
+          "placeholder_60_rejected"
+        ]
+      },
+      "expected": {
+        "used_numeric_rows": 0,
+        "legacy_placeholder": "rejected"
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\david_all_pairs_complete_uniprot\\all_pairs_david_refined_ranking.csv",
+        "data\\formal_analysis\\uc-24-herbs-v1\\david_all_pairs_complete_uniprot\\david_pathway_scoring_report.json"
+      ],
+      "message": "旧版统一60分已被隔离，没有进入阶段性或最终总分。"
+    },
+    {
+      "id": "official_food_medicine_evidence",
+      "status": "passed",
+      "observed": "not_applicable",
+      "expected": "not required by task scope",
+      "evidence_paths": [
+        "config\\tasks\\uc-24-herbs-v1\\pipeline.json"
+      ],
+      "message": "本任务不限制药食同源，官方药食同源目录证据不适用。"
+    },
+    {
+      "id": "top3_computational_docking",
+      "status": "passed",
+      "observed": {
+        "expected_top3_pairs": [
+          "党参＋蒲公英",
+          "蒲公英＋鱼腥草",
+          "栀子＋蒲公英"
+        ],
+        "observed_top3_pairs": [
+          "党参＋蒲公英",
+          "蒲公英＋鱼腥草",
+          "栀子＋蒲公英"
+        ],
+        "matrix_pair_count": 3,
+        "redocking_rmsd_angstrom": 1.7969,
+        "redocking_passed": true,
+        "matrix_logs_and_poses_exist": true,
+        "input_structure_hashes_match": true
+      },
+      "expected": {
+        "top3_pairs_match_current_ranking": true,
+        "redocking_rmsd_angstrom": "<=2.0",
+        "matrix_logs_and_poses_exist": true,
+        "input_structure_hashes_match": true
+      },
+      "evidence_paths": [
+        "data\\formal_analysis\\uc-24-herbs-v1\\docking_top3\\report.json",
+        "data\\formal_analysis\\uc-24-herbs-v1\\docking_top3\\redocking_validation.json",
+        "data\\formal_analysis\\uc-24-herbs-v1\\docking_top3\\binding_energy_matrix.csv",
+        "data\\formal_analysis\\uc-24-herbs-v1\\docking_top3\\structure_manifest.csv",
+        "data\\formal_analysis\\uc-24-herbs-v1\\docking_top3\\top3_candidates.csv",
+        "data\\formal_analysis\\uc-24-herbs-v1\\david_all_pairs_complete_uniprot\\top10_david_refined.csv"
+      ],
+      "message": "当前阶段Top3已完成真实分子对接、回对接和文件闭环检查。"
+    },
+    {
+      "id": "docking_linked_to_current_candidates",
+      "status": "pending",
+      "observed": "no current final-candidate docking report",
+      "expected": "docking report linked to a current reviewed finalist pair",
+      "evidence_paths": [],
+      "message": "现有对接仅能作为方法测试；安全和文献复核锁定候选后，才能做正式候选对接。"
+    }
+  ],
+  "interpretation": {
+    "passed": "证据文件存在且结构、数量或哈希符合预期。",
+    "pending": "步骤尚未完成或仍在运行，不能误报失败。",
+    "warning": "流程已覆盖，但需要人工科研判断后才能进入最终评分。",
+    "failed": "出现数据矛盾、数量不闭合、越界或证据完整性错误。"
+  },
+  "important": "网络药理学、PPI、富集分析和分子对接只能形成可审计的协同潜力排名，不能独立证明药对具有1+1>2的真实药效。"
+}

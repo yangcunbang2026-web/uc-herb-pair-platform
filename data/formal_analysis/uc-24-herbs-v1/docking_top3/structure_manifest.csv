@@ -1,0 +1,5 @@
+﻿type,name,database,identifier,source_url,local_file,sha256,target_gene
+protein,human PTGS2,RCSB PDB,5IKR,https://www.rcsb.org/structure/5IKR,target_PTGS2_5IKR\5IKR.pdb,a49a2d980020881b734a532b371fd9db83c9a2d011684c0ab95f394deba5dcff,
+ligand,luteolin,PubChem,5280445,https://pubchem.ncbi.nlm.nih.gov/compound/5280445,target_PTGS2_5IKR\luteolin_5280445_3d.sdf,41393e294833b9a79b89be63a5a97ab9d7f4a942c11ff57fe10d5ed4dc894f96,PTGS2
+ligand,protocatechualdehyde,PubChem,8768,https://pubchem.ncbi.nlm.nih.gov/compound/8768,target_PTGS2_5IKR\protocatechualdehyde_8768_3d.sdf,09930b404a53b009930373ed14ce6fb45d83a7078debd2388a4f0e9fa52c06ae,PTGS2
+ligand,quercetin,PubChem,5280343,https://pubchem.ncbi.nlm.nih.gov/compound/5280343,target_PTGS2_5IKR\quercetin_5280343_3d.sdf,91ea8d6f9c5986247a1f0b514ebf7332df895b3e7d302c0ac8e640de25d097c4,PTGS2

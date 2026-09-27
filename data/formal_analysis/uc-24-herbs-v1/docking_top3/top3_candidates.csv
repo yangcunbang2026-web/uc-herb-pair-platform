@@ -1,0 +1,4 @@
+﻿pair_rank,pair_key,herb_a,herb_b,target_gene,target_priority,structure_source,ingredient_evidence_score
+1,党参＋蒲公英,党参,蒲公英,PTGS2,1,validated_registry,1202.478
+2,蒲公英＋鱼腥草,蒲公英,鱼腥草,PTGS2,1,validated_registry,1598.75
+3,栀子＋蒲公英,栀子,蒲公英,PTGS2,1,validated_registry,1598.75

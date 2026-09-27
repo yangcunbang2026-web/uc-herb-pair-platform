@@ -1,0 +1,21 @@
+{
+  "status": "succeeded",
+  "analysis_rank": 58,
+  "herb_a": "党参",
+  "herb_b": "莲子",
+  "input_signature": "3bf3ea0221ad56fe122fd01c19cdc9680c97ee68d38b49a3b7fe18e7b7844fbc",
+  "submission_signature": "b434085370738daf7a2a1fb8320c8a3d96d5191ed17f684c5ff6c3f69d2bbf59",
+  "input_genes": 49,
+  "submitted_id_type": "UNIPROT_ACCESSION",
+  "submitted_identifiers": 49,
+  "unmapped_genes": [],
+  "enrichment_rows": 1617,
+  "kegg_rows": 135,
+  "go_rows": 1482,
+  "api_request_url": "https://davidbioinformatics.nih.gov/api.jsp?type=UNIPROT_ACCESSION&ids=O15392%2CP00533%2CP00749%2CP01375%2CP01579%2CP03956%2CP04150%2CP04626%2CP04637%2CP05112%2CP05164%2CP05231%2CP05362%2CP06400%2CP08253%2CP08581%2CP08684%2CP09211%2CP09601%2CP09917%2CP11712%2CP11802%2CP14780%2CP15692%2CP22301%2CP22894%2CP23219%2CP24385%2CP25963%2CP27695%2CP28482%2CP29965%2CP31645%2CP31749%2CP35228%2CP35354%2CP35869%2CP35968%2CP36544%2CP37231%2CP38936%2CP42574%2CP60568%2CQ04206%2CQ16665%2CQ96EB6%2CQ9HC29%2CQ9HC97%2CQ9UNQ0&tool=chartReport&annot=GOTERM_BP_FAT%2CGOTERM_CC_FAT%2CGOTERM_MF_FAT%2CKEGG_PATHWAY",
+  "table_download_url": "https://davidbioinformatics.nih.gov/data/download/chart_74D428F231D11790485441444.txt",
+  "api_response_sha256": "9407022bd12ca8a76da095766675193345a32a40d55f86c67932d4d28428207f",
+  "chart_response_sha256": "c0185c44519c02c1cd28f2e3d34704f8b2c1fa2993603239f8cfd66403198f64",
+  "table_sha256": "e2e3e3f70bde2b53aa6f186573f42f501b056b586b0d2371267b15b749dd65b2",
+  "completed_at": "2026-09-27T05:04:15.665664+00:00"
+}

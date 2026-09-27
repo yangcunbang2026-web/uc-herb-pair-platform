@@ -1,0 +1,7 @@
+﻿pair_rank,pair_key,herb_name,ingredient_id,ingredient_name,target_gene,pdb_id,pubchem_cid,best_affinity_kcal_mol,pose_count,ingredient_target_evidence,vina_log,pose_file
+1,党参＋蒲公英,党参,MOL000006,luteolin,PTGS2,5IKR,5280445,-8.142,9,data\channel_tests\tcmsp\uc-24-herbs-v1\17_党参.json,target_PTGS2_5IKR\luteolin_5280445.log,target_PTGS2_5IKR\luteolin_5280445_out.pdbqt
+1,党参＋蒲公英,蒲公英,HBIN040905,Protocatechualdehyde,PTGS2,5IKR,8768,-5.935,9,data\formal_inputs\herb2_supplements\HERB004401\ingredient_targets_active_uc_intersection.csv,target_PTGS2_5IKR\protocatechualdehyde_8768.log,target_PTGS2_5IKR\protocatechualdehyde_8768_out.pdbqt
+2,蒲公英＋鱼腥草,蒲公英,HBIN040905,Protocatechualdehyde,PTGS2,5IKR,8768,-5.935,9,data\formal_inputs\herb2_supplements\HERB004401\ingredient_targets_active_uc_intersection.csv,target_PTGS2_5IKR\protocatechualdehyde_8768.log,target_PTGS2_5IKR\protocatechualdehyde_8768_out.pdbqt
+2,蒲公英＋鱼腥草,鱼腥草,MOL000098,quercetin,PTGS2,5IKR,5280343,-7.912,9,data\channel_tests\tcmsp\uc-24-herbs-v1\12_鱼腥草.json,target_PTGS2_5IKR\quercetin_5280343.log,target_PTGS2_5IKR\quercetin_5280343_out.pdbqt
+3,栀子＋蒲公英,栀子,MOL000098,quercetin,PTGS2,5IKR,5280343,-7.912,9,data\channel_tests\tcmsp\uc-24-herbs-v1\14_栀子.json,target_PTGS2_5IKR\quercetin_5280343.log,target_PTGS2_5IKR\quercetin_5280343_out.pdbqt
+3,栀子＋蒲公英,蒲公英,HBIN040905,Protocatechualdehyde,PTGS2,5IKR,8768,-5.935,9,data\formal_inputs\herb2_supplements\HERB004401\ingredient_targets_active_uc_intersection.csv,target_PTGS2_5IKR\protocatechualdehyde_8768.log,target_PTGS2_5IKR\protocatechualdehyde_8768_out.pdbqt

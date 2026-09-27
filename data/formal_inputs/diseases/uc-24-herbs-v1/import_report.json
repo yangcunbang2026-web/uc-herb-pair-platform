@@ -1,0 +1,19 @@
+{
+  "source_database": "GeneCards",
+  "disease_query": "Ulcerative Colitis",
+  "formal_input": true,
+  "imported_at": "2026-09-26T09:39:39.231651+00:00",
+  "source_filename": "GeneCards - GeneCards - Search results for _Ulcerative Colitis_.csv",
+  "source_sha256": "ff7a40c0cd94cb6232f735df071b78e751b2f1888d010e4d067bbf4f0c6b8d37",
+  "raw_rows": 7137,
+  "all_normalized_unique_gene_symbols": 7136,
+  "filtered_unique_gene_symbols": 511,
+  "top300_gene_symbols": 300,
+  "detected_gene_column": "Symbol",
+  "detected_relevance_score_column": "Relevance Score",
+  "minimum_relevance_score": 5.0,
+  "normalized_sha256": "a0916af3c32947bcd8b4ae142e1c4a064dd088abb34889ca7c56c4528c63d671",
+  "all_normalized_sha256": "e1d135944b23814b94811aa809957d8e120771e357eb95ce2bd1672b5a865c90",
+  "top300_sha256": "447f9f1e0862c4a3599c56af02fe3f32ceff1c88e52156d73850102bf597c4a1",
+  "note": "User-authorized browser export; no credentials or browser cookies stored."
+}

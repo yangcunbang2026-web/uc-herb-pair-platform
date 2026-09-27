@@ -1,0 +1,131 @@
+{
+  "analysis_status": "DAVID_validation_for_supplied_ranked_pairs",
+  "pair_input": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\top10_source_bias_adjusted_interim.csv",
+  "rank_column": "adjusted_interim_rank",
+  "submitted_id_type": "UNIPROT_ACCESSION",
+  "pair_count": 10,
+  "reports": [
+    {
+      "analysis_rank": 1,
+      "herb_a": "蒲公英",
+      "herb_b": "鱼腥草",
+      "input_genes": 77,
+      "submitted_id_type": "UNIPROT_ACCESSION",
+      "submitted_identifiers": 76,
+      "submitted_uniprot_accessions": 76,
+      "enrichment_rows": 2089,
+      "kegg_rows": 157,
+      "go_rows": 1932
+    },
+    {
+      "analysis_rank": 2,
+      "herb_a": "栀子",
+      "herb_b": "蒲公英",
+      "input_genes": 77,
+      "submitted_id_type": "UNIPROT_ACCESSION",
+      "submitted_identifiers": 76,
+      "submitted_uniprot_accessions": 76,
+      "enrichment_rows": 2089,
+      "kegg_rows": 157,
+      "go_rows": 1932
+    },
+    {
+      "analysis_rank": 3,
+      "herb_a": "槐花",
+      "herb_b": "蒲公英",
+      "input_genes": 77,
+      "submitted_id_type": "UNIPROT_ACCESSION",
+      "submitted_identifiers": 76,
+      "submitted_uniprot_accessions": 76,
+      "enrichment_rows": 2089,
+      "kegg_rows": 157,
+      "go_rows": 1932
+    },
+    {
+      "analysis_rank": 4,
+      "herb_a": "大枣",
+      "herb_b": "蒲公英",
+      "input_genes": 78,
+      "submitted_id_type": "UNIPROT_ACCESSION",
+      "submitted_identifiers": 77,
+      "submitted_uniprot_accessions": 77,
+      "enrichment_rows": 2098,
+      "kegg_rows": 158,
+      "go_rows": 1940
+    },
+    {
+      "analysis_rank": 5,
+      "herb_a": "乌梅",
+      "herb_b": "蒲公英",
+      "input_genes": 77,
+      "submitted_id_type": "UNIPROT_ACCESSION",
+      "submitted_identifiers": 76,
+      "submitted_uniprot_accessions": 76,
+      "enrichment_rows": 2089,
+      "kegg_rows": 157,
+      "go_rows": 1932
+    },
+    {
+      "analysis_rank": 6,
+      "herb_a": "蒲公英",
+      "herb_b": "马齿苋",
+      "input_genes": 79,
+      "submitted_id_type": "UNIPROT_ACCESSION",
+      "submitted_identifiers": 78,
+      "submitted_uniprot_accessions": 78,
+      "enrichment_rows": 2106,
+      "kegg_rows": 157,
+      "go_rows": 1949
+    },
+    {
+      "analysis_rank": 7,
+      "herb_a": "蒲公英",
+      "herb_b": "黄芪",
+      "input_genes": 79,
+      "submitted_id_type": "UNIPROT_ACCESSION",
+      "submitted_identifiers": 78,
+      "submitted_uniprot_accessions": 78,
+      "enrichment_rows": 2119,
+      "kegg_rows": 157,
+      "go_rows": 1962
+    },
+    {
+      "analysis_rank": 8,
+      "herb_a": "石榴皮",
+      "herb_b": "蒲公英",
+      "input_genes": 80,
+      "submitted_id_type": "UNIPROT_ACCESSION",
+      "submitted_identifiers": 79,
+      "submitted_uniprot_accessions": 79,
+      "enrichment_rows": 2104,
+      "kegg_rows": 157,
+      "go_rows": 1947
+    },
+    {
+      "analysis_rank": 9,
+      "herb_a": "甘草",
+      "herb_b": "蒲公英",
+      "input_genes": 82,
+      "submitted_id_type": "UNIPROT_ACCESSION",
+      "submitted_identifiers": 81,
+      "submitted_uniprot_accessions": 81,
+      "enrichment_rows": 2177,
+      "kegg_rows": 157,
+      "go_rows": 2020
+    },
+    {
+      "analysis_rank": 10,
+      "herb_a": "党参",
+      "herb_b": "蒲公英",
+      "input_genes": 57,
+      "submitted_id_type": "UNIPROT_ACCESSION",
+      "submitted_identifiers": 56,
+      "submitted_uniprot_accessions": 56,
+      "enrichment_rows": 1890,
+      "kegg_rows": 151,
+      "go_rows": 1739
+    }
+  ],
+  "official_limits_observed": "<=200 hits/day and >=10 seconds between api.jsp calls",
+  "not_final_reason": "DAVID enrichment is computational support and does not prove pair synergy."
+}

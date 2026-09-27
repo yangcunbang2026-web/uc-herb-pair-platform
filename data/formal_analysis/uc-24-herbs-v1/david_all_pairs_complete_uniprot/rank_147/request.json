@@ -1,0 +1,44 @@
+{
+  "analysis_rank": 147,
+  "herb_a": "肉豆蔻",
+  "herb_b": "薏苡仁",
+  "input_signature": "10d103f51b39faa3aebc3aa4201419f3c7d47646d9c3c6be547b510c2f27d535",
+  "submission_signature": "17d3483dc7dc072c2061d175ab8e2ddc90cb7b17db95124ac31b5fcd8d25aebe",
+  "input_genes": [
+    "BAX",
+    "BCL2",
+    "CASP3",
+    "CASP8",
+    "NOS2",
+    "PLAU",
+    "PTGS1",
+    "PTGS2",
+    "SLC6A4"
+  ],
+  "mapped_uniprot_accessions": [
+    "P00749",
+    "P10415",
+    "P23219",
+    "P31645",
+    "P35228",
+    "P35354",
+    "P42574",
+    "Q07812",
+    "Q14790"
+  ],
+  "submitted_id_type": "UNIPROT_ACCESSION",
+  "submitted_identifiers": [
+    "P00749",
+    "P10415",
+    "P23219",
+    "P31645",
+    "P35228",
+    "P35354",
+    "P42574",
+    "Q07812",
+    "Q14790"
+  ],
+  "categories": "GOTERM_BP_FAT,GOTERM_CC_FAT,GOTERM_MF_FAT,KEGG_PATHWAY",
+  "david_api": "https://davidbioinformatics.nih.gov/api.jsp",
+  "requested_at": "2026-09-27T05:09:49.359242+00:00"
+}

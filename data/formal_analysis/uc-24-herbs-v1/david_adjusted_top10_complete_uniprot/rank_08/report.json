@@ -1,0 +1,12 @@
+{
+  "analysis_rank": 8,
+  "herb_a": "石榴皮",
+  "herb_b": "蒲公英",
+  "input_genes": 80,
+  "submitted_id_type": "UNIPROT_ACCESSION",
+  "submitted_identifiers": 79,
+  "submitted_uniprot_accessions": 79,
+  "enrichment_rows": 2104,
+  "kegg_rows": 157,
+  "go_rows": 1947
+}

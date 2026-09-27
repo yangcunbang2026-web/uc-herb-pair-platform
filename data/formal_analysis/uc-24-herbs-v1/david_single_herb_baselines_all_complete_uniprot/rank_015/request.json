@@ -1,0 +1,23 @@
+{
+  "analysis_rank": 15,
+  "herb_a": "茯苓",
+  "herb_b": "单味基线",
+  "input_signature": "cccb93aa3c31d4fe07bef860e505b40f47a45c9e0098e89ec7f10853d28217d6",
+  "submission_signature": "2ae2fe46a708e6c5fcf0f94759e6ce6491b60d075fa031c1a2d7d1dad90bf3b2",
+  "input_genes": [
+    "PTGS1",
+    "PTGS2"
+  ],
+  "mapped_uniprot_accessions": [
+    "P23219",
+    "P35354"
+  ],
+  "submitted_id_type": "UNIPROT_ACCESSION",
+  "submitted_identifiers": [
+    "P23219",
+    "P35354"
+  ],
+  "categories": "GOTERM_BP_FAT,GOTERM_CC_FAT,GOTERM_MF_FAT,KEGG_PATHWAY",
+  "david_api": "https://davidbioinformatics.nih.gov/api.jsp",
+  "requested_at": "2026-09-27T05:16:22.733651+00:00"
+}

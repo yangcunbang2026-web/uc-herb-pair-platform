@@ -1,0 +1,15 @@
+{
+  "id": "09_safety_evidence",
+  "name": "安全性15分正式证据",
+  "type": "checkpoint",
+  "status": "needs_input",
+  "started_at": "2026-09-27T05:24:10.954509+00:00",
+  "finished_at": "2026-09-27T05:24:10.963773+00:00",
+  "duration_seconds": 0.0,
+  "required": false,
+  "notes": "保留为科研人工复核项，不阻断Top3虚拟筛选与分子对接。",
+  "artifacts_before": [],
+  "action_required": "补齐国家食药物质身份、禁忌、毒性和潜在相互作用的可追溯证据；当前统一60分占位值必须取消。",
+  "artifacts": [],
+  "source_artifacts": []
+}

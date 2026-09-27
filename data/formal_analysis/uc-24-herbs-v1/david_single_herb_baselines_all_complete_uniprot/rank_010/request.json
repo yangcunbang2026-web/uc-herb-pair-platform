@@ -1,0 +1,50 @@
+{
+  "analysis_rank": 10,
+  "herb_a": "白扁豆",
+  "herb_b": "单味基线",
+  "input_signature": "9911fef348b47b92533dd74db3dedd17807aa8cc3b167cd2377fde5ab2192257",
+  "submission_signature": "7ecf923ebf2d886d4ffd1d3b5c4ddc24b5dff095c6d8c3e288123bc5867d0f9f",
+  "input_genes": [
+    "AKT1",
+    "BCL2",
+    "CASP3",
+    "CASP8",
+    "CYP1A2",
+    "CYP3A4",
+    "HMOX1",
+    "MMP1",
+    "MMP2",
+    "MYC",
+    "PTGS2"
+  ],
+  "mapped_uniprot_accessions": [
+    "P01106",
+    "P03956",
+    "P05177",
+    "P08253",
+    "P08684",
+    "P09601",
+    "P10415",
+    "P31749",
+    "P35354",
+    "P42574",
+    "Q14790"
+  ],
+  "submitted_id_type": "UNIPROT_ACCESSION",
+  "submitted_identifiers": [
+    "P01106",
+    "P03956",
+    "P05177",
+    "P08253",
+    "P08684",
+    "P09601",
+    "P10415",
+    "P31749",
+    "P35354",
+    "P42574",
+    "Q14790"
+  ],
+  "categories": "GOTERM_BP_FAT,GOTERM_CC_FAT,GOTERM_MF_FAT,KEGG_PATHWAY",
+  "david_api": "https://davidbioinformatics.nih.gov/api.jsp",
+  "requested_at": "2026-09-27T05:15:47.516429+00:00"
+}

@@ -1,0 +1,2 @@
+﻿target_gene,uniprot_id,pdb_id,species,receptor_chain,resolution_angstrom,reference_ligand,best_affinity_kcal_mol,symmetry_aware_heavy_atom_rmsd_angstrom,direct_heavy_atom_rmsd_angstrom,threshold_angstrom,passed,source_pdb_sha256,source_ligand_sha256
+PTGS2,P35354,5IKR,Homo sapiens,A,2.342,ID8,-8.881,1.7969,1.8448,2.0,True,a49a2d980020881b734a532b371fd9db83c9a2d011684c0ab95f394deba5dcff,f1efa827635f145ffffc3e1cbbc6e836a7e0252c90b28f121218b18ec847ae49

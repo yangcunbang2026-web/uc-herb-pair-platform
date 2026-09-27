@@ -1,0 +1,505 @@
+{
+  "schema_version": "1.0",
+  "pipeline_profile": "parameterized_two_herb_evidence_v2",
+  "supported_combination_sizes": [
+    2
+  ],
+  "artifact_policy": {
+    "mode": "copy",
+    "root": "{run_artifacts_root}",
+    "preserve_project_relative_paths": true,
+    "note": "旧分析脚本仍可读写原目录，但本次运行的权威证据副本统一封存到 runs/<run_id>/artifacts。"
+  },
+  "paths": {
+    "database": "data/uc_herbs.sqlite",
+    "candidate_herbs_csv": "config/tasks/uc-24-herbs-v1/candidate_herbs.csv",
+    "scoring_config": "config/scoring.json",
+    "disease_targets_root": "data/formal_inputs/diseases/uc-24-herbs-v1",
+    "tcmsp_evidence_root": "data/channel_tests/tcmsp/uc-24-herbs-v1",
+    "herb2_supplement_root": "data/formal_inputs/herb2_supplements",
+    "etcm2_supplement_root": "data/formal_inputs/etcm2_supplements",
+    "legacy_analysis_root": "data/formal_analysis/uc-24-herbs-v1",
+    "pipeline_config": "config/tasks/uc-24-herbs-v1/pipeline.json",
+    "analysis_root": "data/formal_analysis/uc-24-herbs-v1",
+    "david_pairs_root": "data/formal_analysis/uc-24-herbs-v1/david_all_pairs_complete_uniprot",
+    "david_single_root": "data/formal_analysis/uc-24-herbs-v1/david_single_herb_baselines_all_complete_uniprot",
+    "docking_root": "data/formal_analysis/uc-24-herbs-v1/docking_top3"
+  },
+  "job": {
+    "id": "uc-24-herbs-v1",
+    "name": "溃疡性结肠炎_24味中药_两味组合筛选",
+    "disease": {
+      "name_cn": "溃疡性结肠炎",
+      "name_en": "Ulcerative Colitis",
+      "search_terms": [
+        "Ulcerative Colitis",
+        "溃疡性结肠炎"
+      ],
+      "species": "Homo sapiens",
+      "taxon_id": 9606
+    },
+    "herbs": [
+      "黄芩",
+      "甘草",
+      "葛根",
+      "茯苓",
+      "姜黄",
+      "马齿苋",
+      "山药",
+      "芡实",
+      "陈皮",
+      "白扁豆",
+      "蒲公英",
+      "鱼腥草",
+      "槐花",
+      "栀子",
+      "薏苡仁",
+      "莲子",
+      "党参",
+      "黄芪",
+      "大枣",
+      "石榴皮",
+      "乌梅",
+      "砂仁",
+      "生姜",
+      "肉豆蔻"
+    ],
+    "combination_size": 2,
+    "top_n": 10,
+    "docking_top_n": 3,
+    "endpoint": "疾病相关靶点、PPI和通路支持下的中药组合协同潜力"
+  },
+  "scoring": {
+    "version": "source_bias_adjusted_interim_v1",
+    "weights": {
+      "靶点互补": 0.4,
+      "通路协同": 0.3,
+      "安全性": 0.15,
+      "配伍证据": 0.15
+    },
+    "tcmsp_active_filter": "OB >= 30% and DL >= 0.18",
+    "etcm_active_filter": "Standards = Yes",
+    "genecards_filter": "Relevance Score >= 5",
+    "string_required_score": 700,
+    "david_significance": "PValue < 0.01 and Benjamini < 0.05"
+  },
+  "data_sources": [
+    {
+      "name": "国家卫健委食药物质目录",
+      "purpose": "限定候选药材范围及药食同源身份",
+      "url": "https://www.nhc.gov.cn/",
+      "version": "以本地公告原件和哈希为准",
+      "access_mode": "official_documents"
+    },
+    {
+      "name": "GeneCards",
+      "purpose": "UC疾病靶点及相关性分数",
+      "url": "https://www.genecards.org/",
+      "version": "人工导出快照",
+      "access_mode": "manual_authenticated_export"
+    },
+    {
+      "name": "TCMSP",
+      "purpose": "中药成分及预测靶点",
+      "url": "https://old.tcmsp-e.com/tcmsp.php",
+      "version": "运行时原始响应快照",
+      "access_mode": "website_api"
+    },
+    {
+      "name": "HERB 2.0",
+      "purpose": "TCMSP缺失药材的成分靶点补充",
+      "url": "http://47.92.70.12/",
+      "version": "运行时原始响应快照",
+      "access_mode": "website_api"
+    },
+    {
+      "name": "ETCM 2.0",
+      "purpose": "TCMSP缺失药材的成分靶点补充",
+      "url": "http://www.tcmip.cn/ETCM2/front/",
+      "version": "运行时原始响应快照",
+      "access_mode": "website_api"
+    },
+    {
+      "name": "UniProt",
+      "purpose": "人类 reviewed 蛋白标准化",
+      "url": "https://rest.uniprot.org/",
+      "version": "运行时查询",
+      "access_mode": "official_rest_api"
+    },
+    {
+      "name": "STRING",
+      "purpose": "高置信功能性蛋白互作",
+      "url": "https://string-db.org/",
+      "version": "12.0",
+      "access_mode": "official_api"
+    },
+    {
+      "name": "DAVID",
+      "purpose": "GO和KEGG富集分析",
+      "url": "https://davidbioinformatics.nih.gov/",
+      "version": "运行时返回",
+      "access_mode": "official_api_with_rate_limit"
+    },
+    {
+      "name": "RCSB PDB / PubChem",
+      "purpose": "核心靶点蛋白和核心成分结构",
+      "url": "https://www.rcsb.org/ ; https://pubchem.ncbi.nlm.nih.gov/",
+      "version": "运行时查询",
+      "access_mode": "official_api"
+    }
+  ],
+  "steps": [
+    {
+      "id": "01_disease_targets",
+      "name": "疾病靶点授权导出与标准化",
+      "type": "input_gate",
+      "required": true,
+      "artifacts": [
+        "{paths.disease_targets_root}/raw_export.csv",
+        "{paths.disease_targets_root}/uc_genecards_targets_normalized.csv",
+        "{paths.disease_targets_root}/import_report.json"
+      ],
+      "action_required": "登录GeneCards后按疾病标准名导出，并运行标准化导入；不得保存账号、密码或Cookie。"
+    },
+    {
+      "id": "02_herb_component_targets",
+      "name": "24味中药成分—靶点原始证据",
+      "type": "verify_artifacts",
+      "required": true,
+      "artifacts": [
+        "{paths.candidate_herbs_csv}",
+        "{paths.tcmsp_evidence_root}/channel_test_report.json"
+      ],
+      "action_required": "先运行候选中药数据库抓取；TCMSP缺失项须由精确HERB/ETCM材料记录补充。"
+    },
+    {
+      "id": "03_pair_enumeration_string",
+      "name": "交集、210组枚举与STRING网络",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "{python}",
+        "scripts/run_formal_genecards_pair_pipeline.py",
+        "--job-config",
+        "{resolved_config}",
+        "--candidate-herbs-csv",
+        "{paths.candidate_herbs_csv}",
+        "--database-path",
+        "{paths.database}",
+        "--disease-targets-path",
+        "{paths.disease_targets_root}/uc_genecards_targets_normalized.csv",
+        "--disease-report-path",
+        "{paths.disease_targets_root}/import_report.json",
+        "--tcmsp-root",
+        "{paths.tcmsp_evidence_root}",
+        "--herb2-root",
+        "{paths.herb2_supplement_root}",
+        "--etcm2-root",
+        "{paths.etcm2_supplement_root}",
+        "--scoring-config",
+        "{paths.scoring_config}",
+        "--output-root",
+        "{paths.legacy_analysis_root}",
+        "--combination-size",
+        "{job.combination_size}",
+        "--top-n",
+        "{job.top_n}",
+        "--species",
+        "{job.disease.taxon_id}",
+        "--string-required-score",
+        "{scoring.string_required_score}",
+        "--include-herb2-exact-supplements",
+        "--include-etcm2-exact-supplements"
+      ],
+      "artifacts": [
+        "{paths.legacy_analysis_root}/herb_target_audit.csv",
+        "{paths.legacy_analysis_root}/pair_scores_raw_formula_audit.csv",
+        "{paths.legacy_analysis_root}/string_network_raw.json",
+        "{paths.legacy_analysis_root}/report.json"
+      ]
+    },
+    {
+      "id": "04_cytoscape",
+      "name": "Cytoscape网络与拓扑分析",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "{python}",
+        "scripts/run_cytoscape_formal_network.py",
+        "--analysis-dir",
+        "{paths.legacy_analysis_root}",
+        "--title",
+        "FORMAL_{job.name}_STRING"
+      ],
+      "artifacts": [
+        "{paths.legacy_analysis_root}/cytoscape_nodes.csv",
+        "{paths.legacy_analysis_root}/cytoscape_edges.csv",
+        "{paths.legacy_analysis_root}/cytoscape_dropped_edges.csv",
+        "{paths.legacy_analysis_root}/cytoscape_topology_metrics.csv",
+        "{paths.legacy_analysis_root}/formal_ppi_network.png",
+        "{paths.legacy_analysis_root}/formal_ppi_session.cys",
+        "{paths.legacy_analysis_root}/cytoscape_report.json"
+      ]
+    },
+    {
+      "id": "05_source_bias_adjustment",
+      "name": "跨数据库来源偏差校正",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "{python}",
+        "scripts/build_source_bias_adjusted_ranking.py",
+        "--input-root",
+        "{paths.legacy_analysis_root}",
+        "--output-root",
+        "{paths.legacy_analysis_root}",
+        "--job-config",
+        "{resolved_config}",
+        "--candidate-herbs-csv",
+        "{paths.candidate_herbs_csv}",
+        "--top-n",
+        "{job.top_n}"
+      ],
+      "artifacts": [
+        "{paths.legacy_analysis_root}/pair_scores_source_bias_adjusted.csv",
+        "{paths.legacy_analysis_root}/top10_source_bias_adjusted_interim.csv",
+        "{paths.legacy_analysis_root}/ranking_stage_sensitivity.csv",
+        "{paths.legacy_analysis_root}/source_bias_adjustment_report.json"
+      ]
+    },
+    {
+      "id": "05a_prepare_david_single_baselines",
+      "name": "生成DAVID单味药对照输入",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "{python}",
+        "scripts/prepare_david_single_herb_baselines.py",
+        "--input-root",
+        "{paths.legacy_analysis_root}",
+        "--job-config",
+        "{resolved_config}",
+        "--candidate-herbs-csv",
+        "{paths.candidate_herbs_csv}",
+        "--output-path",
+        "{paths.legacy_analysis_root}/david_single_herb_baselines_input.csv"
+      ],
+      "artifacts": [
+        "{paths.legacy_analysis_root}/david_single_herb_baselines_input.csv"
+      ]
+    },
+    {
+      "id": "06_david_pair_enrichment",
+      "name": "DAVID全部合格药对富集",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "{python}",
+        "scripts/run_david_enrichment_batch.py",
+        "--pair-path",
+        "{paths.legacy_analysis_root}/pair_scores_source_bias_adjusted.csv",
+        "--output-root",
+        "{paths.legacy_analysis_root}/david_all_pairs_complete_uniprot",
+        "--rank-column",
+        "adjusted_interim_rank",
+        "--database-path",
+        "{paths.database}",
+        "--id-type",
+        "UNIPROT_ACCESSION",
+        "--resume",
+        "--continue-on-error"
+      ],
+      "artifacts": [
+        "{paths.legacy_analysis_root}/david_all_pairs_complete_uniprot/all_enrichment_rows.csv",
+        "{paths.legacy_analysis_root}/david_all_pairs_complete_uniprot/uniprot_mapping_audit.csv",
+        "{paths.legacy_analysis_root}/david_all_pairs_complete_uniprot/report.json"
+      ]
+    },
+    {
+      "id": "07_david_single_baselines",
+      "name": "DAVID单味药对照基线",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "{python}",
+        "scripts/run_david_enrichment_batch.py",
+        "--pair-path",
+        "{paths.legacy_analysis_root}/david_single_herb_baselines_input.csv",
+        "--output-root",
+        "{paths.david_single_root}",
+        "--rank-column",
+        "analysis_rank",
+        "--id-type",
+        "UNIPROT_ACCESSION",
+        "--resume",
+        "--continue-on-error"
+      ],
+      "artifacts": [
+        "{paths.legacy_analysis_root}/david_single_herb_baselines_input.csv",
+        "{paths.david_single_root}/all_enrichment_rows.csv",
+        "{paths.david_single_root}/report.json"
+      ]
+    },
+    {
+      "id": "08_pathway_refinement",
+      "name": "组合对单药通路增益评分",
+      "type": "command",
+      "required": true,
+      "reuse_if_artifacts_exist": true,
+      "adopt_existing_artifacts": true,
+      "command": [
+        "{python}",
+        "scripts/recalculate_david_pathway_scores.py",
+        "--input-root",
+        "{paths.legacy_analysis_root}",
+        "--pair-input",
+        "{paths.legacy_analysis_root}/david_all_pairs_complete_uniprot/all_enrichment_rows.csv",
+        "--single-input",
+        "{paths.david_single_root}/all_enrichment_rows.csv",
+        "--shortlist-input",
+        "{paths.legacy_analysis_root}/pair_scores_source_bias_adjusted.csv",
+        "--output-root",
+        "{paths.legacy_analysis_root}/david_all_pairs_complete_uniprot",
+        "--job-config",
+        "{resolved_config}",
+        "--candidate-herbs-csv",
+        "{paths.candidate_herbs_csv}"
+      ],
+      "artifacts": [
+        "{paths.legacy_analysis_root}/david_all_pairs_complete_uniprot/pair_vs_single_pathway_metrics.csv",
+        "{paths.legacy_analysis_root}/david_all_pairs_complete_uniprot/all_pairs_david_refined_ranking.csv",
+        "{paths.legacy_analysis_root}/david_all_pairs_complete_uniprot/top10_david_refined_with_cutoff_ties.csv",
+        "{paths.legacy_analysis_root}/david_all_pairs_complete_uniprot/david_pathway_scoring_report.json"
+      ]
+    },
+    {
+      "id": "09_safety_evidence",
+      "name": "安全性15分正式证据",
+      "type": "checkpoint",
+      "required": false,
+      "satisfied": false,
+      "action_required": "补齐国家食药物质身份、禁忌、毒性和潜在相互作用的可追溯证据；当前统一60分占位值必须取消。",
+      "halt_on_needs_input": false,
+      "notes": "保留为科研人工复核项，不阻断Top3虚拟筛选与分子对接。"
+    },
+    {
+      "id": "10_pair_literature_evidence",
+      "name": "配伍文献证据15分",
+      "type": "checkpoint",
+      "required": false,
+      "satisfied": false,
+      "action_required": "检索并人工核验PubMed/正式文献：必须同时出现两味药、UC或肠屏障、以及合用证据；当前0分不能作为最终分。",
+      "halt_on_needs_input": false,
+      "notes": "保留为科研人工复核项，不阻断Top3虚拟筛选与分子对接。"
+    },
+    {
+      "id": "11_select_docking_candidates",
+      "name": "Top3成分—靶点对接对象锁定",
+      "type": "command",
+      "required": true,
+      "depends_on": [
+        "08_pathway_refinement"
+      ],
+      "reuse_if_artifacts_exist": true,
+      "command": [
+        "{python}",
+        "scripts/select_top3_docking_candidates.py",
+        "--analysis-root",
+        "{paths.analysis_root}",
+        "--tcmsp-root",
+        "{paths.tcmsp_evidence_root}",
+        "--herb2-root",
+        "{paths.herb2_supplement_root}",
+        "--etcm2-root",
+        "{paths.etcm2_supplement_root}",
+        "--database",
+        "{paths.database}",
+        "--output-root",
+        "{paths.analysis_root}/docking_top3",
+        "--supplement-target-filename",
+        "ingredient_targets_active_uc_intersection.csv"
+      ],
+      "artifacts": [
+        "{paths.analysis_root}/docking_top3/top3_candidates.csv",
+        "{paths.analysis_root}/docking_top3/ingredient_target_candidates.csv",
+        "{paths.analysis_root}/docking_top3/selected_docking_candidates.csv",
+        "{paths.analysis_root}/docking_top3/selection_report.json"
+      ]
+    },
+    {
+      "id": "12_run_top3_docking",
+      "name": "Top3真实分子对接与回对接质控",
+      "type": "command",
+      "required": true,
+      "depends_on": [
+        "11_select_docking_candidates"
+      ],
+      "reuse_if_artifacts_exist": true,
+      "command": [
+        "{python}",
+        "scripts/run_generic_top3_docking.py",
+        "--analysis-root",
+        "{paths.analysis_root}",
+        "--registry",
+        "config/docking_targets.json",
+        "--exhaustiveness",
+        "16",
+        "--seed",
+        "20260927"
+      ],
+      "artifacts": [
+        "{paths.analysis_root}/docking_top3/report.json",
+        "{paths.analysis_root}/docking_top3/redocking_validation.json",
+        "{paths.analysis_root}/docking_top3/binding_energy_matrix.csv",
+        "{paths.analysis_root}/docking_top3/structure_manifest.csv",
+        "{paths.analysis_root}/docking_top3/docking_parameters.json",
+        "{paths.analysis_root}/docking_top3/docking_attempt_audit.csv",
+        "{paths.analysis_root}/docking_top3/**/*.log",
+        "{paths.analysis_root}/docking_top3/**/*_out.pdbqt"
+      ]
+    },
+    {
+      "id": "13_machine_qc",
+      "name": "全流程机器质控与证据闭环",
+      "type": "command",
+      "required": true,
+      "depends_on": [
+        "12_run_top3_docking"
+      ],
+      "command": [
+        "{python}",
+        "scripts/run_machine_qc.py",
+        "--config",
+        "{resolved_config}"
+      ],
+      "artifacts": [
+        "{paths.analysis_root}/pipeline_qc_report.json"
+      ]
+    }
+  ],
+  "limitations": [
+    "网络药理学、PPI、富集分析和分子对接只能给出协同潜力，不能证明1+1>2。",
+    "结果只用于科研候选筛选，不是临床处方或治疗建议。",
+    "TCMSP、HERB 2.0与ETCM 2.0的收录密度及活性筛选口径不同。",
+    "GeneCards需要人工登录、验证和导出，自动流程不得保存账号、密码、Cookie或验证码。",
+    "DAVID存在官方访问频率限制，批量任务必须限速并支持断点续跑。",
+    "当前DAVID只对初筛前10运行，尚不能让第11名以后通过二次富集进入最终Top10。"
+  ],
+  "scope_policy": {
+    "food_medicine_only": false,
+    "material_type": "中药",
+    "note": "不限制药食同源；候选范围完全由本任务输入决定。"
+  }
+}

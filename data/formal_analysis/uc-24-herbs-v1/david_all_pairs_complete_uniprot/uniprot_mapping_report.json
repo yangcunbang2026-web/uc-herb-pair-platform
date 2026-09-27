@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-09-27T05:00:36.030031+00:00",
+  "input_gene_count": 93,
+  "mapped_count": 92,
+  "unmapped_genes": [
+    "XIST"
+  ],
+  "database_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\uc_herbs.sqlite",
+  "database_sha256": "15bd1a2418dc8c8e503d029aade3a87fb7f26f0bb2608eb161d0c00860bd2ca8"
+}

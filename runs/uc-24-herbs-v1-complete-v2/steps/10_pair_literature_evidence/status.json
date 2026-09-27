@@ -1,0 +1,15 @@
+{
+  "id": "10_pair_literature_evidence",
+  "name": "配伍文献证据15分",
+  "type": "checkpoint",
+  "status": "needs_input",
+  "started_at": "2026-09-27T05:24:10.969792+00:00",
+  "finished_at": "2026-09-27T05:24:10.977094+00:00",
+  "duration_seconds": 0.0,
+  "required": false,
+  "notes": "保留为科研人工复核项，不阻断Top3虚拟筛选与分子对接。",
+  "artifacts_before": [],
+  "action_required": "检索并人工核验PubMed/正式文献：必须同时出现两味药、UC或肠屏障、以及合用证据；当前0分不能作为最终分。",
+  "artifacts": [],
+  "source_artifacts": []
+}

@@ -1,0 +1,79 @@
+{
+  "analysis_status": "DAVID_all_supplied_pairs_refined_interim_missing_reviewed_evidence",
+  "generated_at": "2026-09-27T05:18:51.366591+00:00",
+  "pair_count": 153,
+  "single_baseline_count": 24,
+  "top_n": 10,
+  "top_n_cutoff_tie": {
+    "top_n_requested": 10,
+    "fixed_top_n_count": 10,
+    "top_n_with_cutoff_ties_count": 10,
+    "cutoff_score": 47.901696,
+    "cutoff_tie_size": 1,
+    "cutoff_tie_detected": false,
+    "extra_tied_rows": 0,
+    "tie_precision_decimals": 6
+  },
+  "all_supplied_pairs_covered": true,
+  "final_ranking_available": false,
+  "ranking_basis": "david_refined_core_score",
+  "placeholder_60_rejected_rows": 153,
+  "significance_gate": "PValue < 0.01 and Benjamini < 0.05",
+  "outer_weights": {
+    "target_complementarity": 0.4,
+    "pathway_synergy": 0.3,
+    "safety": 0.15,
+    "pair_evidence": 0.15
+  },
+  "barrier_pathway_keywords": [
+    "tight junction",
+    "adherens junction",
+    "epithelial",
+    "mucus",
+    "mucin",
+    "wound healing",
+    "intestinal",
+    "cell junction",
+    "barrier",
+    "permeability",
+    "extracellular matrix",
+    "ampk signaling",
+    "focal adhesion"
+  ],
+  "pathway_subweights": {
+    "significant_pair_KEGG_count_percentile": 0.3,
+    "emergent_pair_KEGG_ratio_percentile": 0.3,
+    "retained_unique_pathway_balance": 0.2,
+    "barrier_term_count_percentile": 0.2
+  },
+  "safety_handling": {
+    "input_column": "safety_score",
+    "finality_column": "safety_score_final",
+    "final_rows": 0,
+    "placeholder_60_rejected_rows": 153,
+    "missing_or_unverified_rows": 153,
+    "rule": "Safety contributes only when an explicit row-level finality flag is true."
+  },
+  "pair_evidence_handling": {
+    "input_column": "pair_evidence_score",
+    "finality_column": "pair_evidence_score_final",
+    "final_rows": 0,
+    "missing_or_unverified_rows": 153
+  },
+  "outputs": {
+    "all_pairs": "all_pairs_david_refined_ranking.csv",
+    "top10_fixed_n_compatibility": "top10_david_refined.csv",
+    "top10_with_cutoff_ties_recommended": "top10_david_refined_with_cutoff_ties.csv",
+    "legacy_top10_compatibility_copy": "top10_shortlist_david_refined_order.csv",
+    "pathway_metrics": "pair_vs_single_pathway_metrics.csv"
+  },
+  "migration_note": "Use all_pairs_david_refined_ranking.csv and, for scientific reporting, top10_david_refined_with_cutoff_ties.csv. top10_david_refined.csv remains a fixed-N compatibility file; top10_shortlist_david_refined_order.csv is deprecated.",
+  "important": "DAVID后处理覆盖输入的全部153个药对及其涉及的24味单药基线。安全或配伍证据未正式复核时，排名仅按靶点互补与DAVID通路两项计算，不能称为最终Top10。",
+  "limitations": [
+    "Missing or unreviewed safety values remain NA; the legacy fixed 60 placeholder is rejected.",
+    "A final four-dimension ranking is emitted only when explicit reviewed safety and pair-evidence flags are complete for every pair.",
+    "No exported-score tie extends beyond the requested Top-N cutoff in this run.",
+    "An emergent enriched term is statistical support, not proof of pharmacological synergy.",
+    "Experimental validation is required to establish 1+1>2."
+  ]
+}

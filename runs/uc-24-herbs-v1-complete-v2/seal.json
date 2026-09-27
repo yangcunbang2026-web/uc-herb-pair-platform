@@ -1,0 +1,10 @@
+{
+  "run_id": "uc-24-herbs-v1-complete-v2",
+  "sealed_at": "2026-09-27T05:24:47.547007+00:00",
+  "run_status": "completed",
+  "results_finality": "pipeline_validated",
+  "manifest_sha256": "cc00948778ae60c574f558a485f91bde3d980115b2e3bfa08fd1a03d6b635828",
+  "report_sha256": "6884cfc498c61888f8d565940438ab9aa30c124555418f241b1849301fbcf3bc",
+  "checksums_file_sha256": "02ee474b2a4495b4fa7d8878372e27187ca8d3cf4f5252c87562b334003df440",
+  "credentials_stored": false
+}

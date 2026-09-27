@@ -1,0 +1,85 @@
+﻿gene_symbol,uniprot_accession,mapping_source
+ABCG2,Q9UNQ0,local_normalized_target_table
+ADIPOQ,Q15848,local_normalized_target_table
+AHR,P35869,local_normalized_target_table
+AKT1,P31749,local_normalized_target_table
+ALB,Q8TES7,UniProt REST human reviewed exact-gene lookup
+ALOX5,P09917,local_normalized_target_table
+BAX,Q07812,local_normalized_target_table
+BCL2,P10415,local_normalized_target_table
+BIRC5,O15392,local_normalized_target_table
+CASP1,P29466,local_normalized_target_table
+CASP3,P42574,local_normalized_target_table
+CASP8,Q14790,local_normalized_target_table
+CAT,P04040,local_normalized_target_table
+CCL2,P13500,local_normalized_target_table
+CCND1,P24385,local_normalized_target_table
+CD40LG,P29965,local_normalized_target_table
+CDK4,P11802,local_normalized_target_table
+CDKN1A,P38936,local_normalized_target_table
+CHEK2,O96017,local_normalized_target_table
+CHRNA7,P36544,UniProt REST human reviewed exact-gene lookup
+CHUK,O15111,local_normalized_target_table
+CXCL10,P02778,local_normalized_target_table
+CXCL8,P10145,local_normalized_target_table
+CYP1A2,P05177,local_normalized_target_table
+CYP3A4,P08684,local_normalized_target_table
+DUOX2,Q9NRD8,local_normalized_target_table
+EGFR,P00533,local_normalized_target_table
+ERBB2,P04626,local_normalized_target_table
+GLS,O94925,UniProt REST human reviewed exact-gene lookup
+GSTM1,P09488,local_normalized_target_table
+GSTP1,P09211,local_normalized_target_table
+HIF1A,Q16665,local_normalized_target_table
+HMOX1,P09601,local_normalized_target_table
+HNF4A,P41235,local_normalized_target_table
+ICAM1,P05362,local_normalized_target_table
+IFNG,P01579,local_normalized_target_table
+IGF2,P01344,local_normalized_target_table
+IKBKB,O14920,local_normalized_target_table
+IL10,P22301,local_normalized_target_table
+IL13,P35225,local_normalized_target_table
+IL1A,P01583,local_normalized_target_table
+IL1B,P01584,local_normalized_target_table
+IL2,P60568,local_normalized_target_table
+IL4,P05112,local_normalized_target_table
+IL5,P05113,local_normalized_target_table
+IL6,P05231,local_normalized_target_table
+JUN,P05412,UniProt REST human reviewed exact-gene lookup
+KDR,P35968,local_normalized_target_table
+MAPK1,P28482,local_normalized_target_table
+MAPK3,P27361,local_normalized_target_table
+MET,P08581,local_normalized_target_table
+MMP1,P03956,local_normalized_target_table
+MMP2,P08253,local_normalized_target_table
+MMP3,P08254,local_normalized_target_table
+MMP8,P22894,local_normalized_target_table
+MMP9,P14780,local_normalized_target_table
+MPO,P05164,local_normalized_target_table
+MYC,P01106,local_normalized_target_table
+NFE2L2,Q16236,local_normalized_target_table
+NFKB1,P19838,local_normalized_target_table
+NFKBIA,P25963,local_normalized_target_table
+NOS2,P35228,local_normalized_target_table
+NOS3,P29474,local_normalized_target_table
+NR1I2,O75469,local_normalized_target_table
+NR3C1,P04150,local_normalized_target_table
+ODC1,P11926,local_normalized_target_table
+PLAU,P00749,local_normalized_target_table
+PPARA,Q07869,local_normalized_target_table
+PPARG,P37231,local_normalized_target_table
+PTGS1,P23219,local_normalized_target_table
+PTGS2,P35354,local_normalized_target_table
+RB1,P06400,local_normalized_target_table
+RELA,Q04206,local_normalized_target_table
+RORC,P51449,UniProt REST human reviewed exact-gene lookup
+SIRT1,Q96EB6,UniProt REST human reviewed exact-gene lookup
+SLC6A4,P31645,local_normalized_target_table
+STAT1,P42224,local_normalized_target_table
+STAT3,P40763,local_normalized_target_table
+TCF7L2,Q9NQB0,UniProt REST human reviewed exact-gene lookup
+TGFB1,P01137,local_normalized_target_table
+TNF,P01375,local_normalized_target_table
+TP53,P04637,local_normalized_target_table
+VCAM1,P19320,local_normalized_target_table
+XIST,,unmapped_no_reviewed_human_protein

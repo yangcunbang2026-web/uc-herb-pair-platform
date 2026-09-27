@@ -1,0 +1,26 @@
+{
+  "status": "succeeded",
+  "analysis_rank": 3,
+  "herb_a": "槐花",
+  "herb_b": "蒲公英",
+  "input_signature": "ded4616fd545527c3bf2bcd7229832ef551d94e90fa13b3c4cad372e53e677b1",
+  "input_genes": 77,
+  "submitted_id_type": "UNIPROT_ACCESSION",
+  "submitted_identifiers": 76,
+  "unmapped_genes": [
+    "XIST"
+  ],
+  "enrichment_rows": 2089,
+  "kegg_rows": 157,
+  "go_rows": 1932,
+  "api_request_url": "https://davidbioinformatics.nih.gov/api.jsp?type=UNIPROT_ACCESSION&ids=O14920%2CO15111%2CO15392%2CO75469%2CO94925%2CO96017%2CP00533%2CP00749%2CP01106%2CP01137%2CP01344%2CP01375%2CP01579%2CP01583%2CP01584%2CP02778%2CP03956%2CP04150%2CP04626%2CP04637%2CP05112%2CP05113%2CP05164%2CP05177%2CP05231%2CP05362%2CP05412%2CP06400%2CP08253%2CP08254%2CP08684%2CP09211%2CP09488%2CP09601%2CP09917%2CP10145%2CP10415%2CP11926%2CP13500%2CP14780%2CP19320%2CP19838%2CP22301%2CP23219%2CP24385%2CP25963%2CP27361%2CP28482%2CP29466%2CP29474%2CP29965%2CP31645%2CP31749%2CP35225%2CP35228%2CP35354%2CP35869%2CP36544%2CP37231%2CP38936%2CP41235%2CP42224%2CP42574%2CP51449%2CP60568%2CQ04206%2CQ07812%2CQ07869%2CQ14790%2CQ16236%2CQ16665%2CQ8TES7%2CQ96EB6%2CQ9NQB0%2CQ9NRD8%2CQ9UNQ0&tool=chartReport&annot=GOTERM_BP_FAT%2CGOTERM_CC_FAT%2CGOTERM_MF_FAT%2CKEGG_PATHWAY",
+  "table_download_url": "https://davidbioinformatics.nih.gov/data/download/chart_C158C88884641790423180513.txt",
+  "api_response_sha256": "04c1a93dce8138e4cca569a396a672fa2e1a6ccd91fa97c5bb9e6708e7706872",
+  "chart_response_sha256": "633e4f39ba7bb2de68db600358931bca1ea544a88f4e7818a0da1970edc52bbb",
+  "table_sha256": "59edf73c0bf10167578b98a32726aadd1672212c51a641eaf101594d81d10c28",
+  "completed_at": "2026-09-27T05:00:36.334185+00:00",
+  "submission_signature": "53d2c77e0e95dc87160811b58a9a5ebefd23c6ae71235c6172b5ad75a8e82763",
+  "reused_identical_submission": true,
+  "reuse_source_rank": 1,
+  "reuse_source_pair_dir": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_all_pairs_complete_uniprot\\rank_001"
+}

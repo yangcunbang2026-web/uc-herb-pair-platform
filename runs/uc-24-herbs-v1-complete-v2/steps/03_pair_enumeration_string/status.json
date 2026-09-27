@@ -1,0 +1,245 @@
+{
+  "id": "03_pair_enumeration_string",
+  "name": "交集、210组枚举与STRING网络",
+  "type": "command",
+  "status": "reused",
+  "started_at": "2026-09-27T05:24:10.517615+00:00",
+  "finished_at": "2026-09-27T05:24:10.559877+00:00",
+  "duration_seconds": 0.031,
+  "required": true,
+  "notes": "",
+  "artifacts_before": [
+    {
+      "specification": "data/formal_analysis/uc-24-herbs-v1/herb_target_audit.csv",
+      "exists": true,
+      "path": "data\\formal_analysis\\uc-24-herbs-v1\\herb_target_audit.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\herb_target_audit.csv",
+      "bytes": 10012,
+      "modified_at": "2026-09-27T04:28:47.547413+00:00",
+      "sha256": "062b14477dfe342b563a5ac58ceaadd8bf5f816d360125c06626f034c1b1f9e2"
+    },
+    {
+      "specification": "data/formal_analysis/uc-24-herbs-v1/pair_scores_raw_formula_audit.csv",
+      "exists": true,
+      "path": "data\\formal_analysis\\uc-24-herbs-v1\\pair_scores_raw_formula_audit.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\pair_scores_raw_formula_audit.csv",
+      "bytes": 246070,
+      "modified_at": "2026-09-27T04:28:47.559548+00:00",
+      "sha256": "edb10f92160e7796e25145bc6956e47c0a9ed3b5398100d6652d890c1e7a06b1"
+    },
+    {
+      "specification": "data/formal_analysis/uc-24-herbs-v1/string_network_raw.json",
+      "exists": true,
+      "path": "data\\formal_analysis\\uc-24-herbs-v1\\string_network_raw.json",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\string_network_raw.json",
+      "bytes": 244654,
+      "modified_at": "2026-09-27T04:28:47.496923+00:00",
+      "sha256": "09e35c059c31424557d30307a8de49265d55e9646cb5385ec976b21e4331e20f"
+    },
+    {
+      "specification": "data/formal_analysis/uc-24-herbs-v1/report.json",
+      "exists": true,
+      "path": "data\\formal_analysis\\uc-24-herbs-v1\\report.json",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\report.json",
+      "bytes": 2207,
+      "modified_at": "2026-09-27T04:28:47.570062+00:00",
+      "sha256": "306b6234dfd88106c660c16f06098112a79045f0ab074e0f0e7313d2897cd81d"
+    }
+  ],
+  "command": [
+    "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\.venv\\Scripts\\python.exe",
+    "scripts/run_formal_genecards_pair_pipeline.py",
+    "--job-config",
+    "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\uc-24-herbs-v1-complete-v2\\job_config_resolved.json",
+    "--candidate-herbs-csv",
+    "config/tasks/uc-24-herbs-v1/candidate_herbs.csv",
+    "--database-path",
+    "data/uc_herbs.sqlite",
+    "--disease-targets-path",
+    "data/formal_inputs/diseases/uc-24-herbs-v1/uc_genecards_targets_normalized.csv",
+    "--disease-report-path",
+    "data/formal_inputs/diseases/uc-24-herbs-v1/import_report.json",
+    "--tcmsp-root",
+    "data/channel_tests/tcmsp/uc-24-herbs-v1",
+    "--herb2-root",
+    "data/formal_inputs/herb2_supplements",
+    "--etcm2-root",
+    "data/formal_inputs/etcm2_supplements",
+    "--scoring-config",
+    "config/scoring.json",
+    "--output-root",
+    "data/formal_analysis/uc-24-herbs-v1",
+    "--combination-size",
+    "2",
+    "--top-n",
+    "10",
+    "--species",
+    "9606",
+    "--string-required-score",
+    "700",
+    "--include-herb2-exact-supplements",
+    "--include-etcm2-exact-supplements"
+  ],
+  "code_files": [
+    {
+      "path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\scripts\\run_formal_genecards_pair_pipeline.py",
+      "sha256": "0c7da625ee386db709d9bfeaa9c66f0920e801c4ac0a84d7c32525fb6f1ac22c"
+    }
+  ],
+  "input_artifacts": [
+    {
+      "specification": "data/formal_inputs/diseases/uc-24-herbs-v1/raw_export.csv",
+      "exists": true,
+      "path": "runs\\uc-24-herbs-v1-complete-v2\\artifacts\\01_disease_targets\\data\\formal_inputs\\diseases\\uc-24-herbs-v1\\raw_export.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\uc-24-herbs-v1-complete-v2\\artifacts\\01_disease_targets\\data\\formal_inputs\\diseases\\uc-24-herbs-v1\\raw_export.csv",
+      "bytes": 446213,
+      "modified_at": "2026-09-26T09:37:04.386437+00:00",
+      "sha256": "ff7a40c0cd94cb6232f735df071b78e751b2f1888d010e4d067bbf4f0c6b8d37",
+      "origin_path": "data\\formal_inputs\\diseases\\uc-24-herbs-v1\\raw_export.csv",
+      "origin_absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\diseases\\uc-24-herbs-v1\\raw_export.csv",
+      "storage": "run_snapshot"
+    },
+    {
+      "specification": "data/formal_inputs/diseases/uc-24-herbs-v1/uc_genecards_targets_normalized.csv",
+      "exists": true,
+      "path": "runs\\uc-24-herbs-v1-complete-v2\\artifacts\\01_disease_targets\\data\\formal_inputs\\diseases\\uc-24-herbs-v1\\uc_genecards_targets_normalized.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\uc-24-herbs-v1-complete-v2\\artifacts\\01_disease_targets\\data\\formal_inputs\\diseases\\uc-24-herbs-v1\\uc_genecards_targets_normalized.csv",
+      "bytes": 8551,
+      "modified_at": "2026-09-26T09:39:39.227554+00:00",
+      "sha256": "a0916af3c32947bcd8b4ae142e1c4a064dd088abb34889ca7c56c4528c63d671",
+      "origin_path": "data\\formal_inputs\\diseases\\uc-24-herbs-v1\\uc_genecards_targets_normalized.csv",
+      "origin_absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\diseases\\uc-24-herbs-v1\\uc_genecards_targets_normalized.csv",
+      "storage": "run_snapshot"
+    },
+    {
+      "specification": "data/formal_inputs/diseases/uc-24-herbs-v1/import_report.json",
+      "exists": true,
+      "path": "runs\\uc-24-herbs-v1-complete-v2\\artifacts\\01_disease_targets\\data\\formal_inputs\\diseases\\uc-24-herbs-v1\\import_report.json",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\uc-24-herbs-v1-complete-v2\\artifacts\\01_disease_targets\\data\\formal_inputs\\diseases\\uc-24-herbs-v1\\import_report.json",
+      "bytes": 972,
+      "modified_at": "2026-09-26T09:39:39.234912+00:00",
+      "sha256": "9b96df0677f0987e9bff978ac392a1b8b43564d9cd172c2f6cb20ff22bf4d6f7",
+      "origin_path": "data\\formal_inputs\\diseases\\uc-24-herbs-v1\\import_report.json",
+      "origin_absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_inputs\\diseases\\uc-24-herbs-v1\\import_report.json",
+      "storage": "run_snapshot"
+    },
+    {
+      "specification": "config/tasks/uc-24-herbs-v1/candidate_herbs.csv",
+      "exists": true,
+      "path": "runs\\uc-24-herbs-v1-complete-v2\\artifacts\\02_herb_component_targets\\config\\tasks\\uc-24-herbs-v1\\candidate_herbs.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\uc-24-herbs-v1-complete-v2\\artifacts\\02_herb_component_targets\\config\\tasks\\uc-24-herbs-v1\\candidate_herbs.csv",
+      "bytes": 1674,
+      "modified_at": "2026-09-27T04:57:24.359978+00:00",
+      "sha256": "3515c95681f6edbd74eb5bbc87137bd5d1f6b42bf4278cfda0b8bfc15ccbd95b",
+      "origin_path": "config\\tasks\\uc-24-herbs-v1\\candidate_herbs.csv",
+      "origin_absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\config\\tasks\\uc-24-herbs-v1\\candidate_herbs.csv",
+      "storage": "run_snapshot"
+    },
+    {
+      "specification": "data/channel_tests/tcmsp/uc-24-herbs-v1/channel_test_report.json",
+      "exists": true,
+      "path": "runs\\uc-24-herbs-v1-complete-v2\\artifacts\\02_herb_component_targets\\data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\channel_test_report.json",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\uc-24-herbs-v1-complete-v2\\artifacts\\02_herb_component_targets\\data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\channel_test_report.json",
+      "bytes": 21576,
+      "modified_at": "2026-09-27T04:27:48.075480+00:00",
+      "sha256": "cc557075fe0a61cf10813e6f1c3027528c728e0edff371ce3423d055b594d45d",
+      "origin_path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\channel_test_report.json",
+      "origin_absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\channel_test_report.json",
+      "storage": "run_snapshot"
+    }
+  ],
+  "execution_fingerprint": "962c79c7c810d47e8a12f5f77facdce451bd6b9deb3c10c9aa5f48223dcb7046",
+  "reuse_reason": "matching execution fingerprint and output hashes found",
+  "reuse_attestation": {
+    "run_id": "uc-24-herbs-v1-complete",
+    "status_file": "runs\\uc-24-herbs-v1-complete\\steps\\03_pair_enumeration_string\\status.json"
+  },
+  "artifacts": [
+    {
+      "specification": "data/formal_analysis/uc-24-herbs-v1/herb_target_audit.csv",
+      "exists": true,
+      "path": "runs\\uc-24-herbs-v1-complete-v2\\artifacts\\03_pair_enumeration_string\\data\\formal_analysis\\uc-24-herbs-v1\\herb_target_audit.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\uc-24-herbs-v1-complete-v2\\artifacts\\03_pair_enumeration_string\\data\\formal_analysis\\uc-24-herbs-v1\\herb_target_audit.csv",
+      "bytes": 10012,
+      "modified_at": "2026-09-27T04:28:47.547413+00:00",
+      "sha256": "062b14477dfe342b563a5ac58ceaadd8bf5f816d360125c06626f034c1b1f9e2",
+      "origin_path": "data\\formal_analysis\\uc-24-herbs-v1\\herb_target_audit.csv",
+      "origin_absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\herb_target_audit.csv",
+      "storage": "run_snapshot"
+    },
+    {
+      "specification": "data/formal_analysis/uc-24-herbs-v1/pair_scores_raw_formula_audit.csv",
+      "exists": true,
+      "path": "runs\\uc-24-herbs-v1-complete-v2\\artifacts\\03_pair_enumeration_string\\data\\formal_analysis\\uc-24-herbs-v1\\pair_scores_raw_formula_audit.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\uc-24-herbs-v1-complete-v2\\artifacts\\03_pair_enumeration_string\\data\\formal_analysis\\uc-24-herbs-v1\\pair_scores_raw_formula_audit.csv",
+      "bytes": 246070,
+      "modified_at": "2026-09-27T04:28:47.559548+00:00",
+      "sha256": "edb10f92160e7796e25145bc6956e47c0a9ed3b5398100d6652d890c1e7a06b1",
+      "origin_path": "data\\formal_analysis\\uc-24-herbs-v1\\pair_scores_raw_formula_audit.csv",
+      "origin_absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\pair_scores_raw_formula_audit.csv",
+      "storage": "run_snapshot"
+    },
+    {
+      "specification": "data/formal_analysis/uc-24-herbs-v1/string_network_raw.json",
+      "exists": true,
+      "path": "runs\\uc-24-herbs-v1-complete-v2\\artifacts\\03_pair_enumeration_string\\data\\formal_analysis\\uc-24-herbs-v1\\string_network_raw.json",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\uc-24-herbs-v1-complete-v2\\artifacts\\03_pair_enumeration_string\\data\\formal_analysis\\uc-24-herbs-v1\\string_network_raw.json",
+      "bytes": 244654,
+      "modified_at": "2026-09-27T04:28:47.496923+00:00",
+      "sha256": "09e35c059c31424557d30307a8de49265d55e9646cb5385ec976b21e4331e20f",
+      "origin_path": "data\\formal_analysis\\uc-24-herbs-v1\\string_network_raw.json",
+      "origin_absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\string_network_raw.json",
+      "storage": "run_snapshot"
+    },
+    {
+      "specification": "data/formal_analysis/uc-24-herbs-v1/report.json",
+      "exists": true,
+      "path": "runs\\uc-24-herbs-v1-complete-v2\\artifacts\\03_pair_enumeration_string\\data\\formal_analysis\\uc-24-herbs-v1\\report.json",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\uc-24-herbs-v1-complete-v2\\artifacts\\03_pair_enumeration_string\\data\\formal_analysis\\uc-24-herbs-v1\\report.json",
+      "bytes": 2207,
+      "modified_at": "2026-09-27T04:28:47.570062+00:00",
+      "sha256": "306b6234dfd88106c660c16f06098112a79045f0ab074e0f0e7313d2897cd81d",
+      "origin_path": "data\\formal_analysis\\uc-24-herbs-v1\\report.json",
+      "origin_absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\report.json",
+      "storage": "run_snapshot"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "specification": "data/formal_analysis/uc-24-herbs-v1/herb_target_audit.csv",
+      "exists": true,
+      "path": "data\\formal_analysis\\uc-24-herbs-v1\\herb_target_audit.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\herb_target_audit.csv",
+      "bytes": 10012,
+      "modified_at": "2026-09-27T04:28:47.547413+00:00",
+      "sha256": "062b14477dfe342b563a5ac58ceaadd8bf5f816d360125c06626f034c1b1f9e2"
+    },
+    {
+      "specification": "data/formal_analysis/uc-24-herbs-v1/pair_scores_raw_formula_audit.csv",
+      "exists": true,
+      "path": "data\\formal_analysis\\uc-24-herbs-v1\\pair_scores_raw_formula_audit.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\pair_scores_raw_formula_audit.csv",
+      "bytes": 246070,
+      "modified_at": "2026-09-27T04:28:47.559548+00:00",
+      "sha256": "edb10f92160e7796e25145bc6956e47c0a9ed3b5398100d6652d890c1e7a06b1"
+    },
+    {
+      "specification": "data/formal_analysis/uc-24-herbs-v1/string_network_raw.json",
+      "exists": true,
+      "path": "data\\formal_analysis\\uc-24-herbs-v1\\string_network_raw.json",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\string_network_raw.json",
+      "bytes": 244654,
+      "modified_at": "2026-09-27T04:28:47.496923+00:00",
+      "sha256": "09e35c059c31424557d30307a8de49265d55e9646cb5385ec976b21e4331e20f"
+    },
+    {
+      "specification": "data/formal_analysis/uc-24-herbs-v1/report.json",
+      "exists": true,
+      "path": "data\\formal_analysis\\uc-24-herbs-v1\\report.json",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\uc-24-herbs-v1\\report.json",
+      "bytes": 2207,
+      "modified_at": "2026-09-27T04:28:47.570062+00:00",
+      "sha256": "306b6234dfd88106c660c16f06098112a79045f0ab074e0f0e7313d2897cd81d"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "reason": "DAVID输入ID集合、ID类型和注释类别完全一致；富集结果只由该提交决定",
+  "submission_signature": "9274437574ed5035bd681509dea9580dd940a313881cc3313bd5ebd95f9be709",
+  "source_pair_dir": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_all_pairs_complete_uniprot\\rank_044",
+  "source_table_sha256": "5b1745c020b985a85dc4c231a94b55a07666a36d1c9295db59bff8ac0c879561",
+  "copied_table_sha256": "5b1745c020b985a85dc4c231a94b55a07666a36d1c9295db59bff8ac0c879561",
+  "attested_at": "2026-09-27T05:01:43.736401+00:00"
+}

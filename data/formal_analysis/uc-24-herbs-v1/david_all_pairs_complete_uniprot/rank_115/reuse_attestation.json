@@ -1,0 +1,8 @@
+{
+  "reason": "DAVID输入ID集合、ID类型和注释类别完全一致；富集结果只由该提交决定",
+  "submission_signature": "892684a625115cf868c88162280b79aa5a4cb7eb68f8c0d975e6cb49dd85d01d",
+  "source_pair_dir": "rank_114",
+  "source_table_sha256": "48546718216d92b5a801ef6966ef9b6de4abbd84784aa2ca3425008be8b9df52",
+  "copied_table_sha256": "48546718216d92b5a801ef6966ef9b6de4abbd84784aa2ca3425008be8b9df52",
+  "attested_at": "2026-09-27T05:07:43.145752+00:00"
+}

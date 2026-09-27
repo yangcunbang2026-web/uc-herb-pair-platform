@@ -1,0 +1,43 @@
+{
+  "provisional_top3_pairs": 3,
+  "queued_pair_target_options": 953,
+  "queued_unique_pairs": 152,
+  "skipped_pair_count": 1,
+  "unique_herbs": [
+    "乌梅",
+    "党参",
+    "大枣",
+    "姜黄",
+    "山药",
+    "栀子",
+    "槐花",
+    "甘草",
+    "生姜",
+    "白扁豆",
+    "石榴皮",
+    "砂仁",
+    "肉豆蔻",
+    "芡实",
+    "茯苓",
+    "莲子",
+    "葛根",
+    "蒲公英",
+    "薏苡仁",
+    "陈皮",
+    "马齿苋",
+    "鱼腥草",
+    "黄芩",
+    "黄芪"
+  ],
+  "ingredient_target_rows": 4812,
+  "candidate_rows": 3129,
+  "selected_rows": 3255,
+  "dockable_target_presets": [
+    "MMP9",
+    "PLAU",
+    "PTGS2"
+  ],
+  "automatic_structure_discovery": true,
+  "registry": "config\\docking_targets.json",
+  "selection_rule": "按最终排名顺序；两味药须共同命中已通过回对接验证的结构靶点；每味保留前三个可追溯成分作失败回退"
+}

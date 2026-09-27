@@ -1,9 +1,11 @@
 {
-  "generated_at": "2026-09-26T15:17:32.8349369Z",
+  "generated_at": "2026-09-27T07:22:45.1957542Z",
   "source_project": "UC药食同源药对筛选平台（完整本地科研项目未上传）",
   "release_repository": "yangcunbang2026-web/uc-herb-pair-platform",
-  "payload_file_count": 1317,
-  "payload_total_bytes": 150840671.0,
+  "default_task": "uc-24-herbs-v1",
+  "mode": "read_only_evidence_preview",
+  "payload_file_count": 2575,
+  "payload_total_bytes": 371880216.0,
   "omitted_large_aggregates": [
     "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_all_pairs_complete_uniprot\\all_enrichment_rows.csv",
     "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_all_pairs_complete_uniprot\\all_enrichment_rows.partial.csv",

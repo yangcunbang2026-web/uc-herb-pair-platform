@@ -1,0 +1,33 @@
+{
+  "analysis_status": "formal_multisource_network",
+  "candidate_herbs_in_this_run": 24,
+  "combination_size": 2,
+  "disease_label": "Ulcerative Colitis",
+  "cytoscape": {
+    "apiVersion": "v1",
+    "cytoscapeVersion": "3.10.4",
+    "automationAPIVersion": "1.13.0",
+    "py4cytoscapeVersion": "1.13.0"
+  },
+  "network_suid": 128,
+  "nodes": 93,
+  "edges": 894,
+  "raw_string_edges": 900,
+  "dropped_edges_with_unmatched_string_preferred_names": 6,
+  "analysis": {
+    "networkTitle": "UC_24HERBS_STRING_PPI (undirected)",
+    "nodeCount": "93",
+    "edgeCount": "894",
+    "avNeighbors": "20.790697674418606",
+    "diameter": "5",
+    "radius": "3",
+    "avSpl": "1.9967168262653898",
+    "cc": "0.6599539059146697",
+    "density": "0.2445964432284542",
+    "heterogeneity": "0.7105858218827612",
+    "centralization": "0.46022408963585426",
+    "ncc": "8",
+    "time": "1.325"
+  },
+  "important": "Formal GeneCards input; candidate coverage and source mix are documented in the analysis directory report."
+}

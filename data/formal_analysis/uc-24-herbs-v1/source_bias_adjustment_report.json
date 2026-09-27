@@ -1,0 +1,41 @@
+{
+  "analysis_status": "source_bias_adjusted_interim_ranking_not_final",
+  "generated_at": "2026-09-27T04:29:00.621201+00:00",
+  "input_pairs": 153,
+  "strict_evidence_mode_requested": false,
+  "strict_evidence_mode": false,
+  "strict_evidence_mode_auto_detected": false,
+  "ranking_basis": "legacy_formula_including_unreviewed_placeholders",
+  "final_ranking_available": false,
+  "reviewed_safety_rows": 0,
+  "reviewed_pair_evidence_rows": 0,
+  "outer_weights_unchanged": {
+    "target_complementarity": 0.4,
+    "pathway_synergy": 0.3,
+    "safety": 0.15,
+    "pair_evidence": 0.15
+  },
+  "candidate_herb_count": 24,
+  "top_n": 10,
+  "adjusted_target_subweights": {
+    "union_breadth_percentile": 0.2,
+    "nonoverlap_ratio": 0.25,
+    "unique_contribution_balance": 0.3,
+    "weaker_side_contribution_percentile": 0.15,
+    "cross_herb_ppi_density_percentile": 0.1
+  },
+  "stage_pair_counts": {
+    "TCMSP_17": 55,
+    "TCMSP_HERB_18": 70,
+    "TCMSP_HERB_19": 84,
+    "TCMSP_HERB_ETCM_21": 121
+  },
+  "input_sha256": "e028dfc584e1507d2a26b7c3e806abad954ce96611e540529fc4c40a05c7d339",
+  "audit_sha256": "062b14477dfe342b563a5ac58ceaadd8bf5f816d360125c06626f034c1b1f9e2",
+  "limitations": [
+    "Not final: safety is still a fixed placeholder and pair evidence is still zero.",
+    "Pathway score is pre-DAVID; final candidates require DAVID enrichment recalculation.",
+    "TCMSP uses OB>=30% and DL>=0.18, while ETCM supplements use Standards=Yes.",
+    "Network pharmacology and docking rank synergy potential but do not prove 1+1>2 efficacy."
+  ]
+}

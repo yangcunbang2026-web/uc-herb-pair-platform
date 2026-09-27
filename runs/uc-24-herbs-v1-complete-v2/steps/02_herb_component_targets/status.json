@@ -1,0 +1,77 @@
+{
+  "id": "02_herb_component_targets",
+  "name": "24味中药成分—靶点原始证据",
+  "type": "verify_artifacts",
+  "status": "passed",
+  "started_at": "2026-09-27T05:24:10.488750+00:00",
+  "finished_at": "2026-09-27T05:24:10.511348+00:00",
+  "duration_seconds": 0.015,
+  "required": true,
+  "notes": "",
+  "artifacts_before": [
+    {
+      "specification": "config/tasks/uc-24-herbs-v1/candidate_herbs.csv",
+      "exists": true,
+      "path": "config\\tasks\\uc-24-herbs-v1\\candidate_herbs.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\config\\tasks\\uc-24-herbs-v1\\candidate_herbs.csv",
+      "bytes": 1674,
+      "modified_at": "2026-09-27T04:57:24.359978+00:00",
+      "sha256": "3515c95681f6edbd74eb5bbc87137bd5d1f6b42bf4278cfda0b8bfc15ccbd95b"
+    },
+    {
+      "specification": "data/channel_tests/tcmsp/uc-24-herbs-v1/channel_test_report.json",
+      "exists": true,
+      "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\channel_test_report.json",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\channel_test_report.json",
+      "bytes": 21576,
+      "modified_at": "2026-09-27T04:27:48.075480+00:00",
+      "sha256": "cc557075fe0a61cf10813e6f1c3027528c728e0edff371ce3423d055b594d45d"
+    }
+  ],
+  "artifacts": [
+    {
+      "specification": "config/tasks/uc-24-herbs-v1/candidate_herbs.csv",
+      "exists": true,
+      "path": "runs\\uc-24-herbs-v1-complete-v2\\artifacts\\02_herb_component_targets\\config\\tasks\\uc-24-herbs-v1\\candidate_herbs.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\uc-24-herbs-v1-complete-v2\\artifacts\\02_herb_component_targets\\config\\tasks\\uc-24-herbs-v1\\candidate_herbs.csv",
+      "bytes": 1674,
+      "modified_at": "2026-09-27T04:57:24.359978+00:00",
+      "sha256": "3515c95681f6edbd74eb5bbc87137bd5d1f6b42bf4278cfda0b8bfc15ccbd95b",
+      "origin_path": "config\\tasks\\uc-24-herbs-v1\\candidate_herbs.csv",
+      "origin_absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\config\\tasks\\uc-24-herbs-v1\\candidate_herbs.csv",
+      "storage": "run_snapshot"
+    },
+    {
+      "specification": "data/channel_tests/tcmsp/uc-24-herbs-v1/channel_test_report.json",
+      "exists": true,
+      "path": "runs\\uc-24-herbs-v1-complete-v2\\artifacts\\02_herb_component_targets\\data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\channel_test_report.json",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\runs\\uc-24-herbs-v1-complete-v2\\artifacts\\02_herb_component_targets\\data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\channel_test_report.json",
+      "bytes": 21576,
+      "modified_at": "2026-09-27T04:27:48.075480+00:00",
+      "sha256": "cc557075fe0a61cf10813e6f1c3027528c728e0edff371ce3423d055b594d45d",
+      "origin_path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\channel_test_report.json",
+      "origin_absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\channel_test_report.json",
+      "storage": "run_snapshot"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "specification": "config/tasks/uc-24-herbs-v1/candidate_herbs.csv",
+      "exists": true,
+      "path": "config\\tasks\\uc-24-herbs-v1\\candidate_herbs.csv",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\config\\tasks\\uc-24-herbs-v1\\candidate_herbs.csv",
+      "bytes": 1674,
+      "modified_at": "2026-09-27T04:57:24.359978+00:00",
+      "sha256": "3515c95681f6edbd74eb5bbc87137bd5d1f6b42bf4278cfda0b8bfc15ccbd95b"
+    },
+    {
+      "specification": "data/channel_tests/tcmsp/uc-24-herbs-v1/channel_test_report.json",
+      "exists": true,
+      "path": "data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\channel_test_report.json",
+      "absolute_path": "D:\\Obsidian\\杨存邦ob\\04_项目库\\进行中\\UC药食同源药对筛选平台\\data\\channel_tests\\tcmsp\\uc-24-herbs-v1\\channel_test_report.json",
+      "bytes": 21576,
+      "modified_at": "2026-09-27T04:27:48.075480+00:00",
+      "sha256": "cc557075fe0a61cf10813e6f1c3027528c728e0edff371ce3423d055b594d45d"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "vina_version": "1.2.7",
+  "exhaustiveness": 16,
+  "num_modes": 9,
+  "seed": 20260927,
+  "box_size": [
+    24,
+    24,
+    24
+  ],
+  "target_registry": "config/docking_targets.json",
+  "fallback_policy": "结构回对接失败则换靶点；成分准备失败则换成分；药对失败则按最终排名顺延"
+}

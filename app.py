@@ -16,7 +16,18 @@ from src.dashboard_data import (
     ranking_display,
     read_csv,
 )
-from src.dashboard_ui import inject_dashboard_theme, render_screening_funnel
+from src.dashboard_ui import (
+    inject_dashboard_theme,
+    inject_reference_layout_theme,
+    render_screening_funnel,
+)
+from src.reference_dashboard import render_reference_dashboard
+from src.job_builder import (
+    load_config,
+    normalize_herbs,
+    task_summary,
+)
+from src.task_launcher import create_task, launch_task, load_task_status
 from src.database import (
     load_database_status,
     load_dataset_validation,
@@ -36,8 +47,8 @@ CONFIG = (
 
 
 @st.cache_data(ttl=10, show_spinner=False)
-def load_dashboard() -> dict[str, Any]:
-    return load_current_dashboard(PROJECT_ROOT)
+def load_dashboard(task_config: str | None = None) -> dict[str, Any]:
+    return load_current_dashboard(PROJECT_ROOT, task_config=task_config)
 
 
 @st.cache_data(ttl=30, show_spinner=False)
@@ -59,8 +70,15 @@ def load_pipeline_manifests() -> list[dict[str, Any]]:
 
 
 @st.cache_data(ttl=30, show_spinner=False)
-def load_explorer() -> dict[str, Any]:
-    return load_pair_explorer(PROJECT_ROOT)
+def load_explorer(
+    analysis_root: str | None = None,
+    disease_targets_path: str | None = None,
+) -> dict[str, Any]:
+    return load_pair_explorer(
+        PROJECT_ROOT,
+        analysis_root=analysis_root,
+        disease_targets_path=disease_targets_path,
+    )
 
 
 def relative(path: Path) -> str:
@@ -156,14 +174,151 @@ def selected_columns(frame: pd.DataFrame, columns: list[str]) -> pd.DataFrame:
 
 
 st.set_page_config(
-    page_title="UC药对证据看板",
+    page_title="中药组合协同潜力筛选平台",
     page_icon="🧬",
     layout="wide",
+    initial_sidebar_state="collapsed",
 )
 
 inject_dashboard_theme()
+inject_reference_layout_theme()
 
-dashboard = load_dashboard()
+DEFAULT_TASK_PATH = PROJECT_ROOT / "config" / "tasks" / "uc-24-herbs-v1" / "pipeline.json"
+LEGACY_TASK_PATH = PROJECT_ROOT / "config" / "pipeline_uc_20_strict.json"
+
+
+def discover_tasks() -> dict[str, Path]:
+    paths = [DEFAULT_TASK_PATH]
+    paths.extend(sorted((PROJECT_ROOT / "config" / "tasks").glob("*/pipeline.json"), reverse=True))
+    paths.append(LEGACY_TASK_PATH)
+    tasks: dict[str, Path] = {}
+    seen: set[Path] = set()
+    for path in paths:
+        if not path.is_file() or path.resolve() in seen:
+            continue
+        seen.add(path.resolve())
+        try:
+            summary = task_summary(load_config(path))
+        except (OSError, json.JSONDecodeError, KeyError, TypeError, ValueError):
+            continue
+        disease = summary["disease_cn"] or summary["disease_en"] or "未命名疾病"
+        task_id = path.parent.name if path.name == "pipeline.json" else path.stem
+        label = f"{disease}｜{summary['herb_count']}味｜{task_id}"
+        tasks[label] = path
+    return tasks
+
+
+default_task = load_config(DEFAULT_TASK_PATH)
+default_summary = task_summary(default_task)
+deployment_path = PROJECT_ROOT / "config" / "deployment.json"
+deployment = json.loads(deployment_path.read_text(encoding="utf-8")) if deployment_path.is_file() else {}
+if deployment.get("read_only", False):
+    st.caption("团队预览版 · UC / 24味中药 · 可查看筛选结果、3组候选药对和逐步证据。新任务计算在本地研究端运行。")
+else:
+    st.markdown('<div id="new-research-task" class="chapter-anchor"></div>', unsafe_allow_html=True)
+    with st.expander("新建分析任务：输入疾病和中药后开始跑", expanded=True):
+        st.caption(
+            "系统会自动建任务、获取疾病靶点、抓取TCMSP，再继续运行交集、STRING、"
+            "Cytoscape、DAVID、Top10 和 Top3 分子对接。默认使用Open Targets官方API，不需要登录。"
+        )
+        with st.form("homepage_task_form", clear_on_submit=False):
+            disease_columns = st.columns(3)
+            disease_cn_input = disease_columns[0].text_input("疾病中文名", value="")
+            disease_en_input = disease_columns[1].text_input("疾病英文标准名", value="")
+            species_input = disease_columns[2].text_input("物种", value="Homo sapiens")
+            herbs_input = st.text_area(
+                "候选中药（用顿号、逗号或换行分隔）",
+                value="",
+                height=120,
+                placeholder="例如：黄芩、甘草、葛根、茯苓",
+            )
+            disease_source_label = st.radio(
+                "疾病靶点来源",
+                ["Open Targets官方API（全自动，推荐）", "GeneCards人工授权导出（保留原方法）"],
+                horizontal=True,
+            )
+            upload = st.file_uploader(
+                "GeneCards导出表（只有选择GeneCards模式时才需要）",
+                type=["csv", "tsv", "txt", "xlsx", "xls"],
+                help="GeneCards禁止自动抓取且没有公开OAuth。这里只读取你授权下载的表，不保存账号、密码、Cookie。",
+            )
+            preview_herbs = normalize_herbs(herbs_input)
+            preview_pairs = len(preview_herbs) * (len(preview_herbs) - 1) // 2
+            st.caption(f"当前识别 {len(preview_herbs)} 味不重复中药，预计生成 {preview_pairs} 个两味组合。")
+            submitted = st.form_submit_button("创建任务并开始分析", type="primary", width="stretch")
+        if submitted:
+            try:
+                disease_source = (
+                    "open_targets" if disease_source_label.startswith("Open Targets")
+                    else "genecards_upload"
+                )
+                if disease_source == "genecards_upload" and upload is None:
+                    raise ValueError("GeneCards模式需要先登录官网并上传授权导出表")
+                created = create_task(
+                    project_root=PROJECT_ROOT,
+                    template_path=DEFAULT_TASK_PATH,
+                    disease_cn=disease_cn_input,
+                    disease_en=disease_en_input,
+                    species=species_input,
+                    herbs=preview_herbs,
+                    disease_source=disease_source,
+                    upload_name=upload.name if upload else "",
+                    upload_bytes=upload.getvalue() if upload else b"",
+                )
+                launch_task(PROJECT_ROOT, created)
+                new_config = PROJECT_ROOT / created["config_path"]
+                st.session_state["selected_task_config"] = str(new_config)
+                st.session_state["latest_homepage_task"] = created["task_id"]
+                st.rerun()
+            except (OSError, ValueError, json.JSONDecodeError) as exc:
+                st.error(str(exc))
+        st.link_button(
+            "打开GeneCards官网登录并导出",
+            "https://www.genecards.org/",
+            width="stretch",
+        )
+        st.caption(
+            "说明：GeneCards官方条款禁止自动抓取，因此普通网页账号不能做成一键OAuth。"
+            "如果团队以后购买正式数据许可/API，可再接成真正的授权连接。"
+        )
+
+available_tasks = discover_tasks()
+task_paths = [str(path) for path in available_tasks.values()]
+task_labels = {str(path): label for label, path in available_tasks.items()}
+if st.session_state.get("selected_task_config") not in task_paths:
+    st.session_state["selected_task_config"] = str(DEFAULT_TASK_PATH)
+selected_task_value = st.sidebar.selectbox(
+    "查看任务",
+    task_paths,
+    format_func=lambda value: task_labels.get(value, Path(value).stem),
+    key="selected_task_config",
+)
+selected_task_path = Path(selected_task_value)
+selected_task = load_config(selected_task_path)
+selected_summary = task_summary(selected_task)
+
+selected_task_id = str(selected_task.get("job", {}).get("id", ""))
+selected_status = load_task_status(PROJECT_ROOT, selected_task_id) if selected_task_id else {}
+if selected_status:
+    state = str(selected_status.get("status", ""))
+    stage = str(selected_status.get("stage", "等待运行"))
+    if state in {"completed", "passed"}:
+        st.success(f"当前任务已完成：{stage}")
+    elif state in {"failed", "needs_input", "blocked"}:
+        st.warning(f"当前任务已暂停：{stage}")
+        if selected_status.get("error"):
+            st.caption(str(selected_status["error"]))
+    else:
+        st.info(f"当前任务正在后台运行：{stage}。刷新页面可查看最新结果。")
+    log_value = selected_status.get("log_path")
+    if log_value:
+        log_path = PROJECT_ROOT / str(log_value)
+        if log_path.is_file():
+            with st.expander("查看本次后台运行日志"):
+                log_text = log_path.read_text(encoding="utf-8", errors="replace")
+                st.code(log_text[-12000:] or "日志刚创建，尚无输出。", language="text")
+
+dashboard = load_dashboard(str(selected_task_path))
 scope = dashboard["scope"]
 ranking = dashboard["ranking"]
 david = dashboard["david"]
@@ -172,10 +327,31 @@ pubmed = dashboard["pubmed"]
 safety = dashboard["safety"]
 quality_control = dashboard["quality_control"]
 funnel = dashboard["funnel"]
+docking = dashboard.get("docking", {})
 strict_root: Path = dashboard["strict_root"]
+task_paths = selected_task.get("paths", {})
+disease_label = selected_summary["disease_cn"] or selected_summary["disease_en"] or "目标疾病"
+total_pair_count = selected_summary["combination_count"]
+disease_root = PROJECT_ROOT / task_paths.get("disease_targets_root", "data/formal_inputs/genecards_uc")
+disease_targets_path = disease_root / "uc_genecards_targets_all_normalized.csv"
+if not disease_targets_path.exists():
+    disease_targets_path = disease_root / "uc_genecards_targets_normalized.csv"
 
-st.title("UC药食同源药对证据看板")
-st.caption("严格20味正式链路，展示数据库筛选进度、阶段性候选和全过程证明。")
+render_reference_dashboard(
+    project_root=PROJECT_ROOT,
+    selected_task_path=selected_task_path,
+    selected_task=selected_task,
+    selected_summary=selected_summary,
+    dashboard=dashboard,
+)
+st.stop()
+
+st.title("中药组合协同潜力筛选平台")
+st.caption(
+    f"当前任务：{selected_summary['disease_cn'] or selected_summary['disease_en']} · "
+    f"{selected_summary['herb_count']}味候选中药 · "
+    f"{selected_summary['combination_count']}个两味组合"
+)
 st.info(
     "本系统输出的是科研用协同潜力候选，不是临床药方。"
     "“1+1>2”必须由后续单药A、单药B和联合AB实验确认。"
@@ -187,21 +363,28 @@ st.caption(
     "不会为了让漏斗好看而虚构淘汰数量。"
 )
 render_screening_funnel(funnel)
-st.markdown(
-    '<div class="evidence-callout"><strong>当前真实终点：</strong>'
-    "阶段Top10在截止分处出现并列，所以展示11组。安全与配伍证据尚未完成，正式候选尚未锁定，"
-    "分子对接也尚未进入正式运行。</div>",
-    unsafe_allow_html=True,
-)
+if ranking["data"].empty:
+    st.markdown(
+        '<div class="evidence-callout"><strong>当前真实终点：</strong>'
+        "新任务已经建立，但本任务的真实数据库证据尚未跑完；后续步骤显示待生成，"
+        "不会借用历史任务结果。</div>",
+        unsafe_allow_html=True,
+    )
+else:
+    st.markdown(
+        '<div class="evidence-callout"><strong>当前真实终点：</strong>'
+        "页面只展示本任务已经生成的结果；Top3必须完成真实分子对接后才能交给实验人员。</div>",
+        unsafe_allow_html=True,
+    )
 
 st.subheader("本轮数据范围")
 scope_columns = st.columns(4)
 scope_columns[0].metric("正式候选药材", scope["candidate_herb_count"] or "待生成")
 scope_columns[1].metric("全部两味组合", scope["processed_pairs"] or "待生成")
 scope_columns[2].metric("双方均有贡献", scope["eligible_pairs"] or "待生成")
-scope_columns[3].metric("UC交集靶点", scope["intersection_targets"] or "待生成")
+scope_columns[3].metric("疾病交集靶点", scope["intersection_targets"] or "待生成")
 
-if scope["huangqin_excluded"]:
+if scope["huangqin_excluded"] and selected_task_path == LEGACY_TASK_PATH:
     huangqin = scope["huangqin"]
     st.warning(
         "黄芩已从严格药食同源候选池排除。现行国家食药物质目录未命中黄芩，"
@@ -224,8 +407,8 @@ if scope["huangqin_excluded"]:
                 "官方来源": huangqin.get("official_url"),
             }
         )
-else:
-    st.warning("药材范围或黄芩排除台账尚未生成，当前不能确认正式候选池。")
+elif selected_task_path == DEFAULT_TASK_PATH:
+    st.success("本任务不限制药食同源，24味中药全部按用户输入进入候选池；槐花不替换成槐米。")
 
 st.subheader("阶段性候选顺序")
 st.warning(
@@ -245,17 +428,53 @@ else:
     if Path(ranking["path"]).is_file():
         artifact_download(Path(ranking["path"]), "当前阶段排名CSV", "ranking")
 
+st.subheader("Top3分子对接验证")
+docking_matrix = docking.get("matrix", pd.DataFrame())
+redocking = docking.get("redocking", {})
+if isinstance(docking_matrix, pd.DataFrame) and not docking_matrix.empty:
+    docking_columns = st.columns(4)
+    docking_columns[0].metric("已完成药对", docking_matrix["pair_rank"].nunique())
+    docking_columns[1].metric("实际对接成分", docking_matrix["ingredient_name"].nunique())
+    docking_columns[2].metric(
+        "回对接RMSD",
+        f"{float(redocking.get('symmetry_aware_heavy_atom_rmsd_angstrom', 0)):.4f} Å",
+    )
+    docking_columns[3].metric(
+        "最佳结合能",
+        f"{float(pd.to_numeric(docking_matrix['best_affinity_kcal_mol']).min()):.3f} kcal/mol",
+    )
+    if redocking.get("passed"):
+        st.success("5IKR共晶配体回对接通过（RMSD≤2.0 Å），Top3正式Vina对接已完成。")
+    display_docking = docking_matrix[[
+        column for column in (
+            "pair_rank", "pair_key", "herb_name", "ingredient_name",
+            "target_gene", "pdb_id", "pubchem_cid", "best_affinity_kcal_mol",
+        ) if column in docking_matrix.columns
+    ]].rename(columns={
+        "pair_rank": "排名", "pair_key": "药对", "herb_name": "中药",
+        "ingredient_name": "核心成分", "target_gene": "靶点", "pdb_id": "PDB",
+        "pubchem_cid": "PubChem CID", "best_affinity_kcal_mol": "最佳结合能 kcal/mol",
+    })
+    st.dataframe(display_docking, hide_index=True, width="stretch")
+    artifact_download(Path(docking["matrix_path"]), "结合能矩阵", "docking-matrix")
+    artifact_download(Path(docking["redocking_path"]), "回对接质控", "docking-redocking")
+    st.caption("分子对接只支持潜在结合，不等于已经证明药对协同或临床疗效。")
+else:
+    st.info("Top3尚未完成真实分子对接；旧版对接记录不会在这里显示。")
+
 st.divider()
 st.subheader("药对筛选详情")
 st.caption(
-    "这里覆盖全部190组，包括已经停止的84组。每一组都按同一套规则展示通过、停止、"
+    f"这里覆盖本任务全部{total_pair_count}组。每一组都按同一套规则展示通过、停止、"
     "暂未入围或待人工复核的原因。"
 )
 
-explorer = load_explorer()
+analysis_value = task_paths.get("analysis_root") or task_paths.get("legacy_analysis_root")
+analysis_root = str(PROJECT_ROOT / analysis_value) if analysis_value else None
+explorer = load_explorer(analysis_root, str(disease_targets_path))
 catalogue: pd.DataFrame = explorer["catalogue"]
 if catalogue.empty:
-    st.info("190组药对审计表尚未生成，详情区会在全量组合完成后出现。")
+    st.info(f"{total_pair_count}组药对审计表尚未生成，详情区会在全量组合完成后出现。")
 else:
     shortlist_count = int(catalogue["_shortlisted"].sum())
     eligible_count = int(catalogue["_eligible"].sum())
@@ -279,9 +498,9 @@ else:
         ).sum()
     )
     one_side_covered_count = stopped_count - zero_target_count - identical_target_count
-    with st.expander("查看84组为什么止于第一道药对门槛"):
+    with st.expander(f"查看{stopped_count}组为什么止于第一道药对门槛"):
         stop_columns = st.columns(3)
-        stop_columns[0].metric("至少一味无UC交集", zero_target_count)
+        stop_columns[0].metric("至少一味无疾病交集", zero_target_count)
         stop_columns[1].metric("一味靶点被完全覆盖", one_side_covered_count)
         stop_columns[2].metric("两味靶点集合相同", identical_target_count)
         st.caption(
@@ -297,6 +516,7 @@ else:
     selected_filter = st.radio(
         "查看范围",
         filter_labels,
+        index=0 if shortlist_count else 1,
         horizontal=True,
         key="pair_detail_scope",
     )
@@ -326,7 +546,10 @@ else:
         list(pair_rows),
         format_func=pair_option_label,
         key="pair_detail_selection",
-    )
+    ) if pair_rows else None
+    if selected_pair is None:
+        st.info("这个范围当前没有药对，请切换到其他范围。")
+        st.stop()
     detail = build_pair_detail(explorer, selected_pair)
     row = detail["row"]
     if detail["shortlisted"]:
@@ -443,10 +666,10 @@ else:
 
         target_columns = st.columns(6)
         target_columns[0].metric(
-            f"{detail['herb_a']} UC靶点", len(detail["genes_a"])
+            f"{detail['herb_a']}疾病靶点", len(detail["genes_a"])
         )
         target_columns[1].metric(
-            f"{detail['herb_b']} UC靶点", len(detail["genes_b"])
+            f"{detail['herb_b']}疾病靶点", len(detail["genes_b"])
         )
         target_columns[2].metric("共同靶点", len(detail["shared_genes"]))
         target_columns[3].metric(
@@ -507,7 +730,8 @@ else:
                 "派生出的原始子网，便于复核前置门槛。"
             )
         st.caption(
-            "STRING只请求一次128个UC交集靶点的高置信网络；本页按当前药对并集筛出子网络。"
+            f"STRING只对本轮{scope['intersection_targets']}个疾病交集靶点请求一次高置信网络；"
+            "本页按当前药对并集筛出子网络。"
             "Cytoscape拓扑值来自128节点全局网络，不冒充药对子网络重新计算值。"
         )
         ppi_columns = st.columns(4)
@@ -549,7 +773,7 @@ else:
         ppi_image = Path(explorer["paths"]["ppi_image"])
         if ppi_image.is_file():
             with st.expander("查看128节点全局PPI网络图"):
-                st.image(str(ppi_image), caption="严格20味UC交集靶点全局PPI网络，不是单个药对专属图")
+                st.image(str(ppi_image), caption="本任务疾病交集靶点全局PPI网络，不是单个药对专属图")
 
     with david_detail_tab:
         if not detail["david_complete"]:
@@ -733,7 +957,7 @@ else:
         st.markdown("**全局数据库证明**")
         global_columns = st.columns(3)
         global_artifacts = [
-            ("GeneCards标准化UC靶点", explorer["paths"]["gene_cards"]),
+            (f"GeneCards标准化{disease_label}靶点", explorer["paths"]["gene_cards"]),
             ("STRING原始响应", explorer["paths"]["string_raw"]),
             ("Cytoscape报告", explorer["paths"]["cytoscape_report"]),
             ("Cytoscape会话", explorer["paths"]["cytoscape_session"]),
@@ -775,7 +999,10 @@ with david_tab:
         and david_single["state"] == "completed"
         and ranking["stage"] == "david_refined_interim"
     ):
-        st.success("106组药对和19味单药基线均已完成，DAVID通路二次评分已生成。")
+        st.success(
+            f"{david['requested_pairs']}组药对和{david_single['requested_pairs']}味单药基线均已完成，"
+            "DAVID通路二次评分已生成。"
+        )
     elif david["state"] == "completed":
         st.success("全量药对DAVID富集已完成，正在等待单味基线或通路评分复算。")
     elif david["state"] == "not_started":
@@ -789,9 +1016,9 @@ with david_tab:
 
 with pubmed_tab:
     if pubmed["complete"]:
-        st.success("PubMed全量检索已覆盖106组药对，每组均执行严格和宽松两层检索。")
+        st.success(f"PubMed全量检索已覆盖{pubmed['pair_count']}组药对。")
     else:
-        st.info("PubMed全量检索尚未形成完整的106组、212条查询证明。")
+        st.info(f"PubMed全量检索尚未覆盖本任务{scope['eligible_pairs']}组合格药对。")
     pubmed_columns = st.columns(4)
     pubmed_columns[0].metric("已检索药对", pubmed["pair_count"])
     pubmed_columns[1].metric("检索式", pubmed["query_count"])
@@ -824,7 +1051,7 @@ with pubmed_tab:
 with safety_tab:
     if safety["manual_review_required"]:
         st.warning(
-            "106组目录资格已核对，但0组获得最终安全分。实际材料基源和部位、药典禁忌、"
+            f"{safety['pair_count']}组目录资格已核对，但0组获得最终安全分。实际材料基源和部位、药典禁忌、"
             "拟用剂量、加工方式及批次质量仍需科研人员人工复核。"
         )
     elif safety["covered"]:
@@ -892,24 +1119,24 @@ st.subheader("全过程证明")
 st.caption("按步骤查看输入、原始响应、参数、剔除记录和复核模板。缺失文件会显示“待生成”，不会导致页面报错。")
 
 render_evidence_step(
-    title="1. 候选范围与官方身份",
-    status="20味正式候选已确认" if scope["candidate_herb_count"] == 20 else "待完善",
-    summary="固定国家食药物质范围，黄芩单列为非食药物质标杆，不进入严格20味组合。",
+    title="1. 疾病与候选中药",
+    status=f"{scope['candidate_herb_count']}味候选已确认" if scope["candidate_herb_count"] else "待完善",
+    summary=f"本任务研究{disease_label}，候选中药由任务输入确定，不限制药食同源。",
     files=[
-        ("严格20味清单", scope["candidate_path"]),
-        ("21味身份审计", scope["identity_path"]),
+        ("候选中药清单", scope["candidate_path"]),
+        ("任务配置", selected_task_path),
         ("正式分析总报告", scope["formal_report_path"]),
     ],
     prefix="scope",
 )
 
 render_evidence_step(
-    title="2. 成分靶点与UC交集",
+    title="2. 成分靶点与疾病交集",
     status=f"{scope['intersection_targets']}个交集靶点" if scope["intersection_targets"] else "待生成",
-    summary="保留药材、成分、靶点来源关系，并用GeneCards正式导出建立UC疾病靶点集合。",
+    summary=f"保留药材、成分、靶点来源关系，并用GeneCards正式导出建立{disease_label}疾病靶点集合。",
     files=[
         ("药材靶点审计", strict_root / "herb_target_audit.csv"),
-        ("GeneCards标准化靶点", PROJECT_ROOT / "data" / "formal_inputs" / "genecards_uc" / "uc_genecards_targets_all_normalized.csv"),
+        ("GeneCards标准化靶点", disease_targets_path),
         ("组合公式审计", strict_root / "pair_scores_raw_formula_audit.csv"),
     ],
     prefix="targets",
@@ -917,7 +1144,7 @@ render_evidence_step(
 
 render_evidence_step(
     title="3. STRING与Cytoscape网络",
-    status="128节点、1334条保留边" if (strict_root / "cytoscape_report.json").is_file() else "待生成",
+    status="网络与拓扑文件已生成" if (strict_root / "cytoscape_report.json").is_file() else "待生成",
     summary="STRING 12.0高置信互作进入Cytoscape；错误名称映射边另表剔除，网络会话可再次打开。",
     files=[
         ("STRING原始响应", strict_root / "string_network_raw.json"),
@@ -952,7 +1179,7 @@ render_evidence_step(
 
 render_evidence_step(
     title="5. PubMed配伍证据",
-    status="106组、212条查询已封存" if pubmed["complete"] else "检索中或待封存",
+    status=f"{pubmed['pair_count']}组证据已封存" if pubmed["complete"] else "检索中或待封存",
     summary="严格层和宽松层检索式、PMID、DOI及原始响应均保留；多味复方不自动算两味药证据。",
     files=[
         ("检索总报告", pubmed["source_report_path"]),
@@ -975,6 +1202,25 @@ render_evidence_step(
         ("15分规则", PROJECT_ROOT / "data" / "formal_inputs" / "official_food_medicine_catalog" / "safety_evidence_rubric_15.json"),
     ],
     prefix="safety-proof",
+)
+
+docking_root = strict_root / "docking_top3"
+render_evidence_step(
+    title="7. Top3分子对接验证",
+    status="已完成" if (docking_root / "report.json").is_file() else "待Top10复算后锁定并运行",
+    summary=(
+        "只对最终Top3选取核心成分和核心靶点，保存PubChem/PDB来源、预处理文件、"
+        "Grid Box、Vina日志、结合能矩阵和回对接质控。未生成的结果不会用旧对接记录代替。"
+    ),
+    files=[
+        ("Top3锁定表", docking_root / "top3_candidates.csv"),
+        ("结构来源清单", docking_root / "structure_manifest.csv"),
+        ("对接参数", docking_root / "docking_parameters.json"),
+        ("结合能矩阵", docking_root / "binding_energy_matrix.csv"),
+        ("回对接质控", docking_root / "redocking_validation.csv"),
+        ("分子对接总报告", docking_root / "report.json"),
+    ],
+    prefix="docking-proof",
 )
 
 pipeline_runs = load_pipeline_manifests()
@@ -1035,10 +1281,10 @@ with st.expander("统一流水线运行记录"):
         st.caption("账号、密码、Cookie和验证码不进入运行清单。")
 
 st.divider()
-with st.expander("旧版SQLite原型与历史对照（不参与当前严格20味排名）"):
+with st.expander("历史原型与旧对接记录（不参与当前任务排名）"):
     st.caption(
         "这里保留旧版数据库、跨GEO对照和早期分子对接结果，方便追溯开发历史。"
-        "它们不能覆盖上方严格20味正式链路。"
+        "它们不能覆盖上方当前任务的正式链路。"
     )
     try:
         historical_status = load_database_status()
@@ -1073,7 +1319,7 @@ with st.expander("旧版SQLite原型与历史对照（不参与当前严格20味
             docking_validation = load_docking_validation()
             if not docking_validation.empty:
                 st.dataframe(docking_validation, hide_index=True, width="stretch")
-            st.caption("该对接记录不证明当前20味候选中的药对协同，也不进入当前排名。")
+            st.caption("该对接记录不证明当前任务候选中的药对协同，也不进入当前排名。")
     except Exception as error:  # 页面历史区不能影响正式链路展示
         st.info(f"旧版SQLite历史区暂时无法读取：{type(error).__name__}")
 

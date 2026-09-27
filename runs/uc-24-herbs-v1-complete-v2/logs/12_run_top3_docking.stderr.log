@@ -1,0 +1,1 @@
+[13:24:16] Warning: molecule is tagged as 2D, but at least one Z coordinate is not zero. Marking the mol as 3D.

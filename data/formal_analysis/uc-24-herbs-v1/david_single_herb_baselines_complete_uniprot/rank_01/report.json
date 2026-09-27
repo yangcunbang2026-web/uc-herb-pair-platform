@@ -1,0 +1,12 @@
+{
+  "analysis_rank": 1,
+  "herb_a": "乌梅",
+  "herb_b": "单味基线",
+  "input_genes": 61,
+  "submitted_id_type": "UNIPROT_ACCESSION",
+  "submitted_identifiers": 61,
+  "submitted_uniprot_accessions": 61,
+  "enrichment_rows": 1753,
+  "kegg_rows": 145,
+  "go_rows": 1608
+}

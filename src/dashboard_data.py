@@ -60,11 +60,16 @@ def newest(paths: list[Path]) -> Path | None:
     return max(existing, key=lambda path: path.stat().st_mtime) if existing else None
 
 
-def load_scope(project_root: Path, strict_root: Path) -> dict[str, Any]:
+def load_scope(
+    project_root: Path,
+    strict_root: Path,
+    candidate_path: Path | None = None,
+    identity_path: Path | None = None,
+) -> dict[str, Any]:
     formal_report_path = strict_root / "report.json"
     formal_report = read_json(formal_report_path)
-    candidate_path = project_root / "config" / "uc_candidate_herbs_20_strict.csv"
-    identity_path = project_root / "config" / "official_food_medicine_identity_21.csv"
+    candidate_path = candidate_path or project_root / "config" / "uc_candidate_herbs_20_strict.csv"
+    identity_path = identity_path or project_root / "config" / "official_food_medicine_identity_21.csv"
     candidates = read_csv(candidate_path)
     identity = read_csv(identity_path)
     huangqin: dict[str, Any] = {}
@@ -141,7 +146,7 @@ def build_screening_funnel(
         {
             "name": "PPI重评分与DAVID",
             "value": f"{completed_david} / {eligible_pairs}组" if eligible_pairs else "待生成",
-            "note": "STRING全局网络一次构建，106组进入重评分",
+            "note": f"STRING全局网络一次构建，{eligible_pairs}组进入重评分",
             "state": "done" if eligible_pairs and completed_david >= eligible_pairs else "active",
         },
         {
@@ -406,18 +411,19 @@ def _numeric(value: Any, default: float = 0.0) -> float:
     return default if pd.isna(number) else float(number)
 
 
-def load_pair_explorer(project_root: Path | str = PROJECT_ROOT) -> dict[str, Any]:
+def load_pair_explorer(
+    project_root: Path | str = PROJECT_ROOT,
+    analysis_root: Path | str | None = None,
+    disease_targets_path: Path | str | None = None,
+) -> dict[str, Any]:
     """Load the 190-pair catalogue and lightweight evidence indexes.
 
     The 47 MB combined DAVID table is intentionally not loaded here. A selected
     pair reads its own rank_NNN/david_chart.tsv in ``build_pair_detail``.
     """
     project_root = Path(project_root)
-    strict_root = (
-        project_root
-        / "data"
-        / "formal_analysis"
-        / "genecards_multisource_pairs_20_strict"
+    strict_root = Path(analysis_root) if analysis_root else (
+        project_root / "data" / "formal_analysis" / "genecards_multisource_pairs_20_strict"
     )
     raw_path = strict_root / "pair_scores_raw_formula_audit.csv"
     refined_path = (
@@ -495,7 +501,28 @@ def load_pair_explorer(project_root: Path | str = PROJECT_ROOT) -> dict[str, Any
         "safety": _with_pair_key(
             read_csv(strict_root / "safety_evidence_review" / "pair_safety_review_template.csv")
         ),
-        "scoring": read_json(project_root / "config" / "scoring.json"),
+        "scoring": (
+            lambda report, fallback: {
+                **fallback,
+                "barrier_pathway_keywords": report.get(
+                    "pathway_focus_keywords",
+                    report.get(
+                        "barrier_pathway_keywords",
+                        fallback.get("barrier_pathway_keywords", []),
+                    ),
+                ),
+                "pathway_focus_label": report.get(
+                    "pathway_focus_label", "肠黏膜保护相关条目"
+                ),
+            }
+        )(
+            read_json(
+                strict_root
+                / "david_all_pairs_complete_uniprot"
+                / "david_pathway_scoring_report.json"
+            ),
+            read_json(project_root / "config" / "scoring.json"),
+        ),
         "paths": {
             "string_raw": strict_root / "string_network_raw.json",
             "cytoscape_report": strict_root / "cytoscape_report.json",
@@ -503,11 +530,8 @@ def load_pair_explorer(project_root: Path | str = PROJECT_ROOT) -> dict[str, Any
             "cytoscape_dropped_edges": strict_root / "cytoscape_dropped_edges.csv",
             "cytoscape_session": strict_root / "formal_ppi_session.cys",
             "ppi_image": strict_root / "formal_ppi_network.png",
-            "gene_cards": (
-                project_root
-                / "data"
-                / "formal_inputs"
-                / "genecards_uc"
+            "gene_cards": Path(disease_targets_path) if disease_targets_path else (
+                project_root / "data" / "formal_inputs" / "genecards_uc"
                 / "uc_genecards_targets_all_normalized.csv"
             ),
         },
@@ -554,14 +578,14 @@ def _pair_stop_reason(row: dict[str, Any]) -> str:
     unique_b = int(_numeric(row.get("unique_targets_b")))
     reasons: list[str] = []
     if targets_a == 0:
-        reasons.append(f"{herb_a}没有进入本轮UC交集靶点")
+        reasons.append(f"{herb_a}没有进入本轮疾病交集靶点")
     elif unique_a == 0:
-        reasons.append(f"{herb_a}没有提供区别于{herb_b}的独立UC靶点")
+        reasons.append(f"{herb_a}没有提供区别于{herb_b}的独立疾病靶点")
     if targets_b == 0:
-        reasons.append(f"{herb_b}没有进入本轮UC交集靶点")
+        reasons.append(f"{herb_b}没有进入本轮疾病交集靶点")
     elif unique_b == 0:
-        reasons.append(f"{herb_b}没有提供区别于{herb_a}的独立UC靶点")
-    return "；".join(reasons) or "未通过双方均须提供至少1个独立UC靶点的门槛"
+        reasons.append(f"{herb_b}没有提供区别于{herb_a}的独立疾病靶点")
+    return "；".join(reasons) or "未通过双方均须提供至少1个独立疾病靶点的门槛"
 
 
 def _significant_david_rows(frame: pd.DataFrame) -> pd.DataFrame:
@@ -677,12 +701,12 @@ def build_pair_detail(explorer: dict[str, Any], pair_key: str) -> dict[str, Any]
         {
             "步骤": "1. 药材范围",
             "状态": "通过",
-            "判断依据": "两味药均来自严格20味正式候选池",
+            "判断依据": "两味药均来自本任务候选池",
         },
         {
-            "步骤": "2. UC靶点交集",
+            "步骤": "2. 疾病靶点交集",
             "状态": "通过" if genes_a and genes_b else "未通过",
-            "判断依据": f"{herb_a} {len(genes_a)}个；{herb_b} {len(genes_b)}个UC交集靶点",
+            "判断依据": f"{herb_a} {len(genes_a)}个；{herb_b} {len(genes_b)}个疾病交集靶点",
         },
         {
             "步骤": "3. 双方独立贡献",
@@ -732,7 +756,7 @@ def build_pair_detail(explorer: dict[str, Any], pair_key: str) -> dict[str, Any]
         {
             "步骤": "8. 正式分子对接",
             "状态": "待筛定" if shortlisted else "未进入",
-            "判断依据": "只对最终锁定的少量核心成分和靶点执行，不对190组全部对接",
+            "判断依据": "只对最终锁定的Top3核心成分和靶点执行，不对全部组合逐一对接",
         },
     ]
 
@@ -834,23 +858,50 @@ def load_active_ingredients(
     return {"data": pd.DataFrame(), "path": Path(), "filter": "来源筛选规则见正式报告"}
 
 
-def load_current_dashboard(project_root: Path | str = PROJECT_ROOT) -> dict[str, Any]:
+def load_current_dashboard(
+    project_root: Path | str = PROJECT_ROOT,
+    task_config: Path | str | None = None,
+) -> dict[str, Any]:
     project_root = Path(project_root)
+    task: dict[str, Any] = {}
+    if task_config:
+        config_path = Path(task_config)
+        config_path = config_path if config_path.is_absolute() else project_root / config_path
+        task = read_json(config_path)
+    paths = task.get("paths", {})
+    analysis_value = paths.get("analysis_root") or paths.get("legacy_analysis_root")
     strict_root = (
-        project_root
-        / "data"
-        / "formal_analysis"
-        / "genecards_multisource_pairs_20_strict"
+        (project_root / analysis_value) if analysis_value else
+        project_root / "data" / "formal_analysis" / "genecards_multisource_pairs_20_strict"
     )
-    scope = load_scope(project_root, strict_root)
+    candidate_value = paths.get("candidate_herbs_csv")
+    candidate_path = project_root / candidate_value if candidate_value else None
+    scope = load_scope(project_root, strict_root, candidate_path=candidate_path)
+    if task.get("job"):
+        scope["disease"] = task["job"].get("disease", {})
+        scope["job"] = task["job"]
+        scope["input_candidate_count"] = len(task["job"].get("herbs", []))
+        if not scope["candidate_herb_count"]:
+            scope["candidate_herb_count"] = len(task["job"].get("herbs", []))
+        scope["huangqin_excluded"] = False
     expected_pairs = int(scope["eligible_pairs"] or 106)
     ranking = load_ranking(strict_root)
     david = load_david(strict_root, expected_pairs)
     david_single = load_david_single_baselines(strict_root)
     pubmed = load_pubmed(strict_root, expected_pairs)
     safety = load_safety(strict_root, expected_pairs)
+    funnel = build_screening_funnel(scope, ranking, david)
+    docking_report = read_json(strict_root / "docking_top3" / "report.json")
+    if docking_report.get("status") == "completed":
+        funnel[-1] = {
+            "name": "Top3分子对接",
+            "value": "3 / 3组已完成",
+            "note": "共晶配体回对接通过，Vina日志与结合能矩阵已封存",
+            "state": "done",
+        }
     return {
         "project_root": project_root,
+        "task": task,
         "strict_root": strict_root,
         "scope": scope,
         "ranking": ranking,
@@ -859,7 +910,43 @@ def load_current_dashboard(project_root: Path | str = PROJECT_ROOT) -> dict[str,
         "pubmed": pubmed,
         "safety": safety,
         "quality_control": load_quality_control(strict_root),
-        "funnel": build_screening_funnel(scope, ranking, david),
+        "funnel": funnel,
+        "docking": {
+            "report": docking_report,
+            "report_path": strict_root / "docking_top3" / "report.json",
+            "matrix": read_csv(strict_root / "docking_top3" / "binding_energy_matrix.csv"),
+            "matrix_path": strict_root / "docking_top3" / "binding_energy_matrix.csv",
+            "redocking": read_json(strict_root / "docking_top3" / "redocking_validation.json"),
+            "redocking_path": strict_root / "docking_top3" / "redocking_validation.json",
+            "redocking_table": read_csv(
+                strict_root / "docking_top3" / "redocking_validation.csv"
+            ),
+            "redocking_table_path": (
+                strict_root / "docking_top3" / "redocking_validation.csv"
+            ),
+            "top3": read_csv(strict_root / "docking_top3" / "top3_candidates.csv"),
+            "top3_path": strict_root / "docking_top3" / "top3_candidates.csv",
+            "attempts": read_csv(
+                strict_root / "docking_top3" / "docking_attempt_audit.csv"
+            ),
+            "attempts_path": (
+                strict_root / "docking_top3" / "docking_attempt_audit.csv"
+            ),
+            "queue": read_csv(strict_root / "docking_top3" / "docking_pair_queue.csv"),
+            "queue_path": strict_root / "docking_top3" / "docking_pair_queue.csv",
+            "selection_report": read_json(
+                strict_root / "docking_top3" / "selection_report.json"
+            ),
+            "selection_report_path": (
+                strict_root / "docking_top3" / "selection_report.json"
+            ),
+            "structure_manifest": read_csv(
+                strict_root / "docking_top3" / "structure_manifest.csv"
+            ),
+            "structure_manifest_path": (
+                strict_root / "docking_top3" / "structure_manifest.csv"
+            ),
+        },
     }
 
 
@@ -913,6 +1000,11 @@ def ranking_display(frame: pd.DataFrame) -> pd.DataFrame:
         data["_core_score"] = pd.NA
 
     selected: list[tuple[str, str]] = [(rank_column, "阶段顺序"), ("pair_key", "药对")]
+    focus_count_column = (
+        "pair_focus_term_count"
+        if "pair_focus_term_count" in data.columns
+        else "pair_barrier_term_count"
+    )
     pathway_columns = (
         [("david_pathway_synergy_score", "DAVID通路协同潜力")]
         if "david_pathway_synergy_score" in data.columns
@@ -923,7 +1015,7 @@ def ranking_display(frame: pd.DataFrame) -> pd.DataFrame:
         + pathway_columns
         + [
         ("emergent_pair_kegg_count", "组合新增显著KEGG数"),
-        ("pair_barrier_term_count", "肠黏膜相关条目数"),
+        (focus_count_column, "疾病重点条目数"),
         ("cross_herb_ppi_edges", "跨药材PPI边"),
         ("_core_score", "已完成两维核心分"),
         ("score_finality", "结论状态"),

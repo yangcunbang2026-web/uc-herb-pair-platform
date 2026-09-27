@@ -1,0 +1,18 @@
+{
+  "top3_pairs": 3,
+  "unique_herbs": [
+    "党参",
+    "栀子",
+    "蒲公英",
+    "鱼腥草"
+  ],
+  "ingredient_target_rows": 713,
+  "candidate_rows": 45,
+  "selected_rows": 17,
+  "dockable_target_presets": [
+    "MMP9",
+    "PLAU",
+    "PTGS2"
+  ],
+  "selection_rule": "active ingredient; pair disease target; prefer validated docking target and higher STRING weighted degree"
+}
