@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-09-27T08:46:16.2024733Z",
+  "generated_at": "2026-09-27T09:29:12.7175173Z",
   "source_project": "UC药食同源药对筛选平台（完整本地科研项目未上传）",
   "release_repository": "yangcunbang2026-web/uc-herb-pair-platform",
   "default_task": "uc-24-herbs-v1",
-  "mode": "read_only_evidence_preview",
-  "payload_file_count": 2712,
-  "payload_total_bytes": 397325843.0,
+  "mode": "public_baseline_with_authenticated_remote_compute",
+  "payload_file_count": 2716,
+  "payload_total_bytes": 397350497.0,
   "omitted_large_aggregates": [
     "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_all_pairs_complete_uniprot\\all_enrichment_rows.csv",
     "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_all_pairs_complete_uniprot\\all_enrichment_rows.partial.csv",
     "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_single_herb_baselines_all_complete_uniprot\\all_enrichment_rows.csv",
     "data\\formal_analysis\\genecards_multisource_pairs_20_strict\\david_single_herb_baselines_all_complete_uniprot\\all_enrichment_rows.partial.csv"
   ],
-  "note": "逐药对DAVID原始响应均保留；仅省略网页不读取、可由逐组结果重建的大型聚合表。"
+  "note": "公开包仅含已有基准任务与远程访问界面；团队访问码、任务上传、新任务结果及本机计算服务不发布。逐药对DAVID原始响应均保留，省略可重建的大型聚合表。"
 }

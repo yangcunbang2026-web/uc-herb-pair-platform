@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "worker_url": "https://weeks-trees-chassis-drama.trycloudflare.com",
+  "protocol": "uc-remote-v1",
+  "mode": "team_code",
+  "temporary_tunnel": true
+}

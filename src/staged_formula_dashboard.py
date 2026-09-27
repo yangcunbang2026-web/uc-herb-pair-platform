@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import json
 import hashlib
+import html
 import math
 from pathlib import Path
 from typing import Any
@@ -144,6 +145,9 @@ def _render_docking(output: Path, docking: dict[str, Any], errors: list[str]) ->
         return
     if docking.get("status") != "completed":
         st.info("本轮Top3已锁定，对接证据尚未完成，不能用旧排名的药对代替。")
+        if docking.get("pairs"):
+            st.dataframe(pd.DataFrame([{"药对": row.get("pair_key", "").replace("__", "＋"), "状态": row.get("status", ""), "需要处理": row.get("reason", "")} for row in docking["pairs"]]), hide_index=True, width="stretch")
+            _download(output / "docking_top3" / "report.json", "下载对接进度与失败证据", "staged-dock-pending")
         return
     root = output / "docking_top3"
     unique_count = docking["unique_chemical_task_count"]
@@ -174,25 +178,27 @@ def _render_docking(output: Path, docking: dict[str, Any], errors: list[str]) ->
             assignments.append({
                 "药对": pair["pair_key"].replace("__", "＋"), "来源药材": item["herb_name"],
                 "成分": item["ingredient_name"], "成分编号": item["ingredient_id"],
-                "PubChem CID": item["pubchem_cid"], "共同核心靶点命中数": item["core_hit_count"],
-                "OB": item["ob"], "DL": item["dl"],
+                "PubChem CID": item["pubchem_cid"], "共同核心靶点命中数": item.get("core_hit_count", len(item.get("core_hits", []))),
+                "OB": item.get("ob"), "DL": item.get("dl"),
             })
     st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
     if len(rows) > 1 and rows[0]["通路精筛分"] == rows[1]["通路精筛分"]:
         st.caption("第1、2名评分相同，名称排序不表示疗效差异。")
     st.caption("结合能阈值只是本项目的计算判据，不是有效治疗或药对协同的判据。")
     qc = docking["redocking"]
-    st.success(
-        f"参考配体回对接质控通过：固定受体坐标下RMSD {qc['fixed_receptor_heavy_atom_rmsd_angstrom']:.4f} Å"
-        f"（阈值≤{qc['threshold_angstrom']:.1f} Å），未对配体再做叠合。"
-    )
+    for target_qc in qc.get("targets", [qc]):
+        st.success(
+            f"{target_qc.get('target_gene', '')}/{target_qc.get('pdb_id', '')}参考配体回对接质控通过："
+            f"固定受体坐标下RMSD {target_qc['fixed_receptor_heavy_atom_rmsd_angstrom']:.4f} Å"
+            f"（阈值≤{target_qc['threshold_angstrom']:.1f} Å），未对配体再做叠合。"
+        )
     st.caption(
         f"本轮复用{docking['reused_chemical_task_count']}个化学任务，新计算{docking['new_chemical_task_count']}个；"
         "已核对受体、配体、网格和计算参数一致。评分完成与对接核对是分别留档的两个阶段。"
     )
     with st.expander("查看药材—成分归属及选择依据"):
         st.dataframe(pd.DataFrame(assignments), hide_index=True, width="stretch")
-        st.write("按共同核心靶点覆盖数优先，再按OB及名称确定成分顺序；未按对接结果倒挑成分。六条药材归属记录不算六次独立对接。")
+        st.write("按记录的共同核心靶点覆盖和成分选择规则选取；一个化合物归属于多味药时，不重复算成多次独立对接。具体靶点与结构尝试顺序见原始记录。")
         _download(root / "ingredient_candidate_evidence.json", "下载完整成分候选与来源", "staged-dock-ingredients")
     with st.expander("查看回对接质控、参数和尝试记录"):
         st.json(qc, expanded=False)
@@ -219,6 +225,9 @@ def render_staged_formula_dashboard(
     output = analysis_root / "image_formula_v1"
     report = _json(output / "readiness_report.json")
     rules = _json(rules_path)
+    task_config = _json(rules_path.parent / "pipeline.json")
+    disease = task_config.get("job", {}).get("disease", {})
+    disease_label = disease.get("name_cn") or disease.get("name_en") or rules.get("disease") or "溃疡性结肠炎"
     herbs = _frame(analysis_root / "herb_target_audit.csv")
     herb_count = len(herbs)
     pair_count = herb_count * (herb_count - 1) // 2
@@ -234,7 +243,7 @@ def render_staged_formula_dashboard(
         </nav>''', unsafe_allow_html=True)
     st.markdown(f'''
         <section class="portal-hero">
-          <div class="hero-kicker">本次任务 · 溃疡性结肠炎 · 两味药组合</div>
+          <div class="hero-kicker">本次任务 · {html.escape(str(disease_label))} · 两味药组合</div>
           <h1>从原始数据到Top10，每一步都能点开看证据</h1>
           <p>{herb_count}味候选中药 · {pair_count}组两味药对 · 靶点、PPI、通路和分子对接逐步筛选</p>
           <div class="hero-actions"><a href="#screening-overview">查看完整筛选过程</a>
@@ -284,7 +293,7 @@ def render_staged_formula_dashboard(
             columns = [key for key in ("herb_name", "data_source", "active_ingredient_count", "disease_target_count", "disease_gene_symbols") if key in herbs]
             st.dataframe(herbs[columns], hide_index=True, width="stretch")
         _download(analysis_root / "herb_target_audit.csv", "下载药材与疾病交集靶点", "staged-herb-input")
-        st.caption("本轮修改计算方法，原始药材来源、OB/DL筛选及疾病导出快照未变；没有声称已增加图片中的Caco-2筛选。")
+        st.caption("成分与靶点保留真实来源及OB/DL筛选记录；快照复用不等于重新联网采集，不添加未执行的筛选项目。")
 
     if _chapter_card(index=2, label="疾病靶点与核心通路", title="确定哪些疾病靶点和通路参与加分",
                      action="疾病关联分数分档，核心、重要、普通靶点分别按5、2、1计权；通路清单预先固定。",
@@ -306,7 +315,11 @@ def render_staged_formula_dashboard(
                     _download(path, label, f"staged-{field}")
         policy = _json(output / "definitions" / "operational_policy.json")
         if policy:
-            st.write("默认分级使用511个已选疾病基因的GeneCards分数：最高10%为核心，随后20%为重要，其余为普通；同分同级。10条KEGG通路按UC屏障、炎症与修复范围预先选定。")
+            if "gene_grades" in policy:
+                st.write("使用本任务记录的疾病靶点分级规则和预先定义的核心通路，不将其他疾病的通路直接套用。")
+                st.json(policy, expanded=False)
+            else:
+                st.write("默认分级使用511个已选疾病基因的GeneCards分数：最高10%为核心，随后20%为重要，其余为普通；同分同级。10条KEGG通路按UC屏障、炎症与修复范围预先选定。")
             st.caption("这是本项目的操作性定义，不是GeneCards或KEGG官方认定的‘核心’名单；规则不随药对排名调整。")
             _download(output / "definitions" / "operational_policy.json", "下载分级与通路选择依据", "staged-operational-policy")
         if status != "scored":

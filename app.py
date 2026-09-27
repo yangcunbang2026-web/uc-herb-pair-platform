@@ -23,6 +23,7 @@ from src.dashboard_ui import (
 )
 from src.reference_dashboard import render_reference_dashboard
 from src.staged_formula_dashboard import render_staged_formula_dashboard
+from src.remote_compute_ui import render_remote_compute_panel
 from src.job_builder import (
     load_config,
     normalize_herbs,
@@ -215,75 +216,10 @@ default_task = load_config(DEFAULT_TASK_PATH)
 default_summary = task_summary(default_task)
 deployment_path = PROJECT_ROOT / "config" / "deployment.json"
 deployment = json.loads(deployment_path.read_text(encoding="utf-8")) if deployment_path.is_file() else {}
-if deployment.get("read_only", False):
-    st.caption("团队预览版 · UC / 24味中药 · 可查看筛选结果、候选药对和逐步证据。此页面仅展示已有结果，不接收新的计算任务。")
-else:
-    st.markdown('<div id="new-research-task" class="chapter-anchor"></div>', unsafe_allow_html=True)
-    with st.expander("新建分析任务：输入疾病和中药后开始跑", expanded=True):
-        st.caption(
-            "当前只展示已按新算法重算的UC任务。通用任务启动暂未切换到新评分链路，因此暂停提交，"
-            "不会继续调用旧算法，也不会把UC的核心通路直接套到其他疾病。"
-        )
-        with st.form("homepage_task_form", clear_on_submit=False):
-            disease_columns = st.columns(3)
-            disease_cn_input = disease_columns[0].text_input("疾病中文名", value="")
-            disease_en_input = disease_columns[1].text_input("疾病英文标准名", value="")
-            species_input = disease_columns[2].text_input("物种", value="Homo sapiens")
-            herbs_input = st.text_area(
-                "候选中药（用顿号、逗号或换行分隔）",
-                value="",
-                height=120,
-                placeholder="例如：黄芩、甘草、葛根、茯苓",
-            )
-            disease_source_label = st.radio(
-                "疾病靶点来源",
-                ["Open Targets官方API（全自动，推荐）", "GeneCards人工授权导出（保留原方法）"],
-                horizontal=True,
-            )
-            upload = st.file_uploader(
-                "GeneCards导出表（只有选择GeneCards模式时才需要）",
-                type=["csv", "tsv", "txt", "xlsx", "xls"],
-                help="GeneCards禁止自动抓取且没有公开OAuth。这里只读取你授权下载的表，不保存账号、密码、Cookie。",
-            )
-            preview_herbs = normalize_herbs(herbs_input)
-            preview_pairs = len(preview_herbs) * (len(preview_herbs) - 1) // 2
-            st.caption(f"当前识别 {len(preview_herbs)} 味不重复中药，预计生成 {preview_pairs} 个两味组合。")
-            submitted = st.form_submit_button("创建任务并开始分析", type="primary", width="stretch", disabled=True)
-        if submitted:
-            try:
-                disease_source = (
-                    "open_targets" if disease_source_label.startswith("Open Targets")
-                    else "genecards_upload"
-                )
-                if disease_source == "genecards_upload" and upload is None:
-                    raise ValueError("GeneCards模式需要先登录官网并上传授权导出表")
-                created = create_task(
-                    project_root=PROJECT_ROOT,
-                    template_path=DEFAULT_TASK_PATH,
-                    disease_cn=disease_cn_input,
-                    disease_en=disease_en_input,
-                    species=species_input,
-                    herbs=preview_herbs,
-                    disease_source=disease_source,
-                    upload_name=upload.name if upload else "",
-                    upload_bytes=upload.getvalue() if upload else b"",
-                )
-                launch_task(PROJECT_ROOT, created)
-                new_config = PROJECT_ROOT / created["config_path"]
-                st.session_state["selected_task_config"] = str(new_config)
-                st.session_state["latest_homepage_task"] = created["task_id"]
-                st.rerun()
-            except (OSError, ValueError, json.JSONDecodeError) as exc:
-                st.error(str(exc))
-        st.link_button(
-            "打开GeneCards官网登录并导出",
-            "https://www.genecards.org/",
-            width="stretch",
-        )
-        st.caption(
-            "说明：GeneCards官方条款禁止自动抓取，因此普通网页账号不能做成一键OAuth。"
-            "如果团队以后购买正式数据许可/API，可再接成真正的授权连接。"
-        )
+remote_selection = render_remote_compute_panel(PROJECT_ROOT)
+if remote_selection is not None:
+    render_staged_formula_dashboard(*remote_selection)
+    st.stop()
 
 available_tasks = discover_tasks()
 task_paths = [str(path) for path in available_tasks.values()]

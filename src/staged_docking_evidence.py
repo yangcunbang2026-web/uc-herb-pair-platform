@@ -106,20 +106,27 @@ def load_current_docking(project_root: Path, output: Path) -> tuple[dict, list[s
         fail("当前对接目录越出项目目录")
     if report.get("status") != "completed":
         return report, errors
+    version2 = report.get("schema_version") == "staged-docking-v2"
     try:
         funnel = read_json(stage / "funnel_result.json", "当前筛选结果")
         if not isinstance(funnel, dict):
             raise ValueError("缺少当前筛选结果")
+        if version2 and (funnel.get("formula_version") != "image-staged-v1" or funnel.get("status") != "scoring_complete_not_experimental_validation"):
+            fail("通用对接必须引用当前新分层公式的已完成排名")
         top = funnel.get("top3_docking_candidates", [])
         expected_keys = [row["pair_key"] for row in top]
-        if (len(expected_keys) != 3 or len(set(expected_keys)) != 3
+        expected_count = len(expected_keys)
+        allowed_count = 1 <= expected_count <= 3 if version2 else expected_count == 3
+        if (not allowed_count or len(set(expected_keys)) != expected_count
                 or expected_keys != [row["pair_key"] for row in funnel.get("top10", [])[:3]]):
             fail("当前筛选的Top3顺序或数量无效")
         for key in ("locked_pair_keys", "locked_top3"):
             if report.get(key) != expected_keys:
                 fail(f"对接锁定药对与当前Top3不一致：{key}")
-        if report.get("completed_pair_count") != 3 or report.get("top3_pair_count") != 3:
-            fail("对接完成数量不是锁定的3对")
+        if report.get("completed_pair_count") != expected_count or report.get("top3_pair_count") != expected_count:
+            fail("对接完成数量不等于本任务锁定候选数")
+        if version2 and (report.get("locked_pair_count") != expected_count or report.get("requested_pair_count") != 3):
+            fail("通用任务候选数量声明不一致")
         if report.get("pair_fallback_allowed") is not False:
             fail("对接报告没有禁止药对顺延")
         parameters = report.get("parameters", {})
@@ -132,23 +139,34 @@ def load_current_docking(project_root: Path, output: Path) -> tuple[dict, list[s
         hash_file(source_path, source.get("sha256"), "当前funnel")
         sources_walk(report)
         sources_walk({"source_files": funnel.get("source_files", [])})
-        qc = report.get("redocking", {})
+        redocking = report.get("redocking", {})
         qc_file = read_json(docking / "redocking_validation.json", "回对接质控文件")
-        if qc_file != qc:
+        if qc_file != redocking:
             fail("报告与独立回对接质控文件不一致")
-        rmsd = numeric(qc.get("fixed_receptor_heavy_atom_rmsd_angstrom"), "固定坐标RMSD")
-        cutoff = numeric(qc.get("threshold_angstrom"), "回对接RMSD阈值")
-        if (rmsd is None or cutoff is None or rmsd < 0 or cutoff != 2.0 or rmsd > cutoff
-                or qc.get("passed") is not True or qc.get("alignment_applied") is not False
-                or qc.get("status") != "verified"):
-            fail("固定坐标回对接质控数值/通过标记不一致或未通过")
-        qc_target = docking / f"target_{qc.get('target_gene')}_{qc.get('pdb_id')}"
-        for item in qc.get("sources", []):
-            source_path = resolve(item.get("path"))
-            if source_path is not None:
-                copied = qc_target / source_path.name
-                if copied.is_file():
-                    hash_file(copied, item.get("sha256"), f"本轮复制质控文件 {source_path.name}")
+        qcs = redocking.get("targets", []) if version2 else [redocking]
+        if not qcs or (version2 and redocking.get("status") != "verified"):
+            fail("缺少本次所用结构的独立回对接质控")
+        qc_by_id = {}
+        for qc in qcs:
+            rmsd = numeric(qc.get("fixed_receptor_heavy_atom_rmsd_angstrom"), "固定坐标RMSD")
+            cutoff = numeric(qc.get("threshold_angstrom"), "回对接RMSD阈值")
+            if (rmsd is None or cutoff is None or rmsd < 0 or cutoff != 2.0 or rmsd > cutoff
+                    or qc.get("passed") is not True or qc.get("alignment_applied") is not False
+                    or qc.get("status") != "verified"):
+                fail("固定坐标回对接质控数值/通过标记不一致或未通过")
+            if version2:
+                qc_id = qc.get("qc_id")
+                if not isinstance(qc_id, str) or not qc_id or qc_id in qc_by_id:
+                    fail("结构质控标识缺失或重复")
+                qc_by_id[qc_id] = qc
+            else:
+                qc_target = docking / f"target_{qc.get('target_gene')}_{qc.get('pdb_id')}"
+                for item in qc.get("sources", []):
+                    source_path = resolve(item.get("path"))
+                    if source_path is not None:
+                        copied = qc_target / source_path.name
+                        if copied.is_file():
+                            hash_file(copied, item.get("sha256"), f"本轮复制质控文件 {source_path.name}")
         pairs = report.get("pairs", [])
         if [row.get("pair_key") for row in pairs] != expected_keys:
             fail("逐药对完成明细与当前Top3不一致")
@@ -158,6 +176,9 @@ def load_current_docking(project_root: Path, output: Path) -> tuple[dict, list[s
                 fail("对接明细包含额外药对")
                 continue
             current = top[pair_index - 1]
+            qc = qc_by_id.get(pair.get("qc_id"), {}) if version2 else redocking
+            if version2 and not qc:
+                fail("药对没有引用已通过的本结构质控")
             if pair.get("status") != "docking_evidence_complete" or pair.get("pair_rank") != pair_index:
                 fail(f"药对未完成或顺序错误：{pair.get('pair_key')}")
             if any(pair.get(field) != current.get(field) for field in ("herb_a", "herb_b")):
@@ -177,7 +198,15 @@ def load_current_docking(project_root: Path, output: Path) -> tuple[dict, list[s
                 if not row.get("ingredient_sources"):
                     fail("成分缺少药材—成分—靶点来源")
                 task_key = row.get("chemical_task_key")
-                if task_key != f"{gene}:{pdb}:PubChem:{row.get('pubchem_cid')}":
+                if version2:
+                    identity = row.get("task_identity")
+                    if not isinstance(identity, dict) or hashlib.sha256(json.dumps(identity, sort_keys=True).encode()).hexdigest() != task_key:
+                        fail("独立化学任务标识与实际输入指纹不一致")
+                    elif any(identity.get(key) != row.get(key) for key in ("pubchem_cid", "target_gene", "pdb_id", "receptor_sha256", "grid_sha256", "ligand_sha256")):
+                        fail("独立化学任务输入与成分结构不一致")
+                    if row.get("qc_id") != pair.get("qc_id"):
+                        fail("成分引用的结构质控与药对不一致")
+                elif task_key != f"{gene}:{pdb}:PubChem:{row.get('pubchem_cid')}":
                     fail("独立化学任务标识与PubChem结构不一致")
                 value = numeric(row.get("best_affinity_kcal_mol"), "结合能")
                 if task_key in unique_all and unique_all[task_key] != value:
